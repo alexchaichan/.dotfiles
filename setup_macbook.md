@@ -77,6 +77,10 @@ ln -s ~/Dropbox/.config/mpv ~/.config
 
 brew install python3
 
+brew install yarn
+
+brew install ruby
+
 brew install --cask r
 
 brew install spotify-tui
@@ -210,6 +214,14 @@ defaults delete com.apple.finder DisableAllAnimations
 defaults delete com.apple.Mail DisableSendAnimations
 defaults delete com.apple.Mail DisableReplyAnimations
 ```
+## neovim plugins
+
+### coc
+
+`:CocInstall coc-json coc-pairs coc-r-lsp coc-snippets coc-tsserver coc-vimlsp`
+
+
+
 
 
 
