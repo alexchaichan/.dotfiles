@@ -131,6 +131,7 @@ wget https://mirror.ctan.org/systems/mac/mactex/MacTeX.pkg
 ```
 
 - appstore
+
 : csv editor
 : AdBlockPro
 : Amphetamine
