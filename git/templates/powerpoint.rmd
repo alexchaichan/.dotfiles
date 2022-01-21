@@ -1,0 +1,67 @@
+---
+date: "`r format(Sys.Date(), '%d %b, %Y')`"
+output:
+  powerpoint_presentation:
+    reference_doc: ~/Dropbox/git/styles/template_uni_kassel.pptx
+lang: de
+---
+
+
+<!--  tabelle
+
+flextable::flextable() %>%
+flextable::theme_zebra() %>% 
+flextable::autofit() 
+
+-->
+
+```{r}
+library("tidyverse")
+```
+
+
+# Slide 1
+
+## Header 1
+
+- text
+- text
+
+:::::::::::::: {.columns}
+::: {.column}
+Test
+:::
+::: {.column}
+Text
+:::
+::::::::::::::
+
+## Header 2
+
+## Header 3
+
+
+# Slide 2
+
+ 
+```{r message=FALSE, warning=FALSE, echo=FALSE}
+plot(cars)
+```
+
+# Slide 3
+
+```{r message=FALSE, warning=FALSE, echo=FALSE}
+mtcars %>% 
+  head(10) %>% 
+  flextable::flextable() %>%
+  flextable::theme_zebra() %>% 
+  flextable::autofit()
+```
+
+::: presenter notes
+This is a speaker note.
+
+- Use basic Markdown
+- like this list
+- *and inline formatting*
+:::

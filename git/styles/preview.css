@@ -1,0 +1,104 @@
+body {
+	font-family: Helvetica, sans-serif;
+	font-size: 12pt;
+	line-height: 1.3;
+	margin: auto;
+	background: #282a36;
+	position: relative;
+	padding: 0 30px;
+}
+
+
+
+
+a.headerlink {
+  display: none;
+  border: none;
+}
+
+pre {
+  color: #FFFFFF;
+  background: #2F3362;
+}
+
+h1 {
+  color: #bd93f9;
+}
+
+h2 {
+  color: #bd93f9;
+}
+
+h3 {
+  color: #bd93f9;
+}
+
+h4 {
+  color: #bd93f9;
+}
+
+h5 {
+  color: #bd93f9;
+}
+
+h6 {
+  color: #6272a4;
+}
+
+a {
+  color: #ff79c6;
+}
+
+code {
+  color: #50fa7b;
+}
+
+
+blockquote {
+    border: none !important;
+}
+
+em {
+  color: #8be9fd;
+}
+
+
+strong {
+  color: #ffb86c;
+}
+
+ul {
+  color: #f8f8fF;
+}
+
+ol {
+  color: #6272a4;
+}
+
+dd {
+  color: #f8f8fF;
+}
+
+dt {
+  color: #f8f8fF;
+}
+
+li {
+  color: #f8f8fF;
+}
+
+.MathJax {
+  color: #f1fa8c;
+}
+
+.katex-html {
+  color: #f1fa8c;
+}
+
+
+
+
+
+table, th, td {
+  border: 1px solid black;
+}

@@ -1,0 +1,89 @@
+---
+title: "TITLE"
+subtitle: "SUBTITLE"
+date: "XX/XX/202X" 
+output:
+  pdf_document:
+    latex_engine: pdflatex #xelatex #lualatex #pdflatex
+    includes:
+      in_header: ~/Dropbox/git/styles/style.sty
+    #keep_tex:  true
+  bookdown::pdf_book:
+    citation_package: biblatex #natbib #biblatex
+bibliography: ~/Dropbox/git/literature.bib
+csl: ~/Dropbox/git/styles/my.csl
+lang: de
+fontsize: 12pt
+---
+
+
+
+<!-- title -->
+\pagenumbering{gobble}
+
+
+```{r, child=c('children/title.rmd')} 
+```
+
+<!-- comment ou at the end -->
+\pagebreak 
+\listoftodos
+<!-- comment ou at the end -->
+<!-- and comment in styles/style.sty/notes damit die notes verschwinden-->
+
+\pagebreak 
+\pagenumbering{roman}
+
+\setstretch{1.5}
+```{r, child=c('children/abstract.Rmd')} 
+```
+
+
+\setstretch{1} 
+\pagebreak 
+\listoffigures
+
+\pagebreak 
+\listoftables
+
+\pagebreak 
+\tableofcontents
+
+\pagebreak 
+\pagenumbering{arabic}
+
+
+
+
+<!-- children -->
+\setstretch{1.5} 
+```{r, child=c('children/einleitung.Rmd', 'children/kapitel1.rmd','children/kapitel2.rmd','children/kapitel3.rmd','children/kapitel4.rmd', 'children/schluss.rmd')} 
+```
+
+
+
+
+
+
+\pagebreak  
+# Literaturverzeichnis
+
+\setlength{\parindent}{-0.2in}
+\setlength{\leftskip}{0.2in}
+\setlength{\parskip}{8pt}
+\noindent
+
+<div id="refs"></div>
+
+
+
+
+\pagebreak 
+\pagenumbering{gobble}
+# Anhang {-} 
+
+
+\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
+
+```{r, child=c('children/apendix.Rmd')} 
+```

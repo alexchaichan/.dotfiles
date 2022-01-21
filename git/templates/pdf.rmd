@@ -1,0 +1,88 @@
+---
+title: "TITLE"
+#subtitle: "SUBTITLE"
+author: "Aleksej Chaichan"
+date: "`r format(Sys.Date(), '%d %b, %Y')`"
+output:
+  pdf_document:
+    latex_engine: pdflatex #xelatex #lualatex #pdflatex
+    includes:
+      in_header: ~/Dropbox/git/styles/style.sty
+    #keep_tex:  true
+  bookdown::pdf_book:
+    citation_package: biblatex #natbib #biblatex
+bibliography: ~/Dropbox/git/literature.bib
+csl: ~/Dropbox/git/styles/my.csl
+#nocite: '@*'
+#nocite: |
+#  @key1, @key2
+fontsize: 12pt
+lang: de
+#params: 
+  #X:  <num>; "string"  #filter with params params$X
+---
+
+
+
+
+<!-- 
+---
+title: "TITLE"
+subtitle: "SUBTITLE"
+author: "Aleksej Chaichan"
+date: "`r format(Sys.Date(), '%d %b, %Y')`"
+header-includes:
+  - \usepackage[T1]{fontenc}
+  - \usepackage[utf8]{inputenc} 
+  - \usepackage[scaled]{helvet} 
+  - \usepackage{booktabs}
+  - \usepackage{longtable}
+  - \usepackage{array}
+  - \usepackage{multirow}
+  - \usepackage{wrapfig}
+  - \usepackage{float}
+  - \floatplacement{figure}{H}
+  - \floatplacement{table}{H}
+  - \usepackage{colortbl}
+  - \usepackage{pdflscape}
+  - \usepackage{tabu}
+  - \usepackage{threeparttable}
+  - \usepackage{threeparttablex}
+  - \usepackage[normalem]{ulem}
+  - \usepackage{makecell}
+  - \usepackage{xcolor}
+output:
+  pdf_document:
+fontsize: 12pt
+lang: de
+--- 
+-->
+
+
+
+\setstretch{1} 
+\pagebreak 
+\listoffigures
+
+\pagebreak 
+\listoftables
+
+\pagebreak 
+\tableofcontents
+
+
+
+
+
+<!-- literaturvereichnis 
+# Literaturverzeichnis
+
+\setlength{\parindent}{-0.2in}
+\setlength{\leftskip}{0.2in}
+\setlength{\parskip}{8pt}
+\noindent
+
+<div id="refs"></div>
+-->
+
+
