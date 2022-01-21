@@ -130,10 +130,10 @@ brew install --cask the-unarchiver
 wget https://mirror.ctan.org/systems/mac/mactex/MacTeX.pkg
 ```
 
-- appstore
+## appstore
 
-: csv editor
-: AdBlockPro
-: Amphetamine
-: GetPlainText
-: Chess Tactics and Strategy
+- csv editor
+- AdBlockPro
+- Amphetamine
+- GetPlainText
+- Chess Tactics and Strategy
