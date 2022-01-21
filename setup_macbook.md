@@ -1,6 +1,10 @@
 # setup a fresh mac(book)
 
 ```
+defaults write com.apple.Finder AppleShowAllFiles true
+
+killall Finder
+
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 brew install zsh
