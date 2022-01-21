@@ -134,6 +134,62 @@ brew install --cask the-unarchiver
 wget https://mirror.ctan.org/systems/mac/mactex/MacTeX.pkg
 ```
 
+## turn off all animations
+
+1. opening and closing windows and popovers
+2. smooth scrolling
+3. showing and hiding sheets, resizing preference windows, zooming windows float 0 doesn't work
+4. opening and closing Quick Look windows
+5. rubberband scrolling (doesn't affect web views)
+6. # resizing windows before and after showing the version browser also disabled by NSWindowResizeTime -float 0.001
+7. # showing a toolbar or menu bar in full screen
+8. scrolling column views
+9. showing the Dock
+10. showing and hiding Mission Control, command+numbers
+11. showing and hiding Launchpad
+12. changing pages in Launchpad
+13. at least AnimateInfoPanes
+14. sending messages and opening windows for replies
+
+
+
+```
+defaults write -g NSAutomaticWindowAnimationsEnabled -bool false
+
+defaults write -g NSScrollAnimationEnabled -bool false
+
+defaults write -g NSWindowResizeTime -float 0.001
+
+defaults write -g QLPanelAnimationDuration -float 0
+
+defaults write -g NSScrollViewRubberbanding -bool false
+
+defaults write -g NSDocumentRevisionsWindowTransformAnimation -bool false
+
+defaults write -g NSToolbarFullScreenAnimationDuration -float 0
+
+defaults write -g NSBrowserColumnAnimationSpeedMultiplier -float 0
+
+defaults write com.apple.dock autohide-time-modifier -float 0
+defaults write com.apple.dock autohide-delay -float 0
+
+defaults write com.apple.dock expose-animation-duration -float 0
+
+defaults write com.apple.dock springboard-show-duration -float 0
+defaults write com.apple.dock springboard-hide-duration -float 0
+
+defaults write com.apple.dock springboard-page-duration -float 0
+
+defaults write com.apple.finder DisableAllAnimations -bool true
+
+defaults write com.apple.Mail DisableSendAnimations -bool true
+defaults write com.apple.Mail DisableReplyAnimations -bool true
+```
+
+
+
+
+
 ## `node.js` & `npm`
 
 ## appstore
