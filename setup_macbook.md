@@ -17,11 +17,11 @@ brew install --cask iterm2
 
 brew install --cask dropbox
 
-echo source ~/Dropbox/git/.config/zsh/.zshrc >> ~/.zshrc
+echo source ~/Dropbox/.config/zsh/.zshrc >> ~/.zshrc
 
 mkdir ~/.config/nvim
 
-echo source ~/Dropbox/git/.config/nvim/init.vim >> ~/.config/nvim/init.vim
+echo source ~/Dropbox/.config/nvim/init.vim >> ~/.config/nvim/init.vim
 
 echo '{
   "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "javascript", "graphql", "html", "yaml",  "json", "python"],
@@ -33,13 +33,13 @@ echo '{
   "snippets.ultisnips.directories":
   [
     "UltiSnips",
-    "~/Dropbox/git/.config/nvim/snips"
+    "~/Dropbox/.config/nvim/snips"
   ]
 
 }' >> ~/.config/nvim/coc-settings.json
 
 mkdir ~/.config/nvim/autoload
-echo source ~/Dropbox/git/.config/nvim/autoload/plug.vim >> ~/.config/nvim/autoload/plug.vim
+echo source ~/Dropbox/.config/nvim/autoload/plug.vim >> ~/.config/nvim/autoload/plug.vim
 
 mkdir ~/.config/spotifyd
 echo '[global]
@@ -63,13 +63,13 @@ device_id: 75a25c2be83fdfa0bb221b04cf3a4525e9f1203a
 port: 8888' >> ~/.config/spotify-tui/client.yml
 
 
-ln -s ~/Dropbox/git/.config/.mutt ~/
-ln -s ~/Dropbox/git/.config/.qutebrowser ~/
-ln -s ~/Dropbox/git/.config/.w3m ~/
-ln -s ~/Dropbox/git/.config/calcurse ~/.config
-ln -s ~/Dropbox/git/.config/zathura ~/.config
-ln -s ~/Dropbox/git/.config/rstudio ~/.config
-ln -s ~/Dropbox/git/.config/mpv ~/.config
+ln -s ~/Dropbox/.config/.mutt ~/
+ln -s ~/Dropbox/.config/.qutebrowser ~/
+ln -s ~/Dropbox/.config/.w3m ~/
+ln -s ~/Dropbox/.config/calcurse ~/.config
+ln -s ~/Dropbox/.config/zathura ~/.config
+ln -s ~/Dropbox/.config/rstudio ~/.config
+ln -s ~/Dropbox/.config/mpv ~/.config
 
 brew install python3
 
