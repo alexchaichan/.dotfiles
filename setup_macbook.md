@@ -1,5 +1,7 @@
 # setup a fresh mac(book)
 
+## 1.st of all
+
 ```
 defaults write com.apple.Finder AppleShowAllFiles true
 
@@ -125,6 +127,8 @@ brew install --cask firefox
 
 brew install jupyterlab
 
+pip install JLDracula
+
 brew install --cask rstudio
 
 brew install --cask notunes
@@ -137,6 +141,8 @@ brew install --cask the-unarchiver
 
 wget https://mirror.ctan.org/systems/mac/mactex/MacTeX.pkg
 ```
+
+___
 
 ## turn off all animations
 
@@ -155,8 +161,6 @@ wget https://mirror.ctan.org/systems/mac/mactex/MacTeX.pkg
 13. at least AnimateInfoPanes
 14. sending messages and opening windows for replies
 15. dialog windows
-
-
 
 ```
 defaults write -g NSAutomaticWindowAnimationsEnabled -bool false
@@ -214,18 +218,21 @@ defaults delete com.apple.finder DisableAllAnimations
 defaults delete com.apple.Mail DisableSendAnimations
 defaults delete com.apple.Mail DisableReplyAnimations
 ```
+___
+
+
 ## neovim plugins
 
 ### coc
 
 `:CocInstall coc-json coc-pairs coc-r-lsp coc-snippets coc-tsserver coc-vimlsp`
 
-
-
-
+___
 
 
 ## `node.js` & `npm`
+
+___
 
 ## appstore
 
