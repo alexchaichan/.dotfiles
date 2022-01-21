@@ -141,8 +141,8 @@ wget https://mirror.ctan.org/systems/mac/mactex/MacTeX.pkg
 3. showing and hiding sheets, resizing preference windows, zooming windows float 0 doesn't work
 4. opening and closing Quick Look windows
 5. rubberband scrolling (doesn't affect web views)
-6. # resizing windows before and after showing the version browser also disabled by NSWindowResizeTime -float 0.001
-7. # showing a toolbar or menu bar in full screen
+6. resizing windows before and after showing the version browser also disabled by NSWindowResizeTime -float 0.001
+7. showing a toolbar or menu bar in full screen
 8. scrolling column views
 9. showing the Dock
 10. showing and hiding Mission Control, command+numbers
