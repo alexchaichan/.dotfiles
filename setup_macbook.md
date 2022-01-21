@@ -79,8 +79,6 @@ ln -s ~/Dropbox/.config/mpv ~/.config
 
 brew install python3
 
-brew install --cask anaconda
-
 brew install yarn
 
 brew install ruby
