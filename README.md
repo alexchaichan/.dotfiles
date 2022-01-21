@@ -1,3 +1,6 @@
+# setup a fresh mac(book)
+
+```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 brew install zsh
@@ -125,10 +128,11 @@ brew install --cask hush
 brew install --cask the-unarchiver
 
 wget https://mirror.ctan.org/systems/mac/mactex/MacTeX.pkg
+```
 
-# appstore
-csv editor
-AdBlockPro
-Amphetamine
-GetPlainText
-Chess Tactics and Strategy
+- appstore
+: csv editor
+: AdBlockPro
+: Amphetamine
+: GetPlainText
+: Chess Tactics and Strategy
