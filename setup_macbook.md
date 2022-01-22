@@ -134,6 +134,8 @@ brew install --cask zoom
 
 brew install --cask firefox
 
+brew install tmux
+
 brew install jupyterlab
 
 pip install JLDracula
