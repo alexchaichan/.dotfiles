@@ -76,7 +76,7 @@ ln -s ~/Dropbox/.config/zathura ~/.config
 ln -s ~/Dropbox/.config/rstudio ~/.config
 ln -s ~/Dropbox/.config/mpv ~/.config
 ln -s ~/Dropbox/.config/.jupyter/jupyter_qtconsole_config.py ~/.jupyter
-ln -s ~/Dropbox/.config/ranger/rc.conf ~/.config/ranger
+ln -s ~/Dropbox/.config/ranger ~/.config
 
 brew install python3
 
