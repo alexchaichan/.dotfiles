@@ -131,6 +131,16 @@ brew install w3m
 
 brew install --cask qutebrowser
 
+brew install qt
+
+pip3 install qutebrowser
+
+git clone https://github.com/qutebrowser/qutebrowser.git
+
+cd qutebrowser
+
+python3 scripts/mkvenv.py
+
 brew install mutt
 
 brew install feh
