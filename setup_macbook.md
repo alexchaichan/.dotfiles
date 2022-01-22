@@ -68,7 +68,6 @@ client_secret: 3805771996264c708f4257fc133f5f0a
 device_id: 75a25c2be83fdfa0bb221b04cf3a4525e9f1203a
 port: 8888' >> ~/.config/spotify-tui/client.yml
 
-
 ln -s ~/Dropbox/.config/.mutt ~/
 ln -s ~/Dropbox/.config/.qutebrowser ~/
 ln -s ~/Dropbox/.config/.w3m ~/
@@ -77,6 +76,7 @@ ln -s ~/Dropbox/.config/zathura ~/.config
 ln -s ~/Dropbox/.config/rstudio ~/.config
 ln -s ~/Dropbox/.config/mpv ~/.config
 ln -s ~/Dropbox/.config/.jupyter/jupyter_qtconsole_config.py ~/.jupyter
+ln -s ~/Dropbox/.config/ranger/rc.conf ~/.config/ranger
 
 brew install python3
 
@@ -85,6 +85,8 @@ brew install yarn
 brew install ruby
 
 brew install --cask r
+
+brew install --cask xquartz
 
 brew install spotify-tui
 
@@ -98,7 +100,9 @@ brew install --cask qutebrowser
 
 brew install mutt
 
-brew install mutt
+brew install feh
+
+brew install ranger
 
 brew install zathura
 
@@ -121,6 +125,10 @@ mkdir -p $(brew --prefix zathura)/lib/zathura
 ln -s $(brew --prefix zathura-pdf-poppler)/libpdf-poppler.dylib $(brew --prefix zathura)/lib/zathura/libpdf-poppler.dylib
 
 brew install --cask mpv
+
+brew install youtube-dl
+
+brew install mps-youtube
 
 brew install --cask zoom
 
