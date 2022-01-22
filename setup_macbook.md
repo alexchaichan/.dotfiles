@@ -73,6 +73,8 @@ mkdir .config/spotifyd
 
 cp ~/Dropbox/.config/spotifyd/spotifyd.conf ~/.config/spotifyd
 
+cp ~/Dropbox/.config/.cache/spotifyd ~/.cache/
+
 echo '<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -97,7 +99,6 @@ echo '<?xml version="1.0" encoding="UTF-8"?>
 sudo launchctl load -w /Library/LaunchDaemons/rustlang.spotifyd.plist
 sudo launchctl start /Library/LaunchDaemons/rustlang.spotifyd.plist
 
-
 ln -s ~/Dropbox/.config/.mutt ~/
 ln -s ~/Dropbox/.config/.qutebrowser ~/
 ln -s ~/Dropbox/.config/.w3m ~/
@@ -109,7 +110,6 @@ ln -s ~/Dropbox/.config/.jupyter/jupyter_qtconsole_config.py ~/.jupyter
 ln -s ~/Dropbox/.config/ranger ~/.config
 ln -s ~/Dropbox/.config/spotify-tui/config.yml ~/.config/spotify-tui
 ln -s ~/Dropbox/.config/spotify-tui/client.yml ~/.config/spotify-tui
-
 
 brew install python3
 
@@ -185,7 +185,6 @@ brew install --cask the-unarchiver
 
 wget https://mirror.ctan.org/systems/mac/mactex/MacTeX.pkg
 ```
-
 ___
 
 ## turn off all animations
@@ -263,7 +262,6 @@ defaults delete com.apple.Mail DisableSendAnimations
 defaults delete com.apple.Mail DisableReplyAnimations
 ```
 ___
-
 
 ## neovim plugins
 
