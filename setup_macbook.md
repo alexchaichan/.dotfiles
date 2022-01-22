@@ -286,6 +286,11 @@ ___
 
 ___
 
+## install r packages
+
+` install.packages(c("tidyverse", "languageserver", "DescTools", "komaletter", "lubridate", "data.table"))`
+___
+
 ## appstore
 
 - csv editor
