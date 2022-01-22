@@ -68,6 +68,11 @@ client_secret: 3805771996264c708f4257fc133f5f0a
 device_id: 75a25c2be83fdfa0bb221b04cf3a4525e9f1203a
 port: 8888' >> ~/.config/spotify-tui/client.yml
 
+mkdir .config/spotify-tui
+mkdir .config/spotifyd
+
+cp ~/Dropbox/.config/spotifyd/spotifyd.conf ~/.config/spotifyd
+
 ln -s ~/Dropbox/.config/.mutt ~/
 ln -s ~/Dropbox/.config/.qutebrowser ~/
 ln -s ~/Dropbox/.config/.w3m ~/
@@ -77,6 +82,9 @@ ln -s ~/Dropbox/.config/rstudio ~/.config
 ln -s ~/Dropbox/.config/mpv ~/.config
 ln -s ~/Dropbox/.config/.jupyter/jupyter_qtconsole_config.py ~/.jupyter
 ln -s ~/Dropbox/.config/ranger ~/.config
+ln -s ~/Dropbox/.config/spotify-tui/config.yml ~/.config/spotify-tui
+ln -s ~/Dropbox/.config/spotify-tui/client.yml ~/.config/spotify-tui
+
 
 brew install python3
 
