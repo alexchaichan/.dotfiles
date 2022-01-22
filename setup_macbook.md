@@ -23,11 +23,11 @@ brew install --cask iterm2
 
 brew install --cask dropbox
 
-echo source ~/Dropbox/.config/zsh/.zshrc >> ~/.zshrc
+echo 'source ~/Dropbox/.config/zsh/.zshrc' >> ~/.zshrc
 
 mkdir ~/.config/nvim
 
-echo source ~/Dropbox/.config/nvim/init.vim >> ~/.config/nvim/init.vim
+echo 'source ~/Dropbox/.config/nvim/init.vim' >> ~/.config/nvim/init.vim
 
 echo '{
   "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "javascript", "graphql", "html", "yaml",  "json", "python"],
@@ -45,7 +45,7 @@ echo '{
 }' >> ~/.config/nvim/coc-settings.json
 
 mkdir ~/.config/nvim/autoload
-echo source ~/Dropbox/.config/nvim/autoload/plug.vim >> ~/.config/nvim/autoload/plug.vim
+echo 'source ~/Dropbox/.config/nvim/autoload/plug.vim' >> ~/.config/nvim/autoload/plug.vim
 
 mkdir ~/.config/spotifyd
 echo '[global]
@@ -72,6 +72,31 @@ mkdir .config/spotify-tui
 mkdir .config/spotifyd
 
 cp ~/Dropbox/.config/spotifyd/spotifyd.conf ~/.config/spotifyd
+
+echo '<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>Label</key>
+        <string>rustlang.spotifyd</string>
+        <key>ProgramArguments</key>
+        <array>
+            <string>/usr/local/bin/spotifyd</string>
+            <string>--config-path=/users/user/.config/spotifyd/spotifyd.conf</string>
+            <string>--no-daemon</string>
+        </array>
+        <key>UserName</key>
+        <string>user</string>
+        <key>KeepAlive</key>
+        <true/>
+        <key>ThrottleInterval</key>
+        <integer>30</integer>
+    </dict>
+</plist>' >>  /Library/LaunchDaemons/rustlang.spotifyd.plist
+
+sudo launchctl load -w /Library/LaunchDaemons/rustlang.spotifyd.plist
+sudo launchctl start /Library/LaunchDaemons/rustlang.spotifyd.plist
+
 
 ln -s ~/Dropbox/.config/.mutt ~/
 ln -s ~/Dropbox/.config/.qutebrowser ~/
@@ -143,6 +168,8 @@ brew install --cask zoom
 brew install --cask firefox
 
 brew install jupyterlab
+
+pip install qtconsole # pip3 install qtconsole pip3 install --user qtconsole  
 
 pip install JLDracula
 
