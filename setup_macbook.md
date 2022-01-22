@@ -111,24 +111,32 @@ ln -s ~/Dropbox/.config/ranger ~/.config
 ln -s ~/Dropbox/.config/spotify-tui/config.yml ~/.config/spotify-tui
 ln -s ~/Dropbox/.config/spotify-tui/client.yml ~/.config/spotify-tui
 
+#python
 brew install python3
 
+# yarn
 brew install yarn
 
+# ruby
 brew install ruby
 
+# R
 brew install --cask r
 
+# xquartz for r studio
 brew install --cask xquartz
 
+# spotify
 brew install spotify-tui
 
 brew install spotifyd
 
 brew install calcurse
 
+#terminal browser
 brew install w3m
 
+#qutebrowser
 brew install --cask qutebrowser
 
 brew install qt
@@ -141,12 +149,16 @@ cd qutebrowser
 
 python3 scripts/mkvenv.py
 
+#mail client
 brew install mutt
 
+#image viewer
 brew install feh
 
+# ranger file manager
 brew install ranger
 
+# zathura pdf viewer
 brew install zathura
 
 brew install zathura-pdf-poppler
@@ -167,33 +179,49 @@ mkdir -p $(brew --prefix zathura)/lib/zathura
 
 ln -s $(brew --prefix zathura-pdf-poppler)/libpdf-poppler.dylib $(brew --prefix zathura)/lib/zathura/libpdf-poppler.dylib
 
+# video setup
 brew install --cask mpv
 
 brew install youtube-dl
 
+# zoom
 brew install mps-youtube
 
 brew install --cask zoom
 
+# feuerfuchs
 brew install --cask firefox
 
+# jupter
 brew install jupyterlab
 
 pip install qtconsole # pip3 install qtconsole pip3 install --user qtconsole  
 
 pip install JLDracula
 
+# rstudio
 brew install --cask rstudio
 
+# prevent open music app
 brew install --cask notunes
 
+# mospowerpoint
 brew install --cask microsoft-powerpoint
 
+#hush. coockieblocker
 brew install --cask hush
 
+# anarchiver
 brew install --cask the-unarchiver
 
+# latex
 wget https://mirror.ctan.org/systems/mac/mactex/MacTeX.pkg
+
+# font `source code pro`
+curl -LO https://github.com/adobe-fonts/source-code-pro/archive/release.zip
+
+unzip release.zip
+ cp -a source-code-pro-release/TTF/* ~/Library/Fonts
 ```
 ___
 
