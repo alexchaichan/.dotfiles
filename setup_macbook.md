@@ -110,6 +110,7 @@ ln -s ~/Dropbox/.config/.jupyter/jupyter_qtconsole_config.py ~/.jupyter
 ln -s ~/Dropbox/.config/ranger ~/.config
 ln -s ~/Dropbox/.config/spotify-tui/config.yml ~/.config/spotify-tui
 ln -s ~/Dropbox/.config/spotify-tui/client.yml ~/.config/spotify-tui
+ln -s ~/Dropbox/.config/neofetch ~/.config
 
 #python
 brew install python3
@@ -157,6 +158,12 @@ brew install mutt
 
 #image viewer
 brew install feh
+
+#neofetch shows systeminfo
+brew install neofetch
+
+# activitymonitor
+brew install htop
 
 # ranger file manager
 brew install ranger
