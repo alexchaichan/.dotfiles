@@ -167,6 +167,7 @@ brew install htop
 
 # ranger file manager
 brew install ranger
+brew install tree
 
 # zathura pdf viewer
 brew install zathura
