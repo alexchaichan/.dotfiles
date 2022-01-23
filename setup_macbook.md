@@ -136,9 +136,12 @@ brew install calcurse
 #terminal browser
 brew install w3m
 
-#qutebrowser
-brew install --cask qutebrowser
+###qutebrowser
+## .app
+#wget https://github.com/qutebrowser/qutebrowser/releases/download/v2.4.0/qutebrowser-2.4.0.dmg
+#brew install --cask qutebrowser # funktioniert evtl. nicht
 
+## virtual einvironment
 brew install qt
 
 pip3 install qutebrowser
