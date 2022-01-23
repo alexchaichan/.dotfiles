@@ -134,6 +134,10 @@ brew install spotifyd
 
 brew install calcurse
 
+brew install htop
+
+brew install newsboat
+
 #terminal browser
 brew install w3m
 
