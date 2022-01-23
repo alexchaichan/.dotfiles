@@ -56,7 +56,7 @@ mixer = "PCM"
 volume_controller = "softvol"
 device_name = "spotify"
 bitrate = 160
-cache_path = "~/.config/spotifyd/cache"
+cache_path = "~/.cahe/spotifyd"
 volume_normalisation = true
 zeroconf_port = 1234
 ' >> ~/.config/spotifyd/spotifyd.conf
