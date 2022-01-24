@@ -9,6 +9,22 @@ killall Finder
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+brew install --cask dropbox
+
+ln -s ~/Dropbox/.config/.mutt ~/
+ln -s ~/Dropbox/.config/.qutebrowser ~/
+ln -s ~/Dropbox/.config/.w3m ~/
+ln -s ~/Dropbox/.config/calcurse ~/.config
+ln -s ~/Dropbox/.config/zathura ~/.config
+ln -s ~/Dropbox/.config/rstudio ~/.config
+ln -s ~/Dropbox/.config/mpv ~/.config
+ln -s ~/Dropbox/.config/.jupyter/jupyter_qtconsole_config.py ~/.jupyter
+ln -s ~/Dropbox/.config/ranger ~/.config
+ln -s ~/Dropbox/.config/spotify-tui/config.yml ~/.config/spotify-tui
+ln -s ~/Dropbox/.config/spotify-tui/client.yml ~/.config/spotify-tui
+ln -s ~/Dropbox/.config/neofetch ~/.config
+ln -s /Users/user/Dropbox/.config/.wegorc /Users/user
+
 brew install zsh
 
 zsh
@@ -20,8 +36,6 @@ brew install cask
 brew install git
 
 brew install --cask iterm2
-
-brew install --cask dropbox
 
 echo 'source ~/Dropbox/.config/zsh/.zshrc' >> ~/.zshrc
 
@@ -98,19 +112,6 @@ echo '<?xml version="1.0" encoding="UTF-8"?>
 
 sudo launchctl load -w /Library/LaunchDaemons/rustlang.spotifyd.plist
 sudo launchctl start /Library/LaunchDaemons/rustlang.spotifyd.plist
-
-ln -s ~/Dropbox/.config/.mutt ~/
-ln -s ~/Dropbox/.config/.qutebrowser ~/
-ln -s ~/Dropbox/.config/.w3m ~/
-ln -s ~/Dropbox/.config/calcurse ~/.config
-ln -s ~/Dropbox/.config/zathura ~/.config
-ln -s ~/Dropbox/.config/rstudio ~/.config
-ln -s ~/Dropbox/.config/mpv ~/.config
-ln -s ~/Dropbox/.config/.jupyter/jupyter_qtconsole_config.py ~/.jupyter
-ln -s ~/Dropbox/.config/ranger ~/.config
-ln -s ~/Dropbox/.config/spotify-tui/config.yml ~/.config/spotify-tui
-ln -s ~/Dropbox/.config/spotify-tui/client.yml ~/.config/spotify-tui
-ln -s ~/Dropbox/.config/neofetch ~/.config
 
 #python
 brew install python3
