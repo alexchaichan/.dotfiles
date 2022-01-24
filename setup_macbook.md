@@ -227,7 +227,7 @@ brew install --cask microsoft-powerpoint
 brew install --cask hush
 
 # anarchiver
-brew install --cask the-unarchiver
+#brew install --cask the-unarchiver #may not needed
 
 # latex
 wget https://mirror.ctan.org/systems/mac/mactex/MacTeX.pkg
