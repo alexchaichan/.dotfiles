@@ -118,6 +118,9 @@ brew install python3
 # yarn
 brew install yarn
 
+# go
+brew install go
+
 # ruby
 brew install ruby
 
