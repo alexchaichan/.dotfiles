@@ -23,7 +23,6 @@ ln -s ~/Dropbox/.config/ranger ~/.config
 ln -s ~/Dropbox/.config/spotify-tui/config.yml ~/.config/spotify-tui
 ln -s ~/Dropbox/.config/spotify-tui/client.yml ~/.config/spotify-tui
 ln -s ~/Dropbox/.config/neofetch ~/.config
-ln -s ~/Dropbox/.config/.wegorc /~
 
 brew install zsh
 
