@@ -345,6 +345,12 @@ ___
 ` install.packages(c("tidyverse", "languageserver", "DescTools", "komaletter", "lubridate", "data.table", "psych", "summarytools"))`
 ___
 
+remove standard hotkey `cmd+<space>` and set iTerm settings to Hotkey Profile
+
+- window size etc.
+- 
+___
+
 ## appstore
 
 - csv editor
