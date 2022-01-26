@@ -30,7 +30,8 @@ ln -s ~/Dropbox/.config/ranger ~/.config
 ln -s ~/Dropbox/.config/spotify-tui/config.yml ~/.config/spotify-tui
 ln -s ~/Dropbox/.config/spotify-tui/client.yml ~/.config/spotify-tui
 ln -s ~/Dropbox/.config/neofetch ~/.config
-ln -s ~/Dropbox/.config/alacrity/alacritty.yml ~/
+ln -s ~/Dropbox/.config/alacrity/alacritty.yml ~/.config
+ln -s ~/Dropbox/.config/.tmux.conf ~/
 
 brew install zsh
 
