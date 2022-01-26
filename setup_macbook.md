@@ -7,7 +7,6 @@ defaults write com.apple.Finder AppleShowAllFiles true
 
 killall Finder
 
-
 defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
@@ -31,6 +30,7 @@ ln -s ~/Dropbox/.config/ranger ~/.config
 ln -s ~/Dropbox/.config/spotify-tui/config.yml ~/.config/spotify-tui
 ln -s ~/Dropbox/.config/spotify-tui/client.yml ~/.config/spotify-tui
 ln -s ~/Dropbox/.config/neofetch ~/.config
+ln -s ~/Dropbox/.config/alacrity/alacritty.yml ~/
 
 brew install zsh
 
@@ -41,8 +41,6 @@ brew install neovim
 brew install cask
 
 brew install git
-
-brew install --cask iterm2
 
 echo 'source ~/Dropbox/.config/zsh/.zshrc' >> ~/.zshrc
 
@@ -67,6 +65,14 @@ echo '{
 
 mkdir ~/.config/nvim/autoload
 echo 'source ~/Dropbox/.config/nvim/autoload/plug.vim' >> ~/.config/nvim/autoload/plug.vim
+
+#new terminal <3
+brew install --cask alacritty
+
+brew install tmux
+
+brew install tpm
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 mkdir ~/.config/spotifyd
 echo '[global]
