@@ -335,6 +335,14 @@ defaults delete com.apple.finder DisableAllAnimations
 defaults delete com.apple.Mail DisableSendAnimations
 defaults delete com.apple.Mail DisableReplyAnimations
 ```
+
+### unlink media buttons
+
+launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist
+
+#launchctl load -w /System/Library/LaunchAgents/com.apple.rcd.plist  # undo
+
+
 ___
 
 ## neovim plugins
