@@ -360,11 +360,11 @@ ___
 ` install.packages(c("tidyverse", "languageserver", "DescTools", "komaletter", "lubridate", "data.table", "psych", "summarytools"))`
 ___
 
-remove standard hotkey `cmd+<space>` and set iTerm settings to Hotkey Profile
+remove standard hotkey `cmd+<space>` and 
 
-- window size etc.
-- 
-___
+`cp ~/Dropbox/.config ~/Library/Services`
+
+
 
 ## appstore
 
