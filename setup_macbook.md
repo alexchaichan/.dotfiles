@@ -67,9 +67,6 @@ echo '{
 mkdir ~/.config/nvim/autoload
 echo 'source ~/Dropbox/.config/nvim/autoload/plug.vim' >> ~/.config/nvim/autoload/plug.vim
 
-old terminal
-brew install --cask iterm2
-
 #new terminal <3
 brew install --cask alacritty
 
