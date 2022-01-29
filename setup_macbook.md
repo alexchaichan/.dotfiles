@@ -215,6 +215,11 @@ ln -s $(brew --prefix zathura-pdf-poppler)/libpdf-poppler.dylib $(brew --prefix 
 # video setup
 brew install --cask mpv
 
+#music player
+brew install moc
+brew install berkeley-db
+brew install jack
+
 brew install youtube-dl
 
 # zoom
