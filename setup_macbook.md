@@ -67,16 +67,14 @@ echo '{
 mkdir ~/.config/nvim/autoload
 echo 'source ~/Dropbox/.config/nvim/autoload/plug.vim' >> ~/.config/nvim/autoload/plug.vim
 
-# new terminal <3
+#new terminal <3
 brew install --cask alacritty
 
-# terminal multiplexer
 brew install tmux
+
 brew install tpm
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-
-# spotify
 mkdir ~/.config/spotifyd
 echo '[global]
 username = "USERNAME"
@@ -156,8 +154,6 @@ brew install calcurse
 
 brew install htop
 
-brew install bat
-
 brew install newsboat
 
 #terminal browser
@@ -219,7 +215,6 @@ ln -s $(brew --prefix zathura-pdf-poppler)/libpdf-poppler.dylib $(brew --prefix 
 # video setup
 brew install --cask mpv
 brew install youtube-dl
-
 
 #music player
 brew install moc
@@ -388,6 +383,11 @@ ___
 
 
 ## `node.js` & `npm`
+
+```
+# nerdfont
+npm install git://github.com/adobe-fonts/source-code-pro.git#release
+```
 
 ___
 
