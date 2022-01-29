@@ -67,14 +67,16 @@ echo '{
 mkdir ~/.config/nvim/autoload
 echo 'source ~/Dropbox/.config/nvim/autoload/plug.vim' >> ~/.config/nvim/autoload/plug.vim
 
-#new terminal <3
+# new terminal <3
 brew install --cask alacritty
 
+# terminal multiplexer
 brew install tmux
-
 brew install tpm
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
+
+# spotify
 mkdir ~/.config/spotifyd
 echo '[global]
 username = "USERNAME"
@@ -153,6 +155,8 @@ brew install spotifyd
 brew install calcurse
 
 brew install htop
+
+brew install bat
 
 brew install newsboat
 
