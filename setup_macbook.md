@@ -266,26 +266,22 @@ pip install JLDracula
 # rstudio
 brew install --cask rstudio
 
-# prevent open music app
-brew install --cask notunes
-
 # mospowerpoint
 brew install --cask microsoft-powerpoint
 
 #hush. coockieblocker
 brew install --cask hush
 
-# anarchiver
-#brew install --cask the-unarchiver #may not needed
-
 # latex
 wget https://mirror.ctan.org/systems/mac/mactex/MacTeX.pkg
 
 # font `source code pro`
 curl -LO https://github.com/adobe-fonts/source-code-pro/archive/release.zip
-
 unzip release.zip
- cp -a source-code-pro-release/TTF/* ~/Library/Fonts
+cp -a source-code-pro-release/TTF/* ~/Library/Fonts
+
+brew tap homebrew/cask-fonts
+brew install --cask font-hack-nerd-font
 ```
 ___
 
@@ -384,10 +380,6 @@ ___
 
 ## `node.js` & `npm`
 
-```
-# nerdfont
-npm install git://github.com/adobe-fonts/source-code-pro.git#release
-```
 
 ___
 
