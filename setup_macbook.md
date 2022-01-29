@@ -224,6 +224,31 @@ brew install jack
 brew install libmad
 brew install libid3tag
 
+ echo '<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>org.jackaudio.jackd</string>
+    <key>WorkingDirectory</key>
+    <string>/Users/aziz/</string>
+    <key>ProgramArguments</key>
+    <array>
+      <string>/usr/local/Cellar/jack/1.9.7/bin/jackd</string>
+      <string>-d</string>
+      <string>coreaudio</string>
+    </array>
+    <key>EnableGlobbing</key>
+    <true/>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+  </dict>
+</plist>' >> ~/Library/LaunchAgents/org.jackaudio.jackd.plist
+
+launchctl load ~/Library/LaunchAgents/org.jackaudio.jackd.plist
+
 # zoom
 brew install mps-youtube
 
