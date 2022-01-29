@@ -390,7 +390,7 @@ ___
 
 remove standard hotkey `cmd+<space>` and 
 
-`cp ~/Dropbox/.config ~/Library/Services`
+`cp ~/Dropbox/.config/open_iterm.workflow ~/Library/Services`
 
 
 
