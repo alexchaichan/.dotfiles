@@ -214,13 +214,15 @@ ln -s $(brew --prefix zathura-pdf-poppler)/libpdf-poppler.dylib $(brew --prefix 
 
 # video setup
 brew install --cask mpv
+brew install youtube-dl
+
 
 #music player
 brew install moc
 brew install berkeley-db
 brew install jack
-
-brew install youtube-dl
+brew install libmad
+brew install libid3tag
 
 # zoom
 brew install mps-youtube
