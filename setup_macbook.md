@@ -375,6 +375,10 @@ ___
 
 ## `node.js` & `npm`
 
+```
+# typewritten
+npm install -g typewritten
+```
 
 ___
 
