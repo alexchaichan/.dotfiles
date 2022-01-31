@@ -377,7 +377,7 @@ ___
 
 ```
 # typewritten
-npm install -g typewritten
+npm install -g typewritten # braucht man nicht wenn es schon funktioniert
 ```
 
 ___
