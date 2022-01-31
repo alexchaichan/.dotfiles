@@ -16,6 +16,8 @@ defaults write NSGlobalDomain NSAutomaticTextCompletionEnabled -bool false
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+brew install cask
+
 brew install --cask dropbox
 
 ln -s ~/Dropbox/.config/.mutt ~/
@@ -38,8 +40,6 @@ brew install zsh
 zsh
 
 brew install neovim
-
-brew install cask
 
 brew install git
 
