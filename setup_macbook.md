@@ -275,13 +275,8 @@ brew install --cask hush
 # latex
 wget https://mirror.ctan.org/systems/mac/mactex/MacTeX.pkg
 
-# font `source code pro`
-curl -LO https://github.com/adobe-fonts/source-code-pro/archive/release.zip
-unzip release.zip
-cp -a source-code-pro-release/TTF/* ~/Library/Fonts
-
-brew tap homebrew/cask-fonts
-brew install --cask font-hack-nerd-font
+# nerd font `sauce code pro`
+cp ~/Dropbox/.config/'Sauce Code Pro Nerd Font Complete.ttf' ~/Library/Fonts
 ```
 ___
 
