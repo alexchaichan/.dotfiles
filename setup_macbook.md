@@ -43,9 +43,7 @@ brew install neovim
 
 brew install git
 
-echo 'source ~/Dropbox/.config/zsh/.zshrc
-autoload -U promptinit; promptinit
-prompt typewritten' >> ~/.zshrc
+echo 'source ~/Dropbox/.config/zsh/.zshrc' >> ~/.zshrc
 
 mkdir ~/.config/nvim
 
