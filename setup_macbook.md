@@ -375,10 +375,6 @@ ___
 
 ## `node.js` & `npm`
 
-```
-# typewritten
-npm install -g typewritten # braucht man nicht wenn es schon funktioniert
-```
 
 ___
 
