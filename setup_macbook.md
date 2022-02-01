@@ -60,7 +60,10 @@ echo 'source ~/Dropbox/.config/nvim/autoload/plug.vim' >> ~/.config/nvim/autoloa
 brew install --cask alacritty
 
 # terminal multiplexer
+
 brew install tmux
+
+brew install reattach-to-user-namespace
 
 mkdir ~/.config/spotifyd
 echo '[global]
