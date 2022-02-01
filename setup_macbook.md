@@ -37,7 +37,7 @@ ln -s ~/Dropbox/.config/neofetch ~/.config
 ln -s ~/Dropbox/.config/alacrity/alacritty.yml ~/.config
 ln -s ~/Dropbox/.config/.tmux.conf ~/
 ln -s ~/Dropbox/.config/coc ~/.config/
-
+ln -s ~/Dropbox/.config/.git-credentials ~/
 
 brew install zsh
 
