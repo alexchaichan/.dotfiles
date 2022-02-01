@@ -368,7 +368,7 @@ ___
 
 ## install r packages
 
-` install.packages(c("tidyverse", "languageserver", "DescTools", "komaletter", "lubridate", "data.table", "psych", "summarytools"))`
+` install.packages(c("tidyverse", "languageserver", "DescTools", "komaletter", "lubridate", "data.table", "psych", "summarytools", "gt"))`
 ___
 
 remove standard hotkey `cmd+<space>` and 
