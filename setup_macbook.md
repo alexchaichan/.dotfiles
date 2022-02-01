@@ -251,6 +251,10 @@ brew install mps-youtube
 
 brew install --cask zoom
 
+#speed test
+brew tap teamookla/speedtest
+brew install speedtest --force
+
 # feuerfuchs
 brew install --cask firefox
 
