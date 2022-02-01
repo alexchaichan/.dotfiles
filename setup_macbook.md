@@ -133,7 +133,6 @@ brew install python3
 sudo easy_install pip
 sudo easy_install pip3
 
-
 # yarn
 brew install yarn
 
@@ -149,12 +148,10 @@ brew install --cask r
 # xquartz for r studio
 brew install --cask xquartz
 
-# ueberzug (image viewver)
+# required for some downloads
 echo '[build_ext]
 include_dirs=/opt/X11/include
 library_dirs=/opt/X11/lib' >> ~/.pydistutils.cfg
-
-sudo pip3 install ueberzug
 
 # spotify
 brew install spotify-tui
