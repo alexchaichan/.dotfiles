@@ -20,6 +20,8 @@ brew install cask
 
 brew install --cask dropbox
 
+ln -s ~/Dropbox/.config/nvim/coc-settings.json ~/.config/nvim
+ln -s ~/Dropbox/.config/nvim/pack ~/.config/nvim
 ln -s ~/Dropbox/.config/.mutt ~/
 ln -s ~/Dropbox/.config/.qutebrowser ~/
 ln -s ~/Dropbox/.config/.w3m ~/
@@ -49,31 +51,14 @@ mkdir ~/.config/nvim
 
 echo 'source ~/Dropbox/.config/nvim/init.vim' >> ~/.config/nvim/init.vim
 
-echo '{
-  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "javascript", "graphql", "html", "yaml",  "json", "python"],
-
-  // python config
-  //"python.linting.enabled": true,
-  //"python.linting.pylintEnabled": true,
-
-  "snippets.ultisnips.directories":
-  [
-    "UltiSnips",
-    "~/Dropbox/.config/nvim/snips"
-  ]
-
-}' >> ~/.config/nvim/coc-settings.json
-
 mkdir ~/.config/nvim/autoload
 echo 'source ~/Dropbox/.config/nvim/autoload/plug.vim' >> ~/.config/nvim/autoload/plug.vim
 
-#new terminal <3
+# alacritty terminal 
 brew install --cask alacritty
 
+# terminal multiplexer
 brew install tmux
-
-brew install tpm
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 mkdir ~/.config/spotifyd
 echo '[global]
@@ -84,7 +69,7 @@ mixer = "PCM"
 volume_controller = "softvol"
 device_name = "spotify"
 bitrate = 160
-cache_path = "~/.cahe/spotifyd"
+cache_path = "Users/user/.cahe/spotifyd"
 volume_normalisation = true
 zeroconf_port = 1234
 ' >> ~/.config/spotifyd/spotifyd.conf
@@ -160,14 +145,12 @@ brew install spotifyd
 
 brew install calcurse
 
-brew install htop
-
 brew install newsboat
 
 #terminal browser
 brew install w3m
 
-###qutebrowser
+### qutebrowser
 ## .app
 #wget https://github.com/qutebrowser/qutebrowser/releases/download/v2.4.0/qutebrowser-2.4.0.dmg
 #brew install --cask qutebrowser # funktioniert evtl. nicht
@@ -183,13 +166,13 @@ cd qutebrowser
 
 python3 scripts/mkvenv.py
 
-#mail client
+# mail client
 brew install mutt
 
-#image viewer
+# image viewer
 brew install feh
 
-#neofetch shows systeminfo
+# neofetch shows systeminfo
 brew install neofetch
 
 # activitymonitor
@@ -238,7 +221,7 @@ brew install libid3tag
     <key>Label</key>
     <string>org.jackaudio.jackd</string>
     <key>WorkingDirectory</key>
-    <string>/Users/aziz/</string>
+    <string>/Users/user/</string>
     <key>ProgramArguments</key>
     <array>
       <string>/usr/local/Cellar/jack/1.9.7/bin/jackd</string>
@@ -266,18 +249,17 @@ brew install --cask firefox
 
 # jupter
 brew install jupyterlab
+pip install JLDracula
 
 pip install qtconsole # pip3 install qtconsole pip3 install --user qtconsole  
-
-pip install JLDracula
 
 # rstudio
 brew install --cask rstudio
 
-# mospowerpoint
+# mspowerpoint
 brew install --cask microsoft-powerpoint
 
-#hush. coockieblocker
+#hush coockieblocker
 brew install --cask hush
 
 # latex
@@ -372,13 +354,6 @@ launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist
 
 ___
 
-## neovim plugins
-
-### coc
-
-`:CocInstall coc-json coc-pairs coc-r-lsp coc-snippets coc-tsserver coc-vimlsp`
-
-___
 
 
 ## `node.js` & `npm`
