@@ -395,7 +395,9 @@ remove standard hotkey `cmd+<space>` and
 
 `cp ~/Dropbox/.config/open_iterm.workflow ~/Library/Services`
 
+##
 
+import `dracula.terminal` to standard terminal
 
 ## appstore
 
