@@ -65,6 +65,8 @@ brew install tmux
 
 brew install reattach-to-user-namespace
 
+# spotify credentials
+
 mkdir ~/.config/spotifyd
 echo '[global]
 username = "USERNAME"
