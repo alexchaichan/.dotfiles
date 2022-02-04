@@ -41,6 +41,7 @@ ln -s ~/Dropbox/.config/.git-credentials ~/
 ln -s ~/Dropbox/.config/khard ~/.config
 ln -s ~/Dropbox/.config/vdirsyncer ~/.config
 ln -s ~/Dropbox/.config/khal ~/.config
+ln -s ~/Dropbox/.config/htop ~/.config
 
 # zshell
 brew install zsh
