@@ -39,6 +39,8 @@ ln -s ~/Dropbox/.config/.tmux.conf ~/
 ln -s ~/Dropbox/.config/coc ~/.config
 ln -s ~/Dropbox/.config/.git-credentials ~/
 ln -s ~/Dropbox/.config/khard ~/.config
+ln -s ~/Dropbox/.config/vdirsyncer ~/.config
+ln -s ~/Dropbox/.config/khal ~/.config
 
 # zshell
 brew install zsh
@@ -139,7 +141,8 @@ brew install spotify-tui
 brew install spotifyd
 
 # calendar
-brew install calcurse
+brew install vdirsyncer
+brew install khal
 
 # rss reader
 brew install newsboat
