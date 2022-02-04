@@ -21,7 +21,8 @@ brew install cask
 brew install --cask dropbox
 
 ln -s ~/Dropbox/.config/nvim/ ~/.config/
-ln -s ~/Dropbox/.config/.mutt ~/
+ln -s ~/Dropbox/.config/.mutt/.muttrc ~/
+ln -s ~/Dropbox/.config/.mutt/.mailcap ~/
 ln -s ~/Dropbox/.config/.qutebrowser ~/
 ln -s ~/Dropbox/.config/.w3m ~/
 ln -s ~/Dropbox/.config/calcurse ~/.config
@@ -39,15 +40,14 @@ ln -s ~/Dropbox/.config/coc ~/.config
 ln -s ~/Dropbox/.config/.git-credentials ~/
 ln -s ~/Dropbox/.config/khard ~/.config
 
+# zshell
 brew install zsh
-
 zsh
+echo 'source ~/Dropbox/.config/zsh/.zshrc' >> ~/.zshrc
 
 brew install neovim
 
 brew install git
-
-echo 'source ~/Dropbox/.config/zsh/.zshrc' >> ~/.zshrc
 
 # alacritty terminal 
 brew install --cask alacritty
@@ -59,7 +59,6 @@ brew install tmux
 brew install reattach-to-user-namespace
 
 # spotify credentials
-
 mkdir ~/.config/spotifyd
 echo '[global]
 username = "USERNAME"
@@ -137,11 +136,12 @@ library_dirs=/opt/X11/lib' >> ~/.pydistutils.cfg
 
 # spotify
 brew install spotify-tui
-
 brew install spotifyd
 
+# calendar
 brew install calcurse
 
+# rss reader
 brew install newsboat
 
 #terminal browser
@@ -179,12 +179,14 @@ brew install neofetch
 brew install htop
 
 # contact book
-brew install abook
 brew install khard
 
 # ranger file manager
 brew install ranger
 brew install tree
+
+# markdown reader
+brew install glow
 
 # zathura pdf viewer
 brew install zathura
