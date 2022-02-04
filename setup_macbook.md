@@ -20,8 +20,7 @@ brew install cask
 
 brew install --cask dropbox
 
-ln -s ~/Dropbox/.config/nvim/coc-settings.json ~/.config/nvim
-ln -s ~/Dropbox/.config/nvim/pack ~/.config/nvim
+ln -s ~/Dropbox/.config/nvim/ ~/.config/
 ln -s ~/Dropbox/.config/.mutt ~/
 ln -s ~/Dropbox/.config/.qutebrowser ~/
 ln -s ~/Dropbox/.config/.w3m ~/
@@ -36,8 +35,9 @@ ln -s ~/Dropbox/.config/spotify-tui/client.yml ~/.config/spotify-tui
 ln -s ~/Dropbox/.config/neofetch ~/.config
 ln -s ~/Dropbox/.config/alacrity/alacritty.yml ~/.config
 ln -s ~/Dropbox/.config/.tmux.conf ~/
-ln -s ~/Dropbox/.config/coc ~/.config/
+ln -s ~/Dropbox/.config/coc ~/.config
 ln -s ~/Dropbox/.config/.git-credentials ~/
+ln -s ~/Dropbox/.config/khard ~/.config
 
 brew install zsh
 
@@ -48,13 +48,6 @@ brew install neovim
 brew install git
 
 echo 'source ~/Dropbox/.config/zsh/.zshrc' >> ~/.zshrc
-
-mkdir ~/.config/nvim
-
-echo 'source ~/Dropbox/.config/nvim/init.vim' >> ~/.config/nvim/init.vim
-
-mkdir ~/.config/nvim/autoload
-echo 'source ~/Dropbox/.config/nvim/autoload/plug.vim' >> ~/.config/nvim/autoload/plug.vim
 
 # alacritty terminal 
 brew install --cask alacritty
@@ -87,9 +80,6 @@ client_id: b6a924a75edc4213adee7365aea7b318
 client_secret: 3805771996264c708f4257fc133f5f0a
 device_id: 75a25c2be83fdfa0bb221b04cf3a4525e9f1203a
 port: 8888' >> ~/.config/spotify-tui/client.yml
-
-mkdir .config/spotify-tui
-mkdir .config/spotifyd
 
 cp ~/Dropbox/.config/spotifyd/spotifyd.conf ~/.config/spotifyd
 
@@ -176,8 +166,8 @@ python3 scripts/mkvenv.py
 # mail client
 brew install mutt
 
-brew install msmtp
-brew install offlineimap
+#brew install msmtp
+#brew install offlineimap
 
 # image viewer
 brew install feh
@@ -187,6 +177,10 @@ brew install neofetch
 
 # activitymonitor
 brew install htop
+
+# contact book
+brew install abook
+brew install khard
 
 # ranger file manager
 brew install ranger
