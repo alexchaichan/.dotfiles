@@ -144,6 +144,8 @@ brew install spotifyd
 # calendar
 brew install vdirsyncer
 brew install khal
+#brew install calcurse
+
 
 # rss reader
 brew install newsboat
