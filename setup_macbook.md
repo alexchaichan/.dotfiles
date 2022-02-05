@@ -375,7 +375,17 @@ ___
 
 ## `node.js` & `npm`
 
+___
 
+#### Cronjobs 
+
+1. Open preferences and go to “Security & Privacy” -> “Privacy”
+2. Scroll down to “Full Disk Access” on the left side and select it.
+3. Hit the unlock icon and enter your password
+4. Hit the “+” sign to add an application
+5. Type “command+shift+G” to bring up the got to file dialog box (don’t seem able to navigate the /usr directory)
+6. Enter the full path name to the application (/usr/sbin/cron) and click on “Go”
+7. Click “Open” It should show up in the list with a check mark next to it. I tried it with a simple csh script in cron and it worked
 ___
 
 ## install r packages
