@@ -172,9 +172,9 @@ python3 scripts/mkvenv.py
 # mail client
 brew install mutt
 brew install isync
+brew install msmtp
 
-#brew install msmtp # not required
-#brew install offlineimap # not required
+#brew install offlineimap # not required!
 
 # image viewer
 brew install feh
