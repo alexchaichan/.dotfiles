@@ -48,6 +48,9 @@ brew install zsh
 zsh
 echo 'source ~/Dropbox/.config/zsh/.zshrc' >> ~/.zshrc
 
+# bash 
+brew install bash
+
 brew install neovim
 
 brew install git
@@ -190,9 +193,6 @@ brew install htop
 
 # contact book
 brew install khard
-
-# bash 
-brew install bash
 
 # ranger file manager
 brew install ranger
