@@ -191,6 +191,9 @@ brew install htop
 # contact book
 brew install khard
 
+# bash 
+brew install bash
+
 # ranger file manager
 brew install ranger
 brew install tree
