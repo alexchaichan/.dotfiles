@@ -146,9 +146,6 @@ brew install vdirsyncer
 brew install khal
 #brew install calcurse
 
-# tmux plugins
-brew install abhinav/tap/tmux-fastcopy
-
 # urlview
 brew install urlview
 brew install extract_url
