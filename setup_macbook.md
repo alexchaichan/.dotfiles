@@ -146,6 +146,9 @@ brew install vdirsyncer
 brew install khal
 #brew install calcurse
 
+# urlview
+brew install urlview
+brew install extract_url
 
 # rss reader
 brew install newsboat
