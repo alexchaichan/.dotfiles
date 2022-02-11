@@ -13,6 +13,9 @@ timedatectl set-ntp true
 - creating partitions
 
 ```
+#0. Male free
+cfdisk /dev/sdc
+
 #1. boot partition
 
 gdisk /dev/sdc
