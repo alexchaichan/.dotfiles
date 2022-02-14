@@ -254,14 +254,10 @@ GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet nomodeset"
 - install packages
 
 ```
-pacman -S konsole firefox
+pacman -S neovim w3m tmux htop neofetch broadcom-wl-dkms
 
 #accept all defaults
 ```
-
-`exit`
-
-`reboot`
 
 
 
