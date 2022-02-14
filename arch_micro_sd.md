@@ -13,13 +13,14 @@ timedatectl set-ntp true
 - creating partitions
 
 ```
-#0. Male free
+#0. Make free
 cfdisk /dev/sdc
 
 #1. boot partition
 
 gdisk /dev/sdc
 
+n # new partition
 
 #1. default 
 #2. 
