@@ -6,6 +6,8 @@
 - setup disk
 
 ```
+lsblk
+
 fdisk /dev/sda
 
 # check disk (must be empty)
