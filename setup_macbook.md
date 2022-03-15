@@ -1,10 +1,14 @@
 # setup a fresh mac(book)
 
-## 1.st of all
 
 ```
 defaults write com.apple.Finder AppleShowAllFiles true
+defaults write com.apple.dock workspaces-auto-swoosh -bool NO
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+defaults write com.apple.screencapture disable-shadow -bool TRUE
 
+killall SystemUIServer
+killall Dock
 killall Finder
 
 defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
@@ -20,6 +24,7 @@ brew install cask
 
 brew install --cask dropbox
 
+ln -s ~/Dropbox/.config/zsh/.zshrc ~/
 ln -s ~/Dropbox/.config/nvim/ ~/.config/
 ln -s ~/Dropbox/.config/.mutt/.muttrc ~/
 ln -s ~/Dropbox/.config/.mutt/.mailcap ~/
@@ -29,67 +34,73 @@ ln -s ~/Dropbox/.config/calcurse ~/.config
 ln -s ~/Dropbox/.config/zathura ~/.config
 ln -s ~/Dropbox/.config/rstudio ~/.config
 ln -s ~/Dropbox/.config/mpv ~/.config
-ln -s ~/Dropbox/.config/.jupyter/jupyter_qtconsole_config.py ~/.jupyter
 ln -s ~/Dropbox/.config/ranger ~/.config
-ln -s ~/Dropbox/.config/spotify-tui/config.yml ~/.config/spotify-tui
-ln -s ~/Dropbox/.config/spotify-tui/client.yml ~/.config/spotify-tui
+ln -s ~/Dropbox/.config/spotify-tui/ ~/.config/
 ln -s ~/Dropbox/.config/neofetch ~/.config
-ln -s ~/Dropbox/.config/alacrity/alacritty.yml ~/.config
-ln -s ~/Dropbox/.config/.tmux.conf ~/
+ln -s ~/Dropbox/.config/osx/alacritty.yml ~/.config
+ln -s ~/Dropbox/.config/osx/.tmux.conf ~/
 ln -s ~/Dropbox/.config/coc ~/.config
 ln -s ~/Dropbox/.config/.git-credentials ~/
 ln -s ~/Dropbox/.config/khard ~/.config
 ln -s ~/Dropbox/.config/vdirsyncer ~/.config
 ln -s ~/Dropbox/.config/khal ~/.config
-ln -s ~/Dropbox/.config/htop ~/.config
+ln -s ~/Dropbox/.config/.password-store ~/
+ln -s ~/Dropbox/.config/.gnupg ~/
+ln -s ~/Dropbox/.config/.newsboat ~/
+ln -s ~/Dropbox/.config/.jupyter ~/
+ln -s ~/Dropbox/.config/.mbsyncrc ~/
+ln -s ~/Dropbox/.config/.qutebrowser/qutebrowser ~/
+ln -s ~/Dropbox/.config/.xboardrc ~/
 
 # zshell
 brew install zsh
 zsh
-echo 'source ~/Dropbox/.config/zsh/.zshrc' >> ~/.zshrc
+chsh -s /bin/zsh
+
+# x-code
+xcode-select --install 
+softwareupdate --all --install --force
 
 # bash 
 brew install bash
 
+# wget (downloader)
+brew install wget
+
+# node + npm
+brew install node
+
+# install python
+#wget https://www.python.org/ftp/python/3.10.2/python-3.10.2-macos11.pkg
+
+brew install python3
+brew link --overwrite python@3.9
+
+# pip
+sudo easy_install pip
+sudo easy_install pip3
+pip3 install PyQt5
+
+# nvim
 brew install neovim
 
+# git
 brew install git
 
 # alacritty terminal 
 brew install --cask alacritty
 
+# nerd font `sauce code pro`
+cp ~/Dropbox/.config/'Sauce Code Pro Nerd Font Complete.ttf' ~/Library/Fonts
+
 # terminal multiplexer
-
 brew install tmux
-
 brew install reattach-to-user-namespace
 
-# spotify credentials
-mkdir ~/.config/spotifyd
-echo '[global]
-username = "USERNAME"
-password = "PASSWD"
-backend = "portaudio"
-mixer = "PCM"
-volume_controller = "softvol"
-device_name = "spotify"
-bitrate = 160
-cache_path = "Users/user/.cahe/spotifyd"
-volume_normalisation = true
-zeroconf_port = 1234
-' >> ~/.config/spotifyd/spotifyd.conf
+# password manager
+brew install pass
 
-mkdir ~/.config/spotify-tui
-echo '---
-client_id: b6a924a75edc4213adee7365aea7b318
-client_secret: 3805771996264c708f4257fc133f5f0a
-device_id: 75a25c2be83fdfa0bb221b04cf3a4525e9f1203a
-port: 8888' >> ~/.config/spotify-tui/client.yml
-
-cp ~/Dropbox/.config/spotifyd/spotifyd.conf ~/.config/spotifyd
-
-cp ~/Dropbox/.config/.cache/spotifyd ~/.cache/
-
+# spotify daemon
 echo '<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -99,7 +110,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>
         <key>ProgramArguments</key>
         <array>
             <string>/usr/local/bin/spotifyd</string>
-            <string>--config-path=/users/user/.config/spotifyd/spotifyd.conf</string>
+            <string>--config-path=/Users/user/.config/spotifyd/spotifyd.conf</string>
             <string>--no-daemon</string>
         </array>
         <key>UserName</key>
@@ -111,14 +122,10 @@ echo '<?xml version="1.0" encoding="UTF-8"?>
     </dict>
 </plist>' >>  /Library/LaunchDaemons/rustlang.spotifyd.plist
 
+sudo chmod 600 /Library/LaunchDaemons/rustlang.spotifyd.plist
+
 sudo launchctl load -w /Library/LaunchDaemons/rustlang.spotifyd.plist
 sudo launchctl start /Library/LaunchDaemons/rustlang.spotifyd.plist
-
-#python
-brew install python3
-
-sudo easy_install pip
-sudo easy_install pip3
 
 # yarn
 brew install yarn
@@ -143,6 +150,7 @@ library_dirs=/opt/X11/lib' >> ~/.pydistutils.cfg
 # spotify
 brew install spotify-tui
 brew install spotifyd
+cp -R ~/Dropbox/.config/.cache/spotifyd ~/.cache/
 
 # calendar
 brew install vdirsyncer
@@ -160,14 +168,21 @@ brew install newsboat
 brew install w3m
 
 ### qutebrowser
-## .app
-#wget https://github.com/qutebrowser/qutebrowser/releases/download/v2.4.0/qutebrowser-2.4.0.dmg
+## .app evtl. version anpassen
+wget https://github.com/qutebrowser/qutebrowser/releases/download/v2.4.0/qutebrowser-2.4.0.dmg
+
 #brew install --cask qutebrowser # funktioniert evtl. nicht
 
 ## virtual einvironment
 brew install qt
+brew install dmenu
+cp -r ~/Dropbox/.config/.qutebrowser/userscripts ~/Library/Application\ Support/qutebrowser
 
+pip install PyQtWebEngine
 pip3 install qutebrowser
+pip3 install asciidoc 
+pip3 install adblock
+pip uninstall tldextract
 
 git clone https://github.com/qutebrowser/qutebrowser.git
 
@@ -176,11 +191,9 @@ cd qutebrowser
 python3 scripts/mkvenv.py
 
 # mail client
-brew install mutt
+brew install neomutt
 brew install isync
 brew install msmtp
-
-#brew install offlineimap # not required!
 
 # image viewer
 brew install feh
@@ -194,6 +207,9 @@ brew install htop
 # contact book
 brew install khard
 
+# vpn
+brew install openconnect
+
 # ranger file manager
 brew install ranger
 brew install tree
@@ -201,9 +217,15 @@ brew install tree
 # markdown reader
 brew install glow
 
-# zathura pdf viewer
-brew install zathura
+# better than cat
+brew install bat
 
+#ffmpeg video <-> audio 
+brew instal ffmpeg
+
+# zathura pdf viewer
+brew tap zegervdv/zathura
+brew install zathura
 brew install zathura-pdf-poppler
 
 mkdir -p $(brew --prefix zathura)/lib/zathura
@@ -223,7 +245,7 @@ mkdir -p $(brew --prefix zathura)/lib/zathura
 ln -s $(brew --prefix zathura-pdf-poppler)/libpdf-poppler.dylib $(brew --prefix zathura)/lib/zathura/libpdf-poppler.dylib
 
 # video setup
-brew install --cask mpv
+brew install mpv
 brew install youtube-dl
 
 #music player
@@ -233,7 +255,7 @@ brew install jack
 brew install libmad
 brew install libid3tag
 
- echo '<?xml version="1.0" encoding="UTF-8"?>
+echo '<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
   <dict>
@@ -258,9 +280,10 @@ brew install libid3tag
 
 launchctl load ~/Library/LaunchAgents/org.jackaudio.jackd.plist
 
-# zoom
-brew install mps-youtube
+# youtube terminal (funktioniert nicht)
+#brew install mps-youtube
 
+# zoom
 brew install --cask zoom
 
 #speed test
@@ -274,22 +297,51 @@ brew install --cask firefox
 brew install jupyterlab
 pip install JLDracula
 
-pip install qtconsole # pip3 install qtconsole pip3 install --user qtconsole  
-
+pip install qtconsole # pip3 install qtconsole pip3 install --user qtconsole 
+pip install jupyter
 # rstudio
 brew install --cask rstudio
+
+# clipboardmanager
+brew install --cask maccy
 
 # mspowerpoint
 brew install --cask microsoft-powerpoint
 
 #hush coockieblocker
-brew install --cask hush
+# brew install --cask hush
 
 # latex
-wget https://mirror.ctan.org/systems/mac/mactex/MacTeX.pkg
+brew install --cask basictex
+brew install texlive
+# wget https://mirror.ctan.org/systems/mac/mactex/MacTeX.pkg
 
-# nerd font `sauce code pro`
-cp ~/Dropbox/.config/'Sauce Code Pro Nerd Font Complete.ttf' ~/Library/Fonts
+# chess
+brew install gnu-chess
+brew install xboard
+
+# amphetamine
+mas install 937984704
+wget https://github.com/x74353/Amphetamine-Enhancer/raw/master/Releases/Current/Amphetamine%20Enhancer.dmg
+hdiutil attach Amphetamine\ Enhancer.dmg
+cp -R /Volumes/Amphetamine\ Enhancer/Amphetamine\ Enhancer.app /Applications
+
+# easy csv editor
+mas install 1171346381
+
+# plaintext
+mas install 508368068
+
+mkdir ~/Pictures/screenshot
+defaults write com.apple.screencapture location ~/Pictures/screenshots/ && killall SystemUIServer
+
+# neovim dependencies
+gem install neovim
+yarn global add neovim
+pip3 install neovim
+brew install grep ripgrep fd
+pip3 install pynvim
+brew install fzf
 ```
 ___
 
@@ -346,28 +398,6 @@ defaults write com.apple.Mail DisableReplyAnimations -bool true
 defaults write NSGlobalDomain NSWindowResizeTime .001
 ```
 
-### undo
-
-```
-defaults delete -g NSAutomaticWindowAnimationsEnabled
-defaults delete -g NSScrollAnimationEnabled
-defaults delete -g NSWindowResizeTime
-defaults delete -g QLPanelAnimationDuration
-defaults delete -g NSScrollViewRubberbanding
-defaults delete -g NSDocumentRevisionsWindowTransformAnimation
-defaults delete -g NSToolbarFullScreenAnimationDuration
-defaults delete -g NSBrowserColumnAnimationSpeedMultiplier
-defaults delete com.apple.dock autohide-time-modifier
-defaults delete com.apple.dock autohide-delay
-defaults delete com.apple.dock expose-animation-duration
-defaults delete com.apple.dock springboard-show-duration
-defaults delete com.apple.dock springboard-hide-duration
-defaults delete com.apple.dock springboard-page-duration
-defaults delete com.apple.finder DisableAllAnimations
-defaults delete com.apple.Mail DisableSendAnimations
-defaults delete com.apple.Mail DisableReplyAnimations
-```
-
 ### unlink media buttons
 
 launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist
@@ -385,32 +415,64 @@ ___
 
 #### Cronjobs 
 
-1. Open preferences and go to “Security & Privacy” -> “Privacy”
-2. Scroll down to “Full Disk Access” on the left side and select it.
-3. Hit the unlock icon and enter your password
-4. Hit the “+” sign to add an application
-5. Type “command+shift+G” to bring up the got to file dialog box (don’t seem able to navigate the /usr directory)
-6. Enter the full path name to the application (/usr/sbin/cron) and click on “Go”
-7. Click “Open” It should show up in the list with a check mark next to it. I tried it with a simple csh script in cron and it worked
+1. open preferences and go to ‚ÄúSecurity & Privacy‚Äù -> ‚ÄúPrivacy‚Äù
+2. scroll down to ‚ÄúFull Disk Access‚Äù on the left side and select it.
+3. hit the unlock icon and enter your password
+4. hit the ‚Äú+‚Äù sign to add an application
+5. type ‚Äúcommand+shift+G‚Äù to bring up the got to file dialog box (don‚Äôt seem able to navigate the /usr directory)
+6. enter the full path name to the application (/usr/sbin/cron) and click on ‚ÄúGo‚Äù
+7. click ‚ÄúOpen‚Äù It should show up in the list with a check mark next to it. I tried it with a simple csh script in cron and it worked
 ___
+
+## disable sound effects
+
+1. open System Preferences
+2. go to Sound
+3. uncheck `Play sound on Startup`, `Play user interface sound effects`, `Play feedback when volume is changed`
+4. turn down `Alert volume`
+
+## disable keyboard stuff
+
+1. open System Preferences
+2. disable `fn - keys``
+3. and the rest...
+
+---
+
+# R
 
 ## install r packages
 
-` install.packages(c("tidyverse", "languageserver", "DescTools", "komaletter", "lubridate", "data.table", "psych", "summarytools", "gt", "shiny", "markdown"))`
+` install.packages(c("tidyverse", "languageserver", "DescTools", "komaletter", "lubridate", "data.table", "psych", "summarytools", "gt", "shiny", "markdown", "DT", "devtools", "here", "forecast", "highcharter", "janitor", "timetk", "randomcoloR"))`
+
+`devtools::install_github("IRkernel/IRkernel")`
+
+## install dependencies
+
+`IRkernel::installspec()`
 ___
 
-remove standard hotkey `cmd+<space>` and 
 
-`cp ~/Dropbox/.config/open_iterm.workflow ~/Library/Services`
+---
 
-##
+## remove standard hotkey `cmd+<space>` and 
 
-import `dracula.terminal` to standard terminal
+1. go to System Preferences 
+2. Keyboard > Shortcuts > Spotlight
+3. `cp -R ~/Dropbox/.config/open_terminal.workflow ~/Library/Services` `cp -R ~/Dropbox/.config/open_browser.workflow ~/Library/Services`
+4. Services > check copied services and map a shortcut  
 
-## appstore
+___
 
-- csv editor
-- AdBlockPro
-- Amphetamine
-- GetPlainText
-- Chess Tactics and Strategy
+## screenrecord w/ audio
+
+`brew install blackhole-16ch`
+
+`audiomidisetup`
+
+- click "+" button > Create Aggregated Device > name it "quicktime player input" > check BlackHole 16ch
+
+- click "+" button > Create Multi-Output Device > name it "screen record w/ auio" > check Built-In Output (must be on top!) + BlackHole 16ch 
+
+- record screen with "screen record w/ audio"
+___
