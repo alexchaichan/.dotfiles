@@ -20,7 +20,7 @@ g # create new gpt partition
 
 n # creat first one (default 1) #
       # 1st sector default
-+500 # 2nd sector  efi-boot-partition
++500M # 2nd sector  efi-boot-partition
 
 t # create type for partition
 1 # efi System
