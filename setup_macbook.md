@@ -51,6 +51,7 @@ ln -s ~/Dropbox/.config/.jupyter ~/
 ln -s ~/Dropbox/.config/.mbsyncrc ~/
 ln -s ~/Dropbox/.config/.qutebrowser/qutebrowser ~/
 ln -s ~/Dropbox/.config/.xboardrc ~/
+ln -s ~/Dropbox/.config/R/ ~/Library/ 
 
 # zshell
 brew install zsh
