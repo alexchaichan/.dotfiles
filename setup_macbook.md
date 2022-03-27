@@ -247,6 +247,7 @@ ln -s $(brew --prefix zathura-pdf-poppler)/libpdf-poppler.dylib $(brew --prefix 
 # video setup
 brew install mpv
 brew install youtube-dl
+brew install --cask vlc
 
 #music player
 brew install moc
@@ -415,13 +416,13 @@ ___
 
 #### Cronjobs 
 
-1. open preferences and go to ‚ÄúSecurity & Privacy‚Äù -> ‚ÄúPrivacy‚Äù
-2. scroll down to ‚ÄúFull Disk Access‚Äù on the left side and select it.
+1. open preferences and go to "Security & Privacy" -> "Privacy"
+2. scroll down to "Full Disk Access" on the left side and select it.
 3. hit the unlock icon and enter your password
-4. hit the ‚Äú+‚Äù sign to add an application
-5. type ‚Äúcommand+shift+G‚Äù to bring up the got to file dialog box (don‚Äôt seem able to navigate the /usr directory)
-6. enter the full path name to the application (/usr/sbin/cron) and click on ‚ÄúGo‚Äù
-7. click ‚ÄúOpen‚Äù It should show up in the list with a check mark next to it. I tried it with a simple csh script in cron and it worked
+4. hit the "+" sign to add an application
+5. type "command+shift+G" to bring up the got to file dialog box (don‚Äôt seem able to navigate the /usr directory)
+6. enter the full path name to the application (/usr/sbin/cron) and click on "Go"
+7. click "Open" It should show up in the list with a check mark next to it. I tried it with a simple csh script in cron and it worked
 ___
 
 ## disable sound effects
