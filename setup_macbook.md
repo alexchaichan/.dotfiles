@@ -294,7 +294,7 @@ brew install speedtest --force
 # feuerfuchs
 brew install --cask firefox
 
-# jupter
+# jupyter
 brew install jupyterlab
 pip install JLDracula
 
