@@ -174,9 +174,6 @@ wget https://github.com/qutebrowser/qutebrowser/releases/download/v2.4.0/qutebro
 #brew install --cask qutebrowser # funktioniert evtl. nicht
 
 ## virtual einvironment
-brew install qt
-brew install dmenu
-cp -r ~/Dropbox/.config/.qutebrowser/userscripts ~/Library/Application\ Support/qutebrowser
 
 pip install PyQtWebEngine
 pip3 install qutebrowser
@@ -189,6 +186,10 @@ git clone https://github.com/qutebrowser/qutebrowser.git
 cd qutebrowser
 
 python3 scripts/mkvenv.py
+
+## password manager
+brew install qt dmenu
+cp -r ~/Dropbox/.config/.qutebrowser/userscripts ~/Library/Application\ Support/qutebrowser
 
 # mail client
 brew install neomutt
