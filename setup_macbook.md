@@ -167,10 +167,9 @@ brew install newsboat
 brew install w3m
 
 ### qutebrowser
-## .app evtl. version anpassen
-```
-[version_check](https://github.com/qutebrowser/qutebrowser/releases)
-```
+## .app evtl. version anpassen "https://github.com/qutebrowser/qutebrowser/releases"
+
+
 wget https://github.com/qutebrowser/qutebrowser/releases/download/v2.4.0/qutebrowser-2.4.0.dmg
 
 #brew install --cask qutebrowser # funktioniert evtl. nicht
