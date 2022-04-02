@@ -1,8 +1,37 @@
-- setup dropbox
-https://www.bbkane.com/blog/dropbox-as-a-systemd-service/
-
 ```
-sudo pacman -S git vim neovim ranger feh zathura htop khal khard neofetch alacritty pavucontrol 
+sudo pacman -S git vim neovim ranger feh zathura htop khal khard neofetch alacritty pavucontrol spotifyd mpv 
+yaourt -S zaread-git nerd-fonts-source-code-pro dropbox spotify-tui
 
-yaourt -S zaread-git nerd-fonts-source-code-pro dropbox 
+
+
+mkdir ~/.config/systemd/
+mkdir ~/.config/systemd/user/
+cp ~/Dropbox/.config/linux/dropbox.service ~/.config/systemd/user/
+
+systemctl --user start dropbox
+systemctl --user status dropbox # check status
+systemctl --user enable dropbox
+
+cp ~/Dropbox/.config/linux/spotifyd/ ~/.config/
+cp ~/Dropbox/.config/linux/spotify-tui/ ~/.config/
+
+ln -sf ~/Dropbox/.config/linux/.xinitrc ~/
+ln -sf ~/Dropbox/.config/zsh/.zshrc ~/
+ln -sf ~/Dropbox/.config/vdirsyncer ~/.config
+ln -sf ~/Dropbox/.config/linux/zathura ~/.config
+ln -sf ~/Dropbox/.config/ranger ~/.config
+ln -sf ~/Dropbox/.config/.qutebrowser ~/.config/qutebrowser
+ln -sf ~/Dropbox/.config/khard ~/.config
+ln -sf ~/Dropbox/.config/khal ~/.config
+ln -sf ~/Dropbox/.config/linux/alacritty.yml ~/.config
+ln -sf ~/Dropbox/.config/linux/.tmux.conf ~/
+ln -sf ~/Dropbox/.config/.qutebrowser/bookmarks/urls ~/
+ln -sf ~/Dropbox/Templates ~/
+ln -sf ~/Dropbox/.config/linux/.mailcap ~/
+ln -sf ~/Dropbox/.config/linux/.bash_profile ~/
+ln -sf ~/Dropbox/.config/linux/.bashrc ~/
+ln -sf ~/Dropbox/.config/.mbsyncrc ~/
+ln -sf ~/Dropbox/.config/.mutt/.muttrc ~/
+ln -sf ~/Dropbox/.config/zsh/.p10k.zsh ~/
+ln -sf ~/Dropbox/.config/nvim ~/.config
 ```
