@@ -1,5 +1,5 @@
 ```
-sudo pacman -S git vim neovim ranger feh zathura htop khal khard neofetch alacritty pavucontrol spotifyd mpv alsa-utils bat brightnessctl firefox fzf i3blocks i3status jupyter neomutt pandoc pulseaudio pulseaudio-alsa python-pip python-magic python-tldextract R speedtest-cli texinfo texlive-core texlive-latexextra texlive-science thunar thunar-volman tk tmux vdirsyncer xboard zathura-pdf-poppler youtube-dl
+sudo pacman -S git vim neovim ranger feh zathura htop khal khard neofetch alacritty pavucontrol spotifyd mpv alsa-utils bat brightnessctl firefox fzf i3blocks i3status jupyter neomutt pandoc pulseaudio pulseaudio-alsa python-pip python-magic python-tldextract r speedtest-cli texinfo texlive-core texlive-latexextra texlive-science thunar thunar-volman tk tmux vdirsyncer xboard zathura-pdf-poppler youtube-dl
 
 pip install adblock
 
