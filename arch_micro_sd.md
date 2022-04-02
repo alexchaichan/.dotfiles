@@ -24,7 +24,7 @@ n # new partition
 
 #1. default 
 #2. 
-+200M
++550M
 #3.
 ef00
 
@@ -122,7 +122,7 @@ vim /etc/hosts
 
 ::1 localhost
 
-127.0.0.1	archuser.localdomain archuser
+127.0.1.1	archuser.localdomain archuser
 ```
 
 
