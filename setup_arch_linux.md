@@ -1,11 +1,11 @@
 ```
-sudo pacman -S git vim neovim ranger feh zathura htop khal khard neofetch alacritty pavucontrol spotifyd mpv alsa-utils b43-firmware b43legacy-firmware bat brightnessctl firefox fzf i3blocks i3status jupyter neomutt pandoc pulseaudio pulseaudio-alsa python-pip python-magic python-tldextract R speedtest-cli texinfo texlive-core texlive-latexextra texlive-science thunar thunar-volman tk tmux vdirsyncer xboard zathura-pdf-poppler youtube-dl
+sudo pacman -S git vim neovim ranger feh zathura htop khal khard neofetch alacritty pavucontrol spotifyd mpv alsa-utils bat brightnessctl firefox fzf i3blocks i3status jupyter neomutt pandoc pulseaudio pulseaudio-alsa python-pip python-magic python-tldextract R speedtest-cli texinfo texlive-core texlive-latexextra texlive-science thunar thunar-volman tk tmux vdirsyncer xboard zathura-pdf-poppler youtube-dl
 
 pip install adblock
 
 sudo ln -sf ~/Dropbox/.config/linux/pacman.conf /etc
 
-yaourt -S zaread-git nerd-fonts-source-code-pro dropbox spotify-tui zoom
+yaourt -S zaread-git nerd-fonts-source-code-pro dropbox spotify-tui zoom b43-firmware b43legacy-firmware
 
 
 
