@@ -1,6 +1,3 @@
-# archlinux_imac_2008
-
-
 ### setup brand new disk
 
 - setup disk
