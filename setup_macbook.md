@@ -83,6 +83,7 @@ pip3 install PyQt5
 
 # nvim
 brew install neovim
+sudo ln -sf ~/Dropbox/.config/nvim/spell /usr/local/Cellar/neovim/0.6.1/share/nvim/runtime/ 
 
 # git
 brew install git
