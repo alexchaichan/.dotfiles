@@ -404,10 +404,11 @@ defaults write NSGlobalDomain NSWindowResizeTime .001
 
 ### unlink media buttons
 
+```
 launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist
 
 #launchctl load -w /System/Library/LaunchAgents/com.apple.rcd.plist  # undo
-
+```
 
 ___
 
