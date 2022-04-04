@@ -43,6 +43,7 @@ ln -sf ~/Dropbox/.config/zsh/.p10k.zsh ~/
 ln -sf ~/Dropbox/.config/nvim ~/.config
 ln -sf ~/Dropbox/.config/.password-store ~/
 ln -sf ~/Dropbox/.config/.gnupg ~/
+ln -sf ~/Dropbox/.config/nvim/spell ~/.local/share/nvim/site 
 ```
 
 
