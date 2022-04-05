@@ -50,7 +50,7 @@ ln -s ~/Dropbox/.config/.newsboat ~/
 ln -s ~/Dropbox/.config/.jupyter ~/
 ln -s ~/Dropbox/.config/.mbsyncrc ~/
 ln -s ~/Dropbox/.config/.qutebrowser/bookmarks/urls ~/
-ln -sf ~/Dropbox/.config/pandoc ~/.local/share 
+ln -sf ~/Dropbox/.config/pandoc/ ~/.local/share 
 
 # zshell
 brew install zsh
