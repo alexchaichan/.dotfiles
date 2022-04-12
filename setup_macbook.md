@@ -72,6 +72,9 @@ brew install wget
 # node + npm
 brew install node
 
+# anaconda
+brew install --cask anaconda
+
 # install python
 #wget https://www.python.org/ftp/python/3.10.2/python-3.10.2-macos11.pkg
 
