@@ -44,6 +44,11 @@ ln -sf ~/Dropbox/.config/nvim ~/.config
 ln -sf ~/Dropbox/.config/.password-store ~/
 ln -sf ~/Dropbox/.config/.gnupg ~/
 ln -sf ~/Dropbox/.config/nvim/spell ~/.local/share/nvim/site 
+
+
+cp ~/Dropbox/.config/linux/spotifyd/ ~/.config/
+cp ~/Dropbox/.config/linux/spotify-tui/ ~/.config/
+
 ```
 
 
