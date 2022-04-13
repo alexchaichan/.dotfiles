@@ -19,9 +19,6 @@ systemctl --user start dropbox
 systemctl --user status dropbox # check status
 systemctl --user enable dropbox
 
-cp ~/Dropbox/.config/linux/spotifyd/ ~/.config/
-cp ~/Dropbox/.config/linux/spotify-tui/ ~/.config/
-
 ln -sf ~/Dropbox/.config/linux/.xinitrc ~/
 ln -sf ~/Dropbox/.config/zsh/.zshrc_linux ~/.zshrc
 ln -sf ~/Dropbox/.config/vdirsyncer ~/.config
@@ -44,7 +41,6 @@ ln -sf ~/Dropbox/.config/nvim ~/.config
 ln -sf ~/Dropbox/.config/.password-store ~/
 ln -sf ~/Dropbox/.config/.gnupg ~/
 ln -sf ~/Dropbox/.config/nvim/spell ~/.local/share/nvim/site 
-
 
 cp ~/Dropbox/.config/linux/spotifyd/ ~/.config/
 cp ~/Dropbox/.config/linux/spotify-tui/ ~/.config/
