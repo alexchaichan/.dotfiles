@@ -7,9 +7,10 @@ pip install adblock
 
 sudo ln -sf ~/Dropbox/.config/linux/pacman.conf /etc
 
-yaourt -S zaread-git nerd-fonts-source-code-pro dropbox spotify-tui zoom b43-firmware b43legacy-firmware
+yaourt -S zaread-git nerd-fonts-source-code-pro dropbox spotify-tui zoom miniconda3
 
-
+# imac 2008
+#yaourt -S b43-firmware b43legacy-firmware
 
 mkdir ~/.config/systemd/
 mkdir ~/.config/systemd/user/
