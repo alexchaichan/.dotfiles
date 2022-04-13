@@ -23,7 +23,7 @@ cp ~/Dropbox/.config/linux/spotifyd/ ~/.config/
 cp ~/Dropbox/.config/linux/spotify-tui/ ~/.config/
 
 ln -sf ~/Dropbox/.config/linux/.xinitrc ~/
-ln -sf ~/Dropbox/.config/zsh/.zshrc ~/
+ln -sf ~/Dropbox/.config/zsh/.zshrc_linux ~/.zshrc
 ln -sf ~/Dropbox/.config/vdirsyncer ~/.config
 ln -sf ~/Dropbox/.config/linux/zathura ~/.config
 ln -sf ~/Dropbox/.config/ranger ~/.config
