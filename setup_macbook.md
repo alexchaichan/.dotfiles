@@ -24,7 +24,6 @@ brew install cask
 
 brew install --cask dropbox
 
-
 ln -sf ~/Dropbox/.config/zsh/.zshrc_mac ~/.zshrc
 ln -sf ~/Dropbox/.config/Keychains ~/Library
 ln -sf ~/Dropbox/.config/nvim/ ~/.config/
@@ -97,7 +96,8 @@ brew install git
 brew install --cask alacritty
 
 # nerd font `sauce code pro`
-cp ~/Dropbox/.config/'Sauce Code Pro Nerd Font Complete.ttf' ~/Library/Fonts
+brew tap homebrew/cask-fonts && brew install --cask font-sauce-code-pro-nerd-font 
+#cp ~/Dropbox/.config/'Sauce Code Pro Nerd Font Complete.ttf' ~/Library/Fonts 
 
 # terminal multiplexer
 brew install tmux
