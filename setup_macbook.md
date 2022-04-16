@@ -52,6 +52,7 @@ ln -sf ~/Dropbox/.config/.jupyter ~/
 ln -sf ~/Dropbox/.config/.mbsyncrc ~/
 ln -sf ~/Dropbox/.config/.qutebrowser/bookmarks/urls ~/
 ln -sf ~/Dropbox/.config/pandoc/ ~/.local/share 
+ln -sf ~/Dropbox/.config/.psychopy3 ~/
 
 # zshell
 brew install zsh
