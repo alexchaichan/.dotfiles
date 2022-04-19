@@ -310,8 +310,12 @@ pip install JLDracula
 
 pip install qtconsole # pip3 install qtconsole pip3 install --user qtconsole 
 pip install jupyter
+
 # rstudio
 brew install --cask rstudio
+
+# pycharm
+brew install --cask pycharm
 
 # clipboardmanager
 brew install --cask maccy
