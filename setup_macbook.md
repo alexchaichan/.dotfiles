@@ -315,7 +315,7 @@ pip install jupyter
 brew install --cask rstudio
 
 # pycharm
-brew install --cask pycharm
+brew install --cask pycharm-ce
 
 # clipboardmanager
 brew install --cask maccy
