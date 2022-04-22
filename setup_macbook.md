@@ -459,7 +459,7 @@ ___
 
 ## install r packages
 
-` install.packages(c("tidyverse", "languageserver", "DescTools", "komaletter", "lubridate", "data.table", "psych", "summarytools", "gt", "shiny", "markdown", "DT", "devtools", "here", "forecast", "highcharter", "janitor", "timetk", "randomcoloR", "ggThemeAssist"))`
+` install.packages(c("tidyverse", "languageserver", "DescTools", "komaletter", "lubridate", "data.table", "psych", "summarytools", "gt", "shiny", "markdown", "DT", "devtools", "here", "forecast", "highcharter", "janitor", "timetk", "randomcoloR", "ggThemeAssist", "readxl"))`
 
 `devtools::install_github("IRkernel/IRkernel")`
 
