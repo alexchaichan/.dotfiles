@@ -6,8 +6,8 @@ date: "`r format(Sys.Date(), '%d %b, %Y')`"
 output:
   pdf_document:
     pandoc_args: 
-      - --lua-filter=wordcount.lua
-			- --metadata=wordcount=process
+    	- --lua-filter=wordcount.lua
+	- --metadata=wordcount=process
     latex_engine: pdflatex #xelatex #lualatex #pdflatex
     includes:
       in_header: styles/style.sty
