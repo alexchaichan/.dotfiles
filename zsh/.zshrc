@@ -9,15 +9,20 @@ export TDOTDIR=$HOME.config/.tmux/plugins
 
 export EDITOR=nvim
 
-source $ZDOTDIR/zsh-syntax-highlighting.sh
+# dotfiles
+source $DOTFILES/zsh/zsh-syntax-highlighting.sh
+source $DOTFILES/zsh/.p10k.zsh
+source $DOTFILES/zsh/functions.sh
+source $DOTFILES/zsh/vi-mode.plugin.zsh
+
+# home files
 source $ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $ZDOTDIR/vi-mode.plugin.zsh
 source $ZDOTDIR/zsh-completions/zsh-completions.plugin.zsh
 source $ZDOTDIR/powerlevel10k/powerlevel10k.zsh-theme
-source $ZDOTDIR/.p10k.zsh
-source $DOTFILES/zsh/functions.sh
+
 source $ZDOTDIR/.zsh-autopair/autopair.zsh
+
 
 
 # # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
