@@ -38,6 +38,8 @@ ln -sf ~/.dotfiles/mpv ~/.config
 ln -sf ~/.dotfiles/neofetch ~/.config
 
 ln -sf ~/.dotfiles/tmux/.osx_tmux.conf ~/.tmux.conf
+# install all tmux plugins
+
 ln -sf ~/.dotfiles/alacritty/osx_alacritty.yml ~/.config 
 
 # coc installer 
@@ -53,7 +55,6 @@ ln -sf ~/Dropbox/.config/.qutebrowser ~/
 ln -sf ~/Dropbox/.config/.w3m ~/
 ln -sf ~/Dropbox/.config/calcurse ~/.config
 ln -sf ~/Dropbox/.config/spotify-tui/ ~/.config/
-ln -sf ~/Dropbox/.config/osx/alacritty.yml ~/.config
 ln -sf ~/Dropbox/.config/.git-credentials ~/
 ln -sf ~/Dropbox/.config/khard ~/.config
 ln -sf ~/Dropbox/.config/vdirsyncer ~/.config
