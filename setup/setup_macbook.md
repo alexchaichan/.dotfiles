@@ -34,6 +34,7 @@ ln -sf ~/.dotfiles/zathura ~/.config
 
 ln -sf ~/.dotfiles/rstudio/rstudio-prefs.json ~/.config/rstudio
 
+ln -sf ~/.dotfiles/ranger ~/.config
 
 
 
@@ -47,7 +48,6 @@ ln -sf ~/Dropbox/.config/.qutebrowser ~/
 ln -sf ~/Dropbox/.config/.w3m ~/
 ln -sf ~/Dropbox/.config/calcurse ~/.config
 ln -sf ~/Dropbox/.config/mpv ~/.config
-ln -sf ~/Dropbox/.config/ranger ~/.config
 ln -sf ~/Dropbox/.config/spotify-tui/ ~/.config/
 ln -sf ~/Dropbox/.config/neofetch ~/.config
 ln -sf ~/Dropbox/.config/osx/alacritty.yml ~/.config
