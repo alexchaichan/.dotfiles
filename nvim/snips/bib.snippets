@@ -1,0 +1,56 @@
+snippet book "bib book" b
+@book{Buch,
+  title={TITLE. SUBTITLE},
+  author={NACHNAME, VORNAME and NACHNAME, VORNAME},
+  year={YYYY},
+  publisher={VERLAG},
+  location={ORT}
+}
+endsnippet
+
+snippet sammelband "bib sammelband" b
+@inbook{Sammelband,
+  title = {TITLE. SUBTITLE},
+  author = {NACHNAME, VORNAME and NACHNAME, VORNAME},
+  year = {YYYY},
+  booktitle = {BOOKTITLE},
+  editor = {NACHNAME, VORNAME and NACHNAME, VORNAME},
+  volume = {X},
+  publisher = {VERLAG},
+  location = {ORT},
+  pages = {X--XX}
+}
+endsnippet
+
+snippet paper "bib paper" b
+@article{Paper,
+  title = {TITLE. SUBTITLE},
+  author = {NACHNAME, VORNAME and NACHNAME, VORNAME}, 
+  journal = {JOURNALTITLE},
+  year = {YYYY},
+  number = {XX},
+  volume = {XX},
+  publisher = {VERLAG},
+  pages = {X--XX},
+  doi={LINK}
+}
+endsnippet
+
+snippet online "bib online" b
+@online{Internet,
+  author = {NACHNAME, VORNAME and NACHNAME, VORNAME},
+  title = {TITLE},
+  url = {LINK},
+  year = {YYYY},
+  urldate={YYYY-MM-DD}
+}
+endsnippet
+
+snippet thesis "bib thesis" b
+@thesis{thesis,
+  title={TITLE. SUBTITLE},
+  year={YYYY},
+  author={NACHNAME, VORNAME},
+  school={EINRICHTUNG}
+}
+endsnippet

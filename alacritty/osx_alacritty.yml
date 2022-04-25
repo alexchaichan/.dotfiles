@@ -1,0 +1,34 @@
+#mac
+
+
+
+
+
+
+font:
+  # Point size
+  size: 13.0
+
+window:
+  decorations: buttonless
+
+# Shell
+#
+# You can set `shell.program` to the path of your favorite shell, e.g.
+# `/bin/fish`. Entries in `shell.args` are passed unmodified as arguments to the
+# shell.
+#
+# Default:
+#   - (macOS) /bin/bash --login
+#   - (Linux/BSD) user login shell
+#   - (Windows) powershell
+shell:
+  program: /bin/zsh
+  args:
+   - --login
+   - -c
+   - "tmux attach || tmux"
+
+import:
+  - ~/.dotfiles/alacritty/alacritty.yml 
+

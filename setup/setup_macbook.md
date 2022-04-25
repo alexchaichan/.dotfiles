@@ -30,30 +30,30 @@ ln -sf ~/.dotfiles/zsh/.zshrc_mac ~/.zshrc
 
 ln -sf ~/.dotfiles/zathura ~/.config
 
-
-
 ln -sf ~/.dotfiles/rstudio/rstudio-prefs.json ~/.config/rstudio
+mkdir ~/.config/nvim && ln -sf ~/.dotfiles/nvim/* ~/.config/nvim 
 
 ln -sf ~/.dotfiles/ranger ~/.config
+ln -sf ~/.dotfiles/mpv ~/.config
+ln -sf ~/.dotfiles/neofetch ~/.config
 
+ln -sf ~/.dotfiles/tmux/.osx_tmux.conf ~/.tmux.conf
+ln -sf ~/.dotfiles/alacritty/osx_alacritty.yml ~/.config 
 
+# coc installer 
+# nvim CocInstall coc-json coc-pairs coc-r-lsp coc-snippets coc-tsserver coc-vimlsp
 
+# nvim add all plugins
 
 
 ln -sf ~/Dropbox/.config/Keychains ~/Library
-ln -sf ~/Dropbox/.config/nvim/ ~/.config/
 ln -sf ~/Dropbox/.config/.mutt/.muttrc ~/
 ln -sf ~/Dropbox/.config/.mutt/.mailcap ~/
 ln -sf ~/Dropbox/.config/.qutebrowser ~/
 ln -sf ~/Dropbox/.config/.w3m ~/
 ln -sf ~/Dropbox/.config/calcurse ~/.config
-ln -sf ~/Dropbox/.config/mpv ~/.config
 ln -sf ~/Dropbox/.config/spotify-tui/ ~/.config/
-ln -sf ~/Dropbox/.config/neofetch ~/.config
 ln -sf ~/Dropbox/.config/osx/alacritty.yml ~/.config
-ln -sf ~/Dropbox/.config/osx/.tmux.conf ~/
-ln -sf ~/Dropbox/.config/.tmux ~/
-ln -sf ~/Dropbox/.config/coc ~/.config
 ln -sf ~/Dropbox/.config/.git-credentials ~/
 ln -sf ~/Dropbox/.config/khard ~/.config
 ln -sf ~/Dropbox/.config/vdirsyncer ~/.config
