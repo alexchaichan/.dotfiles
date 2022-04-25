@@ -107,11 +107,13 @@ ln -sf ~/.dotfiles/git/.gitconfig ~/
 
 # source from dropbox
 ln -sf ~/Dropbox/.config/Keychains ~/Library
-ln -sf ~/Dropbox/.config/spotify-tui/ ~/.config/
 ln -sf ~/Dropbox/.config/vdirsyncer ~/.config
 ln -sf ~/Dropbox/.config/.password-store ~/
 ln -sf ~/Dropbox/.config/.gnupg ~/
 ln -sf ~/Dropbox/.config/.mbsyncrc ~/
+ln -sf ~/Dropbox/.config/spotify-tui/ ~/.config/
+ln -sf ~/Dropbox/.config/spotifyd/ ~/.config/
+
 
 # x-code
 xcode-select --install 
