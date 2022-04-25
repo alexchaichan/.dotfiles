@@ -8,7 +8,7 @@
   "snippets.ultisnips.directories":
   [
     "UltiSnips",
-    "~/Dropbox/.config/nvim/snips"
+    "~/.config/nvim/snips"
   ]
 
 }

@@ -64,7 +64,7 @@ vim_add_plugin 'tpope/vim-commentary'
 vim_add_plugin 'sheerun/vim-polyglot'
 vim_add_plugin 'honza/vim-snippets'
 vim_add_plugin 'dhruvasagar/vim-table-mode'
-
+vim_add_plugin 'glepnir/dashboard-nvim'
 nvim "+:CocInstall coc-json coc-pairs coc-r-lsp coc-snippets coc-tsserver coc-vimlsp" 
 
 # tmux with all plugins
@@ -103,7 +103,7 @@ ln -sf ~/.dotfiles/khard/khard ~/.config
 ln -sf ~/.dotfiles/khal/khal ~/.config
 ln -sf ~/.dotfiles/git/.git-credentials ~/
 ln -sf ~/.dotfiles/git/.gitconfig ~/
-
+ln -sf ~/.dotfiles/nvim/snips/r.snippets ~/.config/rstudio/snippets 
 
 # source from dropbox
 ln -sf ~/Dropbox/.config/Keychains ~/Library
@@ -519,7 +519,7 @@ ___
 
 ## install r packages
 
-` install.packages(c("tidyverse", "languageserver", "DescTools", "komaletter", "lubridate", "data.table", "psych", "summarytools", "gt", "shiny", "markdown", "DT", "devtools", "here", "forecast", "highcharter", "janitor", "timetk", "randomcoloR", "ggThemeAssist", "readxl"))`
+` install.packages(c("tidyverse", "languageserver", "DescTools", "komaletter", "lubridate", "data.table", "psych", "summarytools", "gt", "shiny", "markdown", "DT", "devtools", "here", "forecast", "highcharter", "janitor", "timetk", "randomcoloR", "ggThemeAssist", "readxl", "languageserver"))`
 
 `devtools::install_github("IRkernel/IRkernel")`
 
