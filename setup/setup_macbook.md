@@ -31,7 +31,7 @@ ln -sf ~/Dropbox/.config/Keychains ~/Library
 ln -sf ~/Dropbox/.config/nvim/ ~/.config/
 ln -sf ~/Dropbox/.config/.mutt/.muttrc ~/
 ln -sf ~/Dropbox/.config/.mutt/.mailcap ~/
-ln -sf ~/Dropbox/.dotfiles/.qutebrowser ~/
+ln -sf ~/Dropbox/.config/.qutebrowser ~/
 ln -sf ~/Dropbox/.config/.w3m ~/
 ln -sf ~/Dropbox/.config/calcurse ~/.config
 ln -sf ~/Dropbox/.config/zathura ~/.config
