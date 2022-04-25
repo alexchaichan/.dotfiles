@@ -72,6 +72,7 @@ ln -sf ~/Dropbox/.config/khal ~/.config
 ln -sf ~/Dropbox/.config/.password-store ~/
 ln -sf ~/Dropbox/.config/.gnupg ~/
 ln -sf ~/Dropbox/.config/.mbsyncrc ~/
+
 ln -sf ~/Dropbox/.config/pandoc/ ~/.local/share 
 
 # zshell
@@ -173,6 +174,10 @@ brew install --cask xquartz
 echo '[build_ext]
 include_dirs=/opt/X11/include
 library_dirs=/opt/X11/lib' >> ~/.pydistutils.cfg
+
+# pandoc
+brew install pandoc
+git clone https://github.com/pandoc/lua-filters.git ~/.local/share/pandoc/
 
 # spotify
 brew install spotify-tui

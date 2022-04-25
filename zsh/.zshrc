@@ -32,5 +32,5 @@ precmd() { print "" }
 
 bindkey -v
 
-source $ZDOTDIR/zsh-fzf/completion.zsh
-source $ZDOTDIR/zsh-fzf/key-bindings.zsh
+source ~/.dotfiles/zsh/zsh-fzf/completion.zsh
+source ~/.dotfiles/zsh/zsh-fzf/key-bindings.zsh
