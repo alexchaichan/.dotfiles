@@ -1,0 +1,56 @@
+---
+title: "TITLE"
+#subtitle: "SUBTITLE"
+author: "Aleksej Chaichan"
+date: "`r format(Sys.Date(), '%d %b, %Y')`"
+output:
+  pdf_document:
+    pandoc_args: 
+      - --lua-filter=wordcount.lua
+			- --metadata=wordcount=process
+    latex_engine: pdflatex #xelatex #lualatex #pdflatex
+    includes:
+      in_header: styles/style.sty
+    #keep_tex:  true
+  bookdown::pdf_book:
+    citation_package: biblatex #natbib #biblatex
+bibliography: literature.bib
+csl: styles/my.csl
+#nocite: '@*'
+#nocite: |
+#  @key1, @key2
+fontsize: 12pt
+lang: de
+urlcolor: "blue"
+#params: 
+  #X:  <num>; "string"  #filter with params params$X
+---
+
+
+<!-- 
+\setstretch{1} 
+\pagebreak 
+\listoffigures
+
+\pagebreak 
+\listoftables
+
+\pagebreak 
+\tableofcontents 
+-->
+
+
+
+<!-- 
+# Literaturverzeichnis
+
+\setlength{\parindent}{-0.2in}
+\setlength{\leftskip}{0.2in}
+\setlength{\parskip}{8pt}
+\noindent
+
+<div id="refs"></div>
+
+
+
+-->

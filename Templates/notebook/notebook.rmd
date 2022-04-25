@@ -1,0 +1,76 @@
+---
+title: "TITLE"
+subtitle: SUBTITLE
+author: "Aleksej Chaichan"
+#date: "`r format(Sys.Date(), '%d %b, %Y')`"
+output:
+  html_document:
+    css: style.css
+    number_sections: yes
+    theme: lumen
+    toc: yes
+    toc_float: yes
+bibliography: literature.bib
+csl: my.csl
+#nocite: '@*'
+#nocite: |
+#  @key1, @key2
+lang: de
+#params:
+  #X:  <num>; "string"  #filter with params params$X
+---
+
+```{r setup, include=FALSE}
+ knitr::opts_chunk$set(
+ echo = FALSE,
+ message = FALSE,
+ warning = FALSE
+ )
+```
+
+
+```{r}
+packages <- c("tidyverse")
+
+installed_packages <- packages %in% rownames(installed.packages())
+
+if (any(installed_packages == FALSE)) {
+  install.packages(packages[!installed_packages])
+}
+
+# invisible(lapply(packages, library, character.only = TRUE))
+
+#if (!exists("")) {
+#  <- readr::read_csv("")
+#}
+```
+
+
+# Info {-}
+
+
+[NAME_KURS](hispos)
+
+[NAME_DOZ](hispos)
+
+
+<br/>
+<br/>
+<br/>
+
+[Moodle](link)
+
+[Zoom](link)
+
+[Semeniarplan](.pdf)
+
+
+[Skript](.pdf)
+
+<br/>
+
+
+<!-- children -->
+
+```{r, child=c('notes/01.rmd','notes/02.rmd','notes/03.rmd','notes/04.rmd','notes/05.rmd','note/06.rmd','notes/07.rmd','/08.notesrmd','notes/09.rmd','notes/10.rmd','notes/11.rmd','notes/12.rmd','notes/13.rmd','notes/14.rmd')}
+```
