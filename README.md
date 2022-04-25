@@ -95,7 +95,6 @@ ln -sf ~/.dotfiles/psychopy/.psychopy3 ~/
 ln -sf ~/.dotfiles/w3m/.w3m ~/
 ln -sf ~/.dotfiles/jupyter/.jupyter ~/
 ln -sf ~/.dotfiles/zathura ~/.config
-ln -sf ~/.dotfiles/rstudio/rstudio-prefs.json ~/.config/rstudio
 ln -sf ~/.dotfiles/ranger ~/.config
 ln -sf ~/.dotfiles/mpv ~/.config
 ln -sf ~/.dotfiles/neofetch ~/.config
@@ -103,7 +102,6 @@ ln -sf ~/.dotfiles/khard/khard ~/.config
 ln -sf ~/.dotfiles/khal/khal ~/.config
 ln -sf ~/.dotfiles/git/.git-credentials ~/
 ln -sf ~/.dotfiles/git/.gitconfig ~/
-ln -sf ~/.dotfiles/nvim/snips/r.snippets ~/.config/rstudio/snippets 
 
 # source from dropbox
 ln -sf ~/Dropbox/.config/Keychains ~/Library
@@ -373,6 +371,8 @@ pip install jupyter
 
 # rstudio
 brew install --cask rstudio
+ln -sf ~/.dotfiles/rstudio/rstudio-prefs.json ~/.config/rstudio
+ln -sf ~/.dotfiles/nvim/snips/r.snippets ~/.config/rstudio/snippets
 
 # pycharm
 brew install --cask pycharm-ce
