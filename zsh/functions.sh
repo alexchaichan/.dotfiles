@@ -314,14 +314,14 @@ function zsh_add_plugin() {
 #neovim
 function vim_add_plugin() {
   PLUGIN_NAME=$(echo $1 | cut -d "/" -f 2)
-  git clone "https://github.com/$1.git" "$VDOTDIR/$PLUGIN_NAME"
+  git clone "https://github.com/$1.git" "$VDOTDIR/pack/plugins/star/pack/plugins/start/$PLUGIN_NAME"
 }
 
 
 #tmux
 function tmux_add_plugin() {
   PLUGIN_NAME=$(echo $1 | cut -d "/" -f 2)
-  git clone "https://github.com/$1.git" "$TDOTDIR/$PLUGIN_NAME"
+  git clone "https://github.com/$1.git" "$TDOTDIR/plugins/$PLUGIN_NAME"
 }
 
 

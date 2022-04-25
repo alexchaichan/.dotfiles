@@ -20,65 +20,98 @@ defaults write NSGlobalDomain NSAutomaticTextCompletionEnabled -bool false
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-brew install cask
-
-brew install --cask dropbox
-
-ln -sf ~/.dotfiles/zsh/.zshrc_mac ~/.zshrc 
-
-# zsh plugin installer 
-
-ln -sf ~/.dotfiles/zathura ~/.config
-
-ln -sf ~/.dotfiles/rstudio/rstudio-prefs.json ~/.config/rstudio
-mkdir ~/.config/nvim && ln -sf ~/.dotfiles/nvim/* ~/.config/nvim 
-
-ln -sf ~/.dotfiles/ranger ~/.config
-ln -sf ~/.dotfiles/mpv ~/.config
-ln -sf ~/.dotfiles/neofetch ~/.config
-
-ln -sf ~/.dotfiles/tmux/.osx_tmux.conf ~/.tmux.conf
-# install all tmux plugins
-
-ln -sf ~/.dotfiles/alacritty/osx_alacritty.yml ~/.config 
-
-# coc installer 
-# nvim CocInstall coc-json coc-pairs coc-r-lsp coc-snippets coc-tsserver coc-vimlsp
-# nvim add all plugins
-
-ln -sf ~/.dotfiles/newsboat ~/
-ln -sf ~/.dottfiles/.qutebrowser ~/
-ln -sf ~/.dotfiles/qutebrowser/.qutebrowser/bookmarks/urls ~/
-
-
-ln -sf ~/.dotfiles/mutt/.mutt/.muttrc ~/
-ln -sf ~/.dotfiles/mutt/.mutt/.mailcap ~/
-
-ln -sf ~/.dotfiles/psychopy/.psychopy3 ~/
-
-ln -sf ~/Dropbox/.config/Keychains ~/Library
-
-ln -sf ~/.dotfiles/w3m/.w3m ~/
-
-
-ln -sf ~/.dotfiles/jupyter/.jupyter ~/
-
-
-ln -sf ~/Dropbox/.config/spotify-tui/ ~/.config/
-ln -sf ~/Dropbox/.config/.git-credentials ~/
-ln -sf ~/Dropbox/.config/khard ~/.config
-ln -sf ~/Dropbox/.config/vdirsyncer ~/.config
-ln -sf ~/Dropbox/.config/khal ~/.config
-ln -sf ~/Dropbox/.config/.password-store ~/
-ln -sf ~/Dropbox/.config/.gnupg ~/
-ln -sf ~/Dropbox/.config/.mbsyncrc ~/
-
-ln -sf ~/Dropbox/.config/pandoc/ ~/.local/share 
-
 # zshell
 brew install zsh
 zsh
 chsh -s /bin/zsh
+
+brew install cask
+
+brew install --cask dropbox
+
+# zsh with all plugins
+mkdir ~/zsh
+ln -sf ~/.dottfiles/zsh/.zshrc_mac ~/.zshrc
+zsh_add_plugin 'hlissner/zsh-autopair'
+zsh_add_plugin 'zsh-users/zsh-completions'
+zsh_add_plugin 'romkatv/powerlevel10k'
+zsh_add_plugin 'zsh-users/zsh-syntax-highlighting'
+zsh_add_plugin 'zsh-users/zsh-autosuggestions'
+
+# vim with all plugis
+mkdir ~/.config/nvim && ln -sf ~/.dotfiles/nvim/* ~/.config/nvim && mkdir ~/.config/nvim/pack/ && mkdir ~/.config/nvim/pack/plugins/ && mkdir ~/.config/nvim/pack/plugins/start && mkdir ~/.config/nvim/pack/plugins/opt
+vim_add_plugin 'dense-analysis/ale'
+vim_add_plugin 'neoclide/coc.nvim'
+vim_add_plugin 'chrisbra/csv.vim'
+vim_add_plugin 'junegunn/fzf.vim'
+vim_add_plugin 'jupyter-vim/jupyter-vim'
+vim_add_plugin 'iamcco/markdown-preview.vim'
+vim_add_plugin 'gaalcaras/ncm-R'
+vim_add_plugin 'ncm2/ncm2'
+vim_add_plugin 'ncm2/ncm2-bufword'
+vim_add_plugin 'ncm2/ncm2-jedi'
+vim_add_plugin 'ncm2/ncm2-path'
+vim_add_plugin 'preservim/nerdtree'
+vim_add_plugin 'jalvesaq/Nvim-R'
+vim_add_plugin 'nvim-treesitter/nvim-treesitter'
+vim_add_plugin 'roxma/nvim-yarp'
+vim_add_plugin 'nvim-lua/plenary.nvim'
+vim_add_plugin 'kevinhwang91/rnvimr'
+vim_add_plugin 'nvim-telescope/telescope.nvim'
+vim_add_plugin 'dracula/vim'
+vim_add_plugin 'vim-airline/vim-airline'
+vim_add_plugin 'tpope/vim-commentary'
+vim_add_plugin 'sheerun/vim-polyglot'
+vim_add_plugin 'honza/vim-snippets'
+vim_add_plugin 'dhruvasagar/vim-table-mode'
+
+nvim "+:CocInstall coc-json coc-pairs coc-r-lsp coc-snippets coc-tsserver coc-vimlsp" 
+
+# tmux with all plugins
+mkdir ~/./tmux && mkdir ~/.tmux/plugins
+ln -sf ~/.dotfiles/tmux/.osx_tmux.conf ~/.tmux.conf
+tmux_add_plugin 'tmux-plugins/tmux-battery'
+tmux_add_plugin 'tmux-plugins/tmux-copycat'
+tmux_add_plugin 'tmux-plugins/tmux-cpu'
+tmux_add_plugin 'tmux-plugins/tmux-maildir-counter'
+tmux_add_plugin 'tmux-plugins/tmux-newsboat'
+tmux_add_plugin 'tmux-plugins/tmux-online-status'
+tmux_add_plugin 'tmux-plugins/tmux-open'
+tmux_add_plugin 'tmux-plugins/tmux-sensible'
+tmux_add_plugin 'tmux-plugins/tmux-sidebar'
+tmux_add_plugin 'tmux-plugins/tmux-urlview'
+tmux_add_plugin 'tmux-plugins/tmux-yank'
+tmux_add_plugin 'jaclu/tmux-menus'
+tmux_add_plugin 'xamut/tmux-weather'
+tmux_add_plugin 'schasse/tmux-jump'
+
+ln -sf ~/.dotfiles/alacritty/osx_alacritty.yml ~/.config/.alacritt.yml 
+ln -sf ~/.dotfiles/newsboat ~/
+ln -sf ~/.dottfiles/.qutebrowser ~/
+ln -sf ~/.dotfiles/qutebrowser/.qutebrowser/bookmarks/urls ~/
+ln -sf ~/.dotfiles/mutt/.mutt/.muttrc ~/
+ln -sf ~/.dotfiles/mutt/.mutt/.mailcap ~/
+ln -sf ~/.dotfiles/psychopy/.psychopy3 ~/
+ln -sf ~/.dotfiles/w3m/.w3m ~/
+ln -sf ~/.dotfiles/jupyter/.jupyter ~/
+ln -sf ~/.dotfiles/zathura ~/.config
+ln -sf ~/.dotfiles/rstudio/rstudio-prefs.json ~/.config/rstudio
+ln -sf ~/.dotfiles/ranger ~/.config
+ln -sf ~/.dotfiles/mpv ~/.config
+ln -sf ~/.dotfiles/neofetch ~/.config
+ln -sf ~/.dotfiles/khard/khard ~/.config
+ln -sf ~/.dotfiles/khal/khal ~/.config
+ln -sf ~/.dotfiles/git/.git-credentials ~/
+ln -sf ~/.dotfiles/git/.gitconfig ~/
+
+
+# source from dropbox
+ln -sf ~/Dropbox/.config/Keychains ~/Library
+ln -sf ~/Dropbox/.config/spotify-tui/ ~/.config/
+ln -sf ~/Dropbox/.config/vdirsyncer ~/.config
+ln -sf ~/Dropbox/.config/.password-store ~/
+ln -sf ~/Dropbox/.config/.gnupg ~/
+ln -sf ~/Dropbox/.config/.mbsyncrc ~/
 
 # x-code
 xcode-select --install 
@@ -201,7 +234,6 @@ brew install w3m
 
 ### qutebrowser
 ## .app evtl. version anpassen "https://github.com/qutebrowser/qutebrowser/releases"
-
 
 wget https://github.com/qutebrowser/qutebrowser/releases/download/v2.4.0/qutebrowser-2.4.0.dmg
 

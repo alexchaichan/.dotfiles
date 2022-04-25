@@ -17,7 +17,7 @@ source $ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZDOTDIR/zsh-completions/zsh-completions.plugin.zsh
 source $ZDOTDIR/powerlevel10k/powerlevel10k.zsh-theme
-source $ZDOTDIR/.zsh-autopair/autopair.zsh
+source $ZDOTDIR/zsh-autopair/autopair.zsh
 
 
 
