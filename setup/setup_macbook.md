@@ -48,10 +48,15 @@ ln -sf ~/.dotfiles/alacritty/osx_alacritty.yml ~/.config
 
 ln -sf ~/.dotfiles/newsboat ~/
 ln -sf ~/.dottfiles/.qutebrowser ~/
+ln -sf ~/.dotfiles/qutebrowser/.qutebrowser/bookmarks/urls ~/
+
+
+ln -sf ~/.dotfiles/mutt/.mutt/.muttrc ~/
+ln -sf ~/.dotfiles/mutt/.mutt/.mailcap ~/
+
 
 ln -sf ~/Dropbox/.config/Keychains ~/Library
-ln -sf ~/Dropbox/.config/.mutt/.muttrc ~/
-ln -sf ~/Dropbox/.config/.mutt/.mailcap ~/
+
 ln -sf ~/Dropbox/.config/.w3m ~/
 ln -sf ~/Dropbox/.config/spotify-tui/ ~/.config/
 ln -sf ~/Dropbox/.config/.git-credentials ~/
@@ -62,7 +67,6 @@ ln -sf ~/Dropbox/.config/.password-store ~/
 ln -sf ~/Dropbox/.config/.gnupg ~/
 ln -sf ~/Dropbox/.config/.jupyter ~/
 ln -sf ~/Dropbox/.config/.mbsyncrc ~/
-ln -sf ~/Dropbox/.config/.qutebrowser/bookmarks/urls ~/
 ln -sf ~/Dropbox/.config/pandoc/ ~/.local/share 
 ln -sf ~/Dropbox/.config/.psychopy3 ~/
 
