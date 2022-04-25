@@ -44,16 +44,15 @@ ln -sf ~/.dotfiles/alacritty/osx_alacritty.yml ~/.config
 
 # coc installer 
 # nvim CocInstall coc-json coc-pairs coc-r-lsp coc-snippets coc-tsserver coc-vimlsp
-
 # nvim add all plugins
 
+ln -sf ~/.dotfiles/newsboat ~/
+ln -sf ~/.dottfiles/.qutebrowser ~/
 
 ln -sf ~/Dropbox/.config/Keychains ~/Library
 ln -sf ~/Dropbox/.config/.mutt/.muttrc ~/
 ln -sf ~/Dropbox/.config/.mutt/.mailcap ~/
-ln -sf ~/Dropbox/.config/.qutebrowser ~/
 ln -sf ~/Dropbox/.config/.w3m ~/
-ln -sf ~/Dropbox/.config/calcurse ~/.config
 ln -sf ~/Dropbox/.config/spotify-tui/ ~/.config/
 ln -sf ~/Dropbox/.config/.git-credentials ~/
 ln -sf ~/Dropbox/.config/khard ~/.config
@@ -61,7 +60,6 @@ ln -sf ~/Dropbox/.config/vdirsyncer ~/.config
 ln -sf ~/Dropbox/.config/khal ~/.config
 ln -sf ~/Dropbox/.config/.password-store ~/
 ln -sf ~/Dropbox/.config/.gnupg ~/
-ln -sf ~/Dropbox/.config/.newsboat ~/
 ln -sf ~/Dropbox/.config/.jupyter ~/
 ln -sf ~/Dropbox/.config/.mbsyncrc ~/
 ln -sf ~/Dropbox/.config/.qutebrowser/bookmarks/urls ~/
