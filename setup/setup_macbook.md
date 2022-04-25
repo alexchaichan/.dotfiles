@@ -25,7 +25,7 @@ brew install cask
 brew install --cask dropbox
 
 ln -sf ~/Dropbox/.config/zsh/ ~/.zsh
-ln -sf ~/Dropbox/.dotfiles/zsh/.zshrc_mac ~/.zshrc
+ln -sf ~/Dropbox/.config/zsh/.zshrc_mac ~/.zshrc
 ln -sf ~/Dropbox/.config/Keychains ~/Library
 ln -sf ~/Dropbox/.config/nvim/ ~/.config/
 ln -sf ~/Dropbox/.config/.mutt/.muttrc ~/
