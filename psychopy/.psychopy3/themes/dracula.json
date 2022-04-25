@@ -1,0 +1,146 @@
+{
+  "app": "dark",
+  "icons": "dark",
+  "info": "dracula",
+  "base": {
+    "fg": "#f8f8f2",
+    "bg": "#282a36",
+    "font": "JetBrains Mono"
+  },
+  "margin": {
+    "fg": "",
+    "bg": "#282a36",
+    "font": ""
+  },
+  "caret": {
+    "fg": "#f8f8f2",
+    "bg": "#f8f8f2",
+    "font": "bold"
+  },
+  "select": {
+    "fg": "",
+    "bg": "#44475a",
+    "font": ""
+  },
+  "indent": {
+    "fg": "#282a36",
+    "bg": "#282a36",
+    "font": ""
+  },
+  "brace": {
+    "fg": "#50fa7b",
+    "bg": "",
+    "font": ""
+  },
+  "operator": {
+    "fg": "#ff79c6",
+    "bg": "",
+    "font": ""
+  },
+  "keyword": {
+    "fg": "#ff79c6",
+    "bg": "",
+    "font": ""
+  },
+  "keyword2": {
+    "fg": "#ff79c6",
+    "bg": "",
+    "font": [
+      "italic",
+      "bold"
+    ]
+  },
+  "controlchar": {
+    "fg": "",
+    "bg": "",
+    "font": ""
+  },
+  "id": {
+    "fg": "",
+    "bg": "",
+    "font": ""
+  },
+  "num": {
+    "fg": "#bd93f9",
+    "bg": "",
+    "font": ""
+  },
+  "char": {
+    "fg": "#f1fa8c",
+    "bg": "",
+    "font": ""
+  },
+  "str": {
+    "fg": "#f1fa8c",
+    "bg": "",
+    "font": ""
+  },
+  "openstr": {
+    "fg": "#f1fa8c",
+    "bg": "",
+    "font": ""
+  },
+  "infix": {
+    "fg": "#f2545b",
+    "bg": "",
+    "font": ""
+  },
+  "openinfix": {
+    "fg": "#f2545b",
+    "bg": "#75757D",
+    "font": ""
+  },
+  "decorator": {
+    "fg": "#bd93f9",
+    "bg": "",
+    "font": ""
+  },
+  "class": {
+    "fg": "#ffb86c",
+    "bg": "",
+    "font": ""
+  },
+  "def": {
+    "fg": "#ffb86c",
+    "bg": "",
+    "font": ""
+  },
+  "comment": {
+    "fg": "#6272a4",
+    "bg": "",
+    "font": ""
+  },
+  "commentblock": {
+    "fg": "#6272a4",
+    "bg": "",
+    "font": ""
+  },
+  "commentkw": {
+    "fg": "#6272a4",
+    "bg": "",
+    "font": ""
+  },
+  "commenterror": {
+    "fg": "#6272a4",
+    "bg": "",
+    "font": ""
+  },
+  "documentation": {
+    "fg": "#6272a4",
+    "bg": "",
+    "font": "italic"
+  },
+  "documentation2": {
+    "fg": "#6272a4",
+    "bg": "",
+    "font": "italic"
+  },
+  "whitespace": {
+    "fg": "#B8B8BB",
+    "bg": "",
+    "font": "bold"
+  },
+  "python": {},
+  "c++": {},
+  "json": {}
+}

@@ -1,0 +1,4 @@
+############################ Switch to the next buffer (NEXT)
+keymap  B       NEXT
+############################ Switch to the previous buffer (PREV)
+keymap  b       PREV

@@ -54,10 +54,16 @@ ln -sf ~/.dotfiles/qutebrowser/.qutebrowser/bookmarks/urls ~/
 ln -sf ~/.dotfiles/mutt/.mutt/.muttrc ~/
 ln -sf ~/.dotfiles/mutt/.mutt/.mailcap ~/
 
+ln -sf ~/.dotfiles/psychopy/.psychopy3 ~/
 
 ln -sf ~/Dropbox/.config/Keychains ~/Library
 
-ln -sf ~/Dropbox/.config/.w3m ~/
+ln -sf ~/.dotfiles/w3m/.w3m ~/
+
+
+ln -sf ~/.dotfiles/jupyter/.jupyter ~/
+
+
 ln -sf ~/Dropbox/.config/spotify-tui/ ~/.config/
 ln -sf ~/Dropbox/.config/.git-credentials ~/
 ln -sf ~/Dropbox/.config/khard ~/.config
@@ -65,10 +71,8 @@ ln -sf ~/Dropbox/.config/vdirsyncer ~/.config
 ln -sf ~/Dropbox/.config/khal ~/.config
 ln -sf ~/Dropbox/.config/.password-store ~/
 ln -sf ~/Dropbox/.config/.gnupg ~/
-ln -sf ~/Dropbox/.config/.jupyter ~/
 ln -sf ~/Dropbox/.config/.mbsyncrc ~/
 ln -sf ~/Dropbox/.config/pandoc/ ~/.local/share 
-ln -sf ~/Dropbox/.config/.psychopy3 ~/
 
 # zshell
 brew install zsh

@@ -1,0 +1,5 @@
+PTB-INFO: Using modified PortAudio V19.7.0-devel, revision unknown
+2.2307 	DEBUG 	Opening message catalog /Applications/PsychoPy.app/Contents/Resources/lib/python3.8/psychopy/localization/../app/locale/en_US/LC_MESSAGE/messages.mo for locale en_US
+39.2432 	INFO 	Loaded SoundDevice with PortAudio V19.7.0-devel, revision 147dd722548358763a8b649b3e4b41dfffbcfbb6
+39.2437 	INFO 	sound is using audioLib: sounddevice
+39.2438 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
