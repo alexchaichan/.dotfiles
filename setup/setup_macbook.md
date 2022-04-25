@@ -24,8 +24,21 @@ brew install cask
 
 brew install --cask dropbox
 
-ln -sf ~/Dropbox/.config/zsh/ ~/.zsh
-ln -sf ~/Dropbox/.config/zsh/.zshrc_mac ~/.zshrc 
+ln -sf ~/.dotfiles/zsh/.zshrc_mac ~/.zshrc 
+
+# zsh plugin installer 
+
+ln -sf ~/.dotfiles/zathura ~/.config
+
+
+
+ln -sf ~/.dotfiles/rstudio/rstudio-prefs.json ~/.config/rstudio
+
+
+
+
+
+
 ln -sf ~/Dropbox/.config/Keychains ~/Library
 ln -sf ~/Dropbox/.config/nvim/ ~/.config/
 ln -sf ~/Dropbox/.config/.mutt/.muttrc ~/
@@ -33,8 +46,6 @@ ln -sf ~/Dropbox/.config/.mutt/.mailcap ~/
 ln -sf ~/Dropbox/.config/.qutebrowser ~/
 ln -sf ~/Dropbox/.config/.w3m ~/
 ln -sf ~/Dropbox/.config/calcurse ~/.config
-ln -sf ~/Dropbox/.config/zathura ~/.config
-ln -sf ~/Dropbox/.config/rstudio ~/.config
 ln -sf ~/Dropbox/.config/mpv ~/.config
 ln -sf ~/Dropbox/.config/ranger ~/.config
 ln -sf ~/Dropbox/.config/spotify-tui/ ~/.config/

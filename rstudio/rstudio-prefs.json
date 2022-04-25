@@ -1,0 +1,23 @@
+{
+    "initial_working_directory": "~",
+    "editor_theme": "Dracula",
+    "posix_terminal_shell": "zsh",
+    "jobs_tab_visibility": "shown",
+    "show_margin": false,
+    "default_project_location": "~/Dropbox/shunt",
+    "source_with_echo": true,
+    "soft_wrap_r_files": true,
+    "cran_mirror": {
+        "name": "Germany (Münster) [https]",
+        "host": "University of Münster, Germany",
+        "url": "https://cran.uni-muenster.de/",
+        "country": "de",
+        "ok": 1,
+        "secondary": ""
+    },
+    "default_encoding": "UTF-8",
+    "spelling_dictionary_language": "de_DE",
+    "real_time_spellchecking": false,
+    "rmd_viewer_type": "none",
+    "global_theme": "alternate"
+}
