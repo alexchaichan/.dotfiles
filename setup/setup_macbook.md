@@ -41,6 +41,7 @@ ln -sf ~/Dropbox/.config/spotify-tui/ ~/.config/
 ln -sf ~/Dropbox/.config/neofetch ~/.config
 ln -sf ~/Dropbox/.config/osx/alacritty.yml ~/.config
 ln -sf ~/Dropbox/.config/osx/.tmux.conf ~/
+ln -sf ~/Dropbox/.config/.tmux ~/
 ln -sf ~/Dropbox/.config/coc ~/.config
 ln -sf ~/Dropbox/.config/.git-credentials ~/
 ln -sf ~/Dropbox/.config/khard ~/.config
