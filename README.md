@@ -192,6 +192,7 @@ sudo launchctl start /Library/LaunchDaemons/rustlang.spotifyd.plist
 
 # yarn
 brew install yarn
+cd ~/.config/nvim/pack/plugins/start/coc.nvim && yarn install
 
 # go
 brew install go
