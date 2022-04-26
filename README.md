@@ -232,7 +232,7 @@ python3 scripts/mkvenv.py
 
 ## password manager
 brew install qt dmenu
-cp -r ~/Dropbox/.config/.qutebrowser/userscripts ~/Library/Application\ Support/qutebrowser
+cp -r ~/.dotfiles/qutebrowser/.qutebrowser/userscripts ~/Library/Application\ Support/qutebrowser
 
 # mail client
 brew install neomutt
