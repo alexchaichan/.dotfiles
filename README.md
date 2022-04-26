@@ -1,4 +1,4 @@
-# setup a fresh mac(book)
+# system setup mac
 
 
 ```
@@ -113,7 +113,6 @@ mkdir ~/.config/vdirsyncer && ln -sf ~/.dotfiles/vdirsyncer/config ~/.config/vdi
 
 # source from dropbox
 ln -sf ~/Dropbox/.config/Keychains ~/Library
-ln -sf ~/Dropbox/.config/vdirsyncer ~/.config
 ln -sf ~/Dropbox/.config/.password-store ~/
 ln -sf ~/Dropbox/.config/.gnupg ~/
 
