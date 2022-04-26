@@ -174,7 +174,7 @@ brew install ruby
 # R
 brew install --cask r
 
-# xquartz for r studio
+# xquartz
 brew install --cask xquartz
 
 # required for some downloads
@@ -206,7 +206,7 @@ brew install extract_url
 # rss reader
 brew install newsboat
 
-#terminal browser
+# terminal browser
 brew install w3m
 
 ### qutebrowser
@@ -294,7 +294,7 @@ brew install mpv
 brew install youtube-dl
 brew install --cask vlc
 
-#music player
+# music player
 brew install moc
 brew install berkeley-db
 brew install jack
