@@ -1,4 +1,4 @@
-.First <- function(){
+.First <- function(){hi
 invisible(lapply(.Options$defaultPackages, function(x) library(x, character.only=TRUE)))
  library(tidyverse)
  library(lubridate)
