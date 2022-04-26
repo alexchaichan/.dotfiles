@@ -25,6 +25,9 @@ brew install zsh
 zsh
 chsh -s /bin/zsh
 
+# git
+brew install git
+
 brew install cask
 
 brew install --cask dropbox
@@ -102,6 +105,7 @@ ln -sf ~/.dotfiles/khard/khard ~/.config
 ln -sf ~/.dotfiles/khal/khal ~/.config
 ln -sf ~/.dotfiles/git/.git-credentials ~/
 ln -sf ~/.dotfiles/git/.gitconfig ~/
+ln -sf ~/.dotfiles/spotify/spotifyd ~/.config
 
 # source from dropbox
 ln -sf ~/Dropbox/.config/Keychains ~/Library
@@ -142,10 +146,8 @@ pip3 install PyQt5
 
 # nvim
 brew install neovim
-sudo ln -sf ~/Dropbox/.config/nvim/spell /usr/local/Cellar/neovim/0.6.1/share/nvim/runtime/ 
+sudo ln -sf ~/.dotfiles/nvim/spell /usr/local/Cellar/neovim/0.6.1/share/nvim/runtime/ 
 
-# git
-brew install git
 
 # alacritty terminal 
 brew install --cask alacritty
@@ -160,33 +162,6 @@ brew install reattach-to-user-namespace
 
 # password manager
 brew install pass
-
-# spotify daemon
-echo '<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-    <dict>
-        <key>Label</key>
-        <string>rustlang.spotifyd</string>
-        <key>ProgramArguments</key>
-        <array>
-            <string>/usr/local/bin/spotifyd</string>
-            <string>--config-path=/Users/user/.config/spotifyd/spotifyd.conf</string>
-            <string>--no-daemon</string>
-        </array>
-        <key>UserName</key>
-        <string>user</string>
-        <key>KeepAlive</key>
-        <true/>
-        <key>ThrottleInterval</key>
-        <integer>30</integer>
-    </dict>
-</plist>' >>  /Library/LaunchDaemons/rustlang.spotifyd.plist
-
-sudo chmod 600 /Library/LaunchDaemons/rustlang.spotifyd.plist
-
-sudo launchctl load -w /Library/LaunchDaemons/rustlang.spotifyd.plist
-sudo launchctl start /Library/LaunchDaemons/rustlang.spotifyd.plist
 
 # yarn
 brew install yarn
@@ -217,6 +192,9 @@ git clone https://github.com/pandoc/lua-filters.git ~/.local/share/pandoc/
 brew install spotify-tui
 brew install spotifyd
 cp -R ~/Dropbox/.config/.cache/spotifyd ~/.cache/
+brew services start spotifyd
+mkdir ~/.config/spotify-tui && echo | pass spotify-tui > ~/.config/spotify-tui/client.yml && ln -sf ~/.dotfiles/spotify/spotify-tui/config.yml ~/.config/spotify-tui
+mkdir ~/.cache/spotifyd && echo | pass spotifyd > ~/.cache/spotifyd/credentials.json
 
 # calendar
 brew install vdirsyncer
@@ -323,31 +301,7 @@ brew install berkeley-db
 brew install jack
 brew install libmad
 brew install libid3tag
-
-echo '<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-  <dict>
-    <key>Label</key>
-    <string>org.jackaudio.jackd</string>
-    <key>WorkingDirectory</key>
-    <string>/Users/user/</string>
-    <key>ProgramArguments</key>
-    <array>
-      <string>/usr/local/Cellar/jack/1.9.7/bin/jackd</string>
-      <string>-d</string>
-      <string>coreaudio</string>
-    </array>
-    <key>EnableGlobbing</key>
-    <true/>
-    <key>RunAtLoad</key>
-    <true/>
-    <key>KeepAlive</key>
-    <true/>
-  </dict>
-</plist>' >> ~/Library/LaunchAgents/org.jackaudio.jackd.plist
-
-launchctl load ~/Library/LaunchAgents/org.jackaudio.jackd.plist
+brew services start jack
 
 # youtube terminal (funktioniert nicht)
 #brew install mps-youtube
@@ -355,7 +309,7 @@ launchctl load ~/Library/LaunchAgents/org.jackaudio.jackd.plist
 # zoom
 brew install --cask zoom
 
-#speed test
+# speed test
 brew tap teamookla/speedtest
 brew install speedtest --force
 
@@ -382,9 +336,6 @@ brew install --cask maccy
 
 # mspowerpoint
 brew install --cask microsoft-powerpoint
-
-#hush coockieblocker
-# brew install --cask hush
 
 # latex
 brew install --cask basictex
