@@ -68,7 +68,7 @@ vim_add_plugin 'glepnir/dashboard-nvim'
 nvim "+:CocInstall coc-json coc-pairs coc-r-lsp coc-snippets coc-tsserver coc-vimlsp" 
 
 # tmux with all plugins
-mkdir ~/./tmux && mkdir ~/.tmux/plugins
+mkdir ~/.tmux && mkdir ~/.tmux/plugins
 ln -sf ~/.dotfiles/tmux/.osx_tmux.conf ~/.tmux.conf
 tmux_add_plugin 'tmux-plugins/tmux-battery'
 tmux_add_plugin 'tmux-plugins/tmux-copycat'
