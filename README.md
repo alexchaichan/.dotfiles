@@ -28,6 +28,8 @@ chsh -s /bin/zsh
 # git
 brew install git
 
+git clone https://github.com/alexchaichan/.dotfiles.git
+
 brew install cask
 
 brew install --cask dropbox
@@ -114,8 +116,6 @@ ln -sf ~/Dropbox/.config/Keychains ~/Library
 ln -sf ~/Dropbox/.config/vdirsyncer ~/.config
 ln -sf ~/Dropbox/.config/.password-store ~/
 ln -sf ~/Dropbox/.config/.gnupg ~/
-
-
 
 # x-code
 xcode-select --install 
