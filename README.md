@@ -106,13 +106,14 @@ ln -sf ~/.dotfiles/khal/khal ~/.config
 ln -sf ~/.dotfiles/git/.git-credentials ~/
 ln -sf ~/.dotfiles/git/.gitconfig ~/
 ln -sf ~/.dotfiles/spotify/spotifyd ~/.config
+ln -sf ~/.dotfiles/mbsync/.mbsyncrc ~/
+mkdir ~/.config/vdirsyncer && ln -sf ~/.dotfiles/vdirsyncer/config ~/.config/vdirsyncer
 
 # source from dropbox
 ln -sf ~/Dropbox/.config/Keychains ~/Library
 ln -sf ~/Dropbox/.config/vdirsyncer ~/.config
 ln -sf ~/Dropbox/.config/.password-store ~/
 ln -sf ~/Dropbox/.config/.gnupg ~/
-ln -sf ~/Dropbox/.config/.mbsyncrc ~/
 
 
 
@@ -239,6 +240,7 @@ cp -r ~/Dropbox/.config/.qutebrowser/userscripts ~/Library/Application\ Support/
 brew install neomutt
 brew install isync
 brew install msmtp
+mkdir ~/mail
 
 # image viewer
 brew install feh

@@ -1,0 +1,28 @@
+IMAPAccount icloud
+Host imap.mail.me.com
+Port 993
+User a.chaichan@icloud.com
+PassCmd "pass mbsyncrc"
+SSLType IMAPS
+CertificateFile ~/Dropbox/.config/cert.pem
+AuthMechs PLAIN
+
+IMAPStore icloud-remote
+Account icloud
+
+MaildirStore icloud-local
+Path ~/mail/
+Inbox ~/mail/INBOX
+Trash Trash
+
+Channel icloud-folders
+Far :icloud-remote:
+Near :icloud-local:
+Patterns "INBOX"
+Create Both
+Expunge Both
+Patterns *
+SyncState *
+
+Group icloud
+Channel icloud-folders
