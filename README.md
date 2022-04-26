@@ -1,5 +1,6 @@
 # system setup mac
 
+![Screenshot](./screenshot.png)
 
 ```
 defaults write com.apple.Finder AppleShowAllFiles true
