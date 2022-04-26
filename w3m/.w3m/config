@@ -60,7 +60,7 @@ clear_buffer 1
 decode_cte 0
 auto_uncompress 0
 preserve_timestamp 1
-keymap_file ~/Dropbox/.config/.w3m/keymap
+keymap_file ~/.w3m/keymap
 document_root 
 personal_document_root 
 cgi_bin 
