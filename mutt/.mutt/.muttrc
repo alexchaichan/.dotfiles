@@ -2,11 +2,10 @@ source ~/.dotfiles/mutt/.mutt/dracula.muttrc
 
 
 # folder hooks
-folder-hook 'account.com.icloud' source 'source ~/Dropbox/.config/.mutt/account/.com.icloud.muttrc'
-folder-hook 'account.com.icloud' source 'source ~/Dropbox/.config/.mutt/account/.com.proton.muttrc'
+folder-hook 'account.com.icloud' source 'source ~/.dotfiles/mutt/.mutt/account/.com.icloud.muttrc'
 
 # default account
-source ~/Dropbox/.config/.mutt/account.com.icloud.muttrc
+source ~/.dotfiles/mutt/.mutt/account.com.icloud.muttrc
 
 
 # # Macros for switching accounts
