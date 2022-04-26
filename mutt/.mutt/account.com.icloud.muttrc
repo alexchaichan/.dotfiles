@@ -1,0 +1,24 @@
+set my_pass="`pass mutt`"
+
+set imap_user = "a.chaichan"
+set smtp_pass = "$my_pass"
+set imap_pass = "$my_pass"
+set from = "a.chaichan@icloud.com"
+set realname = "Aleksej Chaichan"
+set smtp_url = "smtp://a.chaichan@smtp.mail.me.com:587/"
+
+# for online post inbox
+set folder = "imaps://a.chaichan@imap.mail.me.com/"
+set spoolfile = "imaps://a.chaichan@imap.mail.me.com/INBOX"
+
+set record = "+Sent Messages"
+set trash = "+Trash"
+set postponed = "+Drafts"
+
+mailboxes =INBOX ="Sent Messages" ="Deleted Messages" =Drafts =Junk =Archive =Trash
+
+set sort=threads
+set sort_aux=date-sent
+set header_cache = ~/.cache/.mutt/
+set message_cachedir = ~/.cache/.mutt/
+set certificate_file = ~/.cache/.mutt/
