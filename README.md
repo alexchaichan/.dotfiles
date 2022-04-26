@@ -99,6 +99,7 @@ ln -sf ~/.dotfiles/mutt/.mutt/.muttrc ~/
 ln -sf ~/.dotfiles/mutt/.mutt/.mailcap ~/
 ln -sf ~/.dotfiles/psychopy/.psychopy3 ~/
 ln -sf ~/.dotfiles/w3m/.w3m ~/
+ln -sf ~/.dotfiles/moc/.moc ~/
 ln -sf ~/.dotfiles/jupyter/.jupyter ~/
 ln -sf ~/.dotfiles/zathura ~/.config
 ln -sf ~/.dotfiles/ranger ~/.config
