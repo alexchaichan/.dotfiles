@@ -154,7 +154,6 @@ brew install --cask alacritty
 
 # nerd font `sauce code pro`
 brew tap homebrew/cask-fonts && brew install --cask font-sauce-code-pro-nerd-font 
-#cp ~/Dropbox/.config/'Sauce Code Pro Nerd Font Complete.ttf' ~/Library/Fonts 
 
 # terminal multiplexer
 brew install tmux
@@ -461,9 +460,7 @@ ___
 
 ## disable keyboard stuff
 
-1. open System Preferences
-2. disable `fn - keys``
-3. and the rest...
+system preference > keyboard ...
 
 ---
 
@@ -486,7 +483,7 @@ ___
 ## remove standard hotkey `cmd+<space>` and 
 
 1. go to System Preferences 
-2. Keyboard > Shortcuts > Spotlight
+2. Keyboard > Shortcuts > Spotlight > uncheck
 3. `cp -R ~/Dropbox/.config/open_terminal.workflow ~/Library/Services` `cp -R ~/Dropbox/.config/open_browser.workflow ~/Library/Services`
 4. Services > check copied services and map a shortcut  
 
