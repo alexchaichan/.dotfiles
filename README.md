@@ -91,6 +91,7 @@ tmux_add_plugin 'jaclu/tmux-menus'
 tmux_add_plugin 'xamut/tmux-weather'
 tmux_add_plugin 'schasse/tmux-jump'
 
+# source from dotfiles
 ln -sf ~/.dotfiles/alacritty/osx_alacritty.yml ~/.config/.alacritt.yml 
 ln -sf ~/.dotfiles/newsboat ~/
 ln -sf ~/.dottfiles/.qutebrowser ~/
@@ -115,7 +116,6 @@ mkdir ~/.config/vdirsyncer && ln -sf ~/.dotfiles/vdirsyncer/config ~/.config/vdi
 
 # source from dropbox
 ln -sf ~/Dropbox/.config/Keychains ~/Library
-ln -sf ~/Dropbox/.config/.password-store ~/
 ln -sf ~/Dropbox/.config/.gnupg ~/
 
 # x-code
