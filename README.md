@@ -138,7 +138,6 @@ brew install --cask miniconda
 #wget https://www.python.org/ftp/python/3.10.2/python-3.10.2-macos11.pkg
 
 brew install python3
-brew link --overwrite python@3.9
 
 # pip
 sudo easy_install pip
@@ -147,8 +146,6 @@ pip3 install PyQt5
 
 # nvim
 brew install neovim
-sudo ln -sf ~/.dotfiles/nvim/spell /usr/local/Cellar/neovim/0.6.1/share/nvim/runtime/ 
-
 
 # alacritty terminal 
 brew install --cask alacritty
@@ -165,7 +162,6 @@ brew install pass
 
 # yarn
 brew install yarn
-cd ~/.config/nvim/pack/plugins/start/coc.nvim && yarn install
 
 # go
 brew install go
@@ -369,6 +365,8 @@ pip3 install neovim
 brew install grep ripgrep fd
 pip3 install pynvim
 brew install fzf
+cd ~/.config/nvim/pack/plugins/start/coc.nvim && yarn install
+sudo ln -sf ~/.dotfiles/nvim/spell /usr/local/Cellar/neovim/0.6.1/share/nvim/runtime/
 ```
 ___
 
@@ -436,11 +434,6 @@ launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist
 ___
 
 
-
-## `node.js` & `npm`
-
-___
-
 #### Cronjobs 
 
 1. open preferences and go to "Security & Privacy" -> "Privacy"
@@ -450,6 +443,13 @@ ___
 5. type "command+shift+G" to bring up the got to file dialog box (don‚Äôt seem able to navigate the /usr directory)
 6. enter the full path name to the application (/usr/sbin/cron) and click on "Go"
 7. click "Open" It should show up in the list with a check mark next to it. I tried it with a simple csh script in cron and it worked
+
+```
+crontab -e
+
+*/5 * * * * /usr/local/bin/mbsync icloud && /usr/local/bin/vdirsyncer discover my_contacts && /usr/local/bin/vdirsyncer discover my_calendar  && /usr/local/bin/vdirsyncer sync >/dev/null 2>&1
+
+```
 ___
 
 ## disable sound effects
