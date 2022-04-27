@@ -204,7 +204,6 @@ let g:dashboard_custom_header = [
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" vim_add_plugin "voldikss/vim-floaterm"
 """"""""""""""""""""""floaterm"""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -223,7 +222,7 @@ let g:dashboard_custom_header = [
 
 
 " NERD Tree
-map <leader>nn :NERDTreeToggle<CR>                  " Toggle NERD tree.
+map <leader>nn :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 autocmd VimEnter * NERDTree | wincmd p
 
@@ -273,7 +272,7 @@ let g:mkdp_refresh_slow = 0
 " set to 1, the MarkdownPreview command can be use for all files,
 " by default it can be use in markdown file
 " default: 0
-let g:mkdp_command_for_global = 0
+let g:mkdp_command_for_global = 1
 
 " set to 1, preview server available to others in your network
 " by default, the server listens on localhost (127.0.0.1)
@@ -299,7 +298,7 @@ let g:mkdp_echo_preview_url = 0
 " a custom vim function name to open preview page
 " this function will receive url as param
 " default is empty
-let g:mkdp_browserfunc = ''
+" let g:mkdp_browserfunc = ''
 
 " options for markdown render
 " mkit: markdown-it options for render
@@ -331,13 +330,13 @@ let g:mkdp_preview_options = {
 
 " use a custom markdown style must be absolute path
 " like '/Users/username/markdown.css' or expand('~/markdown.css')
-let g:mkdp_markdown_css = 'Dropbox/styles/preview.css'
+" let g:mkdp_markdown_css = 'Dropbox/styles/preview.css'
 "let g:mkdp_markdown_css = 'Users/user/Dropbox/styles/preview.css'
 
 
 " use a custom highlight style must absolute path
 " like '/Users/username/highlight.css' or expand('~/highlight.css')
-let g:mkdp_highlight_css = 'Dropbox/styles/preview.css'
+" let g:mkdp_highlight_css = 'Dropbox/styles/preview.css'
 " let g:mkdp_highlight_css = 'Users/user/Dropbox/styles/preview.css'
 '
 " use a custom port to start server or random for empty
