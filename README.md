@@ -440,7 +440,7 @@ ___
 2. scroll down to "Full Disk Access" on the left side and select it.
 3. hit the unlock icon and enter your password
 4. hit the "+" sign to add an application
-5. type "command+shift+G" to bring up the got to file dialog box (don‚Äôt seem able to navigate the /usr directory)
+5. type "command+shift+G" to bring up the got to file dialog box
 6. enter the full path name to the application (/usr/sbin/cron) and click on "Go"
 7. click "Open" It should show up in the list with a check mark next to it. I tried it with a simple csh script in cron and it worked
 
