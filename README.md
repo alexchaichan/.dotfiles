@@ -188,7 +188,6 @@ git clone https://github.com/pandoc/lua-filters.git ~/.local/share/pandoc/filter
 # spotify
 brew install spotify-tui
 brew install spotifyd
-cp -R ~/Dropbox/.config/.cache/spotifyd ~/.cache/
 brew services start spotifyd
 mkdir ~/.config/spotify-tui && echo | pass spotify-tui > ~/.config/spotify-tui/client.yml && ln -sf ~/.dotfiles/spotify/spotify-tui/config.yml ~/.config/spotify-tui
 mkdir ~/.cache/spotifyd && echo | pass spotifyd > ~/.cache/spotifyd/credentials.json
