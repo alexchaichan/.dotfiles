@@ -356,8 +356,8 @@ mas install 1171346381
 # plaintext
 mas install 508368068
 
-mkdir ~/Pictures/screenshot
-defaults write com.apple.screencapture location ~/Pictures/screenshots/ && killall SystemUIServer
+mkdir ~/screenshots
+defaults write com.apple.screencapture location ~/screenshots/ && killall SystemUIServer
 
 # neovim dependencies
 gem install neovim
