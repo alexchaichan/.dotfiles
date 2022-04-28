@@ -328,19 +328,10 @@ function tmux_add_plugin() {
 
 
 
-# arch bluetoothctl
+# arch bluetoothctl connect the magic mouse quick
 mm(){
     bluetoothctl connect 04:4B:ED:D2:45:CF
 }
-
-
-# lua pandoc wordcount
-wordcount() {
-  pandoc --lua-filter wordcount.lua "$@"
-}
-
-
-
 
 
 ########################################################################################################## 
@@ -354,31 +345,31 @@ wordcount() {
 
 
 links(){
-    rm -rf wordcount.lua literature.bib styles .Rprofile && ln -sf ~/Dropbox/.config/pandoc/lua-filters/wordcount/wordcount.lua "$(pwd)" && ln -sf ~/Dropbox/styles "$(pwd)" && ln -sf ~/Dropbox/googlebox/literature.bib "$(pwd)" && ln -sf ~/Dropbox/.config/.Rprofile "$(pwd)"
+    rm -rf wordcount.lua literature.bib styles .Rprofile && ln -sf ~/.local/share/pandoc/filters/wordcount/wordcount.lua "$(pwd)" && ln -sf ~/.dotfiles/styles "$(pwd)" && ln -sf ~/Dropbox/googlebox/literature.bib "$(pwd)" && ln -sf ~/.dotfiles/R/.Rprofile "$(pwd)"
 }
 
 copies(){
-rm -rf wordcount.lua literature.bib styles .Rprofile && cp ~/Dropbox/.config/pandoc/lua-filters/wordcount/wordcount.lua "$(pwd)" && cp -rf ~/Dropbox/styles "$(pwd)" && cp ~/Dropbox/googlebox/literature.bib "$(pwd)" && cp ~/Dropbox/.config/.Rprofile "$(pwd)"
+rm -rf wordcount.lua literature.bib styles .Rprofile && cp ~/.local/share/pandoc/filters/wordcount/wordcount.lua "$(pwd)" && cp -rf ~/.dotfiles/styles "$(pwd)" && cp ~/Dropbox/googlebox/literature.bib "$(pwd)" && cp ~/.dotfiles/R/.Rprofile "$(pwd)"
 }
 
 pdf(){
-    cp ~/Dropbox/Templates/pdf.rmd "$(pwd)"
+    cp ~/.dotfiles/Templates/pdf.rmd "$(pwd)"
 }
 
 html(){
-    cp ~/Dropbox/Templates/html.rmd "$(pwd)"
+    cp ~/.dotfiles/Templates/html.rmd "$(pwd)"
 }
 
 letter(){
-    cp ~/Dropbox/Templates/letter.rmd "$(pwd)"
+    cp ~/.dotfiles/Templates/letter.rmd "$(pwd)"
 }
 
 pptx(){
-    cp ~/Dropbox/Templates/pptx.rmd "$(pwd)"
+    cp ~/.dotfiles/Templates/pptx.rmd "$(pwd)"
 }
 
 word(){
-    cp ~/Dropbox/Templates/word.rmd "$(pwd)"
+    cp ~/.dotfiles/Templates/word.rmd "$(pwd)"
 }
 
 

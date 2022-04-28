@@ -183,7 +183,7 @@ library_dirs=/opt/X11/lib' >> ~/.pydistutils.cfg
 
 # pandoc
 brew install pandoc
-git clone https://github.com/pandoc/lua-filters.git ~/.local/share/pandoc/
+git clone https://github.com/pandoc/lua-filters.git ~/.local/share/pandoc/filters
 
 # spotify
 brew install spotify-tui
