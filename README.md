@@ -208,11 +208,10 @@ brew install newsboat
 brew install w3m
 
 ### qutebrowser
+#brew install --cask qutebrowser # wont work?
+
 ## .app evtl. version anpassen "https://github.com/qutebrowser/qutebrowser/releases"
-
 wget https://github.com/qutebrowser/qutebrowser/releases/download/v2.4.0/qutebrowser-2.4.0.dmg
-
-#brew install --cask qutebrowser # funktioniert evtl. nicht
 
 ## virtual einvironment
 
@@ -255,15 +254,17 @@ brew install openconnect
 
 # ranger file manager
 brew install ranger
+
+# tree file structure
 brew install tree
 
-# markdown reader
+# markdown .md viewer
 brew install glow
 
 # better than cat
 brew install bat
 
-#ffmpeg video <-> audio 
+#ffmpeg audio-converter 
 brew instal ffmpeg
 
 # zathura pdf viewer
@@ -447,6 +448,7 @@ ___
 ```
 crontab -e
 
+# sync every 5 mins  mail, contacts and calendars
 */5 * * * * /usr/local/bin/mbsync icloud && /usr/local/bin/vdirsyncer discover my_contacts && /usr/local/bin/vdirsyncer discover my_calendar  && /usr/local/bin/vdirsyncer sync >/dev/null 2>&1
 
 ```
