@@ -96,14 +96,14 @@ ln -sf ~/.dotfiles/alacritty/osx_alacritty.yml ~/.config/.alacritt.yml
 ln -sf ~/.dotfiles/newsboat ~/
 ln -sf ~/.dottfiles/.qutebrowser ~/
 ln -sf ~/.dotfiles/qutebrowser/.qutebrowser/bookmarks/urls ~/
-ln -sf ~/.dotfiles/mutt/.mutt/.muttrc ~/
-ln -sf ~/.dotfiles/mutt/.mutt/.mailcap ~/
+ln -sf ~/.dotfiles/mutt/.muttrc ~/
+ln -sf ~/.dotfiles/mutt/.mac_mailcap ~/
 ln -sf ~/.dotfiles/psychopy/.psychopy3 ~/
 ln -sf ~/.dotfiles/w3m/.w3m ~/
 ln -sf ~/.dotfiles/moc/.moc ~/
 ln -sf ~/.dotfiles/jupyter/.jupyter ~/
 ln -sf ~/.dotfiles/zathura ~/.config
-ln -sf ~/.dotfiles/ranger ~/.config
+ln -sf ~/.dotfiles/ranger/ranger ~/.config
 ln -sf ~/.dotfiles/mpv ~/.config
 ln -sf ~/.dotfiles/neofetch ~/.config
 ln -sf ~/.dotfiles/khard/khard ~/.config
@@ -485,7 +485,7 @@ ___
 
 1. go to System Preferences 
 2. Keyboard > Shortcuts > Spotlight > uncheck
-3. `cp -R ~/Dropbox/.config/open_terminal.workflow ~/Library/Services` `cp -R ~/Dropbox/.config/open_browser.workflow ~/Library/Services`
+3. `cp -R ~/.dotfiles/osx/open_terminal.workflow ~/Library/Services` 
 4. Services > check copied services and map a shortcut  
 
 ___
