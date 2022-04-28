@@ -112,6 +112,8 @@ ln -sf ~/.dotfiles/git/.git-credentials ~/
 ln -sf ~/.dotfiles/git/.gitconfig ~/
 ln -sf ~/.dotfiles/spotify/spotifyd ~/.config
 ln -sf ~/.dotfiles/mbsync/.mbsyncrc ~/
+ln -sf ~/.dotfiles/Templates ~/
+ln -sf ~/.dotfiles/styles ~/
 mkdir ~/.config/vdirsyncer && ln -sf ~/.dotfiles/vdirsyncer/config ~/.config/vdirsyncer
 
 # source from dropbox
