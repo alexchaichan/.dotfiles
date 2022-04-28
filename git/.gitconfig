@@ -1,3 +1,5 @@
 [user]
 	email = a.chaichan@icloud.com
 	name = Alex Chaichan
+[core]
+	excludesfile = /Users/user/.gitignore_global

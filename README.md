@@ -107,8 +107,8 @@ ln -sf ~/.dotfiles/mpv ~/.config
 ln -sf ~/.dotfiles/neofetch ~/.config
 ln -sf ~/.dotfiles/khard/khard ~/.config
 ln -sf ~/.dotfiles/khal/khal ~/.config
-ln -sf ~/.dotfiles/git/.git-credentials ~/
 ln -sf ~/.dotfiles/git/.gitconfig ~/
+ln -sf ~/.dotfiles/git/.gitignore_global ~/
 ln -sf ~/.dotfiles/spotify/spotifyd ~/.config
 ln -sf ~/.dotfiles/mbsync/.mbsyncrc ~/
 ln -sf ~/.dotfiles/Templates ~/
