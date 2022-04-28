@@ -71,7 +71,6 @@ vim_add_plugin 'sheerun/vim-polyglot'
 vim_add_plugin 'honza/vim-snippets'
 vim_add_plugin 'dhruvasagar/vim-table-mode'
 vim_add_plugin 'glepnir/dashboard-nvim'
-nvim "+:CocInstall coc-json coc-pairs coc-r-lsp coc-snippets coc-tsserver coc-vimlsp" 
 
 # tmux with all plugins
 mkdir ~/.tmux && mkdir ~/.tmux/plugins
@@ -364,11 +363,11 @@ defaults write com.apple.screencapture location ~/Pictures/screenshots/ && killa
 gem install neovim
 yarn global add neovim
 pip3 install neovim
-brew install grep ripgrep fd
+brew install grep ripgrep fd fzf
 pip3 install pynvim
-brew install fzf
 cd ~/.config/nvim/pack/plugins/start/coc.nvim && yarn install
 sudo ln -sf ~/.dotfiles/nvim/spell /usr/local/Cellar/neovim/0.6.1/share/nvim/runtime/
+nvim "+:CocInstall coc-json coc-pairs coc-r-lsp coc-snippets coc-tsserver coc-vimlsp" 
 ```
 ___
 
