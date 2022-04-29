@@ -332,8 +332,10 @@ brew install --cask pycharm-ce
 # clipboardmanager
 brew install --cask maccy
 
-# mspowerpoint
+# microsoft
 brew install --cask microsoft-powerpoint
+brew install --cask microsoft-excel
+brew install --cask microsoft-word
 
 # latex
 brew install --cask basictex
