@@ -1,12 +1,69 @@
 # system setup mac
 
-![Screenshot](./screenshot.png)
+![Screenshot](./screenshot.png)`
+
+# osx
 
 ```
+# Close any open System Preferences panes to prevent them from
+# overriding the settings we’re about to change
+osascript -e 'tell application "System Preferences" to quit'
+
+# Ask for the administrator password upfront
+sudo -v
+
+# show all hidden files
 defaults write com.apple.Finder AppleShowAllFiles true
+
+# 
 defaults write com.apple.dock workspaces-auto-swoosh -bool NO
+
+# Enable repeating keys for all apps
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+
+
 defaults write com.apple.screencapture disable-shadow -bool TRUE
+
+
+# disable the sound effects on boot
+sudo nvram SystemAudioVolume=" "
+
+# disable the “Are you sure you want to open this application?” dialog
+defaults write com.apple.LaunchServices LSQuarantine -bool false
+
+# always show scrollbars
+defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
+
+# Set a fast keyboard repeat rate
+defaults write NSGlobalDomain KeyRepeat -int 1
+defaults write NSGlobalDomain InitialKeyRepeat -int 10
+
+# Set a fast mouse speed
+defaults write -g com.apple.mouse.scaling 5.0
+
+# Finder: show all filename extensions
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+# Finder: show status bar
+defaults write com.apple.finder ShowStatusBar -bool true
+
+# Finder: show path bar
+defaults write com.apple.finder ShowPathbar -bool true
+
+
+# Finder: Display full POSIX path as window title
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+
+# Disable the warning when changing a file extension
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
+# Use column view in all Finder windows by default
+# Four-letter codes for the view modes: `icnv`, `Nlsv`, `clmv`, `Flwv`
+defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
+
+# Only use UTF-8 in Terminal.app
+defaults write com.apple.terminal StringEncodings -array 4
+
 
 killall SystemUIServer
 killall Dock
@@ -18,7 +75,10 @@ defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticTextCompletionEnabled -bool false
+```
 
+
+```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # zshell
@@ -370,69 +430,62 @@ cd ~/.config/nvim/pack/plugins/start/coc.nvim && yarn install
 sudo ln -sf ~/.dotfiles/nvim/spell /usr/local/Cellar/neovim/0.6.1/share/nvim/runtime/
 nvim "+:CocInstall coc-json coc-pairs coc-r-lsp coc-snippets coc-tsserver coc-vimlsp"
 ```
-___
-
-## turn off all animations
-
-1. opening and closing windows and popovers
-2. smooth scrolling
-3. showing and hiding sheets, resizing preference windows, zooming windows float 0 doesn't work
-4. opening and closing Quick Look windows
-5. rubberband scrolling (doesn't affect web views)
-6. resizing windows before and after showing the version browser also disabled by NSWindowResizeTime -float 0.001
-7. showing a toolbar or menu bar in full screen
-8. scrolling column views
-9. showing the Dock
-10. showing and hiding Mission Control, command+numbers
-11. showing and hiding Launchpad
-12. changing pages in Launchpad
-13. at least AnimateInfoPanes
-14. sending messages and opening windows for replies
-15. dialog windows
 
 ```
+## turn off all animations
+
+# opening and closing windows and popovers
 defaults write -g NSAutomaticWindowAnimationsEnabled -bool false
 
+# smooth scrolling
 defaults write -g NSScrollAnimationEnabled -bool false
 
+# showing and hiding sheets, resizing preference windows, zooming windows float 0 doesn't work
 defaults write -g NSWindowResizeTime -float 0.001
 
+# opening and closing Quick Look windows
 defaults write -g QLPanelAnimationDuration -float 0
 
+# rubberband scrolling (doesn't affect web views)
 defaults write -g NSScrollViewRubberbanding -bool false
 
+# resizing windows before and after showing the version browser also disabled by NSWindowResizeTime -float 0.001
 defaults write -g NSDocumentRevisionsWindowTransformAnimation -bool false
 
+# showing a toolbar or menu bar in full screen
 defaults write -g NSToolbarFullScreenAnimationDuration -float 0
 
+# scrolling column views
 defaults write -g NSBrowserColumnAnimationSpeedMultiplier -float 0
 
+# showing the Dock
 defaults write com.apple.dock autohide-time-modifier -float 0
 defaults write com.apple.dock autohide-delay -float 0
 
+# showing and hiding Mission Control, command+numbers
 defaults write com.apple.dock expose-animation-duration -float 0
 
+# showing and hiding Launchpad
 defaults write com.apple.dock springboard-show-duration -float 0
 defaults write com.apple.dock springboard-hide-duration -float 0
 
+# changing pages in Launchpad
 defaults write com.apple.dock springboard-page-duration -float 0
 
+# at least AnimateInfoPanes
 defaults write com.apple.finder DisableAllAnimations -bool true
 
+# sending messages and opening windows for replies
 defaults write com.apple.Mail DisableSendAnimations -bool true
 defaults write com.apple.Mail DisableReplyAnimations -bool true
 
+# dialog windows
 defaults write NSGlobalDomain NSWindowResizeTime .001
-```
 
-### unlink media buttons
 
-```
+# unlink media buttons
 launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist
-
 #launchctl load -w /System/Library/LaunchAgents/com.apple.rcd.plist  # undo
-```
-
 ___
 
 
