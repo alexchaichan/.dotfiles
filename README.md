@@ -15,15 +15,14 @@ sudo -v
 # show all hidden files
 defaults write com.apple.Finder AppleShowAllFiles true
 
-# 
+#
 defaults write com.apple.dock workspaces-auto-swoosh -bool NO
 
 # Enable repeating keys for all apps
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
-
+# Disable shadow in screenshots
 defaults write com.apple.screencapture disable-shadow -bool TRUE
-
 
 # disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
@@ -50,7 +49,6 @@ defaults write com.apple.finder ShowStatusBar -bool true
 # Finder: show path bar
 defaults write com.apple.finder ShowPathbar -bool true
 
-
 # Finder: Display full POSIX path as window title
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
@@ -64,27 +62,36 @@ defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 # Only use UTF-8 in Terminal.app
 defaults write com.apple.terminal StringEncodings -array 4
 
-
-killall SystemUIServer
-killall Dock
-killall Finder
-
+# keyboard settings
 defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticTextCompletionEnabled -bool false
+
+# screenshots
+mkdir ~/screenshots
+defaults write com.apple.screencapture location ~/screenshots/ && killall SystemUIServer
+
+killall SystemUIServer
+killall Dock
+killall Finder
 ```
 
 
 ```
+# install homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # zshell
 brew install zsh
+
+if [ -z "`$SHELL -c 'echo $ZSH_VERSION'`" ]; then
+  sudo sh -c "echo $(which zsh) >> /etc/shells"
+  chsh -s "$(which zsh)"
+fi
 zsh
-chsh -s /bin/zsh
 
 # git
 brew install git
@@ -417,9 +424,6 @@ mas install 1171346381
 # plaintext
 mas install 508368068
 
-mkdir ~/screenshots
-defaults write com.apple.screencapture location ~/screenshots/ && killall SystemUIServer
-
 # neovim dependencies
 gem install neovim
 yarn global add neovim
@@ -486,8 +490,9 @@ defaults write NSGlobalDomain NSWindowResizeTime .001
 # unlink media buttons
 launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist
 #launchctl load -w /System/Library/LaunchAgents/com.apple.rcd.plist  # undo
-___
+```
 
+___
 
 #### Cronjobs
 
