@@ -19,5 +19,6 @@
     "spelling_dictionary_language": "de_DE",
     "real_time_spellchecking": false,
     "rmd_viewer_type": "none",
-    "global_theme": "alternate"
+    "global_theme": "alternate",
+    "terminal_initial_directory": "home"
 }
