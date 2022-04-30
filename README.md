@@ -91,7 +91,7 @@ tmux_add_plugin 'xamut/tmux-weather'
 tmux_add_plugin 'schasse/tmux-jump'
 
 # source from dotfiles
-ln -sf ~/.dotfiles/alacritty/osx_alacritty.yml ~/.config/.alacritt.yml 
+ln -sf ~/.dotfiles/alacritty/osx_alacritty.yml ~/.config/.alacritt.yml
 ln -sf ~/.dotfiles/newsboat ~/
 ln -sf ~/.dottfiles/.qutebrowser ~/
 ln -sf ~/.dotfiles/qutebrowser/.qutebrowser/bookmarks/urls ~/
@@ -120,10 +120,10 @@ ln -sf ~/Dropbox/.config/Keychains ~/Library
 ln -sf ~/Dropbox/.config/.gnupg ~/
 
 # x-code
-xcode-select --install 
+xcode-select --install
 softwareupdate --all --install --force
 
-# bash 
+# bash
 brew install bash
 
 # wget (downloader)
@@ -148,11 +148,11 @@ pip3 install PyQt5
 # nvim
 brew install neovim
 
-# alacritty terminal 
+# alacritty terminal
 brew install --cask alacritty
 
 # nerd font `sauce code pro`
-brew tap homebrew/cask-fonts && brew install --cask font-sauce-code-pro-nerd-font 
+brew tap homebrew/cask-fonts && brew install --cask font-sauce-code-pro-nerd-font
 
 # terminal multiplexer
 brew install tmux
@@ -195,7 +195,6 @@ mkdir ~/.cache/spotifyd && echo | pass spotifyd > ~/.cache/spotifyd/credentials.
 # calendar
 brew install vdirsyncer
 brew install khal
-#brew install calcurse
 
 # urlview
 brew install urlview
@@ -217,7 +216,7 @@ wget https://github.com/qutebrowser/qutebrowser/releases/download/v2.4.0/qutebro
 
 pip install PyQtWebEngine
 pip3 install qutebrowser
-pip3 install asciidoc 
+pip3 install asciidoc
 pip3 install adblock
 pip uninstall tldextract
 
@@ -264,7 +263,7 @@ brew install glow
 # better than cat
 brew install bat
 
-#ffmpeg audio-converter 
+#ffmpeg audio-converter
 brew instal ffmpeg
 
 # zathura pdf viewer
@@ -318,7 +317,7 @@ brew install --cask firefox
 brew install jupyterlab
 pip install JLDracula
 
-pip install qtconsole # pip3 install qtconsole pip3 install --user qtconsole 
+pip install qtconsole # pip3 install qtconsole pip3 install --user qtconsole
 pip install jupyter
 
 # rstudio
@@ -369,7 +368,7 @@ brew install grep ripgrep fd fzf
 pip3 install pynvim
 cd ~/.config/nvim/pack/plugins/start/coc.nvim && yarn install
 sudo ln -sf ~/.dotfiles/nvim/spell /usr/local/Cellar/neovim/0.6.1/share/nvim/runtime/
-nvim "+:CocInstall coc-json coc-pairs coc-r-lsp coc-snippets coc-tsserver coc-vimlsp" 
+nvim "+:CocInstall coc-json coc-pairs coc-r-lsp coc-snippets coc-tsserver coc-vimlsp"
 ```
 ___
 
@@ -437,7 +436,7 @@ launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist
 ___
 
 
-#### Cronjobs 
+#### Cronjobs
 
 1. open preferences and go to "Security & Privacy" -> "Privacy"
 2. scroll down to "Full Disk Access" on the left side and select it.
@@ -485,12 +484,12 @@ ___
 
 ---
 
-## remove standard hotkey `cmd+<space>` and 
+## remove standard hotkey `cmd+<space>` and
 
-1. go to System Preferences 
+1. go to System Preferences
 2. Keyboard > Shortcuts > Spotlight > uncheck
-3. `cp -R ~/.dotfiles/osx/open_terminal.workflow ~/Library/Services` 
-4. Services > check copied services and map a shortcut  
+3. `cp -R ~/.dotfiles/osx/open_terminal.workflow ~/Library/Services`
+4. Services > check copied services and map a shortcut
 
 ___
 
@@ -502,7 +501,7 @@ ___
 
 - click "+" button > Create Aggregated Device > name it "quicktime player input" > check BlackHole 16ch
 
-- click "+" button > Create Multi-Output Device > name it "screen record w/ auio" > check Built-In Output (must be on top!) + BlackHole 16ch 
+- click "+" button > Create Multi-Output Device > name it "screen record w/ auio" > check Built-In Output (must be on top!) + BlackHole 16ch
 
 - record screen with "screen record w/ audio"
 ___
