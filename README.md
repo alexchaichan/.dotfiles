@@ -22,7 +22,7 @@ git clone https://github.com/alexchaichan/.dotfiles.git
 brew install cask
 
 
-`source ~/.dotfiles/setup/macos/install.sh`
+source ~/.dotfiles/setup/macos/install.sh
 
 
 brew install --cask dropbox
