@@ -36,7 +36,7 @@ brew install cask
 brew install --cask dropbox
 
 # zsh with all plugins
-mkdir ~/zsh
+mkdir ~/.zsh
 ln -sf ~/.dottfiles/zsh/.zshrc_mac ~/.zshrc
 zsh_add_plugin 'hlissner/zsh-autopair'
 zsh_add_plugin 'zsh-users/zsh-completions'
