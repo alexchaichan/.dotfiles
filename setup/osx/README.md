@@ -11,17 +11,4 @@ brew install git
 git clone https://github.com/alexchaichan/.dotfiles.git
 
 source ~/.dotfiles/setup/macos/install.sh
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```
