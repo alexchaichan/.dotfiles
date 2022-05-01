@@ -2,4 +2,4 @@
 
 ## [osx](/setup/osx/)
 
-## arch linux
+## [arch linux](/setup/arch_linux/)
