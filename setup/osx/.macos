@@ -18,6 +18,11 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # General UI/UX                                                               #
 ###############################################################################
 
+# # Set a custom wallpaper image. `DefaultDesktop.jpg` is already a symlink, and
+# # all wallpapers are in `/Library/Desktop Pictures/`. The default is `Wave.jpg`.
+# rm -rf ~/Library/Application Support/Dock/desktoppicture.db
+# sudo rm -rf /System/Library/CoreServices/DefaultDesktop.jpg
+# sudo ln -sf ~/.dotfiles/setup/osx/wallpaper.png /System/Library/CoreServices/DefaultDesktop.jpg
 
 # Set language and text formats
 defaults write NSGlobalDomain AppleLanguages -array "en" "de"
