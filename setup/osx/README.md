@@ -3,15 +3,14 @@
 
 # install homebrew
 
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 
 # install git
-brew install git
+`brew install git`
 
 # clone the repo 
 
-git clone https://github.com/alexchaichan/.dotfiles.git
+`git clone https://github.com/alexchaichan/.dotfiles.git`
 
 # run installation file
-source ~/.dotfiles/setup/macos/install.sh
-
+`source ~/.dotfiles/setup/macos/install.sh`
