@@ -42,8 +42,8 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
 
 # Set a fast keyboard repeat rate
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 defaults write NSGlobalDomain KeyRepeat -int 1
-defaults write NSGlobalDomain InitialKeyRepeat -int 10
 
 # Set a fast mouse speed
 defaults write -g com.apple.mouse.scaling 5.0
