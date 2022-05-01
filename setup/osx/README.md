@@ -1,14 +1,17 @@
 ![Screenshot](./screenshot.png)
 
 
-```
 # install homebrew
+
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# git
+# install git
 brew install git
+
+# clone the repo 
 
 git clone https://github.com/alexchaichan/.dotfiles.git
 
+# run installation file
 source ~/.dotfiles/setup/macos/install.sh
-```
+
