@@ -1,4 +1,4 @@
 source ~/.dotfiles/setup/macos/.macos
 
-source ~/.dotfiles/setup/macos/.macos
+brew bundle --file=~/.dotfies/setup/osx/Brewfile
 
