@@ -1,5 +1,5 @@
 # dotfiles
 
-## [osx](/setup/osx/README.md)
+## [osx](/setup/osx/)
 
 ## arch linux
