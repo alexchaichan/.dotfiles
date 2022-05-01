@@ -1,6 +1,8 @@
-source ~/.dotfiles/setup/macos/.macos
+source ~/.dotfiles/setup/osx/.macos
 
 brew bundle --file=~/.dotfies/setup/osx/Brewfile
 
-source ~/.dotfiles/setup/macos/pluginmanager.sh
+source ~/.dotfiles/setup/osx/pluginmanager.sh
+
+Rscript ~/.dotfiles/setup/osx/packages.R    
 
