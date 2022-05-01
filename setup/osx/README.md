@@ -83,6 +83,7 @@ tmux_add_plugin 'schasse/tmux-jump'
 
 # source from dotfiles
 ln -sf ~/.dotfiles/alacritty/osx_alacritty.yml ~/.config/.alacritt.yml
+ln -sf ~/.dotfiles/setup/osx/Brewfile ~/
 ln -sf ~/.dotfiles/newsboat ~/
 ln -sf ~/.dottfiles/.qutebrowser ~/
 ln -sf ~/.dotfiles/qutebrowser/.qutebrowser/bookmarks/urls ~/
