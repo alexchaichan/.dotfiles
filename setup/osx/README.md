@@ -157,23 +157,8 @@ crontab -e
 ```
 ___
 
-## disable sound effects
-
-1. open System Preferences
-2. go to Sound
-3. uncheck `Play sound on Startup`, `Play user interface sound effects`, `Play feedback when volume is changed`
-4. turn down `Alert volume`
-
-## disable keyboard stuff
-
-system preference > keyboard ...
-
----
-
-# R
 
 
-___
 
 
 ## remove standard hotkey `cmd+<space>` and
