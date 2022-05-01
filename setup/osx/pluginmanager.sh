@@ -7,10 +7,6 @@ zsh_add_plugin 'romkatv/powerlevel10k'
 zsh_add_plugin 'zsh-users/zsh-syntax-highlighting'
 zsh_add_plugin 'zsh-users/zsh-autosuggestions'
 
-
-
-
-
 # vim with all plugis
 mkdir ~/.config/nvim && ln -sf ~/.dotfiles/nvim/* ~/.config/nvim && mkdir ~/.config/nvim/pack/ && mkdir ~/.config/nvim/pack/plugins/ && mkdir ~/.config/nvim/pack/plugins/start && mkdir ~/.config/nvim/pack/plugins/opt
 vim_add_plugin 'dense-analysis/ale'
@@ -38,16 +34,6 @@ vim_add_plugin 'sheerun/vim-polyglot'
 vim_add_plugin 'honza/vim-snippets'
 vim_add_plugin 'dhruvasagar/vim-table-mode'
 vim_add_plugin 'glepnir/dashboard-nvim'
-
-# neovim dependencies
-gem install neovim
-yarn global add neovim
-pip3 install neovim
-pip3 install pynvim
-cd ~/.config/nvim/pack/plugins/start/coc.nvim && yarn install
-sudo ln -sf ~/.dotfiles/nvim/spell /usr/local/Cellar/neovim/0.6.1/share/nvim/runtime/
-#nvim "+:CocInstall coc-json coc-pairs coc-r-lsp coc-snippets coc-tsserver coc-vimlsp"
-
 
 # tmux with all plugins
 mkdir ~/.tmux && mkdir ~/.tmux/plugins
