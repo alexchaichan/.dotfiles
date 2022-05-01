@@ -5,26 +5,27 @@
 # install homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# zshell
-brew install zsh
-
-if [ -z "`$SHELL -c 'echo $ZSH_VERSION'`" ]; then
-  sudo sh -c "echo $(which zsh) >> /etc/shells"
-  chsh -s "$(which zsh)"
-fi
-zsh
-
 # git
 brew install git
 
 git clone https://github.com/alexchaichan/.dotfiles.git
 
-brew install cask
+
+
+
+
+
+
+
 
 
 source ~/.dotfiles/setup/macos/install.sh
 
-brew install --cask dropbox
+if [ -z "`$SHELL -c 'echo $ZSH_VERSION'`" ]; then
+  sudo sh -c "echo $(which zsh) >> /etc/shells"
+  chsh -s "$(which zsh)"
+fi
+
 
 # zsh with all plugins
 mkdir ~/.zsh
@@ -111,62 +112,13 @@ mkdir ~/.config/vdirsyncer && ln -sf ~/.dotfiles/vdirsyncer/config ~/.config/vdi
 ln -sf ~/Dropbox/.config/Keychains ~/Library
 ln -sf ~/Dropbox/.config/.gnupg ~/
 
-# x-code
-xcode-select --install
-softwareupdate --all --install --force
-
-# bash
-brew install bash
-
-# wget (downloader)
-brew install wget
-
-# node + npm
-brew install node
-
-# anaconda
-brew install --cask miniconda
-
-# install python
-#wget https://www.python.org/ftp/python/3.10.2/python-3.10.2-macos11.pkg
-
-brew install python3
 
 # pip
 sudo easy_install pip
 sudo easy_install pip3
 pip3 install PyQt5
 
-# nvim
-brew install neovim
 
-# alacritty terminal
-brew install --cask alacritty
-
-# nerd font `sauce code pro`
-brew tap homebrew/cask-fonts && brew install --cask font-sauce-code-pro-nerd-font
-
-# terminal multiplexer
-brew install tmux
-brew install reattach-to-user-namespace
-
-# password manager
-brew install pass
-
-# yarn
-brew install yarn
-
-# go
-brew install go
-
-# ruby
-brew install ruby
-
-# R
-brew install --cask r
-
-# xquartz
-brew install --cask xquartz
 
 # required for some downloads
 echo '[build_ext]
@@ -174,29 +126,12 @@ include_dirs=/opt/X11/include
 library_dirs=/opt/X11/lib' >> ~/.pydistutils.cfg
 
 # pandoc
-brew install pandoc
 git clone https://github.com/pandoc/lua-filters.git ~/.local/share/pandoc/filters
 
 # spotify
-brew install spotify-tui
-brew install spotifyd
-brew services start spotifyd
 mkdir ~/.config/spotify-tui && echo | pass spotify-tui > ~/.config/spotify-tui/client.yml && ln -sf ~/.dotfiles/spotify/spotify-tui/config.yml ~/.config/spotify-tui
 mkdir ~/.cache/spotifyd && echo | pass spotifyd > ~/.cache/spotifyd/credentials.json
 
-# calendar
-brew install vdirsyncer
-brew install khal
-
-# urlview
-brew install urlview
-brew install extract_url
-
-# rss reader
-brew install newsboat
-
-# terminal browser
-brew install w3m
 
 ### qutebrowser
 #brew install --cask qutebrowser # wont work?
@@ -219,44 +154,7 @@ cd qutebrowser
 python3 scripts/mkvenv.py
 
 ## password manager
-brew install qt dmenu
 cp -r ~/.dotfiles/qutebrowser/.qutebrowser/userscripts ~/Library/Application\ Support/qutebrowser
-
-# mail client
-brew install neomutt
-brew install isync
-brew install msmtp
-mkdir ~/mail
-
-# image viewer
-brew install feh
-
-# neofetch shows systeminfo
-brew install neofetch
-
-# activitymonitor
-brew install htop
-
-# contact book
-brew install khard
-
-# vpn
-brew install openconnect
-
-# ranger file manager
-brew install ranger
-
-# tree file structure
-brew install tree
-
-# markdown .md viewer
-brew install glow
-
-# better than cat
-brew install bat
-
-#ffmpeg audio-converter
-brew instal ffmpeg
 
 # zathura pdf viewer
 brew tap zegervdv/zathura
@@ -279,75 +177,28 @@ mkdir -p $(brew --prefix zathura)/lib/zathura
 
 ln -s $(brew --prefix zathura-pdf-poppler)/libpdf-poppler.dylib $(brew --prefix zathura)/lib/zathura/libpdf-poppler.dylib
 
-# video setup
-brew install mpv
-brew install youtube-dl
-brew install --cask vlc
 
-# music player
-brew install moc
-brew install berkeley-db
-brew install jack
-brew install libmad
-brew install libid3tag
-brew services start jack
 
-# youtube terminal (funktioniert nicht)
-#brew install mps-youtube
 
-# zoom
-brew install --cask zoom
-
-# speed test
-brew tap teamookla/speedtest
-brew install speedtest --force
-
-# feuerfuchs
-brew install --cask firefox
 
 # jupyter
-brew install jupyterlab
 pip install JLDracula
 
 pip install qtconsole # pip3 install qtconsole pip3 install --user qtconsole
 pip install jupyter
 
 # rstudio
-brew install --cask rstudio
 ln -sf ~/.dotfiles/rstudio/rstudio-prefs.json ~/.config/rstudio
 ln -sf ~/.dotfiles/nvim/snips/r.snippets ~/.config/rstudio/snippets
 
-# pycharm
-brew install --cask pycharm-ce
 
-# clipboardmanager
-brew install --cask maccy
 
-# microsoft
-brew install --cask microsoft-powerpoint
-brew install --cask microsoft-excel
-brew install --cask microsoft-word
-
-# latex
-brew install --cask basictex
-brew install texlive
-# wget https://mirror.ctan.org/systems/mac/mactex/MacTeX.pkg
-
-# chess
-brew install gnu-chess
-brew install xboard
 
 # amphetamine
-mas install 937984704
 wget https://github.com/x74353/Amphetamine-Enhancer/raw/master/Releases/Current/Amphetamine%20Enhancer.dmg
 hdiutil attach Amphetamine\ Enhancer.dmg
 cp -R /Volumes/Amphetamine\ Enhancer/Amphetamine\ Enhancer.app /Applications
 
-# easy csv editor
-mas install 1171346381
-
-# plaintext
-mas install 508368068
 
 # neovim dependencies
 gem install neovim
