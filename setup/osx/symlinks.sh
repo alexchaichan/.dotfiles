@@ -1,4 +1,12 @@
 # source from dotfiles
+mkdir ~/.zsh
+mkdir ~/.config/nvim && mkdir ~/.config/nvim/pack/ && mkdir ~/.config/nvim/pack/plugins/ && mkdir ~/.config/nvim/pack/plugins/start && mkdir ~/.config/nvim/pack/plugins/opt
+mkdir ~/.tmux && mkdir ~/.tmux/plugins
+mkdir ~/.config/vdirsyncer
+
+ln -sf ~/.dottfiles/zsh/.zshrc_mac ~/.zshrc
+ln -sf ~/.dotfiles/nvim/* ~/.config/nvim
+ln -sf ~/.dotfiles/tmux/.osx_tmux.conf ~/.tmux.conf
 ln -sf ~/.dotfiles/alacritty/osx_alacritty.yml ~/.config/.alacritty.yml
 ln -sf ~/.dotfiles/setup/osx/Brewfile ~/
 ln -sf ~/.dotfiles/newsboat/.newsboat ~/
@@ -22,21 +30,14 @@ ln -sf ~/.dotfiles/spotify/spotifyd ~/.config
 ln -sf ~/.dotfiles/mbsync/.mbsyncrc ~/
 ln -sf ~/.dotfiles/Templates ~/
 ln -sf ~/.dotfiles/styles ~/
-mkdir ~/.config/vdirsyncer && ln -sf ~/.dotfiles/vdirsyncer/config ~/.config/vdirsyncer
+ln -sf ~/.dotfiles/vdirsyncer/config ~/.config/vdirsyncer
+ln -sf ~/.dotfiles/rstudio/rstudio-prefs.json ~/.config/rstudio
+ln -sf ~/.dotfiles/nvim/snips/r.snippets ~/.config/rstudio/snippets
 
 # source from dropbox
-ln -sf ~/Dropbox/.config/Keychains ~/Library
-ln -sf ~/Dropbox/.config/.gnupg ~/
+# ln -sf ~/Dropbox/.config/Keychains ~/Library
+# ln -sf ~/Dropbox/.config/.gnupg ~/
 
 # spotify
 mkdir ~/.config/spotify-tui && echo | pass spotify-tui > ~/.config/spotify-tui/client.yml && ln -sf ~/.dotfiles/spotify/spotify-tui/config.yml ~/.config/spotify-tui
 mkdir ~/.cache/spotifyd && echo | pass spotifyd > ~/.cache/spotifyd/credentials.json
-
-# required for some downloads
-echo '[build_ext]
-include_dirs=/opt/X11/include
-library_dirs=/opt/X11/lib' >> ~/.pydistutils.cfg
-
-# rstudio
-ln -sf ~/.dotfiles/rstudio/rstudio-prefs.json ~/.config/rstudio
-ln -sf ~/.dotfiles/nvim/snips/r.snippets ~/.config/rstudio/snippets

@@ -1,6 +1,4 @@
 # zsh with all plugins
-mkdir ~/.zsh
-ln -sf ~/.dottfiles/zsh/.zshrc_mac ~/.zshrc
 zsh_add_plugin 'hlissner/zsh-autopair'
 zsh_add_plugin 'zsh-users/zsh-completions'
 zsh_add_plugin 'romkatv/powerlevel10k'
@@ -8,7 +6,6 @@ zsh_add_plugin 'zsh-users/zsh-syntax-highlighting'
 zsh_add_plugin 'zsh-users/zsh-autosuggestions'
 
 # vim with all plugis
-mkdir ~/.config/nvim && ln -sf ~/.dotfiles/nvim/* ~/.config/nvim && mkdir ~/.config/nvim/pack/ && mkdir ~/.config/nvim/pack/plugins/ && mkdir ~/.config/nvim/pack/plugins/start && mkdir ~/.config/nvim/pack/plugins/opt
 vim_add_plugin 'dense-analysis/ale'
 vim_add_plugin 'neoclide/coc.nvim'
 vim_add_plugin 'chrisbra/csv.vim'
@@ -36,8 +33,6 @@ vim_add_plugin 'dhruvasagar/vim-table-mode'
 vim_add_plugin 'glepnir/dashboard-nvim'
 
 # tmux with all plugins
-mkdir ~/.tmux && mkdir ~/.tmux/plugins
-ln -sf ~/.dotfiles/tmux/.osx_tmux.conf ~/.tmux.conf
 tmux_add_plugin 'tmux-plugins/tmux-battery'
 tmux_add_plugin 'tmux-plugins/tmux-copycat'
 tmux_add_plugin 'tmux-plugins/tmux-cpu'
