@@ -27,4 +27,4 @@ shell:
    - "tmux attach || tmux"
 
 import:
-  - ~/Dropbox/.config/alacritty.yml 
+  - ~/.dotfiles/alacritty/alacritty.yml
