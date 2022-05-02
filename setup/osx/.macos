@@ -49,14 +49,14 @@ defaults write com.apple.Finder AppleShowAllFiles true
 # Disable Sudden Motion Sensor
 sudo pmset -a sms 0
 
-#
-defaults write com.apple.dock workspaces-auto-swoosh -bool NO
+# Preventing desktop jump when window is open on another desktop
+defaults write com.apple.dock workspaces-auto-swoosh -bool false
 
 # Enable repeating keys for all apps
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 # Disable shadow in screenshots
-defaults write com.apple.screencapture disable-shadow -bool TRUE
+defaults write com.apple.screencapture disable-shadow -bool true
 
 # disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
