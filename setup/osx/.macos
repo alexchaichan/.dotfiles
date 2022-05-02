@@ -32,7 +32,7 @@ defaults write NSGlobalDomain AppleMetricUnits -bool true
 
 
 # Set the timezone (see `sudo systemsetup -listtimezones` for other values)
-sudo systemsetup -settimezone "Europe/Berlin" > /dev/null
+# sudo systemsetup -settimezone "Europe/Berlin" > /dev/null
 
 # show all hidden files
 defaults write com.apple.Finder AppleShowAllFiles true
