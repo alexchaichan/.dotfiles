@@ -1,4 +1,4 @@
-# pip
+# install pip
 sudo easy_install pip
 sudo easy_install pip3
 

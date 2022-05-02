@@ -32,10 +32,3 @@ ___
 
 - record screen with "screen record w/ audio"
 ___
-
-
-
-
-
-
-

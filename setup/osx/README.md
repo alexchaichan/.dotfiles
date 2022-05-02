@@ -10,5 +10,7 @@
 
 `git clone https://github.com/alexchaichan/.dotfiles.git`
 
+- copy .gnupg file into `~/`
+
 # run installation file
 `source ~/.dotfiles/setup/macos/install.sh`
