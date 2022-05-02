@@ -25,11 +25,13 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # sudo ln -sf ~/.dotfiles/setup/osx/wallpaper.png /System/Library/CoreServices/DefaultDesktop.jpg
 
 # Set language and text formats
-defaults write NSGlobalDomain AppleLanguages -array "en" "de"
-defaults write NSGlobalDomain AppleLocale -string "en_US@currency=EUR"
+defaults write NSGlobalDomain AppleLanguages -array "en"
+defaults write NSGlobalDomain AppleLocale -string "de_DE@currency=EUR"
 defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
 defaults write NSGlobalDomain AppleMetricUnits -bool true
 
+# disable power button sleep mode
+defaults write com.apple.loginwindow PowerButtonSleepsSystem -bool no 
 
 # Set the timezone (see `sudo systemsetup -listtimezones` for other values)
 # sudo systemsetup -settimezone "Europe/Berlin" > /dev/null
@@ -200,8 +202,6 @@ defaults write com.apple.finder DisableAllAnimations -bool true
 defaults write com.apple.Mail DisableSendAnimations -bool true
 defaults write com.apple.Mail DisableReplyAnimations -bool true
 
-# dialog windows
-defaults write NSGlobalDomain NSWindowResizeTime .001
 
 
 # unlink media buttons
