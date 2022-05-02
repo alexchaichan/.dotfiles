@@ -10,6 +10,9 @@ source ~/.dotfiles/setup/osx/pluginmanager.sh
 # install the Brewfile
 brew bundle --file=~/.dotfies/setup/osx/Brewfile
 
+# source password-store
+source ~/.dotfiles/setup/osx/password-store.sh
+
 # install applications
 source ~/.dotfiles/setup/osx/wgets.sh
 
@@ -36,7 +39,5 @@ pip3 install neovim
 pip3 install pynvim
 cd ~/.config/nvim/pack/plugins/start/coc.nvim && yarn install
 sudo ln -sf ~/.dotfiles/nvim/spell /usr/local/Cellar/neovim/0.6.1/share/nvim/runtime/
-
-git clone https://github.com/alexchaichan/.password-store.git ~/.password-store 
 
 bat ~/.dotfiles/setup/osx/installbyhand.sh
