@@ -7,3 +7,10 @@ cp -r ~/.dotfiles/qutebrowser/.qutebrowser/userscripts ~/Library/Application\ Su
 
 # pandoc
 git clone https://github.com/pandoc/lua-filters.git ~/.local/share/pandoc/filters
+
+# repos
+git clone https://github.com/alexchaichan/markdown_training.git ~/repositories
+
+git clone https://github.com/alexchaichan/R.git ~/repositories
+
+git clone https://github.com/alexchaichan/forschungsberichte_und_empirische_abschlussarbeiten.git ~/repositories

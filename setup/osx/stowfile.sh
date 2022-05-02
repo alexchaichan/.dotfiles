@@ -5,6 +5,7 @@ mkdir ~/.tmux && mkdir ~/.tmux/plugins
 mkdir ~/.config/vdirsyncer
 mkdir ~/.config/spotify-tui
 mkdir ~/.cache/spotifyd
+mkdir ~/repositories
 
 ln -sf ~/.dottfiles/zsh/.zshrc_mac ~/.zshrc
 ln -sf ~/.dotfiles/nvim/* ~/.config/nvim
