@@ -39,7 +39,7 @@ ___
 7. click "Open" It should show up in the list with a check mark next to it. I tried it with a simple csh script in cron and it worked
 ___
 
-### remove standard hotkey `cmd+<space>` and
+### remove standard hotkey `cmd+<space>`
 
 1. go to System Preferences
 2. Keyboard > Shortcuts > Spotlight > uncheck
