@@ -22,6 +22,7 @@ ln -sf ~/.dotfiles/w3m/.w3m ~/
 ln -sf ~/.dotfiles/moc/.moc ~/
 ln -sf ~/.dotfiles/jupyter/.jupyter ~/
 ln -sf ~/.dotfiles/zathura ~/.config
+ln -sf ~/.dotfiles/htop/ ~/config
 ln -sf ~/.dotfiles/ranger/ranger ~/.config
 ln -sf ~/.dotfiles/mpv ~/.config
 ln -sf ~/.dotfiles/neofetch ~/.config
