@@ -1,30 +1,34 @@
 ![Screenshot](./screenshot.png)
-# install homebrew
+
+# install workingenvironment for osx
+
+## install homebrew
 
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 
-# install git
+## install git
 `brew install git`
 
-# clone the repo 
+## clone the repo 
 
 `git clone https://github.com/alexchaichan/.dotfiles.git`
 
-### copy `.gnupg` file into `~/`
+## copy `.gnupg` file into `~/`
 
-# run installation file
+## run installation file
 `source ~/.dotfiles/setup/macos/install.sh`
 
 ___
 
 ## last steps by hand
 
-```# neovim
-#nvim "+:CocInstall coc-json coc-pairs coc-r-lsp coc-snippets coc-tsserver coc-vimlsp"
-```
+### coc x neovim
+
+`nvim "+:CocInstall coc-json coc-pairs coc-r-lsp coc-snippets coc-tsserver coc-vimlsp"`
+
 ___
 
-# full disk acces to crontabs
+### full disk acces to crontabs
 
 1. open preferences and go to "Security & Privacy" -> "Privacy"
 2. scroll down to "Full Disk Access" on the left side and select it.
@@ -35,7 +39,7 @@ ___
 7. click "Open" It should show up in the list with a check mark next to it. I tried it with a simple csh script in cron and it worked
 ___
 
-# remove standard hotkey `cmd+<space>` and
+### remove standard hotkey `cmd+<space>` and
 
 1. go to System Preferences
 2. Keyboard > Shortcuts > Spotlight > uncheck
@@ -43,7 +47,7 @@ ___
 4. Services > check copied services and map a shortcut
 ___
 
-# screenrecord w/ audio
+### screenrecord w/ audio
 
 `audiomidisetup`
 
