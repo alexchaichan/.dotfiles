@@ -1,7 +1,7 @@
 # make osx system changes
 source ~/.dotfiles/setup/osx/.macos
 
-# create all symlinks from .dotfiles repo
+# create symlinks from .dotfiles repo
 source ~/.dotfiles/setup/osx/stowfile.sh
 
 # install plugins for zsh / neovim / tmux
@@ -25,12 +25,14 @@ source ~/.dotfiles/setup/osx/cronbtabs.sh
 # install R packages
 Rscript ~/.dotfiles/setup/osx/packages.R
 
+# install python packages
+Rscript ~/.dotfiles/setup/osx/pip.sh
+
 # make zsh default shell 
 if [ -z "`$SHELL -c 'echo $ZSH_VERSION'`" ]; then
   sudo sh -c "echo $(which zsh) >> /etc/shells"
   chsh -s "$(which zsh)"
 fi
-
 
 # neovim dependencies
 gem install neovim
