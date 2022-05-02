@@ -26,7 +26,7 @@ source ~/.dotfiles/setup/osx/cronbtabs.sh
 Rscript ~/.dotfiles/setup/osx/packages.R
 
 # install python packages
-Rscript ~/.dotfiles/setup/osx/pip.sh
+source ~/.dotfiles/setup/osx/pip.sh
 
 # make zsh default shell 
 if [ -z "`$SHELL -c 'echo $ZSH_VERSION'`" ]; then
