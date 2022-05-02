@@ -16,7 +16,7 @@
 ## copy `.gnupg` file into `~/`
 
 ## run installation file
-`source ~/.dotfiles/setup/macos/install.sh`
+`source ~/.dotfiles/setup/macos/bootstrap.sh`
 
 ___
 
