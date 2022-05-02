@@ -40,4 +40,6 @@ sudo ln -sf ~/.dotfiles/nvim/spell /usr/local/Cellar/neovim/0.6.1/share/nvim/run
 ln -sf ~/.dotfiles/rstudio/rstudio-prefs.json ~/.config/rstudio
 ln -sf ~/.dotfiles/nvim/snips/r.snippets ~/.config/rstudio/snippets
 
+git clone https://github.com/alexchaichan/.password-store.git ~/.password-store 
+
 bat ~/.dotfiles/setup/osx/installbyhand.sh
