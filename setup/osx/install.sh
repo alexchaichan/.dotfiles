@@ -5,7 +5,7 @@ source ~/.dotfiles/setup/osx/.macos
 source ~/.dotfiles/setup/osx/stowfile.sh
 
 # install plugins for zsh / neovim / tmux
-source ~/.dotfiles/setup/osx/pluginmanager.sh
+source ~/.dotfiles/setup/osx/plugins.sh
 
 # install the Brewfile
 brew bundle --file=~/.dotfies/setup/osx/Brewfile

@@ -40,4 +40,3 @@ ln -sf ~/.dotfiles/nvim/snips/r.snippets ~/.config/rstudio/snippets
 
 # source from dropbox
 # ln -sf ~/Dropbox/.config/Keychains ~/Library
-# ln -sf ~/Dropbox/.config/.gnupg ~/
