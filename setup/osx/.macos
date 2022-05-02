@@ -15,7 +15,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 
 ###############################################################################
-# General UI/UX                                                               #
+# general UI/UX                                                               #
 ###############################################################################
 
 # # Set a custom wallpaper image. `DefaultDesktop.jpg` is already a symlink, and
@@ -40,9 +40,6 @@ defaults write com.apple.Finder AppleShowAllFiles true
 
 # Disable Sudden Motion Sensor
 sudo pmset -a sms 0
-
-# Disable audio feedback when volume is changed
-defaults write com.apple.sound.beep.feedback -bool false
 
 #
 defaults write com.apple.dock workspaces-auto-swoosh -bool NO
@@ -120,9 +117,18 @@ defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 mkdir ~/screenshots
 defaults write com.apple.screencapture location ~/screenshots/ && killall SystemUIServer
 
+###############################################################################
+# sounds                                                                      #
+###############################################################################
+
+# Disable audio feedback when volume is changed
+defaults write com.apple.sound.beep.feedback -bool false
+
+# Disable sound effects
+defaults write com.apple.systemsound "com.apple.sound.uiaudio.enabled" -int 0
 
 ###############################################################################
-# Dock                                                                        #
+# dock                                                                        #
 ###############################################################################
 
 # Show indicator lights for open applications in the Dock
