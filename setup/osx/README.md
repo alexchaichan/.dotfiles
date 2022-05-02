@@ -22,7 +22,7 @@ ___
 
 ## last steps by hand
 
-### coc x neovim
+### coc - neovim
 
 `nvim "+:CocInstall coc-json coc-pairs coc-r-lsp coc-snippets coc-tsserver coc-vimlsp"`
 
