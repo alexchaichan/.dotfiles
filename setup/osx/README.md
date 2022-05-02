@@ -17,7 +17,7 @@
 
 ___
 
-### last steps by hand
+## last steps by hand
 
 ```# neovim
 #nvim "+:CocInstall coc-json coc-pairs coc-r-lsp coc-snippets coc-tsserver coc-vimlsp"
