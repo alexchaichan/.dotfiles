@@ -1,17 +1,24 @@
 # make osx system changes
 source ~/.dotfiles/setup/osx/.macos
+
 # create all symlinks from .dotfiles repo
 source ~/.dotfiles/setup/osx/symlinks.sh
+
 # install plugins for zsh / neovim / tmux
 source ~/.dotfiles/setup/osx/pluginmanager.sh
+
 # install the Brewfile
 brew bundle --file=~/.dotfies/setup/osx/Brewfile
+
 # install applications
 source ~/.dotfiles/setup/osx/wgets.sh
+
 # install repositores
 source ~/.dotfiles/setup/osx/repositories.sh
+
 # install crontabs
 source ~/.dotfiles/setup/osx/cronbtabs.sh
+
 # install R packages
 Rscript ~/.dotfiles/setup/osx/packages.R
 
