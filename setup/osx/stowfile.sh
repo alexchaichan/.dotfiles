@@ -3,6 +3,8 @@ mkdir ~/.zsh
 mkdir ~/.config/nvim && mkdir ~/.config/nvim/pack/ && mkdir ~/.config/nvim/pack/plugins/ && mkdir ~/.config/nvim/pack/plugins/start && mkdir ~/.config/nvim/pack/plugins/opt
 mkdir ~/.tmux && mkdir ~/.tmux/plugins
 mkdir ~/.config/vdirsyncer
+mkdir ~/.config/spotify-tui
+mkdir ~/.cache/spotifyd
 
 ln -sf ~/.dottfiles/zsh/.zshrc_mac ~/.zshrc
 ln -sf ~/.dotfiles/nvim/* ~/.config/nvim

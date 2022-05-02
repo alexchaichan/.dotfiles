@@ -2,7 +2,7 @@
 source ~/.dotfiles/setup/osx/.macos
 
 # create all symlinks from .dotfiles repo
-source ~/.dotfiles/setup/osx/symlinks.sh
+source ~/.dotfiles/setup/osx/stowfile.sh
 
 # install plugins for zsh / neovim / tmux
 source ~/.dotfiles/setup/osx/pluginmanager.sh
