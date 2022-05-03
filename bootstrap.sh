@@ -11,27 +11,29 @@ esac
 
 # make osx system changes
 if [[ "$os" == "osx" ]]; then
-	source ~/.dotfiles/setup/osx/.macos
+	source ~/.dotfiles/osx/.macos
 fi
 
 # create symlinks from .dotfiles repo
-source ~/.dotfiles/setup/osx/stowfile.sh
+source ~/.dotfiles/stowfile.sh
 
 # install plugins for zsh / neovim / tmux
-source ~/.dotfiles/setup/osx/plugins.sh
+source ~/.dotfiles/plugins.sh
 
 # install Brewfile
 if [[ "$os" == "osx" ]]; then
-	brew bundle --file=~/.dotfies/setup/osx/Brewfile
+	brew bundle --file=~/.dotfies/osx/Brewfile
 fi
 
-
-
 # source password-store
-source ~/.dotfiles/setup/osx/password-store.sh
+source ~/.dotfiles/password-store.sh
+
 
 # install applications
-source ~/.dotfiles/setup/osx/wgets.sh
+if [[ "$os" == "osx" ]]; then
+	source ~/.dotfiles/setup/osx/wgets.sh
+fi
+
 
 # install repositores
 source ~/.dotfiles/setup/osx/repositories.sh
