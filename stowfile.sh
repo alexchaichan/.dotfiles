@@ -32,6 +32,10 @@ mkdir ~/.config/zathura
 
 mkdir ~/repositories
 
+mkdir ~/.contacts
+
+mkdir ~/. calendars
+
 # create symlinks
 
 # zshrc

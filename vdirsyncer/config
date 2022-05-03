@@ -38,7 +38,7 @@ metadata = ["diplayname"]
 # A storage references actual data on a remote server or on the local disk.
 # Similar to repositories in OfflineIMAP.
 type = "filesystem"
-path = "~/Dropbox/.contacts/"
+path = "~/.contacts"
 fileext = ".vcf"
 
 [storage my_contacts_remote]
@@ -58,7 +58,7 @@ metadata = ["displayname", "color"]
 
 [storage my_calendar_local]
 type = "filesystem"
-path = "~/Dropbox/.calendars/"
+path = "~/.calendars"
 fileext = ".ics"
 
 [storage my_calendar_remote]

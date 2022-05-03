@@ -1,9 +1,9 @@
 [calendars]
   [[privat]]
-    path = ~/Dropbox/.calendars/A484F09C-F031-4F97-8F1F-D46648B330E2/
+    path = ~/.calendars/A484F09C-F031-4F97-8F1F-D46648B330E2/
     color = white
   [[<3]]
-    path = ~/Dropbox/.calendars/B2D94FE9-FA83-4BF5-8258-82D89739B3E1/
+    path = ~/.calendars/B2D94FE9-FA83-4BF5-8258-82D89739B3E1/
     color = yellow
 
 [locale]
