@@ -32,23 +32,7 @@ weather(){
 wetter(){
     curl v2d.wttr.in/$1
 }
-spoty(){
-    pkill spotifyd
-    spt
-}
 
-killer(){
-    pkill calcurse
-    pkill newsboat
-}
-
-jack(){
-     jackd -d coreaudio
-}
-
-moc(){
-    mocp $1
-}
 
 mutt() {
     stty discard undef
@@ -60,14 +44,8 @@ qute(){
 }
 
 
-browser(){
-    /usr/bin/open -a qutebrowser
-}
-
-
-
 vim(){
-   nvim $1 "+:set number" "+:hi clear CursorLine" 
+   nvim $1
 }
 
 w3mb(){
@@ -188,11 +166,6 @@ rstudio(){
 ##
 
 
-neo(){
-    neofetch
-}
-
-
 gitpush(){
     git add .
     git commit -m "update"
@@ -200,14 +173,8 @@ gitpush(){
 }
 
 
-
 update(){
     brew update && brew upgrade && brew cleanup && brew outdated
-}
-
-boat(){
-    pkill newsboat
-    newsboat
 }
 
 
@@ -299,17 +266,18 @@ alias PlugUpdate="cd ~/.config/nvim/pack/plugins/start && find . -maxdepth 3 -na
 
 alias PlugUpdatePlus="cd ~/.config/nvim/pack/plugins/start && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd && cd ~/.zsh/ && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd && cd /.tmux/  && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd && cd ~/.config/nvim/pack/plugins/start/coc.nvim/ && yarn install && cd"
 
-### install plugins
 
+
+
+########################################################################################################## 
+#pluginmanager                                                                                           #
+########################################################################################################## 
 
 # zsh
 function zsh_add_plugin() {
   PLUGIN_NAME=$(echo $1 | cut -d "/" -f 2)
   git clone "https://github.com/$1.git" "$ZDOTDIR/$PLUGIN_NAME"
 }
-
-
-
 
 #neovim
 function vim_add_plugin() {
@@ -324,6 +292,7 @@ function tmux_add_plugin() {
   git clone "https://github.com/$1.git" "$TDOTDIR/plugins/$PLUGIN_NAME"
 }
 
+########################################################################################################## 
 
 
 
@@ -371,5 +340,3 @@ pptx(){
 word(){
     cp ~/.dotfiles/Templates/word.rmd "$(pwd)"
 }
-
-
