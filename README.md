@@ -1,6 +1,6 @@
 # dotfiles
 
-## [osx](/setup/osx/)
+## osx
 
 ![Screenshot](./screenshot.png)
 
@@ -20,7 +20,7 @@
 ## store `.gnupg` file into `~/`
 
 ## run installation file
-`source ~/.dotfiles/setup/macos/bootstrap.sh`
+`source ~/.dotfiles/bootstrap.sh`
 
 ### [last teps per hand](~/.dotfiles/osx/lastperhand.md)
 
