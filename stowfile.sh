@@ -54,9 +54,11 @@ elfi [[ "$os" == "linux" ]]; then
 	ln -sf ~/.dotfiles/tmux/.arch_tmux.conf ~/.tmux.conf
 fi
 
-# brewfile
+# brewfile / pacmanfile
 if [[ "$os" == "osx" ]]; then
 	ln -sf ~/.dotfiles/setup/osx/Brewfile ~/
+elfi [[ "$os" == "linux" ]]; then
+	ln -sf ~/.dotfiles/arch/pacman/pacmanfile.sh ~/
 fi
 
 # qutebrowser

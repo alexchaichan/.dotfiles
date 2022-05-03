@@ -45,6 +45,8 @@ source ~/.dotfiles/plugins.sh
 # install Brewfile
 if [[ "$os" == "osx" ]]; then
 	brew bundle --file=~/.dotfies/osx/Brewfile
+elfi [[ "$os" == "linux" ]]; then
+	ln -sf ~/.dotfiles/qutebrowser/.qutebrowser ~/.config/qutebrowser
 fi
 
 # source password-store
