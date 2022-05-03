@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+# ask for the administrator password upfront
+sudo -v
+
+# keep-alive: update existing `sudo` time stamp until `.bootstap.sh` has finished
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
 # check for os type
 unameOut="$(uname -s)"
 case "${unameOut}" in
@@ -9,6 +15,21 @@ case "${unameOut}" in
     MINGW*)     os=mingw;;
     *)          os="UNKNOWN:${unameOut}"
 esac
+
+# install homebrew for osx
+if [[ "$os" == "osx" ]]; then
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
+# git
+if [[ "$os" == "osx" ]]; then
+	brew install git
+elfi [[ "$os" == "linux" ]]; then
+	pacman -S git
+fi
+
+# clone repo
+git clone https://github.com/alexchaichan/.dotfiles.git
 
 # make osx system changes
 if [[ "$os" == "osx" ]]; then
