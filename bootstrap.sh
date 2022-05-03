@@ -42,7 +42,7 @@ source ~/.dotfiles/stowfile.sh
 # install plugins for zsh / neovim / tmux
 source ~/.dotfiles/plugins.sh
 
-# install Brewfile
+# install Brewfile / pacmanfile
 if [[ "$os" == "osx" ]]; then
 	brew bundle --file=~/.dotfies/osx/Brewfile
 elfi [[ "$os" == "linux" ]]; then
