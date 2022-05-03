@@ -8,6 +8,7 @@ mkdir ~/.config/vdirsyncer
 mkdir ~/.config/spotify-tui
 mkdir ~/.config/spotifyd
 mkdir ~/.cache/spotifyd
+mkdir ~/.config/zathura
 mkdir ~/repositories
 
 # create symlinks
@@ -37,7 +38,7 @@ ln -sf ~/.dotfiles/styles ~/
 
 ln -sf ~/.dotfiles/alacritty/osx_alacritty.yml ~/.config/.alacritty.yml
 ln -sf ~/.dotfiles/nvim/* ~/.config/nvim
-ln -sf ~/.dotfiles/zathura ~/.config
+ln -sf ~/.dotfiles/zathura/osx_zathurarc ~/.config/zathura/zathurarc
 ln -sf ~/.dotfiles/htop/ ~/config
 ln -sf ~/.dotfiles/ranger ~/.config
 ln -sf ~/.dotfiles/mpv ~/.config
