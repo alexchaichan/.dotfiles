@@ -21,7 +21,7 @@ fi
 if [[ "$os" == "linux" ]]; then
 	mkdir ~/.config/systemd/
 	mkdir ~/.config/systemd/user/
-	#cp ~/Dropbox/.config/linux/dropbox.service ~/.config/systemd/user/
+	#cp ~/.dotfiles/arch/dropbox.service ~/.config/systemd/user/
 
 	#systemctl --user start dropbox
 	#systemctl --user status dropbox # check status
