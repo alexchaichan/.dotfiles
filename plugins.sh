@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 
 # zsh
+
+function zsh_add_plugin() {
+  PLUGIN_NAME=$(echo $1 | cut -d "/" -f 2)
+  git clone "https://github.com/$1.git" "$ZDOTDIR/$PLUGIN_NAME"
+}
+
 zsh_add_plugin 'hlissner/zsh-autopair'
 zsh_add_plugin 'zsh-users/zsh-completions'
 zsh_add_plugin 'romkatv/powerlevel10k'
@@ -8,6 +14,12 @@ zsh_add_plugin 'zsh-users/zsh-syntax-highlighting'
 zsh_add_plugin 'zsh-users/zsh-autosuggestions'
 
 # nvim
+
+function vim_add_plugin() {
+  PLUGIN_NAME=$(echo $1 | cut -d "/" -f 2)
+  git clone "https://github.com/$1.git" "$VDOTDIR/pack/plugins/start/$PLUGIN_NAME"
+}
+
 vim_add_plugin 'dense-analysis/ale'
 vim_add_plugin 'neoclide/coc.nvim'
 vim_add_plugin 'chrisbra/csv.vim'
@@ -35,6 +47,12 @@ vim_add_plugin 'dhruvasagar/vim-table-mode'
 vim_add_plugin 'glepnir/dashboard-nvim'
 
 # tmux
+
+function tmux_add_plugin() {
+  PLUGIN_NAME=$(echo $1 | cut -d "/" -f 2)
+  git clone "https://github.com/$1.git" "$TDOTDIR/plugins/$PLUGIN_NAME"
+}
+
 tmux_add_plugin 'tmux-plugins/tmux-battery'
 tmux_add_plugin 'tmux-plugins/tmux-copycat'
 tmux_add_plugin 'tmux-plugins/tmux-cpu'

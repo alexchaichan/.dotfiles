@@ -2,6 +2,10 @@
 
 # create directories
 
+mkdir ~/.config
+
+mkdir ~/.cache
+
 mkdir ~/.zsh
 
 mkdir ~/.config/nvim && mkdir ~/.config/nvim/pack/ && mkdir ~/.config/nvim/pack/plugins/ && mkdir ~/.config/nvim/pack/plugins/start && mkdir ~/.config/nvim/pack/plugins/opt
@@ -34,48 +38,48 @@ mkdir ~/repositories
 
 mkdir ~/.contacts
 
-mkdir ~/. calendars
+mkdir ~/.calendars
 
 # create symlinks
 
 # zshrc
 if [[ "$os" == "osx" ]]; then
-	ln -sf ~/.dottfiles/zsh/.zshrc_mac ~/.zshrc
-elfi [[ "$os" == "linux" ]]; then
-	ln -sf ~/.dottfiles/zsh/.zshrc_arch ~/.zshrc
+	ln -sf ~/.dotfiles/zsh/.zshrc_mac ~/.zshrc
+elif [[ "$os" == "linux" ]]; then
+	ln -sf ~/.dotfiles/zsh/.zshrc_arch ~/.zshrc
 fi
 
 # bash
 if [[ "$os" == "linux" ]]; then
-	ln -sf ~/.dottfiles/bash/.arch_bashrc ~/.bashrc
-	ln -sf ~/.dottfiles/bash/.arch_bashprofile ~/.bash_profile
+	ln -sf ~/.dotfiles/bash/.arch_bashrc ~/.bashrc
+	ln -sf ~/.dotfiles/bash/.arch_bashprofile ~/.bash_profile
 fi
 
 # tmux
 if [[ "$os" == "osx" ]]; then
 	ln -sf ~/.dotfiles/tmux/.osx_tmux.conf ~/.tmux.conf
-elfi [[ "$os" == "linux" ]]; then
+elif [[ "$os" == "linux" ]]; then
 	ln -sf ~/.dotfiles/tmux/.arch_tmux.conf ~/.tmux.conf
 fi
 
 # brewfile / pacmanfile
 if [[ "$os" == "osx" ]]; then
 	ln -sf ~/.dotfiles/setup/osx/Brewfile ~/
-elfi [[ "$os" == "linux" ]]; then
+elif [[ "$os" == "linux" ]]; then
 	ln -sf ~/.dotfiles/arch/pacman/pacmanfile ~/
 fi
 
 # qutebrowser
 if [[ "$os" == "osx" ]]; then
 	ln -sf ~/.dotfiles/qutebrowser/.qutebrowser ~/
-elfi [[ "$os" == "linux" ]]; then
+elif [[ "$os" == "linux" ]]; then
 	ln -sf ~/.dotfiles/qutebrowser/.qutebrowser ~/.config/qutebrowser
 fi
 
 # mutt (mailcap)
 if [[ "$os" == "osx" ]]; then
 	ln -sf ~/.dotfiles/mutt/.mac_mailcap ~/.mailcap
-elfi [[ "$os" == "linux" ]]; then
+elif [[ "$os" == "linux" ]]; then
 	ln -sf ~/.dotfiles/mutt/.arch_mailcap ~/.mailcap
 fi
 
@@ -87,14 +91,14 @@ fi
 # alacritty
 if [[ "$os" == "osx" ]]; then
 	ln -sf ~/.dotfiles/alacritty/osx_alacritty.yml ~/.config/.alacritty.yml
-elfi [[ "$os" == "linux" ]]; then
+elif [[ "$os" == "linux" ]]; then
 	ln -sf ~/.dotfiles/alacritty/arch_alacritty.yml ~/.config/.alacritty.yml
 fi
 
 # zathura
 if [[ "$os" == "osx" ]]; then
 	ln -sf ~/.dotfiles/zathura/osx_zathurarc ~/.config/zathura/zathurarc
-elfi [[ "$os" == "linux" ]]; then
+elif [[ "$os" == "linux" ]]; then
 	ln -sf ~/.dotfiles/zathura/arch_zathurarc ~/.config/zathura/zathurarc
 fi
 
@@ -106,7 +110,7 @@ fi
 # spotifyd
 if [[ "$os" == "osx" ]]; then
 	ln -sf ~/.dotfiles/spotify/osx_spotifyd.conf ~/.config/spotifyd/spotifyd.conf
-elfi [[ "$os" == "linux" ]]; then
+elif [[ "$os" == "linux" ]]; then
 	ln -sf ~/.dotfiles/spotify/arch_spotifyd.conf ~/.config/spotifyd/spotifyd.conf
 fi
 
@@ -137,8 +141,6 @@ ln -sf ~/.dotfiles/newsboat/.newsboat ~/
 
 ln -sf ~/.dotfiles/w3m/.w3m ~/
 
-ln -sf ~/.dotfiles/moc/.moc ~/
-
 ln -sf ~/.dotfiles/jupyter/.jupyter ~/
 
 ln -sf ~/.dotfiles/git/.gitconfig ~/
@@ -149,7 +151,7 @@ ln -sf ~/.dotfiles/Templates ~/
 
 ln -sf ~/.dotfiles/styles ~/
 
-ln -sf ~/.dotfiles/htop/ ~/config
+ln -sf ~/.dotfiles/htop/ ~/.config
 
 ln -sf ~/.dotfiles/mpv ~/.config
 
