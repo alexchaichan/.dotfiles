@@ -1,13 +1,4 @@
 ```
-sudo pacman -S git vim neovim ranger feh zathura htop khal khard neofetch alacritty pavucontrol spotifyd mpv alsa-utils bat brightnessctl firefox fzf i3blocks i3status jupyter neomutt pandoc pulseaudio pulseaudio-alsa python-pip python-magic python-tldextract r speedtest-cli texinfo texlive-core texlive-latexextra texlive-science thunar thunar-volman tk tmux vdirsyncer xboard zathura-pdf-poppler youtube-dl
-
-# npm node yarn
-
-pip install adblock
-
-sudo ln -sf ~/Dropbox/.config/linux/pacman.conf /etc
-
-yaourt -S zaread-git nerd-fonts-source-code-pro dropbox spotify-tui zoom miniconda3
 
 # imac 2008
 #yaourt -S b43-firmware b43legacy-firmware
@@ -24,8 +15,7 @@ systemctl --user enable dropbox
 
 ln -sf ~/Dropbox/.config/nvim/spell ~/.local/share/nvim/site 
 
-cp ~/Dropbox/.config/linux/spotifyd/ ~/.config/
-cp ~/Dropbox/.config/linux/spotify-tui/ ~/.config/
+
 
 ```
 

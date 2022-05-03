@@ -3,15 +3,33 @@
 # create directories
 
 mkdir ~/.zsh
+
 mkdir ~/.config/nvim && mkdir ~/.config/nvim/pack/ && mkdir ~/.config/nvim/pack/plugins/ && mkdir ~/.config/nvim/pack/plugins/start && mkdir ~/.config/nvim/pack/plugins/opt
+
 mkdir ~/.tmux && mkdir ~/.tmux/plugins
+
 mkdir ~/.config/vdirsyncer
+
 mkdir ~/.config/spotify-tui
+
 mkdir ~/.config/spotifyd
+
 if [[ "$os" == "osx" ]]; then
 	mkdir ~/.cache/spotifyd
 fi
+
+if [[ "$os" == "linux" ]]; then
+	mkdir ~/.config/systemd/
+	mkdir ~/.config/systemd/user/
+	#cp ~/Dropbox/.config/linux/dropbox.service ~/.config/systemd/user/
+
+	#systemctl --user start dropbox
+	#systemctl --user status dropbox # check status
+	#systemctl --user enable dropbox
+fi
+
 mkdir ~/.config/zathura
+
 mkdir ~/repositories
 
 # create symlinks
@@ -79,28 +97,56 @@ if [[ "$os" == "linux" ]]; then
 	ln -sf ~/Dropbox/.config/linux/.xinitrc ~/
 fi
 
-# spotify
+# spotifyd
+if [[ "$os" == "osx" ]]; then
+	ln -sf ~/.dotfiles/spotify/osx_spotifyd.conf ~/.config/spotifyd/spotifyd.conf
+elfi [[ "$os" == "linux" ]]; then
+	ln -sf ~/.dotfiles/spotify/arch_spotifyd.conf ~/.config/spotifyd/spotifyd.conf
+fi
+
+# pacman.conf
+if [[ "$os" == "linux" ]]; then
+	ln -sf ~/.dotfiles/arch/pacman/pacman.conf /etc
+fi
+
 ln -sf ~/.dotfiles/spotify/spotify-tui/config.yml ~/.config/spotify-tui
 
 ln -sf ~/.dotfiles/qutebrowser/.qutebrowser/bookmarks/urls ~/
+
 ln -sf ~/.dotfiles/vdirsyncer/config ~/.config/vdirsyncer
+
 ln -sf ~/.dotfiles/ranger ~/.config
+
 ln -sf ~/.dotfiles/khard ~/.config
+
 ln -sf ~/.dotfiles/khal ~/.config
+
 ln -sf ~/.dotfiles/mbsync/.mbsyncrc ~/
+
 ln -sf ~/.dotfiles/mutt/.muttrc ~/
+
 ln -sf ~/.dotfiles/nvim/* ~/.config/nvim
 
 ln -sf ~/.dotfiles/newsboat/.newsboat ~/
+
 ln -sf ~/.dotfiles/w3m/.w3m ~/
+
 ln -sf ~/.dotfiles/moc/.moc ~/
+
 ln -sf ~/.dotfiles/jupyter/.jupyter ~/
+
 ln -sf ~/.dotfiles/git/.gitconfig ~/
+
 ln -sf ~/.dotfiles/git/.gitignore_global ~/ && git config --global core.excludesfile ~/.gitignore_global
+
 ln -sf ~/.dotfiles/Templates ~/
+
 ln -sf ~/.dotfiles/styles ~/
+
 ln -sf ~/.dotfiles/htop/ ~/config
+
 ln -sf ~/.dotfiles/mpv ~/.config
+
 ln -sf ~/.dotfiles/neofetch ~/.config
 
 # source from dropbox
