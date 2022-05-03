@@ -1,6 +1,7 @@
 [user]
-	email = a.chaichan@icloud.com
-	name = Alex Chaichan
+	email = aleksejchaichan@posteo.de
+	name = Aleksej Chaichan
+	signingkey = B50CCA3A30B61127
 [core]
 	excludesfile = /Users/user/.gitignore_global
 
@@ -56,3 +57,5 @@
   unmerged = magenta bold reverse
   untracked = red
   updated = green bold
+[commit]
+	gpgsign = true

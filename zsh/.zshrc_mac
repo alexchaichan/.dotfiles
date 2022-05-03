@@ -18,3 +18,4 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 export PATH="/usr/local/sbin:$PATH"
+export GPG_TTY=$(tty)
