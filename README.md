@@ -20,7 +20,7 @@ fi
 if [[ "$(uname)" == "Darwin" ]]; then
     brew install git       
 elif [[ "$(expr substr $(uname -s) 1 5)" == "Linux" ]]; then
-    pacman -S git
+    sudo pacman -S git
 elif [[ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]]; then
     winget install git
 elif [[ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]]; then
