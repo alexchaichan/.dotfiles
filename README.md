@@ -29,7 +29,7 @@ fi
 ```
 
 # clone .dotfiles
-`git clone https://github.com/alexchaichan/.dotfiles.git ~/`
+`git clone https://github.com/alexchaichan/.dotfiles.git`
 
 ## store `.gnupg` file into `~/`
 
