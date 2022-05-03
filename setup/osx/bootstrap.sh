@@ -39,8 +39,8 @@ source ~/.dotfiles/setup/osx/repositories.sh
 # install crontabs
 source ~/.dotfiles/setup/osx/cronbtabs.sh
 
-# install R packages
-Rscript ~/.dotfiles/setup/osx/packages.R
+# install R
+source ~/.dotfiles/R/R.sh
 
 # install python packages
 source ~/.dotfiles/setup/osx/pip.sh

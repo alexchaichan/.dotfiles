@@ -1,11 +1,13 @@
-# zsh with all plugins
+#!/usr/bin/env bash
+
+# zsh
 zsh_add_plugin 'hlissner/zsh-autopair'
 zsh_add_plugin 'zsh-users/zsh-completions'
 zsh_add_plugin 'romkatv/powerlevel10k'
 zsh_add_plugin 'zsh-users/zsh-syntax-highlighting'
 zsh_add_plugin 'zsh-users/zsh-autosuggestions'
 
-# vim with all plugis
+# nvim
 vim_add_plugin 'dense-analysis/ale'
 vim_add_plugin 'neoclide/coc.nvim'
 vim_add_plugin 'chrisbra/csv.vim'
@@ -32,7 +34,7 @@ vim_add_plugin 'honza/vim-snippets'
 vim_add_plugin 'dhruvasagar/vim-table-mode'
 vim_add_plugin 'glepnir/dashboard-nvim'
 
-# tmux with all plugins
+# tmux
 tmux_add_plugin 'tmux-plugins/tmux-battery'
 tmux_add_plugin 'tmux-plugins/tmux-copycat'
 tmux_add_plugin 'tmux-plugins/tmux-cpu'

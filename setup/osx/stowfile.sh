@@ -12,15 +12,52 @@ mkdir ~/.config/zathura
 mkdir ~/repositories
 
 # create symlinks
-ln -sf ~/.dottfiles/zsh/.zshrc_mac ~/.zshrc
-ln -sf ~/.dotfiles/tmux/.osx_tmux.conf ~/.tmux.conf
-ln -sf ~/.dotfiles/setup/osx/Brewfile ~/
+
+# zshrc
+if [[ "$os" == "osx" ]]; then
+	ln -sf ~/.dottfiles/zsh/.zshrc_mac ~/.zshrc
+elfi [[ "$os" == "linux" ]]; then
+	ln -sf ~/.dottfiles/zsh/.zshrc_arch ~/.zshrc
+fi
+
+# tmux
+if [[ "$os" == "osx" ]]; then
+	ln -sf ~/.dotfiles/tmux/.osx_tmux.conf ~/.tmux.conf
+elfi [[ "$os" == "linux" ]]; then
+	ln -sf ~/.dotfiles/tmux/.arch_tmux.conf ~/.tmux.conf
+fi
+
+# brewfile
+if [[ "$os" == "osx" ]]; then
+	ln -sf ~/.dotfiles/setup/osx/Brewfile ~/
+fi
+
+# qutebrowser
+if [[ "$os" == "osx" ]]; then
+	ln -sf ~/.dotfiles/qutebrowser/.qutebrowser ~/
+elfi [[ "$os" == "linux" ]]; then
+	ln -sf ~/.dotfiles/qutebrowser/.qutebrowser ~/qutebrowser
+fi
+
+# qutebrowser
+if [[ "$os" == "osx" ]]; then
+	ln -sf ~/.dotfiles/mutt/.mac_mailcap ~/.mailcap
+elfi [[ "$os" == "linux" ]]; then
+	ln -sf ~/.dotfiles/mutt/.arch_mailcap ~/.mailcap
+fi
+
+# psychopy
+if [[ "$os" == "osx" ]]; then
+	ln -sf ~/.dotfiles/psychopy/.psychopy3 ~/
+fi
+
+
+
 ln -sf ~/.dotfiles/newsboat/.newsboat ~/
-ln -sf ~/.dotfiles/qutebrowser/.qutebrowser ~/
 ln -sf ~/.dotfiles/qutebrowser/.qutebrowser/bookmarks/urls ~/
+
 ln -sf ~/.dotfiles/mutt/.muttrc ~/
-ln -sf ~/.dotfiles/mutt/.mac_mailcap ~/.mailcap
-ln -sf ~/.dotfiles/psychopy/.psychopy3 ~/
+
 ln -sf ~/.dotfiles/w3m/.w3m ~/
 ln -sf ~/.dotfiles/moc/.moc ~/
 ln -sf ~/.dotfiles/jupyter/.jupyter ~/
@@ -36,9 +73,26 @@ ln -sf ~/.dotfiles/nvim/snips/r.snippets ~/.config/rstudio/snippets
 ln -sf ~/.dotfiles/Templates ~/
 ln -sf ~/.dotfiles/styles ~/
 
-ln -sf ~/.dotfiles/alacritty/osx_alacritty.yml ~/.config/.alacritty.yml
+
+
+# alacritty
+if [[ "$os" == "osx" ]]; then
+	ln -sf ~/.dotfiles/alacritty/osx_alacritty.yml ~/.config/.alacritty.yml
+elfi [[ "$os" == "linux" ]]; then
+	ln -sf ~/.dotfiles/alacritty/arch_alacritty.yml ~/.config/.alacritty.yml
+fi
+
+
 ln -sf ~/.dotfiles/nvim/* ~/.config/nvim
-ln -sf ~/.dotfiles/zathura/osx_zathurarc ~/.config/zathura/zathurarc
+
+
+# zathura
+if [[ "$os" == "osx" ]]; then
+	ln -sf ~/.dotfiles/zathura/osx_zathurarc ~/.config/zathura/zathurarc
+elfi [[ "$os" == "linux" ]]; then
+	ln -sf ~/.dotfiles/zathura/arch_zathurarc ~/.config/zathura/zathurarc
+fi
+
 ln -sf ~/.dotfiles/htop/ ~/config
 ln -sf ~/.dotfiles/ranger ~/.config
 ln -sf ~/.dotfiles/mpv ~/.config
