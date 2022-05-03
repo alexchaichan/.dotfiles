@@ -46,7 +46,7 @@ source ~/.dotfiles/plugins.sh
 if [[ "$os" == "osx" ]]; then
 	brew bundle --file=~/.dotfies/osx/Brewfile
 elfi [[ "$os" == "linux" ]]; then
-	ln -sf ~/.dotfiles/qutebrowser/.qutebrowser ~/.config/qutebrowser
+	pacman -S --needed - < ~/.dotfiles/arch/pacman/pacmanfile
 fi
 
 # source password-store

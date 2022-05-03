@@ -58,7 +58,7 @@ fi
 if [[ "$os" == "osx" ]]; then
 	ln -sf ~/.dotfiles/setup/osx/Brewfile ~/
 elfi [[ "$os" == "linux" ]]; then
-	ln -sf ~/.dotfiles/arch/pacman/pacmanfile.sh ~/
+	ln -sf ~/.dotfiles/arch/pacman/pacmanfile ~/
 fi
 
 # qutebrowser
