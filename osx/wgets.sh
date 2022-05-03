@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # # qutebrowser
 # wget https://github.com/qutebrowser/qutebrowser/releases/download/v2.4.0/qutebrowser-2.4.0.dmg
 # hdiutil attach qutebrowser.dmg

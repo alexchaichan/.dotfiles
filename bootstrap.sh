@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 
 # check for os type
 unameOut="$(uname -s)"
@@ -28,24 +29,22 @@ fi
 # source password-store
 source ~/.dotfiles/password-store.sh
 
-
 # install applications
 if [[ "$os" == "osx" ]]; then
-	source ~/.dotfiles/setup/osx/wgets.sh
+	source ~/.dotfiles/osx/wgets.sh
 fi
 
-
 # install repositores
-source ~/.dotfiles/setup/osx/repositories.sh
+source ~/.dotfiles/repositories.sh
 
 # install crontabs
-source ~/.dotfiles/setup/osx/cronbtabs.sh
+source ~/.dotfiles/cronbtabs.sh
 
 # install R
 source ~/.dotfiles/R/R.sh
 
 # install python packages
-source ~/.dotfiles/setup/osx/pip.sh
+source ~/.dotfiles/pip.sh
 
 # make zsh default shell 
 if [ -z "`$SHELL -c 'echo $ZSH_VERSION'`" ]; then

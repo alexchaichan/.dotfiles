@@ -1,5 +1,3 @@
-
-
 ___
 
 ## last steps by hand

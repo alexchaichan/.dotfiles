@@ -1,4 +1,6 @@
-# zshrc
+#!/usr/bin/env bash
+
+# qutebrowser virtual environment
 if [[ "$os" == "osx" ]]; then
 	git clone https://github.com/qutebrowser/qutebrowser.git
 	cd qutebrowser
