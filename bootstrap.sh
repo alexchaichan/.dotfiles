@@ -29,7 +29,7 @@ source ~/.dotfiles/plugins.sh
 
 # install Brewfile / pacmanfile
 if [[ "$os" == "osx" ]]; then
-	brew bundle --file=~/.dotfies/osx/Brewfile
+	brew bundle --file=~/.dotfiles/osx/Brewfile
 elif [[ "$os" == "linux" ]]; then
 	pacman -S --needed - < ~/.dotfiles/arch/pacman/pacmanfile
 fi
