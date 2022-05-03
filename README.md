@@ -8,4 +8,4 @@
 
 ### [last steps per hand for osx](osx/lastperhand.md)
 
-## [arch linux](/setup/arch_linux/)
+## [arch linux](arch/README.md/)
