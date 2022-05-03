@@ -16,21 +16,6 @@ case "${unameOut}" in
     *)          os="UNKNOWN:${unameOut}"
 esac
 
-# install homebrew for osx
-if [[ "$os" == "osx" ]]; then
-	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-fi
-
-# git
-if [[ "$os" == "osx" ]]; then
-	brew install git
-elfi [[ "$os" == "linux" ]]; then
-	pacman -S git
-fi
-
-# clone .dotfiles
-git clone https://github.com/alexchaichan/.dotfiles.git ~/
-
 # make osx system changes
 if [[ "$os" == "osx" ]]; then
 	source ~/.dotfiles/osx/.macos
