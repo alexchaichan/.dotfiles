@@ -8,7 +8,9 @@ mkdir ~/.tmux && mkdir ~/.tmux/plugins
 mkdir ~/.config/vdirsyncer
 mkdir ~/.config/spotify-tui
 mkdir ~/.config/spotifyd
-mkdir ~/.cache/spotifyd
+if [[ "$os" == "osx" ]]; then
+	mkdir ~/.cache/spotifyd
+fi
 mkdir ~/.config/zathura
 mkdir ~/repositories
 
@@ -19,6 +21,12 @@ if [[ "$os" == "osx" ]]; then
 	ln -sf ~/.dottfiles/zsh/.zshrc_mac ~/.zshrc
 elfi [[ "$os" == "linux" ]]; then
 	ln -sf ~/.dottfiles/zsh/.zshrc_arch ~/.zshrc
+fi
+
+# bash
+if [[ "$os" == "linux" ]]; then
+	ln -sf ~/.dottfiles/bash/.arch_bashrc ~/.bashrc
+	ln -sf ~/.dottfiles/bash/.arch_bashprofile ~/.bash_profile
 fi
 
 # tmux
@@ -37,16 +45,15 @@ fi
 if [[ "$os" == "osx" ]]; then
 	ln -sf ~/.dotfiles/qutebrowser/.qutebrowser ~/
 elfi [[ "$os" == "linux" ]]; then
-	ln -sf ~/.dotfiles/qutebrowser/.qutebrowser ~/qutebrowser
+	ln -sf ~/.dotfiles/qutebrowser/.qutebrowser ~/.config/qutebrowser
 fi
 
-# qutebrowser
+# mutt (mailcap)
 if [[ "$os" == "osx" ]]; then
 	ln -sf ~/.dotfiles/mutt/.mac_mailcap ~/.mailcap
 elfi [[ "$os" == "linux" ]]; then
 	ln -sf ~/.dotfiles/mutt/.arch_mailcap ~/.mailcap
 fi
-ln -sf ~/.dotfiles/qutebrowser/.qutebrowser/bookmarks/urls ~/
 
 # psychopy
 if [[ "$os" == "osx" ]]; then
@@ -67,24 +74,34 @@ elfi [[ "$os" == "linux" ]]; then
 	ln -sf ~/.dotfiles/zathura/arch_zathurarc ~/.config/zathura/zathurarc
 fi
 
-ln -sf ~/.dotfiles/nvim/* ~/.config/nvim
-ln -sf ~/.dotfiles/newsboat/.newsboat ~/
+# xinitrc
+if [[ "$os" == "linux" ]]; then
+	ln -sf ~/Dropbox/.config/linux/.xinitrc ~/
+fi
+
+# spotify
+ln -sf ~/.dotfiles/spotify/spotify-tui/config.yml ~/.config/spotify-tui
+
+ln -sf ~/.dotfiles/qutebrowser/.qutebrowser/bookmarks/urls ~/
+ln -sf ~/.dotfiles/vdirsyncer/config ~/.config/vdirsyncer
+ln -sf ~/.dotfiles/ranger ~/.config
+ln -sf ~/.dotfiles/khard ~/.config
+ln -sf ~/.dotfiles/khal ~/.config
+ln -sf ~/.dotfiles/mbsync/.mbsyncrc ~/
 ln -sf ~/.dotfiles/mutt/.muttrc ~/
+ln -sf ~/.dotfiles/nvim/* ~/.config/nvim
+
+ln -sf ~/.dotfiles/newsboat/.newsboat ~/
 ln -sf ~/.dotfiles/w3m/.w3m ~/
 ln -sf ~/.dotfiles/moc/.moc ~/
 ln -sf ~/.dotfiles/jupyter/.jupyter ~/
 ln -sf ~/.dotfiles/git/.gitconfig ~/
 ln -sf ~/.dotfiles/git/.gitignore_global ~/ && git config --global core.excludesfile ~/.gitignore_global
-ln -sf ~/.dotfiles/mbsync/.mbsyncrc ~/
-ln -sf ~/.dotfiles/vdirsyncer/config ~/.config/vdirsyncer
 ln -sf ~/.dotfiles/Templates ~/
 ln -sf ~/.dotfiles/styles ~/
 ln -sf ~/.dotfiles/htop/ ~/config
-ln -sf ~/.dotfiles/ranger ~/.config
 ln -sf ~/.dotfiles/mpv ~/.config
 ln -sf ~/.dotfiles/neofetch ~/.config
-ln -sf ~/.dotfiles/khard ~/.config
-ln -sf ~/.dotfiles/khal ~/.config
 
 # source from dropbox
 # ln -sf ~/Dropbox/.config/Keychains ~/Library
