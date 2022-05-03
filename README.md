@@ -6,6 +6,6 @@
 
 `source ~/.dotfiles/bootstrap.sh`
 
-### [last teps per hand for osx](osx/lastperhand.md)
+### [last steps per hand for osx](osx/lastperhand.md)
 
 ## [arch linux](/setup/arch_linux/)
