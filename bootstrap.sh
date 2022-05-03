@@ -29,7 +29,7 @@ elfi [[ "$os" == "linux" ]]; then
 fi
 
 # clone .dotfiles
-git clone https://github.com/alexchaichan/.dotfiles.git
+git clone https://github.com/alexchaichan/.dotfiles.git ~/
 
 # make osx system changes
 if [[ "$os" == "osx" ]]; then
