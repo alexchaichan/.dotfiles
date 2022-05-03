@@ -28,7 +28,7 @@ elfi [[ "$os" == "linux" ]]; then
 	pacman -S git
 fi
 
-# clone repo
+# clone .dotfiles
 git clone https://github.com/alexchaichan/.dotfiles.git
 
 # make osx system changes
