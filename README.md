@@ -22,6 +22,6 @@
 ## run installation file
 `source ~/.dotfiles/bootstrap.sh`
 
-### [last teps per hand](~/.dotfiles/osx/lastperhand.md)
+### [last teps per hand](osx/lastperhand.md)
 
 ## [arch linux](/setup/arch_linux/)
