@@ -167,7 +167,7 @@ rstudio(){
 
 
 gitpush(){
-    pass # 
+    pass + 
     git add . && git commit -m "update" && git push &&
 }
 
