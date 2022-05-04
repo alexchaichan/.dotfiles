@@ -55,9 +55,13 @@ defaults write com.apple.screencapture disable-shadow -bool true
 defaults write com.apple.terminal StringEncodings -array 4
 
 # window color
+defaults delete -globalDomain "AppleAquaColorVariant"
+defaults delete -globalDomain "AccentColor"
+
 defaults write -globalDomain "AccentColor" -int -1
 defaults write NSGlobalDomain AppleAccentColor -int -1
 defaults write -g AppleAccentColor -int -1
+defaults write -globalDomain "AppleAquaColorVariant" -int -1
 
 ###############################################################################
 # finder                                                                      #
