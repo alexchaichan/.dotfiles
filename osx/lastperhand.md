@@ -10,14 +10,15 @@ ___
 ___
 
 ## neovim
+```
 gem install neovim
 yarn global add neovim
 pip3 install neovim
 pip3 install pynvim
 cd ~/.config/nvim/pack/plugins/start/coc.nvim && yarn install
 sudo ln -sf ~/.dotfiles/nvim/spell /usr/local/Cellar/neovim/0.6.1/share/nvim/runtime/
-
-`nvim "+:CocInstall coc-json coc-pairs coc-r-lsp coc-snippets coc-tsserver coc-vimlsp"`
+nvim "+:CocInstall coc-json coc-pairs coc-r-lsp coc-snippets coc-tsserver coc-vimlsp"
+```
 ___
 
 ### full disk acces to crontabs
