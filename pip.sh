@@ -2,6 +2,7 @@
 
 # install pip
 sudo easy_install pip
+/Library/Developer/CommandLineTools/usr/bin/python3 -m pip install --upgrade pip
 sudo easy_install pip3
 
 pip3 install PyQt5

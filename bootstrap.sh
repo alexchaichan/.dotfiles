@@ -68,4 +68,4 @@ pip3 install pynvim
 cd ~/.config/nvim/pack/plugins/start/coc.nvim && yarn install
 sudo ln -sf ~/.dotfiles/nvim/spell /usr/local/Cellar/neovim/0.6.1/share/nvim/runtime/
 
-bat ~/.dotfiles/setup/osx/installbyhand.sh
+bat ~/.dotfiles/osx/lastperhand.md

@@ -129,6 +129,9 @@ defaults write com.apple.systemuiserver menuExtras -array "/System/Library/CoreS
 # preventing desktop jump when window is open on another desktop
 defaults write com.apple.dock workspaces-auto-swoosh -bool false
 
+# remove all app icons from the Dock in OS X: 
+defaults write com.apple.dock persistent-apps -array
+
 ###############################################################################
 # animations                                                                  #
 ###############################################################################
