@@ -125,7 +125,7 @@ ln -sf ~/.dotfiles/spotify/spotify-tui/config.yml ~/.config/spotify-tui
 
 ln -sf ~/.dotfiles/qutebrowser/.qutebrowser/bookmarks/urls ~/
 
-ln -sf ~/.dotfiles/vdirsyncer/config ~/.config/vdirsyncer
+ln -sf ~/.dotfiles/isync/vdirsyncer/config ~/.config/vdirsyncer
 
 ln -sf ~/.dotfiles/ranger ~/.config
 
@@ -133,7 +133,7 @@ ln -sf ~/.dotfiles/khard ~/.config
 
 ln -sf ~/.dotfiles/khal ~/.config
 
-ln -sf ~/.dotfiles/mbsync/.mbsyncrc ~/
+ln -sf ~/.dotfiles/isync/mbsync/.mbsyncrc ~/
 
 ln -sf ~/.dotfiles/mutt/.muttrc ~/
 
