@@ -3,6 +3,7 @@ Host imap.mail.me.com
 Port 993
 User a.chaichan@icloud.com
 PassCmd "pass mbsyncrc"
+# Pass xxxx-xxxx-xxxx-xxxx
 SSLType IMAPS
 CertificateFile /usr/local/etc/openssl@1.1/cert.pem
 AuthMechs PLAIN
