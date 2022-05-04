@@ -48,8 +48,8 @@ source ~/.dotfiles/repositories.sh
 # install crontabs
 source ~/.dotfiles/cronbtabs.sh
 
-# install R
-source ~/.dotfiles/R/R.sh
+# install Rpackage
+Rscript ~/.dotfiles/R/packages.R
 
 # install python packages
 source ~/.dotfiles/pip.sh
@@ -59,13 +59,5 @@ if [ -z "`$SHELL -c 'echo $ZSH_VERSION'`" ]; then
   sudo sh -c "echo $(which zsh) >> /etc/shells"
   chsh -s "$(which zsh)"
 fi
-
-# neovim dependencies
-gem install neovim
-yarn global add neovim
-pip3 install neovim
-pip3 install pynvim
-cd ~/.config/nvim/pack/plugins/start/coc.nvim && yarn install
-sudo ln -sf ~/.dotfiles/nvim/spell /usr/local/Cellar/neovim/0.6.1/share/nvim/runtime/
 
 bat ~/.dotfiles/osx/lastperhand.md

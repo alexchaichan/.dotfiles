@@ -2,10 +2,22 @@ ___
 
 ## last steps by hand
 
-### coc - neovim
+## Rstudio
+
+1. `rstudio`
+2. Tools > Global Options... > Code > Edit Snippets... > 1st line <space> > save
+3. `ln -sf ~/.dotfiles/rstudio/rstudio-prefs.json ~/.config/rstudio && ln -sf ~/.dotfiles/nvim/snips/r.snippets ~/.config/rstudio/snippets`
+___
+
+## neovim
+gem install neovim
+yarn global add neovim
+pip3 install neovim
+pip3 install pynvim
+cd ~/.config/nvim/pack/plugins/start/coc.nvim && yarn install
+sudo ln -sf ~/.dotfiles/nvim/spell /usr/local/Cellar/neovim/0.6.1/share/nvim/runtime/
 
 `nvim "+:CocInstall coc-json coc-pairs coc-r-lsp coc-snippets coc-tsserver coc-vimlsp"`
-
 ___
 
 ### full disk acces to crontabs
