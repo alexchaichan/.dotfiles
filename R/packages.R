@@ -25,7 +25,9 @@ install.packages(
     "randomcoloR",
     "ggThemeAssist",
     "readxl",
-    "languageserver"
+    "languageserver",
+    "articles",
+    "bookdown"
   ),
   repos = "https://cloud.r-project.org"
 )
