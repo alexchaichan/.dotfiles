@@ -4,13 +4,13 @@
 
 ```
 if [[ "$(uname)" == "Darwin" ]]; then
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"       
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 elif [[ "$(expr substr $(uname -s) 1 5)" == "Linux" ]]; then
-    
+
 elif [[ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]]; then
-    
+
 elif [[ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]]; then
-    
+
 fi
 ```
 
@@ -18,7 +18,7 @@ fi
 
 ```
 if [[ "$(uname)" == "Darwin" ]]; then
-    brew install git       
+    brew install git
 elif [[ "$(expr substr $(uname -s) 1 5)" == "Linux" ]]; then
     sudo pacman -S git
 elif [[ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]]; then
