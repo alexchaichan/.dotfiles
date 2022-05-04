@@ -26,7 +26,7 @@ install.packages(
     "ggThemeAssist",
     "readxl",
     "languageserver",
-    "articles",
+    "rticles",
     "bookdown"
   ),
   repos = "https://cloud.r-project.org"
