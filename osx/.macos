@@ -54,6 +54,11 @@ defaults write com.apple.screencapture disable-shadow -bool true
 # only use UTF-8 in Terminal.app
 defaults write com.apple.terminal StringEncodings -array 4
 
+# window color
+defaults write -globalDomain "AccentColor" -int -1
+defaults write NSGlobalDomain AppleAccentColor -int -1
+defaults write -g AppleAccentColor -int -1
+
 ###############################################################################
 # finder                                                                      #
 ###############################################################################
@@ -132,6 +137,7 @@ defaults write com.apple.dock workspaces-auto-swoosh -bool false
 
 # remove all app icons from the Dock in OS X: 
 defaults write com.apple.dock persistent-apps -array
+
 
 ###############################################################################
 # animations                                                                  #
