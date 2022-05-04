@@ -6,7 +6,7 @@ mkdir ~/.config
 
 mkdir ~/.cache
 
-mkdir ~/.zsh
+mkdir ~/zsh
 
 mkdir ~/.config/nvim && mkdir ~/.config/nvim/pack/ && mkdir ~/.config/nvim/pack/plugins/ && mkdir ~/.config/nvim/pack/plugins/start && mkdir ~/.config/nvim/pack/plugins/opt
 
@@ -64,7 +64,7 @@ fi
 
 # brewfile / pacmanfile
 if [[ "$os" == "osx" ]]; then
-	ln -sf ~/.dotfiles/setup/osx/Brewfile ~/
+	ln -sf ~/.dotfiles/osx/Brewfile ~/
 elif [[ "$os" == "linux" ]]; then
 	ln -sf ~/.dotfiles/arch/pacman/pacmanfile ~/
 fi
@@ -90,9 +90,9 @@ fi
 
 # alacritty
 if [[ "$os" == "osx" ]]; then
-	ln -sf ~/.dotfiles/alacritty/osx_alacritty.yml ~/.config/.alacritty.yml
+	ln -sf ~/.dotfiles/alacritty/osx_alacritty.yml ~/.config/alacritty.yml
 elif [[ "$os" == "linux" ]]; then
-	ln -sf ~/.dotfiles/alacritty/arch_alacritty.yml ~/.config/.alacritty.yml
+	ln -sf ~/.dotfiles/alacritty/arch_alacritty.yml ~/.config/alacritty.yml
 fi
 
 # zathura

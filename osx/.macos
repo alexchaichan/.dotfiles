@@ -22,6 +22,7 @@ osascript -e 'tell application "System Preferences" to quit'
 # rm -rf ~/Library/Application Support/Dock/desktoppicture.db
 # sudo rm -rf /System/Library/CoreServices/DefaultDesktop.jpg
 # sudo ln -sf ~/.dotfiles/setup/osx/wallpaper.png /System/Library/CoreServices/DefaultDesktop.jpg
+cp ~/.dotfiles/wallpaper.png ~/Pictures
 
 # set language and text formats
 defaults write NSGlobalDomain AppleLanguages -array "en"
