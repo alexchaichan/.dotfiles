@@ -23,8 +23,7 @@ ___
 
 1. go to System Preferences
 2. Keyboard > Shortcuts > Spotlight > uncheck
-3. `cp -R ~/.dotfiles/osx/open_terminal.workflow ~/Library/Services`
-4. Services > check copied services and map a shortcut
+3. Services > map workflow to cmd + space
 ___
 
 ### screenrecord w/ audio

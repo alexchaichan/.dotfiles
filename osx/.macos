@@ -17,6 +17,9 @@ osascript -e 'tell application "System Preferences" to quit'
 # scutil --set HostName "user"
 # scutil --set LocalHostName "user"
 
+# copy workflows
+cp ~/.dotfiles/osx/open_terminal.workflow ~/Library/Services
+
 # # set a custom wallpaper image. `DefaultDesktop.jpg` is already a symlink, and
 # # all wallpapers are in `/Library/Desktop Pictures/`. The default is `Wave.jpg`.
 # rm -rf ~/Library/Application Support/Dock/desktoppicture.db

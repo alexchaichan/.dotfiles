@@ -8,6 +8,8 @@ mkdir ~/.cache
 
 mkdir ~/zsh
 
+mkdir mail
+
 mkdir ~/.config/nvim && mkdir ~/.config/nvim/pack/ && mkdir ~/.config/nvim/pack/plugins/ && mkdir ~/.config/nvim/pack/plugins/start && mkdir ~/.config/nvim/pack/plugins/opt
 
 mkdir ~/.tmux && mkdir ~/.tmux/plugins
