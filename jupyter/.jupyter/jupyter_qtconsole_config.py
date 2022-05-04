@@ -275,7 +275,7 @@
 
 ## path to a custom CSS stylesheet
 #  Default: ''
-c.JupyterQtConsoleApp.stylesheet = 'Dropbox/.config/.jupyter/qtdracula.css'
+c.JupyterQtConsoleApp.stylesheet = '.dotfiles/jupyter/.jupyter/qtdracula.css'
 
 #  See also: ConnectionFileMixin.transport
 # c.JupyterQtConsoleApp.transport = 'tcp'
