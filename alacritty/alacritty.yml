@@ -817,7 +817,7 @@ key_bindings:
 
 
 ########################### crazy open qutebrowser workaround 
-  - { key: E,    mods: Command, chars: "\x63\x6c\x65\x61\x72\x0a\x62\x61\x74\x20\x75\x72\x6c\x73\x0a"                       }
+  - { key: E,    mods: Command, chars: "\x63\x6c\x65\x61\x72\x0a\x62\x61\x74\x20\x7e\x2f\x75\x72\x6c\x73\x0a"                       }
 
 
 # open link  alt+1=1, 2=2, 3...
