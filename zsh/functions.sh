@@ -1,53 +1,57 @@
+######################################################################
+# aliasas						          #
+######################################################################
+
+# open this file
 funs(){
     vim $DOTFILES/zsh/functions.sh
 }
 
-# aliasas
-#
-#
-
+# pull all repos start searching from actual directory
 alias gitpullall="find . -maxdepth 300 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull"
 
-
-licht(){
-   brightnessctl set 100% 
-}
-
+# bat out .password-store repo
 passwort(){
     pass | bat 
 }
 
+# ls wit flags
 l(){
     ls -a --color=auto $1
 }
 
+# get easy keyboard hex codes
 hex(){
     xxd -psd
 }
 
+# check weather in stadard location
 weather(){
     curl v2d.wttr.in/Kassel
 }
 
+# check weather in $1 location
 wetter(){
     curl v2d.wttr.in/$1
 }
 
-
+# open neomutt
 mutt() {
     stty discard undef
     neomutt
 }
 
+# open qutebrowser with $1
 qute(){
     qutebrowser $1
 }
 
-
+# open neovim
 vim(){
    nvim $1
 }
 
+# open w3m terminal browser
 w3mb(){
     w3m -B
 }

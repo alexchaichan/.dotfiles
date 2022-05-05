@@ -1,5 +1,5 @@
 source ~/.dotfiles/zsh/.zshrc
-
+source ~/.dotfiles/zsh/osx_functions.sh
 
 
 # >>> conda initialize >>>

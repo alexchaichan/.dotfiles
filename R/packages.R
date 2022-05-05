@@ -27,12 +27,21 @@ install.packages(
     "readxl",
     "languageserver",
     "rticles",
-    "bookdown"
+    "bookdown",
+    "wbstats",
+    "ggdag",
+    "dagitty",
+    "",
   ),
   repos = "https://cloud.r-project.org"
 )
 
-devtools::install_github("IRkernel/IRkernel")
+
+devtools::install_github(
+  c(
+    "IRkernel/IRkernel",
+    "ngay/kustats")
+   )
 
 ## install dependencies
 

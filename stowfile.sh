@@ -111,9 +111,9 @@ fi
 
 # spotifyd
 if [[ "$os" == "osx" ]]; then
-	ln -sf ~/.dotfiles/spotify/osx_spotifyd.conf ~/.config/spotifyd/spotifyd.conf
+	ln -sf ~/.dotfiles/spotify/spotifyd/osx_spotifyd.conf ~/.config/spotifyd/spotifyd.conf
 elif [[ "$os" == "linux" ]]; then
-	ln -sf ~/.dotfiles/spotify/arch_spotifyd.conf ~/.config/spotifyd/spotifyd.conf
+	ln -sf ~/.dotfiles/spotify/spotifyd/arch_spotifyd.conf ~/.config/spotifyd/spotifyd.conf
 fi
 
 # pacman.conf

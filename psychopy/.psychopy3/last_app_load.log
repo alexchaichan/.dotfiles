@@ -1,13 +1,55 @@
 PTB-INFO: Using modified PortAudio V19.7.0-devel, revision unknown
-0.6329 	DEBUG 	Opening message catalog /Applications/PsychoPy.app/Contents/Resources/lib/python3.8/psychopy/localization/../app/locale/en_US/LC_MESSAGE/messages.mo for locale en_US
-13.3020 	INFO 	Loaded SoundDevice with PortAudio V19.7.0-devel, revision 147dd722548358763a8b649b3e4b41dfffbcfbb6
-13.3022 	INFO 	sound is using audioLib: sounddevice
-13.3023 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
-14.8646 	WARNING 	image was set to update during ISI_load_images Static Component, but that component no longer exists
-14.8646 	WARNING 	image was set to update during ISI_load_images Static Component, but that component no longer exists
-14.8646 	WARNING 	image was set to update during ISI_load_images Static Component, but that component no longer exists
-14.8647 	WARNING 	image was set to update during ISI_load_images Static Component, but that component no longer exists
-14.8647 	WARNING 	image was set to update during ISI_load_images Static Component, but that component no longer exists
-15.0206 	DEBUG 	PavloviaLoggedIn
-16.3189 	WARNING 	Couldn't connect to psychopy.org
+0.3399 	DEBUG 	Opening message catalog /Applications/PsychoPy.app/Contents/Resources/lib/python3.8/psychopy/localization/../app/locale/en_US/LC_MESSAGE/messages.mo for locale en_US
+9.1459 	INFO 	Loaded SoundDevice with PortAudio V19.7.0-devel, revision 147dd722548358763a8b649b3e4b41dfffbcfbb6
+9.1461 	INFO 	sound is using audioLib: sounddevice
+9.1461 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+10.6511 	WARNING 	image was set to update during ISI_load_images Static Component, but that component no longer exists
+10.6512 	WARNING 	image was set to update during ISI_load_images Static Component, but that component no longer exists
+10.6513 	WARNING 	image was set to update during ISI_load_images Static Component, but that component no longer exists
+10.6513 	WARNING 	image was set to update during ISI_load_images Static Component, but that component no longer exists
+10.6513 	WARNING 	image was set to update during ISI_load_images Static Component, but that component no longer exists
+10.8420 	DEBUG 	PavloviaLoggedIn
+12.0633 	WARNING 	Couldn't connect to psychopy.org
 Check internet settings (and proxy setting in PsychoPy Preferences.
+########## Running: /Users/user/Downloads/openiat/openIAT_lastrun.py ###########
+2022-05-05 18:32:34.978 python[87290:2855561] ApplePersistenceIgnoreState: Existing state will not be touched. New state will be written to /var/folders/zn/bp11zdkj26l4v_zc_h19t31h0000gn/T/org.opensciencetools.psychopy.savedState
+Fontconfig warning: ignoring UTF-8: not a valid region tag
+Traceback (most recent call last):
+1.5233 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+10.0910 	WARNING 	User requested fullscreen with size [1920 1080], but screen is actually [1440, 900]. Using actual size
+  File "/Users/user/Downloads/openiat/openIAT_lastrun.py", line 239, in <module>
+    trialList=data.importConditions('resources/instructs.xlsx'),
+  File "/Applications/PsychoPy.app/Contents/Resources/lib/python3.8/psychopy/data/utils.py", line 291, in importConditions
+    raise ValueError(msg % os.path.abspath(fileName))
+ValueError: Conditions file not found: /Users/user/Downloads/openiat/resources/instructs.xlsx
+################ Experiment ended with exit code 1 [pid:87290] #################
+########## Running: /Users/user/Downloads/openiat/openIAT_lastrun.py ###########
+2022-05-05 18:35:06.571 python[95239:2871891] ApplePersistenceIgnoreState: Existing state will not be touched. New state will be written to /var/folders/zn/bp11zdkj26l4v_zc_h19t31h0000gn/T/org.opensciencetools.psychopy.savedState
+Fontconfig warning: ignoring UTF-8: not a valid region tag
+Traceback (most recent call last):
+1.5421 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+7.4238 	WARNING 	User requested fullscreen with size [1920 1080], but screen is actually [1440, 900]. Using actual size
+  File "/Users/user/Downloads/openiat/openIAT_lastrun.py", line 413, in <module>
+    trialList=data.importConditions("resources/"+blocks_file),
+  File "/Applications/PsychoPy.app/Contents/Resources/lib/python3.8/psychopy/data/utils.py", line 291, in importConditions
+    raise ValueError(msg % os.path.abspath(fileName))
+ValueError: Conditions file not found: /Users/user/Downloads/openiat/resources/blocks_order1.xlsx
+################ Experiment ended with exit code 1 [pid:95239] #################
+########## Running: /Users/user/Downloads/openiat/openIAT_lastrun.py ###########
+2022-05-05 18:37:13.513 python[2241:2885787] ApplePersistenceIgnoreState: Existing state will not be touched. New state will be written to /var/folders/zn/bp11zdkj26l4v_zc_h19t31h0000gn/T/org.opensciencetools.psychopy.savedState
+Fontconfig warning: ignoring UTF-8: not a valid region tag
+Traceback (most recent call last):
+1.4867 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+7.4944 	WARNING 	User requested fullscreen with size [1920 1080], but screen is actually [1440, 900]. Using actual size
+  File "/Users/user/Downloads/openiat/openIAT_lastrun.py", line 586, in <module>
+    trialList=data.importConditions("resources/"+conds_file),
+  File "/Applications/PsychoPy.app/Contents/Resources/lib/python3.8/psychopy/data/utils.py", line 291, in importConditions
+    raise ValueError(msg % os.path.abspath(fileName))
+ValueError: Conditions file not found: /Users/user/Downloads/openiat/resources/pos_neg_train.xlsx
+################# Experiment ended with exit code 1 [pid:2241] #################
+########## Running: /Users/user/Downloads/openiat/openIAT_lastrun.py ###########
+2022-05-05 18:37:52.174 python[4242:2890027] ApplePersistenceIgnoreState: Existing state will not be touched. New state will be written to /var/folders/zn/bp11zdkj26l4v_zc_h19t31h0000gn/T/org.opensciencetools.psychopy.savedState
+Fontconfig warning: ignoring UTF-8: not a valid region tag
+1.6581 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+13.4721 	WARNING 	User requested fullscreen with size [1920 1080], but screen is actually [1440, 900]. Using actual size
+################# Experiment ended with exit code 0 [pid:4242] #################
