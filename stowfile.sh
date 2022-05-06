@@ -142,6 +142,13 @@ fi
 # spotify-tui
 ln -sf ~/.dotfiles/spotify/spotify-tui/config.yml ~/.config/spotify-tui
 
+# i3
+if [[ "$os" == "linux" ]]; then
+	ln -sf ~/.dotfiles/i3/i3 ~/.config
+	ln -sf ~/.dotfiles/i3/i3status ~/.config
+fi
+
+
 # vdirsyncer
 ln -sf ~/.dotfiles/isync/vdirsyncer/config ~/.config/vdirsyncer
 
