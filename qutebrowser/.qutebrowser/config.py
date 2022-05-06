@@ -134,7 +134,7 @@ config.bind('p', 'spawn --userscript qute-pass --dmenu-invocation dmenu')
 config.bind('P', 'spawn --userscript qute-pass --dmenu-invocation dmenu --password-only')
 
 # magnets home
-# c.url.start_pages = ('~/Dropbox/.config/.qutebrowser/search/startpage.html')
+# c.url.start_pages = ('~/.dotfiles/qutebrowser/.qutebrowser/search/startpage.html')
 
 # how long will the downloads files apear in a tab (milliseconds)
 c.downloads.remove_finished = 1
@@ -144,12 +144,6 @@ c.downloads.remove_finished = 1
 c.content.pdfjs = True
 
 
-
-# terminal start + home
-# # default + start_pages
-# c.url.start_pages = ('~/Dropbox/.config/.qutebrowser/HomeTerm/index.html')
-
-# c.url.default_page = ('~/Dropbox/.config/.qutebrowser/HomeTerm/index.html')
 
 
 # default 'startpage.com' startpage
