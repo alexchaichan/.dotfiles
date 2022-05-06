@@ -75,9 +75,11 @@ fi
 if [[ "$os" == "osx" ]]; then
 	mkdir ~/.qutebrowser
 	ln -sf ~/.dotfiles/qutebrowser/.qutebrowser/* ~/.qutebrowser
+	git clone https://github.com/dracula/qutebrowser-dracula-theme.git ~/.qutebrowser/dracula
 elif [[ "$os" == "linux" ]]; then
 	mkdir ~/.config/qutebrowser
 	ln -sf ~/.dotfiles/qutebrowser/.qutebrowser/* ~/.config/qutebrowser
+	git clone https://github.com/dracula/qutebrowser-dracula-theme.git ~/.config/qutebrowser/dracula
 fi
 
 # mutt (mailcap)
