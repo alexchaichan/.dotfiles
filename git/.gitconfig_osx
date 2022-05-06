@@ -4,7 +4,7 @@
 	signingkey = B50CCA3A30B61127
 [core]
 	excludesfile = /Users/user/.dotfiles/git/.gitignore_global
-[credentials]
+[credential]
   helper = !pass-git-helper $@
 # INCLUDES
 # --------
