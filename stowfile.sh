@@ -65,8 +65,8 @@ elif [[ "$os" == "linux" ]]; then
 	ln -sf ~/.dotfiles/git/.gitconfig_arch ~/.gitconfig && git config --global core.excludesfile ~/.dotfiles/git/.gitignore_global
 fi
 
-
-
+# git pass helper
+ln -sf ~/.dotfiles/pass-git-helper ~/.config
 
 # tmux
 if [[ "$os" == "osx" ]]; then
