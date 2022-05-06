@@ -64,7 +64,7 @@ if [[ "$os" == "osx" ]]; then
 elif [[ "$os" == "linux" ]]; then
 	ln -sf ~/.dotfiles/git/.gitconfig_arch ~/.gitconfig && git config --global core.excludesfile ~/.dotfiles/git/.gitignore_global
 fi
-ln -sf ~/.dotfiles/git/.gitconfig ~/ && git config --global core.excludesfile ~/.dotfiles/git/.gitignore_global
+
 
 
 
