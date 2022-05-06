@@ -106,7 +106,7 @@ fi
 
 # xinitrc
 if [[ "$os" == "linux" ]]; then
-	ln -sf ~/Dropbox/.config/linux/.xinitrc ~/
+	ln -sf ~/.dotfiles/arch/.xinitrc ~/
 fi
 
 # spotifyd
