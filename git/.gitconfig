@@ -3,7 +3,7 @@
 	name = Aleksej Chaichan
 	signingkey = B50CCA3A30B61127
 [core]
-	excludesfile = /Users/user/.gitignore_global
+	excludesfile = ~/.gitignore_global
 
 # INCLUDES
 # --------
