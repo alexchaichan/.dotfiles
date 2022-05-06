@@ -121,6 +121,7 @@ if [[ "$os" == "linux" ]]; then
 	ln -sf ~/.dotfiles/arch/pacman/pacman.conf /etc
 fi
 
+# spotify-tui
 ln -sf ~/.dotfiles/spotify/spotify-tui/config.yml ~/.config/spotify-tui
 
 ln -sf ~/.dotfiles/qutebrowser/.qutebrowser/bookmarks/urls ~/
