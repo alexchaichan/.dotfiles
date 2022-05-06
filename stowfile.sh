@@ -66,7 +66,7 @@ elif [[ "$os" == "linux" ]]; then
 fi
 
 # git pass helper
-ln -sf ~/.dotfiles/pass-git-helper ~/.config
+ln -sf ~/.dotfiles/git/pass-git-helper ~/.config
 
 # tmux
 if [[ "$os" == "osx" ]]; then
