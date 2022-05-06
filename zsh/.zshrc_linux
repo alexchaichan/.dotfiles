@@ -1,5 +1,5 @@
 source ~/.dotfiles/zsh/.zshrc
-source ~/.dotfiles/zsh/.zshrc_linux
+source ~/.dotfiles/zsh/arch_functions.sh
 
 
 # >>> conda initialize >>>
