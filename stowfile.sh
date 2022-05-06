@@ -145,9 +145,7 @@ ln -sf ~/.dotfiles/w3m/.w3m ~/
 
 ln -sf ~/.dotfiles/jupyter/.jupyter ~/
 
-ln -sf ~/.dotfiles/git/.gitconfig ~/
-
-ln -sf ~/.dotfiles/git/.gitignore_global ~/ && git config --global core.excludesfile ~/.gitignore_global
+ln -sf ~/.dotfiles/git/.gitconfig ~/ && git config --global core.excludesfile ~/.dotfiles/git/.gitignore_global
 
 ln -sf ~/.dotfiles/Templates ~/
 
