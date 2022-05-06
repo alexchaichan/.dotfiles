@@ -1,6 +1,6 @@
 [user]
 	email = a.chaichan@icloud.com
-	name = Aleksej Chaichan
+	name = alexchaichan
 	signingkey = B50CCA3A30B61127
 [core]
 	excludesfile = /home/imac/.dotfiles/git/.gitignore_global
