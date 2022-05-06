@@ -13,9 +13,10 @@ funs(){
 
 # quick push git
 gitpush(){
-	git add .
-	git commit -m "update"
-	git push
+  pass +
+  git add .
+  git commit -m "update"
+  git push
 }
 
 # pull all repos start searching from actual directory
