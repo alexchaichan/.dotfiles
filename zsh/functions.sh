@@ -7,8 +7,20 @@ funs(){
     vim $DOTFILES/zsh/functions.sh
 }
 
+#
+git #
+#
+
+git add .
+git commit -m "update"
+
 # pull all repos start searching from actual directory
 alias gitpullall="find . -maxdepth 300 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull"
+
+
+
+
+######################################################################
 
 # bat out .password-store repo
 passwort(){
@@ -91,7 +103,7 @@ odot(){
 
 
 #####################################################
-######### zsh functions #############################
+# zsh functions                                     #
 #####################################################
 
 #
@@ -173,13 +185,6 @@ function tmux_add_plugin() {
 
 ########################################################################################################## 
 
-
-
-
-# arch bluetoothctl connect the magic mouse quick
-mm(){
-    bluetoothctl connect 04:4B:ED:D2:45:CF
-}
 
 
 ########################################################################################################## 
