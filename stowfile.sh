@@ -93,6 +93,9 @@ elif [[ "$os" == "linux" ]]; then
 	git clone https://github.com/dracula/qutebrowser-dracula-theme.git ~/.config/qutebrowser/dracula
 fi
 
+# qutebrowser bookmarks
+ln -sf ~/.dotfiles/qutebrowser/.qutebrowser/bookmarks/urls ~/
+
 # mutt (mailcap)
 if [[ "$os" == "osx" ]]; then
 	ln -sf ~/.dotfiles/mutt/.mac_mailcap ~/.mailcap
@@ -138,8 +141,6 @@ fi
 
 # spotify-tui
 ln -sf ~/.dotfiles/spotify/spotify-tui/config.yml ~/.config/spotify-tui
-
-ln -sf ~/.dotfiles/qutebrowser/.qutebrowser/bookmarks/urls ~/
 
 ln -sf ~/.dotfiles/isync/vdirsyncer/config ~/.config/vdirsyncer
 
