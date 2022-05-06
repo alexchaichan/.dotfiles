@@ -122,7 +122,7 @@ c.editor.encoding = 'utf-8'
 
 # Always restore open sites when qutebrowser is reopened.
 # Type: Bool
-c.auto_save.session = True
+c.auto_save.session = False
 
 
 # scroll with mousewheel tabs type:bool
