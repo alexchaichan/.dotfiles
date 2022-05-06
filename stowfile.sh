@@ -73,9 +73,11 @@ fi
 
 # qutebrowser
 if [[ "$os" == "osx" ]]; then
-	ln -sf ~/.dotfiles/qutebrowser/.qutebrowser ~/
+	mkdir ~/.qutebrowser
+	ln -sf ~/.dotfiles/qutebrowser/.qutebrowser/* ~/.qutebrowser
 elif [[ "$os" == "linux" ]]; then
-	ln -sf ~/.dotfiles/qutebrowser/.qutebrowser ~/.config/qutebrowser
+	mkdir ~/.config/qutebrowser
+	ln -sf ~/.dotfiles/qutebrowser/.qutebrowser/* ~/.config/qutebrowser
 fi
 
 # mutt (mailcap)
