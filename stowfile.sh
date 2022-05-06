@@ -57,6 +57,17 @@ if [[ "$os" == "linux" ]]; then
 	ln -sf ~/.dotfiles/bash/.arch_bashprofile ~/.bash_profile
 fi
 
+
+# git
+if [[ "$os" == "osx" ]]; then
+	ln -sf ~/.dotfiles/git/.gitconfig_osx ~/.gitconfig && git config --global core.excludesfile ~/.dotfiles/git/.gitignore_global
+elif [[ "$os" == "linux" ]]; then
+	ln -sf ~/.dotfiles/git/.gitconfig_arch ~/.gitconfig && git config --global core.excludesfile ~/.dotfiles/git/.gitignore_global
+fi
+ln -sf ~/.dotfiles/git/.gitconfig ~/ && git config --global core.excludesfile ~/.dotfiles/git/.gitignore_global
+
+
+
 # tmux
 if [[ "$os" == "osx" ]]; then
 	ln -sf ~/.dotfiles/tmux/.osx_tmux.conf ~/.tmux.conf
@@ -150,7 +161,7 @@ ln -sf ~/.dotfiles/w3m/.w3m ~/
 
 ln -sf ~/.dotfiles/jupyter/.jupyter ~/
 
-ln -sf ~/.dotfiles/git/.gitconfig ~/ && git config --global core.excludesfile ~/.dotfiles/git/.gitignore_global
+
 
 ln -sf ~/.dotfiles/Templates ~/
 
