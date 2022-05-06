@@ -198,6 +198,7 @@ bar {
   }
 }
 
+
 # class                 border  bground text    indicator child_border
 client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
 client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
@@ -207,10 +208,7 @@ client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
 
 client.background       #F8F8F2
 
+
 #keyboard layout
 exec_always setxkbmap de
 
-# increase brightness
-bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
-# decrease brightness
-bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
