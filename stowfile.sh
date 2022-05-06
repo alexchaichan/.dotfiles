@@ -142,6 +142,7 @@ fi
 # spotify-tui
 ln -sf ~/.dotfiles/spotify/spotify-tui/config.yml ~/.config/spotify-tui
 
+# vdirsyncer
 ln -sf ~/.dotfiles/isync/vdirsyncer/config ~/.config/vdirsyncer
 
 ln -sf ~/.dotfiles/ranger ~/.config
