@@ -12,9 +12,11 @@ funs(){
 ######################################################################
 
 # quick push git
-git add .
-git commit -m "update"
-git push
+gitpush(){
+	git add .
+	git commit -m "update"
+	git push
+}
 
 # pull all repos start searching from actual directory
 alias gitpullall="find . -maxdepth 300 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull"
