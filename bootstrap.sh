@@ -16,6 +16,13 @@ case "${unameOut}" in
     *)          os="UNKNOWN:${unameOut}"
 esac
 
+# create $ directorys
+export HOME="$(echo -n $(bash -c "cd ~${USER} && pwd"))" 
+export DOTFILES=$HOME/.dotfiles
+export ZDOTDIR=$HOME/zsh
+export VDOTDIR=$HOME/.config/nvim
+export TDOTDIR=$HOME/.tmux
+
 # make osx system changes
 if [[ "$os" == "osx" ]]; then
 	source ~/.dotfiles/osx/.macos
@@ -39,7 +46,7 @@ source ~/.dotfiles/password-store.sh
 
 # install applications
 if [[ "$os" == "osx" ]]; then
-	source ~/.dotfiles/osx/wgets.sh
+	source ~/.dotfiles/osx/applications.sh
 fi
 
 # install repositores
@@ -59,5 +66,3 @@ if [ -z "`$SHELL -c 'echo $ZSH_VERSION'`" ]; then
   sudo sh -c "echo $(which zsh) >> /etc/shells"
   chsh -s "$(which zsh)"
 fi
-
-bat ~/.dotfiles/osx/lastperhand.md

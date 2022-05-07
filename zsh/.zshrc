@@ -8,7 +8,7 @@ case "${unameOut}" in
     *)          os="UNKNOWN:${unameOut}"
 esac
 
-# create $ dirrectorys
+# create $ directorys
 export HOME="$(echo -n $(bash -c "cd ~${USER} && pwd"))" 
 export DOTFILES=$HOME/.dotfiles
 export ZDOTDIR=$HOME/zsh

@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# clone repo
 git clone https://github.com/alexchaichan/.password-store.git ~/.password-store 
 
 # spotify
