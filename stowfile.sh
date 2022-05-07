@@ -22,7 +22,7 @@ fi
 # bash
 if [[ "$os" == "linux" ]]; then
 	ln -sf ~/.dotfiles/bash/.arch_bashrc ~/.bashrc
-	ln -sf ~/.dotfiles/bash/.arch_bashprofile ~/.bash_profile
+	ln -sf ~/.dotfiles/bash/.arch_bash_profile ~/.bash_profile
 fi
 
 # git
