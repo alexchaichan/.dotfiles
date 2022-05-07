@@ -4,11 +4,11 @@
 
 Chaichan, Aleksej
 
-35527017 \hspace{1em} 
+matrikelnummer \hspace{1em} 
 
-Kirchweg 80, 34119 Kassel
+adresse
 
-aleksej.chaichan@student.uni-kassel.de \hspace{1em} 
+mail \hspace{1em} 
 
 01726830875
 
