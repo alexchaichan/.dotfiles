@@ -16,7 +16,7 @@ mkdir ~/zsh
 if [[ "$os" == "osx" ]]; then
 	ln -sf ~/.dotfiles/zsh/.zshrc_mac ~/.zshrc
 elif [[ "$os" == "linux" ]]; then
-	ln -sf ~/.dotfiles/zsh/.zshrc_arch ~/.zshrc
+	ln -sf ~/.dotfiles/zsh/.zshrc_linux ~/.zshrc
 fi
 
 # bash
