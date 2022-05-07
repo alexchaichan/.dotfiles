@@ -10,7 +10,8 @@ mkdir ~/zsh
 
 mkdir ~/mail
 
-mkdir ~/.config/nvim && mkdir ~/.config/nvim/pack/ && mkdir ~/.config/nvim/pack/plugins/ && mkdir ~/.config/nvim/pack/plugins/start && mkdir ~/.config/nvim/pack/plugins/opt && mkdir ~/.config/nvim/spell
+# nvim
+mkdir ~/.config/nvim && mkdir ~/.config/nvim/pack/ && mkdir ~/.config/nvim/pack/plugins/ && mkdir ~/.config/nvim/pack/plugins/start && mkdir ~/.config/nvim/pack/plugins/opt && mkdir ~/.config/nvim/spell && ln -sf ~/.dotfiles/nvim/* ~/.config/nvim
 
 mkdir ~/.tmux && mkdir ~/.tmux/plugins
 
@@ -174,9 +175,6 @@ ln -sf ~/.dotfiles/khal ~/.config
 
 # mbsync
 ln -sf ~/.dotfiles/isync/mbsync/.mbsyncrc ~/
-
-# nvim
-ln -sf ~/.dotfiles/nvim/* ~/.config/nvim
 
 # newsboat
 mkdir ~/.newsboat && ln -sf ~/.dotfiles/newsboat/.newsboat/* ~/.newsboat

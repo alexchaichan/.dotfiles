@@ -161,7 +161,7 @@ autocmd FileType r let b:coc_pairs_disabled = ['<']
 " default value is clap
 let g:dashboard_default_executive ='telescope'
 
-# header
+" header
 let g:dashboard_custom_header = [
 \ ' ██╗   ██╗ ██╗ ██╗   ██╗ ██╗',
 \ ' ██║   ██║ ██║ ██║  ██║  ██║',
