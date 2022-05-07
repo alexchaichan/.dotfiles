@@ -1,9 +1,4 @@
-#mac
-
-
-
-
-
+# osx
 
 font:
   # Point size
@@ -30,5 +25,4 @@ shell:
    - "tmux attach || tmux"
 
 import:
-  - ~/.dotfiles/alacritty/alacritty.yml 
-
+  - ~/.dotfiles/alacritty/alacritty.yml
