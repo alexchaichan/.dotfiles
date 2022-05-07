@@ -7,7 +7,6 @@
 # settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
 
-
 ###############################################################################
 # general UI/UX                                                               #
 ###############################################################################
