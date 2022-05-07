@@ -1,3 +1,4 @@
+" set language
 set langmenu=en_US
 let $LANG = 'en_US'
 
@@ -16,7 +17,7 @@ set hidden                              " Required to keep multiple buffers open
 " set nowrap                              " Display long lines as just one line
 set pumheight=10                        " Makes popup menu smaller
 set cmdheight=2                         " More space for displaying messages
-set iskeyword+=-                      	" treat dash separated words as a word text object"
+set iskeyword+=-                        " treat dash separated words as a word text object"
 set mouse=a                             " Enable your mouse
 set splitbelow                          " Horizontal splits will automatically be below
 set splitright                          " Vertical splits will automatically be to the right
@@ -32,7 +33,7 @@ set updatetime=300                      " Faster completion
 set timeoutlen=500                      " By default timeoutlen is 1000 ms
 set formatoptions-=cro                  " Stop newline continution of comments
 set clipboard=unnamedplus               " Copy paste between vim and everything else
-"set autochdir                           " Your working directory will always be the same as your working directory
+" set autochdir                         " Your working directory will always be the same as your working directory
 set spelllang=de
 
 
