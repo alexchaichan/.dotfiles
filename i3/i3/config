@@ -187,6 +187,8 @@ bindsym $mod+r mode "resize"
 bar {
     bindsym button4 nop
     bindsym button5 nop
+    bindsym button6 nop
+    bindsym button7 nop
     position top
         status_command i3status -c /home/imac/.config/i3status/i3status.conf
 	 colors {
