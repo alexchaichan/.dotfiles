@@ -1,3 +1,3 @@
-source $VDOTDIR/vim-plug/plugins.vim
-source $VDOTDIR/general/settings.vim
-source $VDOTDIR/keys/mappings.vim
+source $VDOTDIR/plugins.vim
+source $VDOTDIR/settings.vim
+source $VDOTDIR/mappings.vim
