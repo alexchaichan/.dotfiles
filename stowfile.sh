@@ -179,7 +179,7 @@ ln -sf ~/.dotfiles/isync/mbsync/.mbsyncrc ~/
 ln -sf ~/.dotfiles/nvim/* ~/.config/nvim
 
 # newsboat
-mkdir ~/.newsboat && ln -sf ~/.dotfiles/newsboat/.newsboat/* ~/
+mkdir ~/.newsboat && ln -sf ~/.dotfiles/newsboat/.newsboat/* ~/.newsboat
 
 # w3m
 ln -sf ~/.dotfiles/w3m/.w3m ~/
