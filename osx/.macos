@@ -123,7 +123,7 @@ defaults write com.apple.sound.beep.feedback -bool false
 defaults write com.apple.systemsound "com.apple.sound.uiaudio.enabled" -int 0
 
 ###############################################################################
-# dock                                                                        #
+# dock & menubar                                                              #
 ###############################################################################
 
 # showing the Dock
@@ -144,6 +144,9 @@ defaults write com.apple.dock workspaces-auto-swoosh -bool false
 
 # remove all app icons from the Dock in OS X: 
 defaults write com.apple.dock persistent-apps -array
+
+# hide spotlight from dock 
+defaults -currentHost write com.apple.Spotlight MenuItemHidden -int 1 
 
 ###############################################################################
 # animations                                                                  #
