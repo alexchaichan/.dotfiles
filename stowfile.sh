@@ -93,7 +93,10 @@ fi
 # qutebrowser bookmarks
 ln -sf ~/.dotfiles/qutebrowser/.qutebrowser/bookmarks/urls ~/
 
-# mutt (mailcap)
+# muttrc
+ln -sf ~/.dotfiles/mutt/.muttrc ~/
+
+# mailcap
 if [[ "$os" == "osx" ]]; then
 	ln -sf ~/.dotfiles/mutt/.mac_mailcap ~/.mailcap
 elif [[ "$os" == "linux" ]]; then
@@ -159,9 +162,6 @@ ln -sf ~/.dotfiles/khal ~/.config
 
 # mbsync
 ln -sf ~/.dotfiles/isync/mbsync/.mbsyncrc ~/
-
-# muttrc
-ln -sf ~/.dotfiles/mutt/.muttrc ~/
 
 # nvim
 ln -sf ~/.dotfiles/nvim/* ~/.config/nvim
