@@ -1,12 +1,15 @@
 # dotfiles
 
-## install homebrew for osx
+## package installer
 
 ```
 if [[ "$(uname)" == "Darwin" ]]; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 elif [[ "$(expr substr $(uname -s) 1 5)" == "Linux" ]]; then
-
+    echo '[archlinuxfr]
+    SigLevel = Never
+    Server = http://repo.archlinux.fr/$arch' >> /etc/pacman.conf 
+    pacman -Sy yaourt
 elif [[ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]]; then
 
 elif [[ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]]; then
