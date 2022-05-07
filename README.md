@@ -30,8 +30,10 @@ elif [[ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]]; then
 fi
 ```
 
-# clone .dotfiles
-`git clone https://github.com/alexchaichan/.dotfiles.git`
+# clone .dotfiles & .password-store
+`git clone https://github.com/alexchaichan/.dotfiles.git ~/.dotfiles`
+
+`git clone https://github.com/alexchaichan/.password-store.git ~/.password-store`
 
 ## store `.gnupg` file into `~/`
 

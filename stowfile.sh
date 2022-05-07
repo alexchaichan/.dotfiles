@@ -127,25 +127,37 @@ if [[ "$os" == "linux" ]]; then
 	ln -sf ~/.dotfiles/arch/.xinitrc ~/
 fi
 
-# spotifyd
-if [[ "$os" == "osx" ]]; then
-	ln -sf ~/.dotfiles/spotify/spotifyd/osx_spotifyd.conf ~/.config/spotifyd/spotifyd.conf
-elif [[ "$os" == "linux" ]]; then
-	ln -sf ~/.dotfiles/spotify/spotifyd/arch_spotifyd.conf ~/.config/spotifyd/spotifyd.conf
-fi
 
 # pacman.conf
 if [[ "$os" == "linux" ]]; then
 	ln -sf ~/.dotfiles/arch/pacman/pacman.conf /etc
 fi
 
-# spotify-tui
+# spotify
+
+## spotifyd
+if [[ "$os" == "osx" ]]; then
+	ln -sf ~/.dotfiles/spotify/spotifyd/osx_spotifyd.conf ~/.config/spotifyd/spotifyd.conf
+elif [[ "$os" == "linux" ]]; then
+	ln -sf ~/.dotfiles/spotify/spotifyd/arch_spotifyd.conf ~/.config/spotifyd/spotifyd.conf
+fi
+
+## spotify-tui
 ln -sf ~/.dotfiles/spotify/spotify-tui/config.yml ~/.config/spotify-tui
 
 # i3
 if [[ "$os" == "linux" ]]; then
 	ln -sf ~/.dotfiles/i3/i3 ~/.config
 	ln -sf ~/.dotfiles/i3/i3status ~/.config
+fi
+
+## spotify credentials
+echo | pass spotify-tui > ~/.config/spotify-tui/client.yml
+
+if [[ "$os" == "osx" ]]; then
+	echo | pass spotifyd > ~/.cache/spotifyd/credentials.json
+elif [[ "$os" == "linux" ]]; then
+	echo | pass spotifyd > ~/.config/spotifyd/cache/credentials.json
 fi
 
 # vdirsyncer
