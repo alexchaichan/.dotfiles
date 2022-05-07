@@ -52,7 +52,7 @@ source ~/.dotfiles/repositories.sh
 # install crontabs
 source ~/.dotfiles/cronbtabs.sh
 
-# install Rpackage
+# install R packages
 Rscript ~/.dotfiles/R/packages.R
 
 # install python packages
