@@ -41,9 +41,6 @@ elif [[ "$os" == "linux" ]]; then
 	pacman -S --needed - < ~/.dotfiles/arch/pacman/pacmanfile
 fi
 
-# source password-store
-source ~/.dotfiles/password-store.sh
-
 # install applications
 if [[ "$os" == "osx" ]]; then
 	source ~/.dotfiles/osx/applications.sh
