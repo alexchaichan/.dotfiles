@@ -1,49 +1,18 @@
 #!/usr/bin/env bash
 
-# create directories
+########################################################
+# create directories                                   #
+########################################################
 
-mkdir ~/.config
+mkdir ~/.config && mkdir ~/.cache && mkdir ~/repositories
 
-mkdir ~/.cache
+########################################################
+# create symlinks                                      #
+########################################################
 
+# zsh
 mkdir ~/zsh
 
-mkdir ~/mail
-
-# nvim
-mkdir ~/.config/nvim && mkdir ~/.config/nvim/pack/ && mkdir ~/.config/nvim/pack/plugins/ && mkdir ~/.config/nvim/pack/plugins/start && mkdir ~/.config/nvim/pack/plugins/opt && mkdir ~/.config/nvim/spell && ln -sf ~/.dotfiles/nvim/* ~/.config/nvim
-
-mkdir ~/.tmux && mkdir ~/.tmux/plugins
-
-mkdir ~/.config/vdirsyncer
-
-mkdir ~/.config/spotify-tui
-
-mkdir ~/.config/spotifyd
-
-mkdir ~/.cache/spotifyd
-
-if [[ "$os" == "linux" ]]; then
-	mkdir ~/.config/systemd/
-	mkdir ~/.config/systemd/user/
-	#cp ~/.dotfiles/arch/dropbox.service ~/.config/systemd/user/
-
-	#systemctl --user start dropbox
-	#systemctl --user status dropbox # check status
-	#systemctl --user enable dropbox
-fi
-
-mkdir ~/.config/zathura
-
-mkdir ~/repositories
-
-mkdir ~/.contacts
-
-mkdir ~/.calendars
-
-# create symlinks
-
-# zshrc
 if [[ "$os" == "osx" ]]; then
 	ln -sf ~/.dotfiles/zsh/.zshrc_mac ~/.zshrc
 elif [[ "$os" == "linux" ]]; then
@@ -63,10 +32,22 @@ elif [[ "$os" == "linux" ]]; then
 	ln -sf ~/.dotfiles/git/.gitconfig_arch ~/.gitconfig && git config --global core.excludesfile ~/.dotfiles/git/.gitignore_global
 fi
 
-# git pass helper
+## git pass helper
 ln -sf ~/.dotfiles/git/pass-git-helper ~/.config
 
+# alacritty
+if [[ "$os" == "osx" ]]; then
+	ln -sf ~/.dotfiles/alacritty/osx_alacritty.yml ~/.config/alacritty.yml
+elif [[ "$os" == "linux" ]]; then
+	ln -sf ~/.dotfiles/alacritty/arch_alacritty.yml ~/.config/alacritty.yml
+fi
+
+# nvim
+mkdir ~/.config/nvim && mkdir ~/.config/nvim/pack/ && mkdir ~/.config/nvim/pack/plugins/ && mkdir ~/.config/nvim/pack/plugins/start && mkdir ~/.config/nvim/pack/plugins/opt && mkdir ~/.config/nvim/spell && ln -sf ~/.dotfiles/nvim/* ~/.config/nvim
+
 # tmux
+mkdir ~/.tmux && mkdir ~/.tmux/plugins
+
 if [[ "$os" == "osx" ]]; then
 	ln -sf ~/.dotfiles/tmux/.osx_tmux.conf ~/.tmux.conf
 elif [[ "$os" == "linux" ]]; then
@@ -94,10 +75,13 @@ fi
 # qutebrowser bookmarks
 ln -sf ~/.dotfiles/qutebrowser/.qutebrowser/bookmarks/urls ~/
 
-# muttrc
+# mail
+mkdir ~/mail
+
+## muttrc
 ln -sf ~/.dotfiles/mutt/.muttrc ~/
 
-# mailcap
+## mailcap
 if [[ "$os" == "osx" ]]; then
 	ln -sf ~/.dotfiles/mutt/.mac_mailcap ~/.mailcap
 elif [[ "$os" == "linux" ]]; then
@@ -109,14 +93,9 @@ if [[ "$os" == "osx" ]]; then
 	ln -sf ~/.dotfiles/psychopy/.psychopy3 ~/
 fi
 
-# alacritty
-if [[ "$os" == "osx" ]]; then
-	ln -sf ~/.dotfiles/alacritty/osx_alacritty.yml ~/.config/alacritty.yml
-elif [[ "$os" == "linux" ]]; then
-	ln -sf ~/.dotfiles/alacritty/arch_alacritty.yml ~/.config/alacritty.yml
-fi
-
 # zathura
+mkdir ~/.config/zathura
+
 if [[ "$os" == "osx" ]]; then
 	ln -sf ~/.dotfiles/zathura/osx_zathurarc ~/.config/zathura/zathurarc
 elif [[ "$os" == "linux" ]]; then
@@ -135,6 +114,7 @@ if [[ "$os" == "linux" ]]; then
 fi
 
 # spotify
+mkdir ~/.config/spotify-tui && mkdir ~/.config/spotifyd && mkdir ~/.cache/spotifyd
 
 ## spotifyd
 if [[ "$os" == "osx" ]]; then
@@ -161,17 +141,20 @@ elif [[ "$os" == "linux" ]]; then
 	echo | pass spotifyd > ~/.config/spotifyd/cache/credentials.json
 fi
 
-# vdirsyncer
-ln -sf ~/.dotfiles/isync/vdirsyncer/config ~/.config/vdirsyncer
-
 # ranger
 ln -sf ~/.dotfiles/ranger ~/.config
+
+# contacs & calendar
+mkdir ~/.contacts && mkdir ~/.calendars
 
 # khard
 ln -sf ~/.dotfiles/khard ~/.config
 
 # khal
 ln -sf ~/.dotfiles/khal ~/.config
+
+# vdirsyncer
+mkdir ~/.config/vdirsyncer && ln -sf ~/.dotfiles/isync/vdirsyncer/config ~/.config/vdirsyncer
 
 # mbsync
 ln -sf ~/.dotfiles/isync/mbsync/.mbsyncrc ~/
@@ -196,3 +179,19 @@ ln -sf ~/.dotfiles/mpv ~/.config
 
 # neofetch
 ln -sf ~/.dotfiles/neofetch ~/.config
+
+
+########################################################
+# services                                             #
+########################################################
+
+# arch dropbox service
+if [[ "$os" == "linux" ]]; then
+	mkdir ~/.config/systemd/
+	mkdir ~/.config/systemd/user/
+	#cp ~/.dotfiles/arch/dropbox.service ~/.config/systemd/user/
+
+	#systemctl --user start dropbox
+	#systemctl --user status dropbox # check status
+	#systemctl --user enable dropbox
+fi
