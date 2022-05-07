@@ -145,7 +145,6 @@ defaults write com.apple.dock workspaces-auto-swoosh -bool false
 # remove all app icons from the Dock in OS X: 
 defaults write com.apple.dock persistent-apps -array
 
-
 ###############################################################################
 # animations                                                                  #
 ###############################################################################
