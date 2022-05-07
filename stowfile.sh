@@ -107,7 +107,6 @@ if [[ "$os" == "linux" ]]; then
 	ln -sf ~/.dotfiles/arch/.xinitrc ~/
 fi
 
-
 # pacman.conf
 if [[ "$os" == "linux" ]]; then
 	ln -sf ~/.dotfiles/arch/pacman/pacman.conf /etc
