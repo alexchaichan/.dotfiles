@@ -8,7 +8,7 @@ mkdir ~/.cache
 
 mkdir ~/zsh
 
-mkdir mail
+mkdir ~/mail
 
 mkdir ~/.config/nvim && mkdir ~/.config/nvim/pack/ && mkdir ~/.config/nvim/pack/plugins/ && mkdir ~/.config/nvim/pack/plugins/start && mkdir ~/.config/nvim/pack/plugins/opt
 
@@ -20,9 +20,7 @@ mkdir ~/.config/spotify-tui
 
 mkdir ~/.config/spotifyd
 
-if [[ "$os" == "osx" ]]; then
-	mkdir ~/.cache/spotifyd
-fi
+mkdir ~/.cache/spotifyd
 
 if [[ "$os" == "linux" ]]; then
 	mkdir ~/.config/systemd/
@@ -56,7 +54,6 @@ if [[ "$os" == "linux" ]]; then
 	ln -sf ~/.dotfiles/bash/.arch_bashrc ~/.bashrc
 	ln -sf ~/.dotfiles/bash/.arch_bashprofile ~/.bash_profile
 fi
-
 
 # git
 if [[ "$os" == "osx" ]]; then
@@ -148,39 +145,44 @@ if [[ "$os" == "linux" ]]; then
 	ln -sf ~/.dotfiles/i3/i3status ~/.config
 fi
 
-
 # vdirsyncer
 ln -sf ~/.dotfiles/isync/vdirsyncer/config ~/.config/vdirsyncer
 
+# ranger
 ln -sf ~/.dotfiles/ranger ~/.config
 
+# khard
 ln -sf ~/.dotfiles/khard ~/.config
 
+# khal
 ln -sf ~/.dotfiles/khal ~/.config
 
+# mbsync
 ln -sf ~/.dotfiles/isync/mbsync/.mbsyncrc ~/
 
+# muttrc
 ln -sf ~/.dotfiles/mutt/.muttrc ~/
 
+# nvim
 ln -sf ~/.dotfiles/nvim/* ~/.config/nvim
 
+# newsboat
 ln -sf ~/.dotfiles/newsboat/.newsboat ~/
 
+# w3m
 ln -sf ~/.dotfiles/w3m/.w3m ~/
 
+# jupyter
 ln -sf ~/.dotfiles/jupyter/.jupyter ~/
 
-
-
+# templates
 ln -sf ~/.dotfiles/Templates ~/
 
-ln -sf ~/.dotfiles/styles ~/
-
+# htop
 ln -sf ~/.dotfiles/htop/ ~/.config
 
+# mpv
 ln -sf ~/.dotfiles/mpv ~/.config
 
+# neofetch
 ln -sf ~/.dotfiles/neofetch ~/.config
-
-# source from dropbox
-# ln -sf ~/Dropbox/.config/Keychains ~/Library
