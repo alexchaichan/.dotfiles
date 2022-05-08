@@ -89,7 +89,7 @@ elif [[ "$os" == "linux" ]]; then
 fi
 
 # rstudio
-mkdir ~/.config/rstudio && mkdir ~/.config/rstudio/snippets && ln -sf ~/.dotfiles/rstudio/* ~/.config/rstudio && ln -sf ~/.dotfiles/nvim/snips/r.snippets ~/.config/rstudio/snippets
+mkdir ~/.config/rstudio && ln -sf ~/.dotfiles/rstudio/* ~/.config/rstudio && ln -sf ~/.dotfiles/snippets ~/.config/rstudio/
 
 # psychopy
 mkdir ~/.psychopy3 && ln -sf ~/.dotfiles/psychopy/.psychopy3/* ~/.psychopy3
@@ -166,7 +166,7 @@ mkdir ~/.newsboat && ln -sf ~/.dotfiles/newsboat/.newsboat/* ~/.newsboat
 ln -sf ~/.dotfiles/w3m/.w3m ~/
 
 # jupyter
-ln -sf ~/.dotfiles/jupyter/.jupyter ~/
+mkdir ~/.jupyter && ln -sf ~/.dotfiles/jupyter/.jupyter/* ~/.jupyter
 
 # templates
 ln -sf ~/.dotfiles/Templates ~/
