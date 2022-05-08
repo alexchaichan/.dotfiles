@@ -14,6 +14,17 @@ snippet lib
 	}
 
 	# invisible(lapply(packages, library, character.only = TRUE))
+	
+	prefix <- c("$3/")
+	remotes <- c("$2")
+	
+	installed_remotes <- remotes %in% rownames(installed.packages())
+
+	if (any(installed_remotes == FALSE)) {
+	remotes::install_github(paste0(prefix,remotes[!installed_remotes]))
+	}
+
+invisible(lapply(remotes, library, character.only = TRUE))
 endsnippet
 
 snippet req
