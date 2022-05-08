@@ -11,7 +11,7 @@ mkdir ~/.config && mkdir ~/.cache && mkdir ~/repositories
 ########################################################
 
 # zsh
-mkdir ~/zsh
+mkdir ~/.zsh_plugins
 
 if [[ "$os" == "osx" ]]; then
 	ln -sf ~/.dotfiles/zsh/.zshrc_mac ~/.zshrc

@@ -11,7 +11,7 @@ esac
 # create $ directorys
 export HOME="$(echo -n $(bash -c "cd ~${USER} && pwd"))" 
 export DOTFILES=$HOME/.dotfiles
-export ZDOTDIR=$HOME/zsh
+export ZDOTDIR=$HOME/.zsh/zsh_plugins
 export VDOTDIR=$HOME/.config/nvim
 export TDOTDIR=$HOME/.tmux
 
