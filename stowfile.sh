@@ -166,7 +166,7 @@ mkdir ~/.newsboat && ln -sf ~/.dotfiles/newsboat/.newsboat/* ~/.newsboat
 ln -sf ~/.dotfiles/w3m/.w3m ~/
 
 # jupyter
-mkdir ~/.jupyter && ln -sf ~/.dotfiles/jupyter/.jupyter/* ~/.jupyter
+mkdir ~/.jupyter && mkdir ~/.jupyter/lab && ln -sf ~/.dotfiles/jupyter/.jupyter/jupyter_qtconsole_config.py ~/.jupyter && ln -sf ~/.dotfiles/jupyter/.jupyter/qtdracula.css ~/.jupyter && ln -sf ~/.dotfiles/jupyter/.jupyter/lab/user-settings ~/.jupyter/lab
 
 # templates
 ln -sf ~/.dotfiles/Templates ~/
