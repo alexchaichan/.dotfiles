@@ -1,16 +1,16 @@
 ---
 author: Aleksej Chaichan
 return-address: 
-  - "Freiherr vom Stein Straße 22"
-  - "34212 Melsungen"
-return-phone: "+49 172 693 087 5"
-return-email: aleksejchaichan@posteo.de 
+  - "STRASSE NR"
+  - "PLZ ORT"
+return-phone: "+49"
+return-email: MAIL@LIAM.com 
 
 address:
-  - HERR FRAU 
+  - NAME 
   - STRASSE. 00
-  - 12345 STADT
-  - Germany
+  - PLZ ORT
+  - CTRY
 
 
 
