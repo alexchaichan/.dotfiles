@@ -1,15 +1,6 @@
-___
-
 ## last steps by hand
 
-## Rstudio
-
-1. `rstudio`
-2. Tools > Global Options... > Code > Edit Snippets... > 1st line <space> > save
-3. `ln -sf ~/.dotfiles/rstudio/rstudio-prefs.json ~/.config/rstudio && ln -sf ~/.dotfiles/nvim/snips/r.snippets ~/.config/rstudio/snippets`
-___
-
-## neovim
+### neovim
 ```
 gem install neovim
 yarn global add neovim

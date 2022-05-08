@@ -88,10 +88,11 @@ elif [[ "$os" == "linux" ]]; then
 	ln -sf ~/.dotfiles/mutt/.arch_mailcap ~/.mailcap
 fi
 
+# rstudio
+mkdir ~/.config/rstudio && mkdir ~/.config/rstudio/snippets && ln -sf ~/.dotfiles/rstudio/* ~/.config/rstudio && ln -sf ~/.dotfiles/nvim/snips/r.snippets ~/.config/rstudio/snippets
+
 # psychopy
-if [[ "$os" == "osx" ]]; then
-	ln -sf ~/.dotfiles/psychopy/.psychopy3 ~/
-fi
+mkdir ~/.psychopy3 && ln -sf ~/.dotfiles/psychopy/.psychopy3/* ~/.psychopy3
 
 # zathura
 mkdir ~/.config/zathura
