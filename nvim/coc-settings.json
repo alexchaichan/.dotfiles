@@ -8,7 +8,7 @@
   "snippets.ultisnips.directories":
   [
     "UltiSnips",
-    "~/.config/nvim/snips"
+    "~/.dotfiles/snippets"
   ]
 
 }

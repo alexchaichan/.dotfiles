@@ -1,0 +1,76 @@
+snippet for
+	for (${1:var} in ${2:start}:${3:end}) {
+	  ${0}
+	}
+
+snippet if
+	if (${1:condition}) {
+	  ${0}
+	}
+
+snippet el
+	else (${1:condition}) {
+	  ${0}
+	}
+
+snippet ei
+	else if (${1:condition}) {
+	  ${0}
+	}
+
+snippet <l
+	<lower = ${1:expression}>${0}
+
+snippet <u
+	<upper = ${1:expression}>${0}
+
+snippet <lu
+	<lower = ${1:expression}, upper = ${2:expression}>${0}
+
+snippet while
+	while (${1:condition}) {
+	  ${0}
+	}
+
+snippet gen
+	generated quantities {
+	  ${0}
+	}
+
+snippet mdl
+	model {
+	  ${0}
+	}
+
+snippet par
+	parameters {
+	  ${0}
+	}
+
+snippet tpar
+	transformed parameters {
+	  ${0}
+	}
+
+snippet data
+	data {
+	  ${0}
+	}
+
+snippet tdata
+	transformed data {
+	  ${0}
+	}
+
+snippet ode
+	integrate_ode(${1:function}, ${2:y0}, ${3:t0}, ${4:t}, ${5:theta}, ${6:x_r}, ${7:x_i});
+
+snippet funs
+	functions {
+	  ${0}
+	}
+
+snippet fun
+	${1:return} ${2:name} (${3:args}) {
+	  ${0}
+	}
