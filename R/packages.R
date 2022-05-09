@@ -31,7 +31,6 @@ install.packages(
     "wbstats",
     "ggdag",
     "dagitty",
-    "",
   ),
   repos = "https://cloud.r-project.org"
 )
