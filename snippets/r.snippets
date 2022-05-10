@@ -2,7 +2,7 @@ snippet read
 	if (!exists("$1")) {
 	$3 <- readr::read_csv("$2")	
 	}
-endsnippet
+
 
 snippet lib
 	packages <- c("tidyverse","$1")
@@ -25,113 +25,113 @@ snippet lib
 	}
 
 invisible(lapply(remotes, library, character.only = TRUE))
-endsnippet
+
 
 snippet req
 	require(${1:package})
-endsnippet
+
 
 snippet src
 	source("${1:file.R}")
-endsnippet
+
 
 snippet ret
 	return(${1:code})
-endsnippet
+
 
 snippet mat
 	matrix(${1:data}, nrow = ${2:rows}, ncol = ${3:cols})
-endsnippet
+
 
 snippet sg
 	setGeneric("${1:generic}", function(${2:x, ...}) {
 		standardGeneric("${1:generic}")
 	})
-endsnippet
+
 
 snippet sm
 	setMethod("${1:generic}", ${2:class}, function(${2:x, ...}) {
 		${0}
 	})
-endsnippet
+
 
 snippet sc
 	setClass("${1:Class}", slots = c(${2:name = "type"}))
-endsnippet
+
 
 snippet if
 	if (${1:condition}) {
 		${0}
 	}
-endsnippet
+
 
 snippet el
 	else {
 		${0}
 	}
-endsnippet
+
 
 snippet ei
 	else if (${1:condition}) {
 		${0}
 	}
-endsnippet
+
 
 snippet fun
 	${1:name} <- function(${2:variables}) {
 		${0}
 	}
-endsnippet
+
 
 snippet for
 	for (${1:variable} in ${2:vector}) {
 		${0}
 	}
-endsnippet
+
 
 snippet while
 	while (${1:condition}) {
 		${0}
 	}
-endsnippet
+
 
 snippet switch
 	switch (${1:object},
 		${2:case} = ${3:action}
 	)
-endsnippet
+
 
 snippet apply
 	apply(${1:array}, ${2:margin}, ${3:...})
-endsnippet
+
 
 snippet lapply
 	lapply(${1:list}, ${2:function})
-endsnippet
+
 
 snippet sapply
 	sapply(${1:list}, ${2:function})
-endsnippet
+
 
 snippet mapply
 	mapply(${1:function}, ${2:...})
-endsnippet
+
 
 snippet tapply
 	tapply(${1:vector}, ${2:index}, ${3:function})
-endsnippet
+
 
 snippet vapply
 	vapply(${1:list}, ${2:function}, FUN.VALUE = ${3:type}, ${4:...})
-endsnippet
+
 
 snippet rapply
 	rapply(${1:list}, ${2:function})
-endsnippet
+
 
 snippet ts
 	`r paste("#", date(), "------------------------------\n")`
-endsnippet
+
 
 snippet shinyapp
 	library(shiny)
@@ -145,7 +145,7 @@ snippet shinyapp
 	}
 	
 	shinyApp(ui, server)
-endsnippet
+
 
 snippet shinymod
 	${1:name}_UI <- function(id) {
@@ -158,7 +158,7 @@ snippet shinymod
 	${1:name} <- function(input, output, session) {
 	  
 	}
-endsnippet
+
 
 
 snippet mail "R mail" b
@@ -192,7 +192,7 @@ em <- outl$
 
 em <- em$add_attachment()
 em$send()
-endsnippet
+
 
 
 
@@ -200,7 +200,7 @@ snippet tab "kable table" b
 knitr::kable(caption="\\label{tab:LABEL}TITLE - in LoT") %>% 
 kableExtra::kable_styling(latex_options = "striped", position = "center") %>% 
 kableExtra::footnote(general = "FOOTNOTE")
-endsnippet
+
 
 
 

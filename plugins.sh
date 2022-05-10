@@ -23,14 +23,17 @@ function vim_add_plugin() {
 vim_add_plugin "nvim-lua/popup.nvim" # an implementation of the Popup API from vim in Neovim
 vim_add_plugin "nvim-lua/plenary.nvim" # useful lua functions used ny lots of plugins
 vim_add_plugin "windwp/nvim-autopairs" # autopairs, integrates with both cmp and treesitter
-vim_add_plugin "numToStr/Comment.nvim" # easily comment stuff
+# comments
+vim_add_plugin "numToStr/Comment.nvim"
 vim_add_plugin "kyazdani42/nvim-web-devicons"
+# tree
 vim_add_plugin "kyazdani42/nvim-tree.lua"
 vim_add_plugin "akinsho/bufferline.nvim"
 vim_add_plugin "moll/vim-bbye"
+# lualine / lightline / airline
 vim_add_plugin "nvim-lualine/lualine.nvim"
-vim_add_plugin "akinsho/toggleterm.nvim"
 vim_add_plugin "ahmedkhalf/project.nvim"
+# load faster vim plugins
 vim_add_plugin "lewis6991/impatient.nvim"
 vim_add_plugin "lukas-reineke/indent-blankline.nvim"
 # dashboard
@@ -64,6 +67,7 @@ vim_add_plugin 'jalvesaq/Nvim-R'
 vim_add_plugin 'ncm2/ncm2-jedi'
 # ranger
 vim_add_plugin 'kevinhwang91/rnvimr'
+# dracula
 vim_add_plugin 'dracula/vim'
 
 # tmux
