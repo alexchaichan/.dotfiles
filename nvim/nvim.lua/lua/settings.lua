@@ -1,6 +1,7 @@
 HOME = os.getenv("HOME")
 -- set language
-vim.api.nvim_exec ('language en_US', true)
+LANG=en_US
+--vim.api.nvim_exec ('language en_US', true)
 
 -- basic settings
 vim.o.encoding = "utf-8"
