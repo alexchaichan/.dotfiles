@@ -1,6 +1,6 @@
 local lsp_installer =require("nvim-lsp-installer")
 local lspconfig = require("lspconfig")
-local servers = { "jsonls", "sumneko_lua", "r_language_server1" }
+local servers = { "jsonls", "sumneko_lua", "r_language_server" }
 
 lsp_installer.setup {
 	ensure_installed = servers

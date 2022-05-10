@@ -2,7 +2,6 @@ local default_schemas = nil
 local jsonls_settings = require("nlspsettings.jsonls")
 default_schemas = jsonls_settings.get_default_schemas()
 
-
 local schemas = {
   {
     description = "TypeScript compiler configuration file",
