@@ -24,7 +24,7 @@ snippet lib
 	remotes::install_github(paste0(prefix,remotes[!installed_remotes]))
 	}
 
-invisible(lapply(remotes, library, character.only = TRUE))
+	invisible(lapply(remotes, library, character.only = TRUE))
 
 
 snippet req
