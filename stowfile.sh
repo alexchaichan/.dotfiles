@@ -43,7 +43,7 @@ elif [[ "$os" == "linux" ]]; then
 fi
 
 # nvim
-mkdir ~/.config/nvim && mkdir ~/.config/nvim/pack/ && mkdir ~/.config/nvim/pack/plugins/ && mkdir ~/.config/nvim/pack/plugins/start && mkdir ~/.config/nvim/pack/plugins/opt && mkdir ~/.config/nvim/spell && ln -sf ~/.dotfiles/nvim/* ~/.config/nvim
+mkdir ~/.config/nvim && mkdir ~/.config/nvim/pack/ && mkdir ~/.config/nvim/pack/plugins/ && mkdir ~/.config/nvim/pack/plugins/start && mkdir ~/.config/nvim/pack/plugins/opt && mkdir ~/.config/nvim/spell && ln -sf ~/.dotfiles/nvim/nvim.lua/* ~/.config/nvim
 
 # tmux
 mkdir ~/.tmux && mkdir ~/.tmux/plugins
