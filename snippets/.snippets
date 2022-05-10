@@ -2,9 +2,9 @@
 #
 #		snippet trigger_word [ "description" [ options ] ]
 #
-# and end with:
+# and begin new snippet with indent from position 1
 #
-#		endsnippet
+
 #
 # Snippet options:
 #
@@ -18,8 +18,8 @@
 # Basic example:
 #
 #		snippet emitter "emitter properties" b
-#		private readonly ${1} = new Emitter<$2>()
-#		public readonly ${1/^_(.*)/$1/}: Event<$2> = this.$1.event
-#		endsnippet
+#			private readonly ${1} = new Emitter<$2>()
+#			public readonly ${1/^_(.*)/$1/}: Event<$2> = this.$1.event
+#		
 #
 # Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
