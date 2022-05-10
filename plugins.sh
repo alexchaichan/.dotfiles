@@ -47,15 +47,21 @@ vim_add_plugin "hrsh7th/cmp-path" # path completions
 vim_add_plugin "hrsh7th/cmp-cmdline" # cmdline completions
 vim_add_plugin "saadparwaiz1/cmp_luasnip" # snippet completions
 vim_add_plugin "hrsh7th/cmp-nvim-lsp"
-vim_add_plugin "L3MON4D3/LuaSnip" #snippet engine
+# snippets
+vim_add_plugin "L3MON4D3/LuaSnip"
+# lsp
 vim_add_plugin "rafamadriz/friendly-snippets" # a bunch of snippets to use
 vim_add_plugin "neovim/nvim-lspconfig" # enable LSP
 vim_add_plugin "williamboman/nvim-lsp-installer" # simple to use language server installer
 vim_add_plugin "tamago324/nlsp-settings.nvim" # language server settings defined in json for
 vim_add_plugin "jose-elias-alvarez/null-ls.nvim" # for formatters and linters
+# telescope for searching
 vim_add_plugin "nvim-telescope/telescope.nvim"
+# treesitter syntaxhiglighting
 vim_add_plugin "nvim-treesitter/nvim-treesitter"
+#
 vim_add_plugin "JoosepAlviste/nvim-ts-context-commentstring"
+# git symbols
 vim_add_plugin "lewis6991/gitsigns.nvim"
 # R
 vim_add_plugin 'gaalcaras/ncm-R'
