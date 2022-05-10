@@ -15,7 +15,8 @@ nnoremap <M-l>    :vertical resize +2<CR>
 " Easy CAPS
 inoremap <c-u> <ESC>
 nnoremap <c-u> viwU<Esc>
-
+ay to save
+keymap(
 " TAB in general mode will move to text buffer
 nnoremap <TAB> :bnext<CR>
 " SHIFT-TAB will go back
@@ -23,10 +24,15 @@ nnoremap <S-TAB> :bprevious<CR>
 
 :nmap <C-t> :tabnew<cr>
 :map <C-t> :tabnew<cr>
+
+
 " Alternate way to save
 nnoremap <C-w> :w<CR>
 " Alternate way to quit
 nnoremap <C-q> :q<CR>
+
+
+
 " Use control-c instead of escape
 nnoremap <C-c> <Esc>
 " <TAB>: completion.

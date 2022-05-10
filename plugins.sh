@@ -20,31 +20,51 @@ function vim_add_plugin() {
   git clone "https://github.com/$1.git" "$VDOTDIR/pack/plugins/start/$PLUGIN_NAME"
 }
 
-vim_add_plugin 'dense-analysis/ale'
-vim_add_plugin 'neoclide/coc.nvim'
-vim_add_plugin 'chrisbra/csv.vim'
-vim_add_plugin 'junegunn/fzf.vim'
-vim_add_plugin 'jupyter-vim/jupyter-vim'
-vim_add_plugin 'iamcco/markdown-preview.vim'
+vim_add_plugin "nvim-lua/popup.nvim" # an implementation of the Popup API from vim in Neovim
+vim_add_plugin "nvim-lua/plenary.nvim" # useful lua functions used ny lots of plugins
+vim_add_plugin "windwp/nvim-autopairs" # autopairs, integrates with both cmp and treesitter
+vim_add_plugin "numToStr/Comment.nvim" # easily comment stuff
+vim_add_plugin "kyazdani42/nvim-web-devicons"
+vim_add_plugin "kyazdani42/nvim-tree.lua"
+vim_add_plugin "akinsho/bufferline.nvim"
+vim_add_plugin "moll/vim-bbye"
+vim_add_plugin "nvim-lualine/lualine.nvim"
+vim_add_plugin "akinsho/toggleterm.nvim"
+vim_add_plugin "ahmedkhalf/project.nvim"
+vim_add_plugin "lewis6991/impatient.nvim"
+vim_add_plugin "lukas-reineke/indent-blankline.nvim"
+# dashboard
+vim_add_plugin "goolord/alpha-nvim"
+vim_add_plugin "antoinemadec/FixCursorHold.nvim" # this is needed to fix lsp doc highlight
+vim_add_plugin "folke/which-key.nvim"
+# completion
+vim_add_plugin "hrsh7th/nvim-cmp" # the  plugin
+vim_add_plugin "hrsh7th/cmp-buffer" # buffer completions
+vim_add_plugin "hrsh7th/cmp-path" # path completions
+vim_add_plugin "hrsh7th/cmp-cmdline" # cmdline completions
+vim_add_plugin "saadparwaiz1/cmp_luasnip" # snippet completions
+vim_add_plugin "hrsh7th/cmp-nvim-lsp"
+vim_add_plugin "L3MON4D3/LuaSnip" #snippet engine
+vim_add_plugin "rafamadriz/friendly-snippets" # a bunch of snippets to use
+vim_add_plugin "neovim/nvim-lspconfig" # enable LSP
+vim_add_plugin "williamboman/nvim-lsp-installer" # simple to use language server installer
+vim_add_plugin "tamago324/nlsp-settings.nvim" # language server settings defined in json for
+vim_add_plugin "jose-elias-alvarez/null-ls.nvim" # for formatters and linters
+vim_add_plugin "nvim-telescope/telescope.nvim"
+vim_add_plugin "nvim-treesitter/nvim-treesitter"
+vim_add_plugin "JoosepAlviste/nvim-ts-context-commentstring"
+vim_add_plugin "lewis6991/gitsigns.nvim"
+# R
 vim_add_plugin 'gaalcaras/ncm-R'
 vim_add_plugin 'ncm2/ncm2'
 vim_add_plugin 'ncm2/ncm2-bufword'
-vim_add_plugin 'ncm2/ncm2-jedi'
 vim_add_plugin 'ncm2/ncm2-path'
-vim_add_plugin 'preservim/nerdtree'
 vim_add_plugin 'jalvesaq/Nvim-R'
-vim_add_plugin 'nvim-treesitter/nvim-treesitter'
-vim_add_plugin 'roxma/nvim-yarp'
-vim_add_plugin 'nvim-lua/plenary.nvim'
+# python
+vim_add_plugin 'ncm2/ncm2-jedi'
+# ranger
 vim_add_plugin 'kevinhwang91/rnvimr'
-vim_add_plugin 'nvim-telescope/telescope.nvim'
 vim_add_plugin 'dracula/vim'
-vim_add_plugin 'vim-airline/vim-airline'
-vim_add_plugin 'tpope/vim-commentary'
-vim_add_plugin 'sheerun/vim-polyglot'
-vim_add_plugin 'honza/vim-snippets'
-vim_add_plugin 'dhruvasagar/vim-table-mode'
-vim_add_plugin 'glepnir/dashboard-nvim'
 
 # tmux
 
