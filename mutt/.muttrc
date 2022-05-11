@@ -36,7 +36,7 @@ set move = no
 set include
 
 
-auto_view text/html 
+auto_view text/html
 alternative_order text/plain text/enriched text/html     # save html for last
 
 
@@ -148,7 +148,7 @@ set sidebar_sort_method = 'unsorted'
 
 
 
-### example 
+### example
 
 
 ### ============================================================================
@@ -334,7 +334,7 @@ bind index,pager B sidebar-toggle-visible
 ## erhält.
 ## Vorteil: Funktioniert auch mit anderen Editoren als Vim
 ## Nachteil: Mehr Overhead, da drei Prozesse gestartet werden müssen
-## 
+##
 ##set editor="sigkiller %s; vim +\`awk '/^$/ {print i+2; exit} {i++}' %s\` %s"
 ##
 ## Das Skript selber benutzt awk und stammt aus Felix Leitners Mutt-FAQ. Hier ist
@@ -345,7 +345,7 @@ bind index,pager B sidebar-toggle-visible
 ##  # sigkiller: delete last foreign signatur when quoting mails
 ##  #            (foreign dashes = "> -- " or "> --"
 ##  #
-##  # Markus Muss 
+##  # Markus Muss
 ##  #
 ##  awk '{if ($0 ~ /^> -- ?$/) {
 ##           while ($0 !~ /^-- $/) {
@@ -444,7 +444,7 @@ bind index,pager B sidebar-toggle-visible
 ## einfärben kann
 #set quote_regexp="^( {0,4}[>|:%]| {0,4}[a-z0-9]+[>|]+)+"
 #  # Folgendes wird gedeckt:
-#  # 
+#  #
 #  #  > > Frage
 #  #  > Antwort
 #  #  Gegenfrage
@@ -568,10 +568,10 @@ bind index,pager B sidebar-toggle-visible
 #ignore x-keywords x-uid x-ftn-via x-ftn-domain x-ftn-seen-by x-ftn-path
 #ignore x-gateway x-loop x-sender x-priority
 #ignore mbox-line x-pop3-rcpt x-mailing-list x400- dl-expansion-history
-#ignore priority alternate-recipient x-zc-via 
+#ignore priority alternate-recipient x-zc-via
 #ignore x-received x-envelope-sender x-return-path x-authentication-warning
 #ignore resent-message-id resent-sender resent-date resent-cc
-#ignore from >From From 
+#ignore from >From From
 #ignore X-MIME-Autoconverted X-MimeOLE X-URL X-Cool X-PGP-Key
 #ignore X-PGP-Algorithms X-ICQ-UIN X-From_ X-MSMail-Priority
 #ignore From X-Editor X-Operating-System X-Envelope-To User-Agent
