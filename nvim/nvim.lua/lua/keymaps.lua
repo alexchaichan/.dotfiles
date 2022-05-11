@@ -50,7 +50,7 @@ keymap("v", ">", ">gv", opts)
 keymap("v", "<A-j>", ":m .+1<CR>==", opts)
 keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 
--- 
+--
 keymap("v", "p", '"_dP', opts)
 
 -- visual Block --
@@ -69,9 +69,9 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- alternate way to save
 keymap("", "<C-w>", "<Nop>", opts) -- unmap first
-keymap("", "<C-w>", ":w<CR>", opts) -- save with ctrl+w
+keymap("", "<C-w>", ":%s/\\s\\+$//e | :w<CR>", opts) -- save with ctr+w aswell remove all whitespace in the whole file
 -- alternate way to quit
-keymap("", "<C-q>", "<Nop>", opts) -- unmap first 
+keymap("", "<C-q>", "<Nop>", opts) -- unmap first
 keymap("", "<C-q>", ":q!<CR>", opts) -- quit with ctrl+q
 
 -- activate spell

@@ -26,7 +26,7 @@ env:
   # available, otherwise `xterm-256color` is used.
   TERM: alacritty
   #TERM: screen-256color
-  #TERM: tmux  
+  #TERM: tmux
 
 window:
   # Window dimensions (changes require restart)
@@ -795,14 +795,14 @@ key_bindings:
 
 
   - { key: Left,     mods: Command, chars: "\x06\x1b\x5b\x44"                      }
-  - { key: Right,    mods: Command, chars: "\x06\x1b\x5b\x43"                       } 
-  - { key: Up,    mods: Command, chars: "\x06\x1b\x5b\x41"                       } 
-  - { key: Down,    mods: Command, chars: "\x06\x1b\x5b\x42"                       } 
+  - { key: Right,    mods: Command, chars: "\x06\x1b\x5b\x43"                       }
+  - { key: Up,    mods: Command, chars: "\x06\x1b\x5b\x41"                       }
+  - { key: Down,    mods: Command, chars: "\x06\x1b\x5b\x42"                       }
 
   - { key: H,     mods: Command, chars: "\x06\x1b\x5b\x44"                      }
-  - { key: L,    mods: Command, chars: "\x06\x1b\x5b\x43"                       } 
-  - { key: K,    mods: Command, chars: "\x06\x1b\x5b\x41"                       } 
-  - { key: J,    mods: Command, chars: "\x06\x1b\x5b\x42"                       } 
+  - { key: L,    mods: Command, chars: "\x06\x1b\x5b\x43"                       }
+  - { key: K,    mods: Command, chars: "\x06\x1b\x5b\x41"                       }
+  - { key: J,    mods: Command, chars: "\x06\x1b\x5b\x42"                       }
 
 # open url_view (tmx-plugin mac os only)
   - { key: U,    mods: Command, chars: "\x06\x75"                       }
@@ -818,7 +818,7 @@ key_bindings:
 
 
 
-########################### crazy open qutebrowser workaround 
+########################### crazy open qutebrowser workaround
   - { key: E,    mods: Command, chars: "\x63\x6c\x65\x61\x72\x0a\x62\x61\x74\x20\x7e\x2f\x75\x72\x6c\x73\x0a"                       }
 
 
@@ -831,11 +831,11 @@ key_bindings:
 
 
 # open  R with cmd+R
-  - { key: R,    mods: Command, chars: "\x52\x0a"                       } 
+  - { key: R,    mods: Command, chars: "\x52\x0a"                       }
 
 # open jupyter-lab cmd+J
   - { key: J,    mods: Command, chars: "\x6a\x75\x70\x79\x74\x65\x72\x2d\x6c\x61\x62\x0a"
-} 
+}
 
   #- { key: Paste,                                       action: Paste          }
   #- { key: Copy,                                        action: Copy           }

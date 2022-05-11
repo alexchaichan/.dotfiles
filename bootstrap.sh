@@ -17,7 +17,7 @@ case "${unameOut}" in
 esac
 
 # create $ directorys
-export HOME="$(echo -n $(bash -c "cd ~${USER} && pwd"))" 
+export HOME="$(echo -n $(bash -c "cd ~${USER} && pwd"))"
 export DOTFILES=$HOME/.dotfiles
 export ZDOTDIR=$HOME/zsh
 export VDOTDIR=$HOME/.config/nvim
@@ -58,7 +58,7 @@ Rscript ~/.dotfiles/R/packages.R
 # install python packages
 source ~/.dotfiles/pip.sh
 
-# make zsh default shell 
+# make zsh default shell
 if [ -z "`$SHELL -c 'echo $ZSH_VERSION'`" ]; then
   sudo sh -c "echo $(which zsh) >> /etc/shells"
   chsh -s "$(which zsh)"
