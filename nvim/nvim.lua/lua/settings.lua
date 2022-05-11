@@ -33,7 +33,7 @@ vim.o.foldlevel = 4 -- limit folding to 4 levels
 vim.o.foldmethod = 'syntax' -- use language syntax to generate folds
 vim.o.wrap = true --do wrap lines even very long
 vim.o.eol = false -- show if there's no eol char
-vim.o.showbreak= '↪' -- character to show when line is broken
+vim.o.showbreak= false -- character to show when line is broken
 
 -- sidebar
 vim.o.number = true -- line number on the left

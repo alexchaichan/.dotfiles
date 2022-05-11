@@ -142,26 +142,6 @@ disconnect(){
 }
 
 
-
-
-######## plugin manager
-
-
-# update plugins
-
-alias PlugUpdate="cd ~/.config/nvim/pack/plugins/start && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd && cd ~/zsh/ && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd && cd ~/.tmux/ && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd" 
-
-
-
-# die beiden folgenden befehle updaten coc.nvim was der unterschied zwischen yarn add coc.nvim und yarn install ist ??? es gibt aber auch noch yarn upgrade zur not mal das ausprobieren
-
-# alias PlugUpdatePlus="cd Dropbox/.config/nvim/pack/plugins/start && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd && cd Dropbox/.config/zsh/ && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd && cd Dropbox/.config/.tmux/  && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd && cd Dropbox/.config/nvim/pack/plugins/start/coc.nvim/ && yarn add coc.nvim && cd" 
-
-alias PlugUpdatePlus="cd ~/.config/nvim/pack/plugins/start && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd && cd ~/zsh/ && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd && cd /.tmux/  && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd && cd ~/.config/nvim/pack/plugins/start/coc.nvim/ && yarn install && cd"
-
-
-
-
 ########################################################################################################## 
 #pluginmanager                                                                                           #
 ########################################################################################################## 
@@ -184,12 +164,14 @@ function tmux_add_plugin() {
   git clone "https://github.com/$1.git" "$TDOTDIR/plugins/$PLUGIN_NAME"
 }
 
-########################################################################################################## 
-
-
+alias PlugUpdate="cd ~/.config/nvim/pack/plugins/start && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd && cd ~/zsh/ && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd && cd ~/.tmux/ && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd" 
 
 ########################################################################################################## 
-#####################################################templates############################################
+
+
+
+########################################################################################################## 
+# templates                                                                                              #
 ########################################################################################################## 
 
 # when its come to create markdown documents use this 
