@@ -73,3 +73,11 @@ keymap("", "<C-w>", ":w<CR>", opts) -- save with ctrl+w
 -- alternate way to quit
 keymap("", "<C-q>", "<Nop>", opts) -- unmap first 
 keymap("", "<C-q>", ":q!<CR>", opts) -- quit with ctrl+q
+
+-- activate spell
+keymap("n", "<F5>", ":set spell spelllang=de<CR>", opts)
+-- deactivate spell
+keymap("n", "<F6>", ":set spell nospell<CR>", opts)
+
+-- for R-script %>% when pressing µ (alt+m)
+keymap("i", "µ", "%>%", opts)

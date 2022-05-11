@@ -20,11 +20,6 @@ function vim_add_plugin() {
   git clone "https://github.com/$1.git" "$VDOTDIR/pack/plugins/start/$PLUGIN_NAME"
 }
 
-function vim_add_plugin_opt() {
-  PLUGIN_NAME=$(echo $1 | cut -d "/" -f 2)
-  git clone "https://github.com/$1.git" "$VDOTDIR/pack/plugins/opt/$PLUGIN_NAME"
-}
-
 vim_add_plugin "nvim-lua/popup.nvim" # an implementation of the Popup API from vim in Neovim
 vim_add_plugin "nvim-lua/plenary.nvim" # useful lua functions used ny lots of plugins
 vim_add_plugin "windwp/nvim-autopairs" # autopairs, integrates with both cmp and treesitter
@@ -69,14 +64,14 @@ vim_add_plugin "JoosepAlviste/nvim-ts-context-commentstring"
 # git symbols
 vim_add_plugin "lewis6991/gitsigns.nvim"
 # R
-vim_add_plugin_opt 'gaalcaras/ncm-R'
-vim_add_plugin_opt 'ncm2/ncm2'
-vim_add_plugin_opt 'ncm2/ncm2-bufword'
-vim_add_plugin_opt 'ncm2/ncm2-path'
-vim_add_plugin_opt 'jalvesaq/Nvim-R'
-vim_add_plugin_opt 'roxma/nvim-yarp'
+vim_add_plugin 'gaalcaras/ncm-R'
+vim_add_plugin 'ncm2/ncm2'
+vim_add_plugin 'ncm2/ncm2-bufword'
+vim_add_plugin 'ncm2/ncm2-path'
+vim_add_plugin 'jalvesaq/Nvim-R'
+vim_add_plugin 'roxma/nvim-yarp'
 # python
-vim_add_plugin_opt 'ncm2/ncm2-jedi'
+vim_add_plugin 'ncm2/ncm2-jedi'
 # ranger
 vim_add_plugin 'kevinhwang91/rnvimr'
 # dracula
