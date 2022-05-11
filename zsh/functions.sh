@@ -178,6 +178,11 @@ function vim_add_plugin() {
   git clone "https://github.com/$1.git" "$VDOTDIR/pack/plugins/start/$PLUGIN_NAME"
 }
 
+# neovim opt directory
+function vim_add_plugin_opt() {
+  PLUGIN_NAME=$(echo $1 | cut -d "/" -f 2)
+  git clone "https://github.com/$1.git" "$VDOTDIR/pack/plugins/opt/$PLUGIN_NAME"
+}
 
 #tmux
 function tmux_add_plugin() {
