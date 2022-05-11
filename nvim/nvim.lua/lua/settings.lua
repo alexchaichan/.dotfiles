@@ -95,6 +95,7 @@ vim.cmd([[
 --syntax enable
 --colorscheme dracula
 
+vim.cmd('set t_Co=256')
 vim.cmd('set termguicolors')
 vim.cmd('colorscheme dracula')
 --vim.g.material_style = "palenight"
