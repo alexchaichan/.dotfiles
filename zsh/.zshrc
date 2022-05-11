@@ -17,8 +17,9 @@ export TDOTDIR=$HOME/.tmux
 
 # default editor
 export EDITOR=nvim
-#export TERM_PROGRAM='tmux' 
 export TERM=screen-256color
+export TERM_PROGRAM=tmux
+export COLORTERM=truecolor
 
 # source plugins
 source $HOME/.dotfiles/zsh/zsh-syntax-highlighting.sh
