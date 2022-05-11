@@ -117,3 +117,5 @@ tree.setup {
     },
   },
 }
+
+keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
