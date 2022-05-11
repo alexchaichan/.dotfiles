@@ -75,12 +75,13 @@ w3mb(){
 #
 
 schoko(){
-    cd ~/Dropbox/uni/schokolade/ && vim notebook.rmd
+
+    nvim ~/Dropbox/uni/schokolade
 }
 
 modeling(){
-    cd ~/Dropbox/uni/modeling/ && vim notebook.rmd
-}
+    nvim ~/Dropbox/uni/modeling/ 
+  }
 
 
 synchro(){
