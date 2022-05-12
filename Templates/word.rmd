@@ -4,9 +4,6 @@ author: "Aleksej Chaichan"
 date: "`r format(Sys.Date(), '%d %b, %Y')`"
 output:
   word_document:
-    pandoc_args:
-      - --lua-filter=wordcount.lua
-			- --metadata=wordcount=process
     reference_docx: styles/svm-word-docx-example.docx
   citation_package: biblatex
 bibliography: literature.bib
