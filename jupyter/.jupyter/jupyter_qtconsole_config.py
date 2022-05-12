@@ -6,7 +6,7 @@
 ## Mixin for configurable classes that work with connection files
 
 ## JSON file in which to store connection info [default: kernel-<pid>.json]
-#  
+#
 #      This file will contain the IP, ports, and authentication key needed to connect
 #      clients to this kernel. By default, this file will be created in the security dir
 #      of the current profile, but can be specified by absolute path.
@@ -185,7 +185,7 @@
 #  See also: JupyterApp.config_file_name
 # c.JupyterQtConsoleApp.config_file_name = ''
 
-## 
+##
 #  See also: JupyterConsoleApp.confirm_exit
 # c.JupyterQtConsoleApp.confirm_exit = True
 
@@ -285,13 +285,13 @@ c.JupyterQtConsoleApp.stylesheet = '.dotfiles/jupyter/.jupyter/qtdracula.css'
 #------------------------------------------------------------------------------
 ## An abstract base class for console-type widgets. This class has
 #         functionality for:
-#  
+#
 #             * Maintaining a prompt and editing region
 #             * Providing the traditional Unix-style console keyboard shortcuts
 #             * Performing tab completion
 #             * Paging text
 #             * Handling ANSI escape codes
-#  
+#
 #         ConsoleWidget also provides a number of utility methods that will be
 #         convenient to implementors of a console-style widget.
 
@@ -315,7 +315,7 @@ c.JupyterQtConsoleApp.stylesheet = '.dotfiles/jupyter/.jupyter/qtdracula.css'
 # c.ConsoleWidget.console_width = 81
 
 ## Whether to automatically execute on syntactically complete input.
-#  
+#
 #          If False, Shift-Enter is required to submit each execution.
 #          Disabling this is mainly useful for non-Python kernels,
 #          where the completion check would be wrong.
@@ -335,7 +335,7 @@ c.JupyterQtConsoleApp.stylesheet = '.dotfiles/jupyter/.jupyter/qtdracula.css'
 # c.ConsoleWidget.font_size = 0
 
 ## The type of completer to use. Valid values are:
-#  
+#
 #  'plain'   : Show the available completion as a text list
 #              Below the editing area.
 #  'droplist': Show the completion in a drop down list navigable
@@ -349,7 +349,7 @@ c.JupyterQtConsoleApp.stylesheet = '.dotfiles/jupyter/.jupyter/qtdracula.css'
 
 ## Whether to include output from clients
 #          other than this one sharing the same kernel.
-#  
+#
 #          Outputs are not displayed until enter is pressed.
 #  Default: False
 c.ConsoleWidget.include_other_output = True
@@ -361,13 +361,13 @@ c.ConsoleWidget.include_other_output = True
 # c.ConsoleWidget.kind = 'plain'
 
 ## Prefix to add to outputs coming from clients other than this one.
-#  
+#
 #          Only relevant if include_other_output is True.
 #  Default: '[remote] '
 # c.ConsoleWidget.other_output_prefix = '[remote] '
 
 ## The type of paging to use. Valid values are:
-#  
+#
 #  'inside'
 #     The widget pages like a traditional terminal.
 #  'hsplit'
@@ -399,7 +399,7 @@ c.ConsoleWidget.include_other_output = True
 #  See also: ConsoleWidget.ansi_codes
 # c.HistoryConsoleWidget.ansi_codes = True
 
-## 
+##
 #  See also: ConsoleWidget.buffer_size
 # c.HistoryConsoleWidget.buffer_size = 500
 
@@ -423,7 +423,7 @@ c.ConsoleWidget.include_other_output = True
 #  See also: ConsoleWidget.font_size
 # c.HistoryConsoleWidget.font_size = 0
 
-## 
+##
 #  See also: ConsoleWidget.gui_completion
 # c.HistoryConsoleWidget.gui_completion = 'ncurses'
 
@@ -434,7 +434,7 @@ c.ConsoleWidget.include_other_output = True
 #  See also: ConsoleWidget.include_other_output
 # c.HistoryConsoleWidget.include_other_output = False
 
-## 
+##
 #  See also: ConsoleWidget.kind
 # c.HistoryConsoleWidget.kind = 'plain'
 
@@ -442,7 +442,7 @@ c.ConsoleWidget.include_other_output = True
 #  See also: ConsoleWidget.other_output_prefix
 # c.HistoryConsoleWidget.other_output_prefix = '[remote] '
 
-## 
+##
 #  See also: ConsoleWidget.paging
 # c.HistoryConsoleWidget.paging = 'inside'
 
@@ -462,7 +462,7 @@ c.ConsoleWidget.include_other_output = True
 #  Default: ''
 # c.FrontendWidget.banner = ''
 
-## 
+##
 #  See also: ConsoleWidget.buffer_size
 # c.FrontendWidget.buffer_size = 500
 
@@ -498,7 +498,7 @@ c.ConsoleWidget.include_other_output = True
 #  See also: ConsoleWidget.font_size
 # c.FrontendWidget.font_size = 0
 
-## 
+##
 #  See also: ConsoleWidget.gui_completion
 # c.FrontendWidget.gui_completion = 'ncurses'
 
@@ -509,7 +509,7 @@ c.ConsoleWidget.include_other_output = True
 #  See also: ConsoleWidget.include_other_output
 # c.FrontendWidget.include_other_output = False
 
-## 
+##
 #  See also: ConsoleWidget.kind
 # c.FrontendWidget.kind = 'plain'
 
@@ -521,7 +521,7 @@ c.ConsoleWidget.include_other_output = True
 #  See also: ConsoleWidget.other_output_prefix
 # c.FrontendWidget.other_output_prefix = '[remote] '
 
-## 
+##
 #  See also: ConsoleWidget.paging
 # c.FrontendWidget.paging = 'inside'
 
@@ -541,7 +541,7 @@ c.ConsoleWidget.include_other_output = True
 #  See also: FrontendWidget.banner
 # c.IPythonWidget.banner = ''
 
-## 
+##
 #  See also: ConsoleWidget.buffer_size
 # c.IPythonWidget.buffer_size = 500
 
@@ -577,7 +577,7 @@ c.ConsoleWidget.include_other_output = True
 #  See also: ConsoleWidget.font_size
 # c.IPythonWidget.font_size = 0
 
-## 
+##
 #  See also: ConsoleWidget.gui_completion
 # c.IPythonWidget.gui_completion = 'ncurses'
 
@@ -588,7 +588,7 @@ c.ConsoleWidget.include_other_output = True
 #  See also: ConsoleWidget.include_other_output
 # c.IPythonWidget.include_other_output = False
 
-## 
+##
 #  See also: ConsoleWidget.kind
 # c.IPythonWidget.kind = 'plain'
 
@@ -600,7 +600,7 @@ c.ConsoleWidget.include_other_output = True
 #  See also: ConsoleWidget.other_output_prefix
 # c.IPythonWidget.other_output_prefix = '[remote] '
 
-## 
+##
 #  See also: ConsoleWidget.paging
 # c.IPythonWidget.paging = 'inside'
 
@@ -620,7 +620,7 @@ c.ConsoleWidget.include_other_output = True
 #  See also: FrontendWidget.banner
 # c.JupyterWidget.banner = ''
 
-## 
+##
 #  See also: ConsoleWidget.buffer_size
 # c.JupyterWidget.buffer_size = 500
 
@@ -669,7 +669,7 @@ c.ConsoleWidget.include_other_output = True
 #  See also: ConsoleWidget.font_size
 # c.JupyterWidget.font_size = 0
 
-## 
+##
 #  See also: ConsoleWidget.gui_completion
 # c.JupyterWidget.gui_completion = 'ncurses'
 
@@ -686,7 +686,7 @@ c.ConsoleWidget.include_other_output = True
 #  Default: '\n'
 # c.JupyterWidget.input_sep = '\n'
 
-## 
+##
 #  See also: ConsoleWidget.kind
 # c.JupyterWidget.kind = 'plain'
 
@@ -707,7 +707,7 @@ c.ConsoleWidget.include_other_output = True
 #  Default: ''
 # c.JupyterWidget.output_sep2 = ''
 
-## 
+##
 #  See also: ConsoleWidget.paging
 # c.JupyterWidget.paging = 'inside'
 
@@ -731,7 +731,7 @@ c.JupyterWidget.syntax_style = 'vim'
 # KernelManager(ConnectionFileMixin) configuration
 #------------------------------------------------------------------------------
 ## Manages a single kernel in a subprocess on this host.
-#  
+#
 #      This version starts kernels with Popen.
 
 ## Should we autorestart the kernel if it dies.
@@ -786,7 +786,7 @@ c.JupyterWidget.syntax_style = 'vim'
 ## Monitor and autorestart a kernel.
 
 ## Whether to include every poll event in debugging output.
-#  
+#
 #          Has to be set explicitly, because there will be *a lot* of output.
 #  Default: False
 # c.KernelRestarter.debug = False
@@ -812,29 +812,29 @@ c.JupyterWidget.syntax_style = 'vim'
 # Session(Configurable) configuration
 #------------------------------------------------------------------------------
 ## Object for handling serialization and sending of messages.
-#  
+#
 #      The Session object handles building messages and sending them
 #      with ZMQ sockets or ZMQStream objects.  Objects can communicate with each
 #      other over the network via Session objects, and only need to work with the
 #      dict-based IPython message spec. The Session will handle
 #      serialization/deserialization, security, and metadata.
-#  
+#
 #      Sessions support configurable serialization via packer/unpacker traits,
 #      and signing with HMAC digests via the key/keyfile traits.
-#  
+#
 #      Parameters
 #      ----------
-#  
+#
 #      debug : bool
 #          whether to trigger extra debugging statements
 #      packer/unpacker : str : 'json', 'pickle' or import_string
 #          importstrings for methods to serialize message parts.  If just
 #          'json' or 'pickle', predefined JSON and pickle packers will be used.
 #          Otherwise, the entire importstring must be used.
-#  
+#
 #          The functions must accept at least valid JSON input, and output
 #  *bytes*.
-#  
+#
 #          For example, to use msgpack:
 #          packer = 'msgpack.packb', unpacker='msgpack.unpackb'
 #      pack/unpack : callables
@@ -856,7 +856,7 @@ c.JupyterWidget.syntax_style = 'vim'
 # c.Session.buffer_threshold = 1024
 
 ## Whether to check PID to protect against calls after fork.
-#  
+#
 #          This check can be disabled if fork-safety is handled elsewhere.
 #  Default: True
 # c.Session.check_pid = True
@@ -870,7 +870,7 @@ c.JupyterWidget.syntax_style = 'vim'
 # c.Session.debug = False
 
 ## The maximum number of digests to remember.
-#  
+#
 #          The digest history will be culled when it exceeds this value.
 #  Default: 65536
 # c.Session.digest_history_size = 65536

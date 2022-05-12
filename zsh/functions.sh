@@ -26,7 +26,7 @@ alias gitpullall="find . -maxdepth 300 -name .git -type d | rev | cut -c 6- | re
 
 # bat out .password-store repo
 passwort(){
-    pass | bat 
+    pass | bat
 }
 
 # ls wit flags
@@ -80,7 +80,7 @@ schoko(){
 }
 
 modeling(){
-    nvim ~/Dropbox/uni/modeling/ 
+    nvim ~/Dropbox/uni/modeling/
   }
 
 
@@ -111,9 +111,9 @@ odot(){
 
 #
 # ZSH functions to start/stop OpenConnect VPN client
-# 
 #
-export VPN_HOST=https://vpn.uni-kassel.de/  
+#
+export VPN_HOST=https://vpn.uni-kassel.de/
 
 function vpn-up() {
   if [[ -z $VPN_HOST ]]
@@ -143,9 +143,9 @@ disconnect(){
 }
 
 
-########################################################################################################## 
+##########################################################################################################
 #pluginmanager                                                                                           #
-########################################################################################################## 
+##########################################################################################################
 
 # zsh
 function zsh_add_plugin() {
@@ -165,17 +165,17 @@ function tmux_add_plugin() {
   git clone "https://github.com/$1.git" "$TDOTDIR/plugins/$PLUGIN_NAME"
 }
 
-alias PlugUpdate="cd ~/.config/nvim/pack/plugins/start && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd && cd ~/zsh/ && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd && cd ~/.tmux/ && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd" 
+alias PlugUpdate="cd ~/.config/nvim/pack/plugins/start && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd && cd ~/zsh/ && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd && cd ~/.tmux/ && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd"
 
-########################################################################################################## 
+##########################################################################################################
 
 
 
-########################################################################################################## 
+##########################################################################################################
 # templates                                                                                              #
-########################################################################################################## 
+##########################################################################################################
 
-# when its come to create markdown documents use this 
+# when its come to create markdown documents use this
 
 
 # 1st link, when want to sent it push it do 2nd copie

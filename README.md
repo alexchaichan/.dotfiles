@@ -8,7 +8,7 @@ if [[ "$(uname)" == "Darwin" ]]; then
 elif [[ "$(expr substr $(uname -s) 1 5)" == "Linux" ]]; then
     echo '[archlinuxfr]
     SigLevel = Never
-    Server = http://repo.archlinux.fr/$arch' >> /etc/pacman.conf 
+    Server = http://repo.archlinux.fr/$arch' >> /etc/pacman.conf
     pacman -Sy yaourt
 elif [[ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]]; then
 

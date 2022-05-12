@@ -16,7 +16,6 @@ vim.g.maplocalleader = " "
 --   term_mode = "t",
 --   command_mode = "c",
 
--- normal --
 -- better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
@@ -37,11 +36,10 @@ keymap("n", "<S-TAB>", ":bprevious<CR>", opts)
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
--- insert --
 -- press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
+keymap("i", "kj", "<ESC>", opts)
 
--- visual --
 -- stay in indent mode
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
@@ -50,7 +48,7 @@ keymap("v", ">", ">gv", opts)
 keymap("v", "<A-j>", ":m .+1<CR>==", opts)
 keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 
---
+-- hold yanked string
 keymap("v", "p", '"_dP', opts)
 
 -- visual Block --
@@ -70,6 +68,7 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- alternate way to save
 keymap("", "<C-w>", "<Nop>", opts) -- unmap first
 keymap("", "<C-w>", ":%s/\\s\\+$//e | :w<CR>", opts) -- save with ctr+w aswell remove all whitespace in the whole file
+
 -- alternate way to quit
 keymap("", "<C-q>", "<Nop>", opts) -- unmap first
 keymap("", "<C-q>", ":q!<CR>", opts) -- quit with ctrl+q

@@ -33,7 +33,7 @@ defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
 defaults write NSGlobalDomain AppleMetricUnits -bool true
 
 # disable power button sleep mode
-defaults write com.apple.loginwindow PowerButtonSleepsSystem -bool no 
+defaults write com.apple.loginwindow PowerButtonSleepsSystem -bool no
 
 # set the timezone (see `sudo systemsetup -listtimezones` for other values)
 # sudo systemsetup -settimezone "Europe/Berlin" > /dev/null
@@ -141,11 +141,11 @@ defaults write com.apple.systemuiserver menuExtras -array "/System/Library/CoreS
 # preventing desktop jump when window is open on another desktop
 defaults write com.apple.dock workspaces-auto-swoosh -bool false
 
-# remove all app icons from the Dock in OS X: 
+# remove all app icons from the Dock in OS X:
 defaults write com.apple.dock persistent-apps -array
 
-# hide spotlight from dock 
-defaults -currentHost write com.apple.Spotlight MenuItemHidden -int 1 
+# hide spotlight from dock
+defaults -currentHost write com.apple.Spotlight MenuItemHidden -int 1
 
 ###############################################################################
 # animations                                                                  #

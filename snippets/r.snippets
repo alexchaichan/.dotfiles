@@ -1,6 +1,6 @@
 snippet read
 	if (!exists("$1")) {
-	$3 <- readr::read_csv("$2")	
+	$3 <- readr::read_csv("$2")
 	}
 
 
@@ -14,10 +14,10 @@ snippet lib
 	}
 
 	# invisible(lapply(packages, library, character.only = TRUE))
-	
+
 	prefix <- c("$3/")
 	remotes <- c("$2")
-	
+
 	installed_remotes <- remotes %in% rownames(installed.packages())
 
 	if (any(installed_remotes == FALSE)) {
@@ -135,15 +135,15 @@ snippet ts
 
 snippet shinyapp
 	library(shiny)
-	
+
 	ui <- fluidPage(
 	  ${0}
 	)
-	
+
 	server <- function(input, output, session) {
-	  
+
 	}
-	
+
 	shinyApp(ui, server)
 
 
@@ -154,9 +154,9 @@ snippet shinymod
 		${0}
 	  )
 	}
-	
+
 	${1:name} <- function(input, output, session) {
-	  
+
 	}
 
 
@@ -164,8 +164,8 @@ snippet shinymod
 
 
 snippet tab "kable table" b
-	knitr::kable(caption="\\label{tab:LABEL}TITLE - in LoT") %>% 
-	kableExtra::kable_styling(latex_options = "striped", position = "center") %>% 
+	knitr::kable(caption="\\label{tab:LABEL}TITLE - in LoT") %>%
+	kableExtra::kable_styling(latex_options = "striped", position = "center") %>%
 	kableExtra::footnote(general = "FOOTNOTE")
 
 

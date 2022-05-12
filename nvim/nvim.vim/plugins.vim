@@ -1,4 +1,4 @@
-""""""""""""" ranger 
+""""""""""""" ranger
 " Make Ranger replace netrw and be the file explorer
 let g:rnvimr_ex_enable = 1
 nmap <space>r :RnvimrToggle<CR>
@@ -16,17 +16,17 @@ set completeopt=noinsert,menuone,noselect
 let g:rout_follow_colorscheme = 1
 
 " pipe operator
-autocmd FileType r inoremap <buffer> ˘ <Esc>:normal! a %>%<CR>a 
-autocmd FileType rnoweb inoremap <buffer> ˘ <Esc>:normal! a %>%<CR>a 
+autocmd FileType r inoremap <buffer> ˘ <Esc>:normal! a %>%<CR>a
+autocmd FileType rnoweb inoremap <buffer> ˘ <Esc>:normal! a %>%<CR>a
 autocmd FileType rmd inoremap <buffer> ˘ <Esc>:normal! a %>%<CR>a
 
-autocmd FileType r inoremap <buffer> µ <Esc>:normal! a %>%<CR>a 
-autocmd FileType rnoweb inoremap <buffer> µ <Esc>:normal! a %>%<CR>a 
+autocmd FileType r inoremap <buffer> µ <Esc>:normal! a %>%<CR>a
+autocmd FileType rnoweb inoremap <buffer> µ <Esc>:normal! a %>%<CR>a
 autocmd FileType rmd inoremap <buffer> µ <Esc>:normal! a %>%<CR>a
 
 " zuweisungspfeil
-autocmd FileType r inoremap <buffer> – <Esc>:normal! a <-<CR>a 
-autocmd FileType rnoweb inoremap <buffer> – <Esc>:normal! a <-<CR>a 
+autocmd FileType r inoremap <buffer> – <Esc>:normal! a <-<CR>a
+autocmd FileType rnoweb inoremap <buffer> – <Esc>:normal! a <-<CR>a
 autocmd FileType rmd inoremap <buffer> – <Esc>:normal! a <-<CR>a
 
 " chunks
@@ -341,7 +341,7 @@ let g:mkdp_page_title = '「${name}」'
 " these filetypes will have MarkdownPreview... commands
 let g:mkdp_filetypes = ['markdown', 'rmd', 'Rmd']
 
- 
+
 
 " R
 if $AUTOSTARTR == "yes"

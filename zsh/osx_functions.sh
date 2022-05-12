@@ -126,7 +126,7 @@ update(){
 # zsh functions to start/stop OpenConnect VPN client
 
 # define vpn host
-export VPN_HOST=https://vpn.uni-kassel.de/  
+export VPN_HOST=https://vpn.uni-kassel.de/
 
 function vpn-up() {
   if [[ -z $VPN_HOST ]]

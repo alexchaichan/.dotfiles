@@ -9,7 +9,7 @@ case "${unameOut}" in
 esac
 
 # create $ directorys
-export HOME="$(echo -n $(bash -c "cd ~${USER} && pwd"))" 
+export HOME="$(echo -n $(bash -c "cd ~${USER} && pwd"))"
 export DOTFILES=$HOME/.dotfiles
 export ZDOTDIR=$HOME/.zsh_plugins
 export VDOTDIR=$HOME/.config/nvim

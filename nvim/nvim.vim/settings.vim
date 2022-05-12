@@ -46,7 +46,7 @@ set ma                          " To set mark a at current cursor location.
 set number                      " To switch the line numbers on.
 set expandtab                   " To enter spaces when tab is pressed.
 set smarttab                    " To use smart tabs.
-set autoindent                  " To copy indentation from current line 
+set autoindent                  " To copy indentation from current line
                                 " when starting a new line.
 set si                          " To switch on smart indentation.
 
@@ -60,9 +60,9 @@ set magic                       " For regular expressions turn magic on.
 set smartindent                         " Makes indenting smart
 
 " Brackets
-set showmatch                   " To show matching brackets when text indicator 
+set showmatch                   " To show matching brackets when text indicator
                                 " is over them.
-set mat=2                       " How many tenths of a second to blink 
+set mat=2                       " How many tenths of a second to blink
                                 " when matching brackets.
 
 
@@ -72,7 +72,7 @@ set noerrorbells                " No annoying sound on errors.
 
 " Color & Fonts
 syntax enable                    " Enable syntax highlighting.
-set encoding=utf8                " Set utf8 as standard encoding and 
+set encoding=utf8                " Set utf8 as standard encoding and
                                  " en_US as the standard language.
 set fileencoding=utf-8           " The encoding written to file
 
@@ -93,8 +93,8 @@ colorscheme default
 " set ruler              			            " Show the cursor position all the time
 
 highlight clear CursorLine
-" hi CursorLineNr cterm=underline ctermfg=10 gui=bold guifg=green  
-" highlight CursorLineNR ctermbg=blue 
+" hi CursorLineNr cterm=underline ctermfg=10 gui=bold guifg=green
+" highlight CursorLineNR ctermbg=blue
 
 
 " hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white

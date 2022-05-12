@@ -134,7 +134,7 @@ snippet sing
 		$1 = function $1($2) {
 			return instance;
 		};
-		
+
 		// carry over the prototype properties
 		$1.prototype = this;
 
@@ -154,13 +154,13 @@ regex /^\s*/clas{0,2}/
 	var ${1:class} = function(${20}) {
 		$40$0
 	};
-	
+
 	(function() {
 		${60:this.prop = ""}
 	}).call(${1:class}.prototype);
-	
+
 	exports.${1:class} = ${1:class};
-# 
+#
 snippet for-
 	for (var ${1:i} = ${2:Things}.length; ${1:i}--; ) {
 		${0:${2:Things}[${1:i}];}
@@ -182,7 +182,7 @@ snippet def
 	define(function(require, exports, module) {
 	"use strict";
 	var ${1/.*\///} = require("${1}");
-	
+
 	$TM_SELECTED_TEXT
 	});
 snippet req

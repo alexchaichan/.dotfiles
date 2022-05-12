@@ -1,6 +1,6 @@
 # set the display on the imac to 100%
 licht(){
-   brightnessctl set 100% 
+   brightnessctl set 100%
 }
 
 # connect magic mous
