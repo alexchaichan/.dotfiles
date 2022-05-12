@@ -1,4 +1,4 @@
-# Ehrenwörtliche Erklärung 
+# Ehrenwörtliche Erklärung
 
 Aleksej Chaichan
 
@@ -23,4 +23,4 @@ Mir ist bekannt, dass ein Verstoß gegen diese Regeln als Plagiat betrachtet wir
 
 \vskip1cm
 \rule{5cm}{0.4pt}
-Kassel, den 
+Kassel, den

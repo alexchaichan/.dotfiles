@@ -5,7 +5,7 @@ author: "Aleksej Chaichan"
 date: "`r format(Sys.Date(), '%d %b, %Y')`"
 output:
   pdf_document:
-    pandoc_args: 
+    pandoc_args:
     	- --lua-filter=wordcount.lua
 	- --metadata=wordcount=process
     latex_engine: pdflatex #xelatex #lualatex #pdflatex
@@ -22,26 +22,26 @@ csl: styles/my.csl
 fontsize: 12pt
 lang: de
 urlcolor: "blue"
-#params: 
+#params:
   #X:  <num>; "string"  #filter with params params$X
 ---
 
 
-<!-- 
-\setstretch{1} 
-\pagebreak 
+<!--
+\setstretch{1}
+\pagebreak
 \listoffigures
 
-\pagebreak 
+\pagebreak
 \listoftables
 
-\pagebreak 
-\tableofcontents 
+\pagebreak
+\tableofcontents
 -->
 
 
 
-<!-- 
+<!--
 # Literaturverzeichnis
 
 \setlength{\parindent}{-0.2in}

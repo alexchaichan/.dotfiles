@@ -4,15 +4,15 @@
 
 Chaichan, Aleksej
 
-matrikelnummer \hspace{1em} 
+matrikelnummer \hspace{1em}
 
 adresse
 
-mail \hspace{1em} 
+mail \hspace{1em}
 
 01726830875
 
-HF: Soziologe - 5. Fachsemester \hspace{1em} 
+HF: Soziologe - 5. Fachsemester \hspace{1em}
 
 NF: Politikwissenschaften - 5. Fachsemester
 
@@ -22,7 +22,7 @@ NF: Politikwissenschaften - 5. Fachsemester
 
 NAME_KURS
 
-Frau / Herr Prof. Dr. NACHNAME, VORNAME 
+Frau / Herr Prof. Dr. NACHNAME, VORNAME
 
 Universität Kassel
 

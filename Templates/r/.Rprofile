@@ -4,7 +4,7 @@ invisible(lapply(.Options$defaultPackages, function(x) library(x, character.only
  library(lubridate)
 
 local({r <- getOption("repos")
-    r["CRAN"] <- "http://cran.r-project.org"  
+    r["CRAN"] <- "http://cran.r-project.org"
     options(repos=r)
 })
 

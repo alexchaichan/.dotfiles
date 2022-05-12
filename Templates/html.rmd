@@ -6,7 +6,7 @@ date: "`r format(Sys.Date(), '%d %b, %Y')`"
 output:
   html_document:
     code_folding : hide
-    pandoc_args: 
+    pandoc_args:
       - --lua-filter=wordcount.lua
       - --metadata=wordcount=process
     css: styles/style.css
@@ -14,13 +14,13 @@ output:
     theme: lumen
     toc: yes
     toc_float: yes
-bibliography: literature.bib 
-csl: styles/my.csl 
+bibliography: literature.bib
+csl: styles/my.csl
 #nocite: '@*'
 #nocite: |
 #  @key1, @key2
 lang: de
 urlcolor: "blue"
-#params: 
+#params:
   #X:  <num>; "string"  #filter with params paramsX
 ---

@@ -1,13 +1,13 @@
 ---
 author: Aleksej Chaichan
-return-address: 
+return-address:
   - "STRASSE NR"
   - "PLZ ORT"
 return-phone: "+49"
-return-email: MAIL@LIAM.com 
+return-email: MAIL@LIAM.com
 
 address:
-  - NAME 
+  - NAME
   - STRASSE. 00
   - PLZ ORT
   - CTRY
@@ -15,7 +15,7 @@ address:
 
 
 
-place: Kassel  
+place: Kassel
 
 subject: Some nonsensical Subject
 opening: Sehr geehrte Frau / Sehr geehrter Herr / sehr geehrte Damen und Herren,

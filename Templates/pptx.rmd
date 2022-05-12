@@ -9,8 +9,8 @@ lang: de
 <!--  tabelle
 
 flextable::flextable() %>%
-flextable::theme_zebra() %>% 
-flextable::autofit() 
+flextable::theme_zebra() %>%
+flextable::autofit()
 
 -->
 
@@ -42,7 +42,7 @@ Text
 
 # Slide 2
 
- 
+
 ```{r message=FALSE, warning=FALSE, echo=F`ALSE}
 plot(cars)
 ```
@@ -50,10 +50,10 @@ plot(cars)
 # Slide 3
 
 ```{r message=FALSE, warning=FALSE, echo=FALSE}
-mtcars %>% 
-  head(10) %>% 
+mtcars %>%
+  head(10) %>%
   flextable::flextable() %>%
-  flextable::theme_zebra() %>% 
+  flextable::theme_zebra() %>%
   flextable::autofit()
 ```
 

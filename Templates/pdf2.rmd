@@ -5,8 +5,8 @@ author: "Aleksej Chaichan"
 date: "r format(Sys.Date(), '%d %b, %Y')"
 header-includes:
   - \usepackage[T1]{fontenc}
-  - \usepackage[utf8]{inputenc} 
-  - \usepackage[scaled]{helvet} 
+  - \usepackage[utf8]{inputenc}
+  - \usepackage[scaled]{helvet}
   - \usepackage{booktabs}
   - \usepackage{longtable}
   - \usepackage{array}
@@ -32,15 +32,15 @@ urlcolor: "blue"
 
 
 
-<!-- 
-\setstretch{1} 
-\pagebreak 
+<!--
+\setstretch{1}
+\pagebreak
 \listoffigures
 
-\pagebreak 
+\pagebreak
 \listoftables
 
-\pagebreak 
+\pagebreak
 \tableofcontents
 
 

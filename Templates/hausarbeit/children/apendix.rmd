@@ -1,4 +1,4 @@
-```{r, child=c('declaration.Rmd')} 
+```{r, child=c('declaration.Rmd')}
 ```
 \pagebreak
 
