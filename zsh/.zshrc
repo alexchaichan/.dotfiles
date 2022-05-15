@@ -22,15 +22,19 @@ export TERM=screen-256color
 #export COLORTERM=truecolor
 
 # source plugins
-source $HOME/.dotfiles/zsh/zsh-syntax-highlighting.sh
-source $HOME/.dotfiles/zsh/.p10k.zsh
-source $HOME/.dotfiles/zsh/functions.sh
-source $HOME/.dotfiles/zsh/vi-mode.plugin.zsh
+source $ZDOTDIR/dracula-zsh-syntax-highlighting/zsh-syntax-highlighting.sh
+source $ZDOTDIR/vi-mode/plugins/vi-mode/vi-mode.plugin.zsh
 source $ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZDOTDIR/zsh-completions/zsh-completions.plugin.zsh
 source $ZDOTDIR/powerlevel10k/powerlevel10k.zsh-theme
 source $ZDOTDIR/zsh-autopair/autopair.zsh
+source ~/.dotfiles/zsh/zsh-fzf/completion.zsh
+source ~/.dotfiles/zsh/zsh-fzf/key-bindings.zsh
+
+source $HOME/.dotfiles/zsh/.p10k.zsh
+source $HOME/.dotfiles/zsh/functions.sh
+
 
 
 # # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -44,5 +48,4 @@ precmd() { print "" }
 
 bindkey -v
 
-source ~/.dotfiles/zsh/zsh-fzf/completion.zsh
-source ~/.dotfiles/zsh/zsh-fzf/key-bindings.zsh
+

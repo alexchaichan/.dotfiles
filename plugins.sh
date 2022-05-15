@@ -12,6 +12,8 @@ zsh_add_plugin 'zsh-users/zsh-completions'
 zsh_add_plugin 'romkatv/powerlevel10k'
 zsh_add_plugin 'zsh-users/zsh-syntax-highlighting'
 zsh_add_plugin 'zsh-users/zsh-autosuggestions'
+git clone https://github.com/dracula/zsh-syntax-highlighting.git $ZDOTDIR/dracula-zsh-syntax-highlighting
+git clone --depth 1 --filter=blob:none --no-checkout https://github.com/ohmyzsh/ohmyzsh $ZDOTDIR/vi-mode ; cd $ZDOTDIR/vi-mode ; git checkout master -- plugins/vi-mode ; cd
 
 # nvim
 
