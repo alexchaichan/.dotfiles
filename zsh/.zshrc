@@ -23,19 +23,17 @@ export TERM=screen-256color
 
 # source plugins
 source $ZDOTDIR/dracula-zsh-syntax-highlighting/zsh-syntax-highlighting.sh
-source $ZDOTDIR/vi-mode/plugins/vi-mode/vi-mode.plugin.zsh
+source $ZDOTDIR/zsh-vi-mode/plugins/vi-mode/vi-mode.plugin.zsh
 source $ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZDOTDIR/zsh-completions/zsh-completions.plugin.zsh
 source $ZDOTDIR/powerlevel10k/powerlevel10k.zsh-theme
 source $ZDOTDIR/zsh-autopair/autopair.zsh
-source ~/.dotfiles/zsh/zsh-fzf/completion.zsh
-source ~/.dotfiles/zsh/zsh-fzf/key-bindings.zsh
+source $ZDOTDIR/zsh-fzf/shell/completion.zsh
+source $ZDOTDIR/zsh-fzf/shell/key-bindings.zsh
 
 source $HOME/.dotfiles/zsh/.p10k.zsh
 source $HOME/.dotfiles/zsh/functions.zsh
-
-
 
 # # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # # Initialization code that may require console input (password prompts, [y/n]
