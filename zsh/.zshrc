@@ -33,7 +33,7 @@ source ~/.dotfiles/zsh/zsh-fzf/completion.zsh
 source ~/.dotfiles/zsh/zsh-fzf/key-bindings.zsh
 
 source $HOME/.dotfiles/zsh/.p10k.zsh
-source $HOME/.dotfiles/zsh/functions.sh
+source $HOME/.dotfiles/zsh/functions.zsh
 
 
 
