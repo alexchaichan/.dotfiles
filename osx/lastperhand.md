@@ -6,8 +6,6 @@ gem install neovim
 yarn global add neovim
 pip3 install neovim
 pip3 install pynvim
-cd ~/.config/nvim/pack/plugins/start/coc.nvim && yarn install
-nvim "+:CocInstall coc-json coc-pairs coc-r-lsp coc-snippets coc-tsserver coc-vimlsp"
 ```
 ___
 
