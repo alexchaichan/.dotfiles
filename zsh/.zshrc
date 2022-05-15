@@ -47,5 +47,3 @@ fi
 precmd() { print "" }
 
 bindkey -v
-
-
