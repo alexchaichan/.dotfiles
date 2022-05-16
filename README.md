@@ -40,3 +40,7 @@ fi
 ## run installation file
 
 `source ~/.dotfiles/bootstrap.sh`
+
+### run light version
+
+`source ~/.dotfiles/light.sh`

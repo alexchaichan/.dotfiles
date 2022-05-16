@@ -16,6 +16,11 @@ vim.g.maplocalleader = " "
 --   term_mode = "t",
 --   command_mode = "c",
 
+-- window splitting
+keymap("n", "<C-v>", ":vsplit<cr>", opts)
+keymap("n", "<C-d>", ":split<cr>", opts)
+keymap("n", "<C-t>", ":tabnew<cr>", opts)
+
 -- better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
