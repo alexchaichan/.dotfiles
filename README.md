@@ -35,7 +35,7 @@ fi
 
 `git clone https://github.com/alexchaichan/.password-store.git ~/.password-store`
 
-## store `.gnupg` file into `~/`
+## store `.gnupg` repo into `~/`
 
 ## run installation file
 
