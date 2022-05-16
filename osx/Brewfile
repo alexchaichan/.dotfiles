@@ -13,7 +13,6 @@ brew "python@3.9"
 brew "gpg"
 brew "harfbuzz"
 brew "librsvg"
-brew "bash"
 brew "bat"
 brew "berkeley-db", link: true
 brew "libtool"

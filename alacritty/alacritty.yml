@@ -753,14 +753,8 @@ cursor:
 #
 #
 
-
-
-
-
-
-
 key_bindings:
-  - { key: V, mods: Command, chars: "\x06\x76"  }
+  - { key: D, mods: Command|Shift, chars: "\x06\x76"  }
   - { key: D, mods: Command, chars: "\x06\x68" }
   - { key: W, mods: Command, chars: "\x06\x78"  }
   - { key: T, mods: Command, chars: "\x06\x74"  }
