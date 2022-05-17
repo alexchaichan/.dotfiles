@@ -1,11 +1,10 @@
 ######################################################################
-# mac alias							 #
+# osx alias							                                             #
 ######################################################################
 
 audiomidisetup(){
   /usr/bin/open -a "Audio MIDI Setup"
 }
-
 
 terminal(){
     /usr/bin/open -a Terminal
@@ -15,11 +14,7 @@ safari(){
     /usr/bin/open -a Safari $1
 }
 
-mail(){
-    /usr/bin/open -a mail
-}
-
-psycho(){
+psychopy(){
     /usr/bin/open -a psychopy
 }
 
@@ -27,32 +22,16 @@ messages(){
     /usr/bin/open -a Messages
 }
 
-calendar(){
-    /usr/bin/open -a Calendar
-}
-
-zoomen(){
+zoom(){
     /usr/bin/open -a zoom.us
 }
 
-feuerfuchs(){
+firefox(){
     /usr/bin/open -a Firefox $1
-}
-
-keychain(){
-    /usr/bin/open -a "Keychain Access"
 }
 
 diskutility(){
     /usr/bin/open -a "Disk Utility"
-}
-
-activity(){
-    /usr/bin/open -a "Activity Monitor"
-}
-
-cisco(){
-    /usr/bin/open -a "Cisco AnyConnect Secure Mobility Client"
 }
 
 csv(){
@@ -71,16 +50,8 @@ powerpoint(){
     /usr/bin/open -a "Microsoft PowerPoint" $1
 }
 
-chess(){
-    /usr/bin/open -a "Chess – tactics and strategy"
-}
-
-drop(){
+dropbox(){
     /usr/bin/open -a Dropbox
-}
-
-contacts(){
-    /usr/bin/open -a Contacts
 }
 
 maps(){
