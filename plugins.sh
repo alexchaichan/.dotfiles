@@ -60,6 +60,7 @@ vim_add_plugin 'roxma/nvim-yarp'
 vim_add_plugin 'ncm2/ncm2-jedi'
 vim_add_plugin 'kevinhwang91/rnvimr'
 vim_add_plugin 'dracula/vim'
+vim_add_plugin 'iamcco/markdown-preview.nvim'
 
 # tmux
 

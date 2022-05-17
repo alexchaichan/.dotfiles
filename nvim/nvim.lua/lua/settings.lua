@@ -1,6 +1,6 @@
 HOME = os.getenv("HOME")
 -- set language
---vim.api.nvim_exec ('language en_US', true)
+--vim.api.nvim_exec ('language en_US', true) --dosent work on arch linux
 
 -- basic settings
 vim.o.encoding = "utf-8"
@@ -101,8 +101,3 @@ vim.cmd('colorscheme dracula')
 --vim.g.material_style = "palenight"
 -- colorscheme for vimr
 vim.g.rout_follow_colorscheme = 1
-
---vim.g.python3_host_prog = "/Users/grzegorz/.asdf/shims/python3"
---2vim.g.python_host_prog = "/Users/grzegorz/.asdf/shims/python2"
-
-
