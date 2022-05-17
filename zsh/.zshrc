@@ -23,7 +23,7 @@ export TERM=screen-256color
 
 # source plugins
 source $ZDOTDIR/dracula-zsh-syntax-highlighting/zsh-syntax-highlighting.sh
-source $ZDOTDIR/zsh-vi-mode/plugins/vi-mode/vi-mode.plugin.zsh
+source $ZDOTDIR/zsh-plugins/plugins/vi-mode/vi-mode.plugin.zsh
 source $ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZDOTDIR/zsh-completions/zsh-completions.plugin.zsh
