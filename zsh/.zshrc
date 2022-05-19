@@ -8,7 +8,7 @@ case "${unameOut}" in
     *)          os="UNKNOWN:${unameOut}"
 esac
 
-# create $ directorys
+# create $ directories
 export HOME="$(echo -n $(bash -c "cd ~${USER} && pwd"))"
 export DOTFILES=$HOME/.dotfiles
 export ZDOTDIR=$HOME/.zsh_plugins
@@ -31,7 +31,6 @@ source $ZDOTDIR/powerlevel10k/powerlevel10k.zsh-theme
 source $ZDOTDIR/zsh-autopair/autopair.zsh
 source $ZDOTDIR/zsh-fzf/shell/completion.zsh
 source $ZDOTDIR/zsh-fzf/shell/key-bindings.zsh
-
 source $HOME/.dotfiles/zsh/.p10k.zsh
 source $HOME/.dotfiles/zsh/functions.zsh
 
@@ -42,6 +41,17 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# setup a custom completion directory
+fpath=($HOME/.dotfiles/zsh/completions $fpath)
+
+# enable completion system
+autoload compinit
+
+# initalize all completions on $fpath an ignore (-i) all insecure files and directory
+compinit -i
+
+# make space between commands
 precmd() { print "" }
 
+# vi keybinding
 bindkey -v
