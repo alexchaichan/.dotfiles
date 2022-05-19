@@ -26,7 +26,6 @@ source $ZDOTDIR/dracula-zsh-syntax-highlighting/zsh-syntax-highlighting.sh
 source $ZDOTDIR/zsh-plugins/plugins/vi-mode/vi-mode.plugin.zsh
 source $ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $ZDOTDIR/zsh-completions/zsh-completions.plugin.zsh
 source $ZDOTDIR/powerlevel10k/powerlevel10k.zsh-theme
 source $ZDOTDIR/zsh-autopair/autopair.zsh
 source $ZDOTDIR/zsh-fzf/shell/completion.zsh
@@ -42,7 +41,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # setup a custom completion directory
-fpath=($HOME/.dotfiles/zsh/completions $fpath)
+fpath=($ZDOTDIR/zsh-completions/src $fpath)
 
 # enable completion system
 autoload compinit
