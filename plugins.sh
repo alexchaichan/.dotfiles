@@ -12,11 +12,9 @@ zsh_add_plugin 'zsh-users/zsh-completions'
 zsh_add_plugin 'romkatv/powerlevel10k'
 zsh_add_plugin 'zsh-users/zsh-syntax-highlighting'
 zsh_add_plugin 'zsh-users/zsh-autosuggestions'
+zsh_add_plugin 'ohmyzsh/ohmyzsh'
+zsh_add_plugin 'zsh-users/zsh-completions'
 git clone https://github.com/dracula/zsh-syntax-highlighting.git $ZDOTDIR/dracula-zsh-syntax-highlighting
-git clone --depth 1 --filter=blob:none --no-checkout https://github.com/ohmyzsh/ohmyzsh $ZDOTDIR/zsh-plugins ; cd $ZDOTDIR/zsh-plugins ; git checkout master -- plugins/vi-mode ; cd
-git clone --depth 1 --filter=blob:none --no-checkout https://github.com/junegunn/fzf.git $ZDOTDIR/zsh-fzf ; cd $ZDOTDIR/zsh-fzf; git checkout master -- shell ; cd
-git clone --depth 1 --filter=blob:none --no-checkout https://github.com/zsh-users/zsh-completions.git $ZDOTDIR/zsh-completions ; cd $ZDOTDIR/zsh-completions; git checkout master -- src ; cd
-
 
 # nvim
 

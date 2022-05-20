@@ -1,4 +1,6 @@
 source ~/.dotfiles/zsh/.zshrc
+source /usr/local/Cellar/fzf/0.30.0/shell/completion.zsh
+source /usr/local/Cellar/fzf/0.30.0/shell/key-bindings.zsh
 source ~/.dotfiles/zsh/osx_functions.zsh
 
 
