@@ -12,17 +12,12 @@ mkdir ~/.config && mkdir ~/.cache && mkdir ~/repositories
 
 # zsh
 mkdir ~/.zsh_plugins
-
-if [[ "$os" == "osx" ]]; then
-	ln -sf ~/.dotfiles/zsh/.zshrc_mac ~/.zshrc
-elif [[ "$os" == "linux" ]]; then
-	ln -sf ~/.dotfiles/zsh/.zshrc_linux ~/.zshrc
-fi
+ln -sf ~/.dotfiles/zsh/.zshrc ~/
 
 # bash
 if [[ "$os" == "linux" ]]; then
-	ln -sf ~/.dotfiles/bash/.arch_bashrc ~/.bashrc
-	ln -sf ~/.dotfiles/bash/.arch_bash_profile ~/.bash_profile
+	ln -sf ~/.dotfiles/bash/.bashrc ~/
+	ln -sf ~/.dotfiles/bash/.bash_profile ~/
 fi
 
 # git

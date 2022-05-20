@@ -18,8 +18,6 @@ export TDOTDIR=$HOME/.tmux
 # default editor
 export EDITOR=nvim
 export TERM=screen-256color
-#export TERM_PROGRAM=tmux
-#export COLORTERM=truecolor
 
 # source plugins
 source $ZDOTDIR/dracula-zsh-syntax-highlighting/zsh-syntax-highlighting.sh
@@ -28,12 +26,21 @@ source $ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZDOTDIR/powerlevel10k/powerlevel10k.zsh-theme
 source $ZDOTDIR/zsh-autopair/autopair.zsh
+
+if [[ "$os" == "osx" ]]; then
+	source /usr/local/Cellar/fzf/0.30.0/shell/completion.zsh
+	source /usr/local/Cellar/fzf/0.30.0/shell/key-bindings.zsh
+elif [[ "$os" == "linux" ]]; then
+	#source /usr/local/fzf/0.30.0/shell/completion.zsh
+	#source /usr/local/fzf/0.30.0/shell/key-bindings.zsh	
+fi
+
 source $HOME/.dotfiles/zsh/.p10k.zsh
 source $HOME/.dotfiles/zsh/functions.zsh
 
-# # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# # Initialization code that may require console input (password prompts, [y/n]
-# # confirmations, etc.) must go above this block; everything else may go below.
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
@@ -52,3 +59,32 @@ precmd() { print "" }
 
 # vi keybinding
 bindkey -v
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+if [[ "$os" == "linux" ]]; then
+	__conda_setup="$('/opt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+	if [ $? -eq 0 ]; then
+    		eval "$__conda_setup"
+	else
+    		if [ -f "/opt/miniconda3/etc/profile.d/conda.sh" ]; then
+        			. "/opt/miniconda3/etc/profile.d/conda.sh"
+    		else
+        			export PATH="/opt/miniconda3/bin:$PATH"
+    		fi
+	fi
+	unset __conda_setup
+elif [[ "$os" == "osx" ]]; then
+	__conda_setup="$('/usr/local/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+	if [ $? -eq 0 ]; then
+    		eval "$__conda_setup"
+	else
+    		if [ -f "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
+        			. "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh"
+    		else
+        			export PATH="/usr/local/Caskroom/miniconda/base/bin:$PATH"
+    		fi
+	fi
+
+fi
+# <<< conda initialize <<<
