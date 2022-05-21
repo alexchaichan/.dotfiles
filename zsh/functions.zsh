@@ -4,7 +4,7 @@
 
 # open this file
 funs(){
-    vim $DOTFILES/zsh/functions.sh
+    vim $DOTFILES/zsh/functions.zsh
 }
 
 ######################################################################
@@ -70,7 +70,6 @@ w3mb(){
     w3m -B
 }
 
-
 # alias for projects
 #
 
@@ -83,14 +82,12 @@ modeling(){
     nvim ~/Dropbox/uni/modeling/
   }
 
-
 synchro(){
     vdirsyncer discover my_contacts
     vdirsyncer discover my_calendar
     vdirsyncer sync
     mbsync icloud
 }
-
 
 todo(){
     vim ~/Dropbox/todo.md
@@ -100,19 +97,12 @@ odot(){
     glow ~/Dropbox/todo.md
 }
 
-
-
-
-
-
 #####################################################
 # zsh functions                                     #
 #####################################################
 
-#
 # ZSH functions to start/stop OpenConnect VPN client
-#
-#
+
 export VPN_HOST=https://vpn.uni-kassel.de/
 
 function vpn-up() {
@@ -129,7 +119,6 @@ function vpn-down() {
   sudo kill -2 `pgrep openconnect`
 }
 
-
 ### function to connect to the hiwi server
 
 # connect(){
@@ -141,7 +130,6 @@ function vpn-down() {
 disconnect(){
     umount /Volumes/Chaichan ; umount /Volumes/uk069555
 }
-
 
 ##########################################################################################################
 #pluginmanager                                                                                           #
@@ -165,11 +153,7 @@ function tmux_add_plugin() {
   git clone "https://github.com/$1.git" "$TDOTDIR/plugins/$PLUGIN_NAME"
 }
 
-alias PlugUpdate="cd ~/.config/nvim/pack/plugins/start && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd && cd ~/zsh/ && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd && cd ~/.tmux/ && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd"
-
-##########################################################################################################
-
-
+alias PlugUpdate="cd ~/.config/nvim/pack/plugins/start && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd && cd ~/.zsh_plugins/ && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd && cd ~/.tmux/ && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd"
 
 ##########################################################################################################
 # templates                                                                                              #
@@ -177,9 +161,7 @@ alias PlugUpdate="cd ~/.config/nvim/pack/plugins/start && find . -maxdepth 3 -na
 
 # when its come to create markdown documents use this
 
-
 # 1st link, when want to sent it push it do 2nd copie
-
 
 links(){
     rm -rf wordcount.lua literature.bib styles .Rprofile && ln -sf ~/.local/share/pandoc/filters/wordcount/wordcount.lua "$(pwd)" && ln -sf ~/.dotfiles/styles "$(pwd)" && ln -sf ~/Dropbox/googlebox/literature.bib "$(pwd)" && ln -sf ~/.dotfiles/R/.Rprofile "$(pwd)"
@@ -213,8 +195,8 @@ word(){
 #####################################################
 # zsh functions mac                                 #
 #####################################################
-if [[ "$os" == "osx" ]]; then
 
+if [[ "$os" == "osx" ]]; then
 
 audiomidisetup(){
   /usr/bin/open -a "Audio MIDI Setup"
@@ -303,11 +285,6 @@ update(){
     brew update && brew upgrade && brew cleanup && brew outdated && brew cu
 }
 
-
-#####################################################
-# zsh functions                                     #
-#####################################################
-
 # zsh functions to start/stop OpenConnect VPN client
 
 # define vpn host
@@ -327,7 +304,6 @@ function vpn-down() {
   sudo kill -2 `pgrep openconnect`
 }
 
-
 ### osa script to connect to the hiwi server
 
 # connect(){
@@ -339,12 +315,12 @@ disconnect(){
     umount /Volumes/Chaichan ; umount /Volumes/uk069555
 }
 
-
-
+fi
 #####################################################
 # zsh functions linux                               #
 #####################################################
-elif [[ "$os" == "linux" ]]; then
+
+if [[ "$os" == "linux" ]]; then
 
 # set the display on the imac to 100%
 licht(){
@@ -355,5 +331,5 @@ licht(){
 mm(){
     bluetoothctl connect 04:4B:ED:D2:45:CF
 }
-	
+
 fi
