@@ -15,6 +15,7 @@ export DROPBOX=$HOME/Dropbox
 export ZDOTDIR=$HOME/.zsh_plugins
 export VDOTDIR=$HOME/.config/nvim
 export TDOTDIR=$HOME/.tmux
+export CONFIG=$HOME/.config
 
 # default editor
 export EDITOR=nvim

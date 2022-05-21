@@ -16,47 +16,49 @@ case "${unameOut}" in
     *)          os="UNKNOWN:${unameOut}"
 esac
 
-# create $ directorys
+# create $ directories
 export HOME="$(echo -n $(bash -c "cd ~${USER} && pwd"))"
 export DOTFILES=$HOME/.dotfiles
-export ZDOTDIR=$HOME/zsh
+export DROPBOX=$HOME/Dropbox
+export ZDOTDIR=$HOME/.zsh_plugins
 export VDOTDIR=$HOME/.config/nvim
 export TDOTDIR=$HOME/.tmux
+export CONFIG=$HOME/.config
 
 # make osx system changes
 if [[ "$os" == "osx" ]]; then
-	source ~/.dotfiles/osx/.macos
+	source $DOTFILES/osx/.macos
 fi
 
 # create symlinks from .dotfiles repo
-source ~/.dotfiles/stowfile.sh
+source $DOTFILES/stowfile.sh
 
 # install plugins for zsh / neovim / tmux
-source ~/.dotfiles/plugins.sh
+source $DOTFILES/plugins.sh
 
 # install Brewfile / pacmanfile
 if [[ "$os" == "osx" ]]; then
-	brew bundle --file=~/.dotfiles/osx/Brewfile
+	brew bundle --file=$DOTFILES/osx/Brewfile
 elif [[ "$os" == "linux" ]]; then
-	pacman -S --needed - < ~/.dotfiles/arch/pacman/pacmanfile
+	pacman -S --needed - < $DOTFILES/arch/pacman/pacmanfile
 fi
 
 # install applications
 if [[ "$os" == "osx" ]]; then
-	source ~/.dotfiles/osx/applications.sh
+	source $DOTFILES/osx/applications.sh
 fi
 
 # install repositores
-source ~/.dotfiles/repositories.sh
+source $DOTFILES/repositories.sh
 
 # install crontabs
-source ~/.dotfiles/cronbtabs.sh
+source $DOTFILES/cronbtabs.sh
 
 # install R packages
-Rscript ~/.dotfiles/R/packages.R
+Rscript $DOTFILES/R/packages.R
 
 # install python packages
-source ~/.dotfiles/pip.sh
+source $DOTFILES/pip.sh
 
 # make zsh default shell
 if [ -z "`$SHELL -c 'echo $ZSH_VERSION'`" ]; then

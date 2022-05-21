@@ -4,176 +4,176 @@
 # create directories                                   #
 ########################################################
 
-mkdir ~/.config && mkdir ~/.cache && mkdir ~/repositories
+mkdir $HOME/.config && mkdir $HOME/.cache && mkdir $HOME/repositories
 
 ########################################################
 # create symlinks                                      #
 ########################################################
 
 # zsh
-mkdir ~/.zsh_plugins
-ln -sf ~/.dotfiles/zsh/.zshrc ~/
+mkdir $ZDOTDIR
+ln -sf $DOTFILES/zsh/.zshrc $HOME/
 
 # bash
 if [[ "$os" == "linux" ]]; then
-	ln -sf ~/.dotfiles/bash/.bashrc ~/
-	ln -sf ~/.dotfiles/bash/.bash_profile ~/
+	ln -sf $DOTFILES/bash/.bashrc $HOME/
+	ln -sf $DOTFILES/bash/.bash_profile $HOME/
 fi
 
 # git
 if [[ "$os" == "osx" ]]; then
-	ln -sf ~/.dotfiles/git/.gitconfig_osx ~/.gitconfig && git config --global core.excludesfile ~/.dotfiles/git/.gitignore_global
+	ln -sf $DOTFILES/git/.gitconfig_osx $HOME/.gitconfig && git config --global core.excludesfile $DOTFILES/git/.gitignore_global
 elif [[ "$os" == "linux" ]]; then
-	ln -sf ~/.dotfiles/git/.gitconfig_arch ~/.gitconfig && git config --global core.excludesfile ~/.dotfiles/git/.gitignore_global
+	ln -sf $DOTFILES/git/.gitconfig_arch $HOME/.gitconfig && git config --global core.excludesfile $DOTFILES/git/.gitignore_global
 fi
 
 ## git pass helper
-ln -sf ~/.dotfiles/git/pass-git-helper ~/.config
+ln -sf $DOTFILES/git/pass-git-helper $HOME/.config
 
 # alacritty
 if [[ "$os" == "osx" ]]; then
-	ln -sf ~/.dotfiles/alacritty/osx_alacritty.yml ~/.config/alacritty.yml
+	ln -sf $DOTFILES/alacritty/osx_alacritty.yml $CONFIG/alacritty.yml
 elif [[ "$os" == "linux" ]]; then
-	ln -sf ~/.dotfiles/alacritty/arch_alacritty.yml ~/.config/alacritty.yml
+	ln -sf $DOTFILES/alacritty/arch_alacritty.yml $CONFIG/alacritty.yml
 fi
 
 # nvim
-mkdir ~/.config/nvim && mkdir ~/.config/nvim/pack/ && mkdir ~/.config/nvim/pack/plugins/ && mkdir ~/.config/nvim/pack/plugins/start && mkdir ~/.config/nvim/pack/plugins/opt && mkdir ~/.config/nvim/spell && ln -sf ~/.dotfiles/nvim/nvim.lua/* ~/.config/nvim && ln -sf ~/.dotfiles/snippets/ ~/.config/nvim
+mkdir $VDOTDIR && mkdir $VDOTDIR/pack/ && mkdir $VDOTDIR/pack/plugins/ && mkdir $VDOTDIR/pack/plugins/start && mkdir $VDOTDIR/pack/plugins/opt && mkdir $VDOTDIR/spell && ln -sf $DOTFILES/nvim/nvim.lua/* $VDOTDIR && ln -sf $DOTFILES/snippets/ $VDOTDIR
 
 # tmux
-mkdir ~/.tmux && mkdir ~/.tmux/plugins
+mkdir $TDOTDIR && mkdir $TDOTDIR/plugins
 
 if [[ "$os" == "osx" ]]; then
-	ln -sf ~/.dotfiles/tmux/.osx_tmux.conf ~/.tmux.conf
+	ln -sf $DOTFILES/tmux/.osx_tmux.conf $HOME/.tmux.conf
 elif [[ "$os" == "linux" ]]; then
-	ln -sf ~/.dotfiles/tmux/.arch_tmux.conf ~/.tmux.conf
+	ln -sf $DOTFILES/tmux/.arch_tmux.conf $HOME/$HOME.tmux.conf
 fi
 
 # brewfile / pacmanfile
 if [[ "$os" == "osx" ]]; then
-	ln -sf ~/.dotfiles/osx/Brewfile ~/
+	ln -sf $DOTFILES/osx/Brewfile $HOME/
 elif [[ "$os" == "linux" ]]; then
-	ln -sf ~/.dotfiles/arch/pacman/pacmanfile ~/
+	ln -sf $DOTFILES/arch/pacman/pacmanfile $HOME/
 fi
 
 # qutebrowser
 if [[ "$os" == "osx" ]]; then
-	mkdir ~/.qutebrowser
-	ln -sf ~/.dotfiles/qutebrowser/.qutebrowser/* ~/.qutebrowser
-	git clone https://github.com/dracula/qutebrowser-dracula-theme.git ~/.qutebrowser/dracula
-elif [[ "$os" == "linux" ]]; then
-	mkdir ~/.config/qutebrowser
-	ln -sf ~/.dotfiles/qutebrowser/.qutebrowser/* ~/.config/qutebrowser
-	git clone https://github.com/dracula/qutebrowser-dracula-theme.git ~/.config/qutebrowser/dracula
+	mkdir $HOME.qutebrowser
+	ln -sf $DOTFILES/qutebrowser/.qutebrowser/* $HOME/.qutebrowser
+	git clone https://github.com/dracula/qutebrowser-dracula-theme.git $HOME/.qutebrowser/dracula
+elif [[ "$os" == "linux" ]]; then$HOME
+	mkdir $CONFIG/qutebrowser
+	ln -sf $DOTFILES/qutebrowser/.qutebrowser/* $CONFIG/qutebrowser
+	git clone https://github.com/dracula/qutebrowser-dracula-theme.git $CONFIG/qutebrowser/dracula
 fi
 
 # qutebrowser bookmarks
-ln -sf ~/.dotfiles/qutebrowser/.qutebrowser/bookmarks/urls ~/
+ln -sf $DOTFILES/qutebrowser/.qutebrowser/bookmarks/urls $HOME/
 
 # mail
-mkdir ~/mail
+mkdir $HOME/mail
 
 ## muttrc
-ln -sf ~/.dotfiles/mutt/.muttrc ~/
+ln -sf $DOTFILES/mutt/.muttrc $HOME/
 
 ## mailcap
 if [[ "$os" == "osx" ]]; then
-	ln -sf ~/.dotfiles/mutt/.mac_mailcap ~/.mailcap
+	ln -sf $DOTFILES/mutt/.mac_mailcap $HOME/.mailcap
 elif [[ "$os" == "linux" ]]; then
-	ln -sf ~/.dotfiles/mutt/.arch_mailcap ~/.mailcap
+	ln -sf $DOTFILES/mutt/.arch_mailcap $HOME/.mailcap
 fi
 
 # rstudio
-mkdir ~/.config/rstudio && ln -sf ~/.dotfiles/rstudio/* ~/.config/rstudio && ln -sf ~/.dotfiles/snippets ~/.config/rstudio/
+mkdir $CONFIG/rstudio && ln -sf $DOTFILES/rstudio/* $CONFIG/rstudio && ln -sf $DOTFILES/snippets $CONFIG/rstudio/
 
 # psychopy
-mkdir ~/.psychopy3 && ln -sf ~/.dotfiles/psychopy/.psychopy3/* ~/.psychopy3
+mkdir $HOME/.psychopy3 && ln -sf $DOTFILES/psychopy/.psychopy3/* $HOME/.psychopy3
 
 # zathura
-mkdir ~/.config/zathura
+mkdir $CONFIG/zathura
 
 if [[ "$os" == "osx" ]]; then
-	ln -sf ~/.dotfiles/zathura/osx_zathurarc ~/.config/zathura/zathurarc
+	ln -sf $DOTFILES/zathura/osx_zathurarc $CONFIG/zathura/zathurarc
 elif [[ "$os" == "linux" ]]; then
-	ln -sf ~/.dotfiles/zathura/arch_zathurarc ~/.config/zathura/zathurarc
+	ln -sf $DOTFILES/zathura/arch_zathurarc $CONFIG/zathura/zathurarc
 fi
 
 # xinitrc
 if [[ "$os" == "linux" ]]; then
-	ln -sf ~/.dotfiles/arch/.xinitrc ~/
+	ln -sf $DOTFILES/arch/.xinitrc $HOME/
 fi
 
 # pacman.conf
 if [[ "$os" == "linux" ]]; then
-	ln -sf ~/.dotfiles/arch/pacman/pacman.conf /etc
+	ln -sf $DOTFILES/arch/pacman/pacman.conf /etc
 fi
 
 # spotify
-mkdir ~/.config/spotify-tui && mkdir ~/.config/spotifyd && mkdir ~/.cache/spotifyd
+mkdir $CONFIG/spotify-tui && mkdir $CONFIG/spotifyd && mkdir $HOME/.cache/spotifyd
 
 ## spotifyd
 if [[ "$os" == "osx" ]]; then
-	ln -sf ~/.dotfiles/spotify/spotifyd/osx_spotifyd.conf ~/.config/spotifyd/spotifyd.conf
+	ln -sf $DOTFILES/spotify/spotifyd/osx_spotifyd.conf $CONFIG/spotifyd/spotifyd.conf
 elif [[ "$os" == "linux" ]]; then
-	ln -sf ~/.dotfiles/spotify/spotifyd/arch_spotifyd.conf ~/.config/spotifyd/spotifyd.conf
+	ln -sf $DOTFILES/spotify/spotifyd/arch_spotifyd.conf $CONFIG/spotifyd/spotifyd.conf
 fi
 
 ## spotify-tui
-ln -sf ~/.dotfiles/spotify/spotify-tui/config.yml ~/.config/spotify-tui
+ln -sf $DOTFILES/spotify/spotify-tui/config.yml $CONFIG/spotify-tui
 
 # i3
 if [[ "$os" == "linux" ]]; then
-	ln -sf ~/.dotfiles/i3/i3 ~/.config
-	ln -sf ~/.dotfiles/i3/i3status ~/.config
+	ln -sf $DOTFILES/i3/i3 $HOME/.config
+	ln -sf $DOTFILES/i3/i3status $HOME/.config
 fi
 
 ## spotify credentials
-echo | pass spotify-tui > ~/.config/spotify-tui/client.yml
+echo | pass spotify-tui > $CONFIG/spotify-tui/client.yml
 
 if [[ "$os" == "osx" ]]; then
-	echo | pass spotifyd > ~/.cache/spotifyd/credentials.json
+	echo | pass spotifyd > $HOME/.cache/spotifyd/credentials.json
 elif [[ "$os" == "linux" ]]; then
-	echo | pass spotifyd > ~/.config/spotifyd/cache/credentials.json
+	echo | pass spotifyd > $CONFIG/spotifyd/cache/credentials.json
 fi
 
 # ranger
-mkdir ~/.config/ranger && ln -sf ~/.dotfiles/ranger/* ~/.config/ranger
+mkdir $CONFIG/ranger && ln -sf $DOTFILES/ranger/* $CONFIG/ranger
 
 # contacs & calendar
-mkdir ~/.contacts && mkdir ~/.calendars
+mkdir $HOME/.contacts && mkdir $HOME/.calendars
 
 # khard
-ln -sf ~/.dotfiles/khard ~/.config
+ln -sf $DOTFILES/khard $HOME/.config
 
 # khal
-ln -sf ~/.dotfiles/khal ~/.config
+ln -sf $DOTFILES/khal $HOME/.config
 
 # vdirsyncer
-mkdir ~/.config/vdirsyncer && ln -sf ~/.dotfiles/isync/vdirsyncer/config ~/.config/vdirsyncer
+mkdir $CONFIG/vdirsyncer && ln -sf $DOTFILES/isync/vdirsyncer/config $CONFIG/vdirsyncer
 
 # mbsync
-ln -sf ~/.dotfiles/isync/mbsync/.mbsyncrc ~/
+ln -sf $DOTFILES/isync/mbsync/.mbsyncrc $HOME/
 
 # newsboat
-mkdir ~/.newsboat && ln -sf ~/.dotfiles/newsboat/.newsboat/* ~/.newsboat
+mkdir $HOME/.newsboat && ln -sf $DOTFILES/newsboat/.newsboat/* $HOME/.newsboat
 
 # w3m
-mkdir ~/.w3m && ln -sf ~/.dotfiles/w3m/.w3m/* ~/.w3m
+mkdir $HOME/.w3m && ln -sf $DOTFILES/w3m/.w3m/* $HOME/.w3m
 
 # jupyter
-mkdir ~/.jupyter && mkdir ~/.jupyter/lab && ln -sf ~/.dotfiles/jupyter/.jupyter/jupyter_qtconsole_config.py ~/.jupyter && ln -sf ~/.dotfiles/jupyter/.jupyter/qtdracula.css ~/.jupyter && ln -sf ~/.dotfiles/jupyter/.jupyter/lab/user-settings ~/.jupyter/lab
+mkdir $HOME/.jupyter && mkdir $HOME/.jupyter/lab && ln -sf $DOTFILES/jupyter/.jupyter/jupyter_qtconsole_config.py $HOME/.jupyter && ln -sf $DOTFILES/jupyter/.jupyter/qtdracula.css $HOME/.jupyter && ln -sf $DOTFILES/jupyter/.jupyter/lab/user-settings $HOME/.jupyter/lab
 
 # templates
-ln -sf ~/.dotfiles/Templates ~/
+ln -sf $DOTFILES/Templates $HOME/
 
 # htop
-ln -sf ~/.dotfiles/htop/ ~/.config
+ln -sf $DOTFILES/htop/ $HOME/.config
 
 # mpv
-ln -sf ~/.dotfiles/mpv ~/.config
+ln -sf $DOTFILES/mpv $HOME/.config
 
 # neofetch
-ln -sf ~/.dotfiles/neofetch ~/.config
+ln -sf $DOTFILES/neofetch $HOME/.config
 
 ########################################################
 # services                                             #
@@ -181,9 +181,9 @@ ln -sf ~/.dotfiles/neofetch ~/.config
 
 # arch dropbox service
 if [[ "$os" == "linux" ]]; then
-	mkdir ~/.config/systemd/
-	mkdir ~/.config/systemd/user/
-	#cp ~/.dotfiles/arch/dropbox.service ~/.config/systemd/user/
+	mkdir $CONFIG/systemd/
+	mkdir $CONFIG/systemd/user/
+	#cp $DOTFILES/arch/dropbox.service $CONFIG/systemd/user/
 
 	#systemctl --user start dropbox
 	#systemctl --user status dropbox # check status
