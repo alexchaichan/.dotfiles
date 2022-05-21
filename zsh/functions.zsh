@@ -71,7 +71,6 @@ w3mb(){
 }
 
 # alias for projects
-#
 
 schoko(){
 
@@ -90,11 +89,11 @@ synchro(){
 }
 
 todo(){
-    vim ~/Dropbox/todo.md
+    vim $DROPBOX/todo.md
 }
 
 odot(){
-    glow ~/Dropbox/todo.md
+    glow $DROPBOX/todo.md
 }
 
 #####################################################
@@ -153,7 +152,7 @@ function tmux_add_plugin() {
   git clone "https://github.com/$1.git" "$TDOTDIR/plugins/$PLUGIN_NAME"
 }
 
-alias PlugUpdate="cd ~/.config/nvim/pack/plugins/start && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd && cd ~/.zsh_plugins/ && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd && cd ~/.tmux/ && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd"
+alias PlugUpdate="cd $VDOTDIR/pack/plugins/start && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd && cd $ZDOTDIR && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd && cd $TDOTDIR && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd"
 
 ##########################################################################################################
 # templates                                                                                              #
@@ -164,31 +163,31 @@ alias PlugUpdate="cd ~/.config/nvim/pack/plugins/start && find . -maxdepth 3 -na
 # 1st link, when want to sent it push it do 2nd copie
 
 links(){
-    rm -rf wordcount.lua literature.bib styles .Rprofile && ln -sf ~/.local/share/pandoc/filters/wordcount/wordcount.lua "$(pwd)" && ln -sf ~/.dotfiles/styles "$(pwd)" && ln -sf ~/Dropbox/googlebox/literature.bib "$(pwd)" && ln -sf ~/.dotfiles/R/.Rprofile "$(pwd)"
+    rm -rf wordcount.lua literature.bib styles .Rprofile && ln -sf ~/.local/share/pandoc/filters/wordcount/wordcount.lua "$(pwd)" && ln -sf $DOTFILES/styles "$(pwd)" && ln -sf $DROPBOX/googlebox/literature.bib "$(pwd)" && ln -sf $DOTFILES/R/.Rprofile "$(pwd)"
 }
 
 copies(){
-rm -rf wordcount.lua literature.bib styles .Rprofile && cp ~/.local/share/pandoc/filters/wordcount/wordcount.lua "$(pwd)" && cp -rf ~/.dotfiles/styles "$(pwd)" && cp ~/Dropbox/googlebox/literature.bib "$(pwd)" && cp ~/.dotfiles/R/.Rprofile "$(pwd)"
+rm -rf wordcount.lua literature.bib styles .Rprofile && cp $HOME/.local/share/pandoc/filters/wordcount/wordcount.lua "$(pwd)" && cp -rf $DOTFILES/styles "$(pwd)" && cp $DROPBOX/googlebox/literature.bib "$(pwd)" && cp $DOTFILES/R/.Rprofile "$(pwd)"
 }
 
 pdf(){
-    cp ~/.dotfiles/Templates/pdf.rmd "$(pwd)"
+    cp $DOTFILES/Templates/pdf.rmd "$(pwd)"
 }
 
 html(){
-    cp ~/.dotfiles/Templates/html.rmd "$(pwd)"
+    cp $DOTFILES/Templates/html.rmd "$(pwd)"
 }
 
 letter(){
-    cp ~/.dotfiles/Templates/letter.rmd "$(pwd)"
+    cp $DOTFILES/Templates/letter.rmd "$(pwd)"
 }
 
 pptx(){
-    cp ~/.dotfiles/Templates/pptx.rmd "$(pwd)"
+    cp $DOTFILES/Templates/pptx.rmd "$(pwd)"
 }
 
 word(){
-    cp ~/.dotfiles/Templates/word.rmd "$(pwd)"
+    cp $DOTFILES/Templates/word.rmd "$(pwd)"
 }
 
 

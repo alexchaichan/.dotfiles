@@ -14,7 +14,7 @@ vim.opt.clipboard = "unnamedplus" -- allows neovim to access the system clipboar
 vim.opt.cmdheight = 1 -- more space in the neovim command line for displaying messages
 vim.opt.conceallevel = 0 -- so that `` is visible in markdown files
 vim.opt.undofile = true -- enable persistent undo
-vim.cmd "set noshowmode" -- disable 2nd mode status bat line
+vim.cmd "set noshowmode" -- disable 2nd mode status line
 
 -- mapping waiting time
 vim.o.timeout = false

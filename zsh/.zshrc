@@ -11,6 +11,7 @@ esac
 # create $ directories
 export HOME="$(echo -n $(bash -c "cd ~${USER} && pwd"))"
 export DOTFILES=$HOME/.dotfiles
+export DROPBOX=$HOME/Dropbox
 export ZDOTDIR=$HOME/.zsh_plugins
 export VDOTDIR=$HOME/.config/nvim
 export TDOTDIR=$HOME/.tmux
@@ -28,11 +29,11 @@ source $ZDOTDIR/powerlevel10k/powerlevel10k.zsh-theme
 source $ZDOTDIR/zsh-autopair/autopair.zsh
 
 if [[ "$os" == "osx" ]]; then
-	source /usr/local/Cellar/fzf/0.30.0/shell/completion.zsh
+  source /usr/local/Cellar/fzf/0.30.0/shell/completion.zsh
 	source /usr/local/Cellar/fzf/0.30.0/shell/key-bindings.zsh
 elif [[ "$os" == "linux" ]]; then
 	#source /usr/local/fzf/0.30.0/shell/completion.zsh
-	#source /usr/local/fzf/0.30.0/shell/key-bindings.zsh	
+	#source /usr/local/fzf/0.30.0/shell/key-bindings.zsh
 fi
 
 source $HOME/.dotfiles/zsh/.p10k.zsh
