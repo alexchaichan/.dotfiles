@@ -83,6 +83,9 @@ elif [[ "$os" == "linux" ]]; then
 	ln -sf $DOTFILES/mutt/.arch_mailcap $HOME/.mailcap
 fi
 
+# bat
+ln -sf $DOTFILES/bat $CONFIG
+
 # rstudio
 mkdir $CONFIG/rstudio && ln -sf $DOTFILES/rstudio/* $CONFIG/rstudio && ln -sf $DOTFILES/snippets $CONFIG/rstudio/
 
