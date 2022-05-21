@@ -1,12 +1,8 @@
-local lsp_installer =require("nvim-lsp-installer")
 local lspconfig = require("lspconfig")
 local servers = { "sumneko_lua", "r_language_server", "pyright" }
 
-lsp_installer.setup {
-	ensure_installed = servers
-}
 
-for _, server in pairs(servers) do
+for _, server in ipairs(servers) do
 	local opts = {
 		on_attach = require("plugins.lsp.handlers").on_attach,
 		capabilities = require("plugins.lsp.handlers").capabilities,
