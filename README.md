@@ -1,8 +1,9 @@
 # dotfiles
 
-- **for windows**
-  : install [cygwin](https://cygwin.com/setup-x86_64.exe)
-  : pick wget
+## for windows:
+  
+- install [cygwin](https://cygwin.com/setup-x86_64.exe)
+- pick wget
 
 ## package installer
 
