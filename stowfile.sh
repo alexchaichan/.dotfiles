@@ -4,33 +4,19 @@
 # create directories                                   #
 ########################################################
 
-if [[ "$os" == "osx" || "$os" == "linux" ]]; then
-  mkdir $CONFIG && mkdir $HOME/.cache && mkdir $HOME/repositories
-elif [[ "$os" == "cygwin" ]]; then
-  mkdir ~/.config && mkdir ~/.cache && mkdir ~/repositorier
-fi
+mkdir $CONFIG && mkdir $HOME/.cache && mkdir $HOME/repositories
 
 ########################################################
 # create symlinks                                      #
 ########################################################
 
 # zsh
-if [[ "$os" == "osx" || "$os" == "linux" ]]; then
-  mkdir $ZDOTDIR
-  ln -sf $DOTFILES/zsh/zsh/.zshrc $HOME/
-elif [[ "$os" == "cygwin" ]]; then
-  mkdir ~/.zsh_plugins
-  cp -fR ~/.dotfiles/zsh/zsh/.zshrc ~/
-fi
+mkdir $ZDOTDIR
+ln -sf $DOTFILES/zsh/zsh/.zshrc $HOME/
 
 # bash
-if [[ "$os" == "osx" || "$os" == "linux" ]]; then
-  ln -sf $DOTFILES/bash/bash/.bashrc $HOME/
-  ln -sf $DOTFILES/bash/bash/.bash_profile $HOME/
-elif [[ "$os" == "cygwin" ]]; then
-  cp -fR ~/.dotfiles/bash/bash/.bashrc ~/
-  cp -fR ~/.dotfiles/bash/bash/.bash_profile ~/
-fi
+ln -sf $DOTFILES/bash/bash/.bashrc $HOME/
+ln -sf $DOTFILES/bash/bash/.bash_profile $HOME/
 
 # git
 ln -sf $DOTFILES/git/git/.gitignore_global $HOME/
@@ -38,16 +24,10 @@ if [[ "$os" == "osx" ]]; then
 	ln -sf $DOTFILES/git/git/.gitconfig_osx $HOME/.gitconfig && git config --global core.excludesfile $DOTFILES/git/git/.gitignore_global
 elif [[ "$os" == "linux" ]]; then
 	ln -sf $DOTFILES/git/git/.gitconfig_arch $HOME/.gitconfig && git config --global core.excludesfile $DOTFILES/git/git/.gitignore_global
-elif [[ "$os" == "cygwin" ]]; then
-  cp -fR ~/.dotfiles/git/git/.gitconfig_windows ~/ && git config --global core.excludesfile ~/.dotfiles/git/git/.gitignore_global
 fi
 
 ## git pass helper
-if [[ "$os" == "osx" || "$os" == "linux" ]]; then
-  ln -sf $DOTFILES/git/git/pass-git-helper $HOME/.config
-elif [[ "$os" == "cygwin" ]]; then
-  cp -fR ~/.dotfiles/git/git/pass-git-helper ~/.config
-fi
+ln -sf $DOTFILES/git/git/pass-git-helper $HOME/.config
 
 # alacritty
 if [[ "$os" == "osx" ]]; then
