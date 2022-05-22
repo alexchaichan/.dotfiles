@@ -147,10 +147,10 @@ mkdir $CONFIG/ranger && ln -sf $DOTFILES/ranger/* $CONFIG/ranger
 mkdir $HOME/.contacts && mkdir $HOME/.calendars
 
 # khard
-ln -sf $DOTFILES/khard $HOME/.config
+ln -sf $DOTFILES/khard/khard $HOME/.config
 
 # khal
-ln -sf $DOTFILES/khal $HOME/.config
+ln -sf $DOTFILES/khal/khal $HOME/.config
 
 # vdirsyncer
 mkdir $CONFIG/vdirsyncer && ln -sf $DOTFILES/isync/vdirsyncer/config $CONFIG/vdirsyncer
@@ -174,7 +174,7 @@ ln -sf $DOTFILES/Templates $HOME/
 ln -sf $DOTFILES/htop/htop/ $HOME/.config
 
 # mpv
-ln -sf $DOTFILES/mpv $HOME/.config
+ln -sf $DOTFILES/mpv/mpv $HOME/.config
 
 # neofetch
 ln -sf $DOTFILES/neofetch $HOME/.config
