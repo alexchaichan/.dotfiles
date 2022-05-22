@@ -55,7 +55,7 @@ source $DOTFILES/repositories.sh
 source $DOTFILES/cronbtabs.sh
 
 # install R packages
-Rscript $DOTFILES/R/packages.R
+Rscript $DOTFILES/R/R/packages.R
 
 # install python packages
 source $DOTFILES/pip.sh

@@ -42,13 +42,8 @@ fi
 mkdir $VDOTDIR && mkdir $VDOTDIR/pack/ && mkdir $VDOTDIR/pack/plugins/ && mkdir $VDOTDIR/pack/plugins/start && mkdir $VDOTDIR/pack/plugins/opt && mkdir $VDOTDIR/spell && ln -sf $DOTFILES/nvim/nvim.lua/* $VDOTDIR && ln -sf $DOTFILES/snippets/ $VDOTDIR
 
 # tmux
-mkdir $TDOTDIR && mkdir $TDOTDIR/plugins
+mkdir $TDOTDIR && mkdir $TDOTDIR/plugins && ln -sf $DOTFILES/tmux/tmux/.tmux.conf $HOME/.tmux.conf
 
-if [[ "$os" == "osx" ]]; then
-	ln -sf $DOTFILES/tmux/.osx_tmux.conf $HOME/.tmux.conf
-elif [[ "$os" == "linux" ]]; then
-	ln -sf $DOTFILES/tmux/.arch_tmux.conf $HOME/$HOME.tmux.conf
-fi
 
 # brewfile / pacmanfile
 if [[ "$os" == "osx" ]]; then
@@ -88,7 +83,7 @@ fi
 ln -sf $DOTFILES/bat/bat $CONFIG
 
 # rstudio
-mkdir $CONFIG/rstudio && ln -sf $DOTFILES/rstudio/rstudio/* $CONFIG/rstudio && ln -sf $DOTFILES/snippets $CONFIG/rstudio/
+mkdir $CONFIG/rstudio && ln -sf $DOTFILES/rstudio/rstudio/rstudio-prefs.json $CONFIG/rstudio && ln -sf $DOTFILES/snippets $CONFIG/rstudio/
 
 # psychopy
 mkdir $HOME/.psychopy3 && ln -sf $DOTFILES/psychopy/.psychopy3/* $HOME/.psychopy3
@@ -177,7 +172,7 @@ ln -sf $DOTFILES/htop/htop/ $HOME/.config
 ln -sf $DOTFILES/mpv/mpv $HOME/.config
 
 # neofetch
-ln -sf $DOTFILES/neofetch $HOME/.config
+ln -sf $DOTFILES/neofetch/neofetch $HOME/.config
 
 ########################################################
 # services                                             #
