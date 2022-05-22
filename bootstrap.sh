@@ -17,7 +17,9 @@ case "${unameOut}" in
 esac
 
 # create $ directories
-export HOME="$(echo -n $(bash -c "cd ~${USER} && pwd"))"
+if [[ "$os" == "osx" || "$os" == "linux" ]]; then
+	export HOME="$(echo -n $(bash -c "cd ~${USER} && pwd"))"
+fi
 export DOTFILES=$HOME/.dotfiles
 export DROPBOX=$HOME/Dropbox
 export ZDOTDIR=$HOME/.zsh_plugins
