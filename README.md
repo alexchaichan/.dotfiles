@@ -15,7 +15,7 @@ elif [[ "$(expr substr $(uname -s) 1 5)" == "Linux" ]]; then
     Server = http://repo.archlinux.fr/$arch' >> /etc/pacman.conf
     pacman -Sy yaourt
 elif [[ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]]; then
-
+  echo "hi"
 elif [[ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]]; then
   echo "hi"
 fi
