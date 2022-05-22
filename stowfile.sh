@@ -22,9 +22,9 @@ fi
 
 # git
 if [[ "$os" == "osx" ]]; then
-	ln -sf $DOTFILES/git/git/.gitconfig_osx $HOME/.gitconfig && git config --global core.excludesfile $DOTFILES/git/.gitignore_global
+	ln -sf $DOTFILES/git/git/.gitconfig_osx $HOME/.gitconfig && git config --global core.excludesfile $DOTFILES/git/git/.gitignore_global
 elif [[ "$os" == "linux" ]]; then
-	ln -sf $DOTFILES/git/git/.gitconfig_arch $HOME/.gitconfig && git config --global core.excludesfile $DOTFILES/git/.gitignore_global
+	ln -sf $DOTFILES/git/git/.gitconfig_arch $HOME/.gitconfig && git config --global core.excludesfile $DOTFILES/git/git/.gitignore_global
 fi
 
 ## git pass helper
