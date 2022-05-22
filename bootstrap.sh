@@ -30,6 +30,10 @@ if [[ "$os" == "osx" ]]; then
 	source $DOTFILES/osx/.macos
 fi
 
+# if [[ "$os" == "cygwin" ]]; then
+# 	source $DOTFILES/osx/.macos
+# fi
+
 # create symlinks from .dotfiles repo
 source $DOTFILES/stowfile.sh
 
