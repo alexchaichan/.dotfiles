@@ -17,66 +17,59 @@ esac
 # create $ directorys
 export HOME="$(echo -n $(bash -c "cd ~${USER} && pwd"))"
 export DOTFILES=$HOME/.dotfiles
-export ZDOTDIR=$HOME/zsh
+export ZDOTDIR=$HOME/.zsh_plugins
 export VDOTDIR=$HOME/.config/nvim
 export TDOTDIR=$HOME/.tmux
+export CONFIG=$HOME/.config
 
 # create directories
-mkdir $HOME/.config
+mkdir $CONFIG
 
 # stowfile
 
 # zsh
-mkdir ~/.zsh_plugins
+mkdir $ZDOTDIR
 
-if [[ "$os" == "osx" ]]; then
-	ln -sf ~/.dotfiles/zsh/.zshrc_mac ~/.zshrc
-elif [[ "$os" == "linux" ]]; then
-	ln -sf ~/.dotfiles/zsh/.zshrc_linux ~/.zshrc
-fi
+ln -sf $DOTFILES/zsh/zsh/.zshrc $HOME/
+
 
 # alacritty
 if [[ "$os" == "osx" ]]; then
-	ln -sf ~/.dotfiles/alacritty/osx_alacritty.yml ~/.config/alacritty.yml
+	ln -sf $DOTFILES/alacritty/alacritty/osx_alacritty.yml $CONFIG/alacritty.yml
 elif [[ "$os" == "linux" ]]; then
-	ln -sf ~/.dotfiles/alacritty/arch_alacritty.yml ~/.config/alacritty.yml
+	ln -sf $DOTFILES/alacritty/alacritty/arch_alacritty.yml $CONFIG/alacritty.yml
 fi
 
 # nvim
-mkdir ~/.config/nvim && mkdir ~/.config/nvim/pack/ && mkdir ~/.config/nvim/pack/plugins/ && mkdir ~/.config/nvim/pack/plugins/start && mkdir ~/.config/nvim/pack/plugins/opt && mkdir ~/.config/nvim/spell && ln -sf ~/.dotfiles/nvim/nvim.lua/* ~/.config/nvim && ln -sf ~/.dotfiles/snippets/ ~/.config/nvim
+mkdir $CONFIG/nvim && mkdir $CONFIG/nvim/pack/ && mkdir $CONFIG/nvim/pack/plugins/ && mkdir $CONFIG/nvim/pack/plugins/start && mkdir $CONFIG/nvim/pack/plugins/opt && mkdir $CONFIG/nvim/spell && ln -sf ~/.dotfiles/nvim/nvim.lua/* $CONFIG/nvim && ln -sf ~/.dotfiles/snippets/ $CONFIG/nvim
 
 # tmux
-mkdir ~/.tmux && mkdir ~/.tmux/plugins
-
-if [[ "$os" == "osx" ]]; then
-	ln -sf ~/.dotfiles/tmux/.osx_tmux.conf ~/.tmux.conf
-elif [[ "$os" == "linux" ]]; then
-	ln -sf ~/.dotfiles/tmux/.arch_tmux.conf ~/.tmux.conf
-fi
+mkdir $TDOTDIR && mkdir $TDOTDIR/plugins && ln -sf $DOTFILES/tmux/tmux/.tmux.conf $HOME/
 
 # qutebrowser
 if [[ "$os" == "osx" ]]; then
-	mkdir ~/.qutebrowser
-	ln -sf ~/.dotfiles/qutebrowser/.qutebrowser/* ~/.qutebrowser
-	git clone https://github.com/dracula/qutebrowser-dracula-theme.git ~/.qutebrowser/dracula
+	mkdir $HOME/.qutebrowser
+	ln -sf $HOME/.dotfiles/qutebrowser/.qutebrowser/* $HOME/.qutebrowser
+	git clone https://github.com/dracula/qutebrowser-dracula-theme.git $HOME/.qutebrowser/dracula
 elif [[ "$os" == "linux" ]]; then
-	mkdir ~/.config/qutebrowser
-	ln -sf ~/.dotfiles/qutebrowser/.qutebrowser/* ~/.config/qutebrowser
-	git clone https://github.com/dracula/qutebrowser-dracula-theme.git ~/.config/qutebrowser/dracula
+	mkdir $CONFIG/qutebrowser
+	ln -sf $HOME/.dotfiles/qutebrowser/.qutebrowser/* $CONFIG/qutebrowser
+	git clone https://github.com/dracula/qutebrowser-dracula-theme.git $CONFIG/qutebrowser/dracula
 fi
 
 # qutebrowser bookmarks
-ln -sf ~/.dotfiles/qutebrowser/.qutebrowser/bookmarks/urls ~/
+ln -sf $DOTFILES/qutebrowser/.qutebrowser/bookmarks/urls $HOME/
 
 # plugins
 
 source $DOTFILES/plugins.sh
 
 # programs
-
-brew install bat neovim ranger tmux zsh
-
-brew install --casl alacritty
+if [[ "$os" == "osx" ]]; then
+	brew install bat neovim ranger tmux zsh && brew install --casl alacritty
+elif [[ "$os" == "linux" ]]; then
+	pacman -S bat neovim ranger tmux zsh alacritty
+fi
 
 # make zsh default shell
 if [ -z "`$SHELL -c 'echo $ZSH_VERSION'`" ]; then

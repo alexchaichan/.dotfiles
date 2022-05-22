@@ -42,8 +42,7 @@ fi
 mkdir $VDOTDIR && mkdir $VDOTDIR/pack/ && mkdir $VDOTDIR/pack/plugins/ && mkdir $VDOTDIR/pack/plugins/start && mkdir $VDOTDIR/pack/plugins/opt && mkdir $VDOTDIR/spell && ln -sf $DOTFILES/nvim/nvim.lua/* $VDOTDIR && ln -sf $DOTFILES/snippets/ $VDOTDIR
 
 # tmux
-mkdir $TDOTDIR && mkdir $TDOTDIR/plugins && ln -sf $DOTFILES/tmux/tmux/.tmux.conf $HOME/.tmux.conf
-
+mkdir $TDOTDIR && mkdir $TDOTDIR/plugins && ln -sf $DOTFILES/tmux/tmux/.tmux.conf $HOME/
 
 # brewfile / pacmanfile
 if [[ "$os" == "osx" ]]; then
