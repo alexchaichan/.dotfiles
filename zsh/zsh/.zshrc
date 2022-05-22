@@ -37,8 +37,8 @@ elif [[ "$os" == "linux" ]]; then
 	#source /usr/local/fzf/0.30.0/shell/key-bindings.zsh
 fi
 
-source $HOME/.dotfiles/zsh/.p10k.zsh
-source $HOME/.dotfiles/zsh/functions.zsh
+source $HOME/.dotfiles/zsh/zsh/.p10k.zsh
+source $HOME/.dotfiles/zsh/zsh/functions.zsh
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]

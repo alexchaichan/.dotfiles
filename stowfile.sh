@@ -92,9 +92,9 @@ mkdir $HOME/.psychopy3 && ln -sf $DOTFILES/psychopy/.psychopy3/* $HOME/.psychopy
 mkdir $CONFIG/zathura
 
 if [[ "$os" == "osx" ]]; then
-	ln -sf $DOTFILES/zathura/osx_zathurarc $CONFIG/zathura/zathurarc
+	ln -sf $DOTFILES/zathura/zathura/osx_zathurarc $CONFIG/zathura/zathurarc
 elif [[ "$os" == "linux" ]]; then
-	ln -sf $DOTFILES/zathura/arch_zathurarc $CONFIG/zathura/zathurarc
+	ln -sf $DOTFILES/zathura/zathura/arch_zathurarc $CONFIG/zathura/zathurarc
 fi
 
 # xinitrc
