@@ -36,6 +36,8 @@ if [[ "$os" == "osx" ]]; then
 	ln -sf $DOTFILES/alacritty/alacritty/osx_alacritty.yml $CONFIG/alacritty.yml
 elif [[ "$os" == "linux" ]]; then
 	ln -sf $DOTFILES/alacritty/alacritty/arch_alacritty.yml $CONFIG/alacritty.yml
+elif [[ "$os" == "linux" ]]; then
+	ln -sf $DOTFILES/alacritty/alacritty/windows_alacritty.yml $CONFIG/alacritty.yml
 fi
 
 # nvim
