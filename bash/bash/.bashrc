@@ -1,6 +1,6 @@
 if [[ "$os" == "linux" ]]; then
 	startx
-elif [[ "$os" == "linux" ]]; then
+elif [[ "$os" == "cygwin" ]]; then
 	zsh
 fi
 
