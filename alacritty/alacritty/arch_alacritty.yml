@@ -1,13 +1,15 @@
-# osx
+#linux
+
 
 font:
   # Point size
-  size: 13.0
+  size: 12.0
 
 window:
-  decorations: buttonless
+  decorations: none 
+  
 
-# Shell
+  # Shell
 #
 # You can set `shell.program` to the path of your favorite shell, e.g.
 # `/bin/fish`. Entries in `shell.args` are passed unmodified as arguments to the
@@ -18,11 +20,11 @@ window:
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
 shell:
-  program: /bin/zsh
+  program: /usr/bin/zsh
   args:
    - --login
    - -c
    - "tmux attach || tmux"
 
 import:
-  - ~/.dotfiles/alacritty/alacritty.yml
+  - ~/.dotfiles/alacritty/alacritty/alacritty.yml
