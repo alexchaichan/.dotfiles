@@ -14,7 +14,7 @@ elif [[ "$(expr substr $(uname -s) 1 5)" == "Linux" ]]; then
     SigLevel = Never
     Server = http://repo.archlinux.fr/$arch' >> /etc/pacman.conf
     pacman -Sy yaourt
-elif [[ "$(expr substr $(uname -s) 1 10)" == "CYGWIN" ]]; then
+elif [[ "$(expr substr $(uname -s) 1 6)" == "CYGWIN" ]]; then
   echo "hi"
 fi
 ```
