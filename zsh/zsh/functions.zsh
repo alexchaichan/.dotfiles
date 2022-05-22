@@ -61,7 +61,7 @@ qute(){
 }
 
 # open neovim
-vim(){
+v(){
    nvim $1
 }
 
