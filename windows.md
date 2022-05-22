@@ -18,5 +18,5 @@
 2. open powershell
 
 ```
-choco install git alacritty qutebrowser
+choco install git alacritty qutebrowser neovim
 ```
