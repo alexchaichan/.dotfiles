@@ -87,7 +87,7 @@ fi
 ln -sf $DOTFILES/bat/bat $CONFIG
 
 # rstudio
-mkdir $CONFIG/rstudio && ln -sf $DOTFILES/rstudio/* $CONFIG/rstudio && ln -sf $DOTFILES/snippets $CONFIG/rstudio/
+mkdir $CONFIG/rstudio && ln -sf $DOTFILES/rstudio/rstudio/* $CONFIG/rstudio && ln -sf $DOTFILES/snippets $CONFIG/rstudio/
 
 # psychopy
 mkdir $HOME/.psychopy3 && ln -sf $DOTFILES/psychopy/.psychopy3/* $HOME/.psychopy3
