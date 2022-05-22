@@ -15,10 +15,8 @@ mkdir $ZDOTDIR
 ln -sf $DOTFILES/zsh/zsh/.zshrc $HOME/
 
 # bash
-if [[ "$os" == "linux" ]]; then
-	ln -sf $DOTFILES/bash/bash/.bashrc $HOME/
-	ln -sf $DOTFILES/bash/bash/.bash_profile $HOME/
-fi
+ln -sf $DOTFILES/bash/bash/.bashrc $HOME/
+ln -sf $DOTFILES/bash/bash/.bash_profile $HOME/
 
 # git
 ln -sf $DOTFILES/git/git/.gitignore_global $HOME/
@@ -36,8 +34,6 @@ if [[ "$os" == "osx" ]]; then
 	ln -sf $DOTFILES/alacritty/alacritty/osx_alacritty.yml $CONFIG/alacritty.yml
 elif [[ "$os" == "linux" ]]; then
 	ln -sf $DOTFILES/alacritty/alacritty/arch_alacritty.yml $CONFIG/alacritty.yml
-elif [[ "$os" == "linux" ]]; then
-	ln -sf $DOTFILES/alacritty/alacritty/windows_alacritty.yml $CONFIG/alacritty.yml
 fi
 
 # nvim
