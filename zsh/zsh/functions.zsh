@@ -4,7 +4,7 @@
 
 # open this file
 funs(){
-    vim $DOTFILES/zsh/functions.zsh
+    vim $DOTFILES/zsh/zsh/functions.zsh
 }
 
 ######################################################################
