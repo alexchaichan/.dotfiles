@@ -33,9 +33,9 @@ ln -sf $DOTFILES/git/git/pass-git-helper $HOME/.config
 
 # alacritty
 if [[ "$os" == "osx" ]]; then
-	ln -sf $DOTFILES/alacritty/osx_alacritty.yml $CONFIG/alacritty.yml
+	ln -sf $DOTFILES/alacritty/alacritty/osx_alacritty.yml $CONFIG/alacritty.yml
 elif [[ "$os" == "linux" ]]; then
-	ln -sf $DOTFILES/alacritty/arch_alacritty.yml $CONFIG/alacritty.yml
+	ln -sf $DOTFILES/alacritty/alacritty/arch_alacritty.yml $CONFIG/alacritty.yml
 fi
 
 # nvim
@@ -171,7 +171,7 @@ mkdir $HOME/.jupyter && mkdir $HOME/.jupyter/lab && ln -sf $DOTFILES/jupyter/.ju
 ln -sf $DOTFILES/Templates $HOME/
 
 # htop
-ln -sf $DOTFILES/htop/ $HOME/.config
+ln -sf $DOTFILES/htop/htop/ $HOME/.config
 
 # mpv
 ln -sf $DOTFILES/mpv $HOME/.config
