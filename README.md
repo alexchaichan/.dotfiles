@@ -15,7 +15,7 @@ elif [[ "$(expr substr $(uname -s) 1 5)" == "Linux" ]]; then
     Server = http://repo.archlinux.fr/$arch' >> /etc/pacman.conf
     pacman -Sy yaourt
 elif [[ "$(expr substr $(uname -s) 1 6)" == "CYGWIN" ]]; then
-  echo "hi"
+    wget rawgit.com/transcode-open/apt-cyg/master/apt-cyg
 fi
 ```
 
@@ -26,10 +26,8 @@ if [[ "$(uname)" == "Darwin" ]]; then
     brew install git
 elif [[ "$(expr substr $(uname -s) 1 5)" == "Linux" ]]; then
     sudo pacman -S git
-elif [[ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]]; then
-    winget install git
-elif [[ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]]; then
-    winget install git
+elif [[ "$(expr substr $(uname -s) 1 6)" == "CYGWIN" ]]; then
+    apt-cyg install git
 fi
 ```
 
