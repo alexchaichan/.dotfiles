@@ -4,19 +4,33 @@
 # create directories                                   #
 ########################################################
 
-mkdir $HOME/.config && mkdir $HOME/.cache && mkdir $HOME/repositories
+if [[ "$os" == "osx" || "$os" == "linux" ]]; then
+  mkdir $CONFIG && mkdir $HOME/.cache && mkdir $HOME/repositories
+elif [[ "$os" == "cygwin" ]]; then
+  mkdir ~/.config && mkdir ~/.cache && mkdir ~/repositorier
+fi
 
 ########################################################
 # create symlinks                                      #
 ########################################################
 
 # zsh
-mkdir $ZDOTDIR
-ln -sf $DOTFILES/zsh/zsh/.zshrc $HOME/
+if [[ "$os" == "osx" || "$os" == "linux" ]]; then
+  mkdir $ZDOTDIR
+  ln -sf $DOTFILES/zsh/zsh/.zshrc $HOME/
+elif [[ "$os" == "cygwin" ]]; then
+  mkdir ~/.zsh_plugins
+  cp -fR ~/.dotfiles/zsh/zsh/.zshrc ~/
+fi
 
 # bash
-ln -sf $DOTFILES/bash/bash/.bashrc $HOME/
-ln -sf $DOTFILES/bash/bash/.bash_profile $HOME/
+if [[ "$os" == "osx" || "$os" == "linux" ]]; then
+  ln -sf $DOTFILES/bash/bash/.bashrc $HOME/
+  ln -sf $DOTFILES/bash/bash/.bash_profile $HOME/
+elif [[ "$os" == "cygwin" ]]; then
+  cp -fR ~/.dotfiles/bash/bash/.bashrc ~/
+  cp -fR ~/.dotfiles/bash/bash/.bash_profile ~/
+fi
 
 # git
 ln -sf $DOTFILES/git/git/.gitignore_global $HOME/
@@ -24,10 +38,16 @@ if [[ "$os" == "osx" ]]; then
 	ln -sf $DOTFILES/git/git/.gitconfig_osx $HOME/.gitconfig && git config --global core.excludesfile $DOTFILES/git/git/.gitignore_global
 elif [[ "$os" == "linux" ]]; then
 	ln -sf $DOTFILES/git/git/.gitconfig_arch $HOME/.gitconfig && git config --global core.excludesfile $DOTFILES/git/git/.gitignore_global
+elif [[ "$os" == "cygwin" ]]; then
+  cp -fR ~/.dotfiles/git/git/.gitconfig_windows ~/ && git config --global core.excludesfile ~/.dotfiles/git/git/.gitignore_global
 fi
 
 ## git pass helper
-ln -sf $DOTFILES/git/git/pass-git-helper $HOME/.config
+if [[ "$os" == "osx" || "$os" == "linux" ]]; then
+  ln -sf $DOTFILES/git/git/pass-git-helper $HOME/.config
+elif [[ "$os" == "cygwin" ]]; then
+  cp -fR ~/.dotfiles/git/git/pass-git-helper ~/.config
+fi
 
 # alacritty
 if [[ "$os" == "osx" ]]; then
@@ -46,7 +66,7 @@ mkdir $TDOTDIR && mkdir $TDOTDIR/plugins && ln -sf $DOTFILES/tmux/tmux/.tmux.con
 if [[ "$os" == "osx" ]]; then
 	ln -sf $DOTFILES/osx/Brewfile $HOME/
 elif [[ "$os" == "linux" ]]; then
-	ln -sf $DOTFILES/arch/pacman/pacmanfile $HOME/
+	ln -sf $DOTFILES/arch/pacman/Pacmanfile $HOME/
 fi
 
 # qutebrowser
