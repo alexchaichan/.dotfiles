@@ -17,9 +17,7 @@ case "${unameOut}" in
 esac
 
 # create $ directories
-if [[ "$os" == "osx" || "$os" == "linux" ]]; then
-	export HOME="$(echo -n $(bash -c "cd ~${USER} && pwd"))"
-fi
+export HOME="$(echo -n $(bash -c "cd ~${USER} && pwd"))"
 export DOTFILES=$HOME/.dotfiles
 export DROPBOX=$HOME/Dropbox
 export ZDOTDIR=$HOME/.zsh_plugins
@@ -31,10 +29,6 @@ export CONFIG=$HOME/.config
 if [[ "$os" == "osx" ]]; then
 	source $DOTFILES/osx/.macos
 fi
-
-# if [[ "$os" == "cygwin" ]]; then
-# 	source $DOTFILES/osx/.macos
-# fi
 
 # create symlinks from .dotfiles repo
 source $DOTFILES/stowfile.sh
