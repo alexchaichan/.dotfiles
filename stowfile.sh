@@ -21,6 +21,7 @@ if [[ "$os" == "linux" ]]; then
 fi
 
 # git
+ln -sf $DOTFILES/git/git/.gitignore_global $HOME/
 if [[ "$os" == "osx" ]]; then
 	ln -sf $DOTFILES/git/git/.gitconfig_osx $HOME/.gitconfig && git config --global core.excludesfile $DOTFILES/git/git/.gitignore_global
 elif [[ "$os" == "linux" ]]; then
