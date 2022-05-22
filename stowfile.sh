@@ -16,8 +16,8 @@ ln -sf $DOTFILES/zsh/.zshrc $HOME/
 
 # bash
 if [[ "$os" == "linux" ]]; then
-	ln -sf $DOTFILES/bash/.bashrc $HOME/
-	ln -sf $DOTFILES/bash/.bash_profile $HOME/
+	ln -sf $DOTFILES/bash/bash/.bashrc $HOME/
+	ln -sf $DOTFILES/bash/bash/.bash_profile $HOME/
 fi
 
 # git
@@ -84,7 +84,7 @@ elif [[ "$os" == "linux" ]]; then
 fi
 
 # bat
-ln -sf $DOTFILES/bat $CONFIG
+ln -sf $DOTFILES/bat/bat $CONFIG
 
 # rstudio
 mkdir $CONFIG/rstudio && ln -sf $DOTFILES/rstudio/* $CONFIG/rstudio && ln -sf $DOTFILES/snippets $CONFIG/rstudio/
