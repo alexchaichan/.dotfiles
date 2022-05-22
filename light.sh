@@ -32,7 +32,6 @@ mkdir $ZDOTDIR
 
 ln -sf $DOTFILES/zsh/zsh/.zshrc $HOME/
 
-
 # alacritty
 if [[ "$os" == "osx" ]]; then
 	ln -sf $DOTFILES/alacritty/alacritty/osx_alacritty.yml $CONFIG/alacritty.yml
@@ -41,7 +40,7 @@ elif [[ "$os" == "linux" ]]; then
 fi
 
 # nvim
-mkdir $CONFIG/nvim && mkdir $CONFIG/nvim/pack/ && mkdir $CONFIG/nvim/pack/plugins/ && mkdir $CONFIG/nvim/pack/plugins/start && mkdir $CONFIG/nvim/pack/plugins/opt && mkdir $CONFIG/nvim/spell && ln -sf ~/.dotfiles/nvim/nvim.lua/* $CONFIG/nvim && ln -sf ~/.dotfiles/snippets/ $CONFIG/nvim
+mkdir $CONFIG/nvim && mkdir $CONFIG/nvim/pack/ && mkdir $CONFIG/nvim/pack/plugins/ && mkdir $CONFIG/nvim/pack/plugins/start && mkdir $CONFIG/nvim/pack/plugins/opt && mkdir $CONFIG/nvim/spell && ln -sf $DOTFILES/nvim/nvim.lua/* $CONFIG/nvim && ln -sf ~/.dotfiles/snippets/ $CONFIG/nvim
 
 # tmux
 mkdir $TDOTDIR && mkdir $TDOTDIR/plugins && ln -sf $DOTFILES/tmux/tmux/.tmux.conf $HOME/

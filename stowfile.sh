@@ -12,7 +12,7 @@ mkdir $HOME/.config && mkdir $HOME/.cache && mkdir $HOME/repositories
 
 # zsh
 mkdir $ZDOTDIR
-ln -sf $DOTFILES/zsh/.zshrc $HOME/
+ln -sf $DOTFILES/zsh/zsh/.zshrc $HOME/
 
 # bash
 if [[ "$os" == "linux" ]]; then
@@ -43,6 +43,7 @@ mkdir $VDOTDIR && mkdir $VDOTDIR/pack/ && mkdir $VDOTDIR/pack/plugins/ && mkdir 
 
 # tmux
 mkdir $TDOTDIR && mkdir $TDOTDIR/plugins && ln -sf $DOTFILES/tmux/tmux/.tmux.conf $HOME/
+
 
 # brewfile / pacmanfile
 if [[ "$os" == "osx" ]]; then
