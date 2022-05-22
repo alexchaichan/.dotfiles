@@ -3,7 +3,7 @@
 ## for windows:
   
 - install [cygwin](https://cygwin.com/setup-x86_64.exe)
-- pick wget
+- pick `wget`
 
 ## package installer
 
