@@ -16,6 +16,7 @@ elif [[ "$(expr substr $(uname -s) 1 5)" == "Linux" ]]; then
     pacman -Sy yaourt
 elif [[ "$(expr substr $(uname -s) 1 6)" == "CYGWIN" ]]; then
     wget rawgit.com/transcode-open/apt-cyg/master/apt-cyg
+    install apt-cyg /bin
 fi
 ```
 
