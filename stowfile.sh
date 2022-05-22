@@ -135,7 +135,7 @@ elif [[ "$os" == "linux" ]]; then
 fi
 
 # ranger
-mkdir $CONFIG/ranger && ln -sf $DOTFILES/ranger/* $CONFIG/ranger
+mkdir $CONFIG/ranger && ln -sf $DOTFILES/ranger/ranger/* $CONFIG/ranger
 
 # contacs & calendar
 mkdir $HOME/.contacts && mkdir $HOME/.calendars
