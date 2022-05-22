@@ -53,10 +53,10 @@ fi
 
 # qutebrowser
 if [[ "$os" == "osx" ]]; then
-	mkdir $HOME.qutebrowser
+	mkdir $HOME/.qutebrowser
 	ln -sf $DOTFILES/qutebrowser/.qutebrowser/* $HOME/.qutebrowser
 	git clone https://github.com/dracula/qutebrowser-dracula-theme.git $HOME/.qutebrowser/dracula
-elif [[ "$os" == "linux" ]]; then$HOME
+elif [[ "$os" == "linux" ]]; then
 	mkdir $CONFIG/qutebrowser
 	ln -sf $DOTFILES/qutebrowser/.qutebrowser/* $CONFIG/qutebrowser
 	git clone https://github.com/dracula/qutebrowser-dracula-theme.git $CONFIG/qutebrowser/dracula
@@ -121,8 +121,8 @@ ln -sf $DOTFILES/spotify/spotify-tui/config.yml $CONFIG/spotify-tui
 
 # i3
 if [[ "$os" == "linux" ]]; then
-	ln -sf $DOTFILES/i3/i3 $HOME/.config
-	ln -sf $DOTFILES/i3/i3status $HOME/.config
+	ln -sf $DOTFILES/i3/i3 $CONFIG
+	ln -sf $DOTFILES/i3/i3status $CONFIG
 fi
 
 ## spotify credentials
@@ -165,13 +165,13 @@ mkdir $HOME/.jupyter && mkdir $HOME/.jupyter/lab && ln -sf $DOTFILES/jupyter/.ju
 ln -sf $DOTFILES/Templates $HOME/
 
 # htop
-ln -sf $DOTFILES/htop/htop/ $HOME/.config
+ln -sf $DOTFILES/htop/htop/ $CONFIG
 
 # mpv
-ln -sf $DOTFILES/mpv/mpv $HOME/.config
+ln -sf $DOTFILES/mpv/mpv $CONFIG
 
 # neofetch
-ln -sf $DOTFILES/neofetch/neofetch $HOME/.config
+ln -sf $DOTFILES/neofetch/neofetch $CONFIG
 
 ########################################################
 # services                                             #
