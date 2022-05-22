@@ -44,7 +44,6 @@ mkdir $VDOTDIR && mkdir $VDOTDIR/pack/ && mkdir $VDOTDIR/pack/plugins/ && mkdir 
 # tmux
 mkdir $TDOTDIR && mkdir $TDOTDIR/plugins && ln -sf $DOTFILES/tmux/tmux/.tmux.conf $HOME/
 
-
 # brewfile / pacmanfile
 if [[ "$os" == "osx" ]]; then
 	ln -sf $DOTFILES/osx/Brewfile $HOME/
