@@ -16,3 +16,7 @@ pip install tldextract
 pip install JLDracula
 pip install qtconsole # pip3 install qtconsole pip3 install --user qtconsole
 pip install jupyter
+
+
+pip3 install matplotlib
+pip3 install sklearn
