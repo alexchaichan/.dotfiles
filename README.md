@@ -1,9 +1,5 @@
 # dotfiles
 
-## for windows:
-- install [cygwin](https://cygwin.com/setup-x86_64.exe)
-- pick `wget`
-
 ## package installer
 
 ```
@@ -47,6 +43,8 @@ fi
 
 `source ~/.dotfiles/light.sh`
 
-### run cygwin version
+## for windows:
+- install [cygwin](https://cygwin.com/setup-x86_64.exe)
+- pick `wget`
 
 `source ~/.dotfiles/windows/cygwin.sh`
