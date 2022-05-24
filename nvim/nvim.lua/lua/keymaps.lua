@@ -1,7 +1,7 @@
 -- shorten function name
-keymap = vim.api.nvim_set_keymap
-opts = { noremap = true, silent = true }
-term_opts = { silent = true }
+local keymap = vim.api.nvim_set_keymap
+local opts = { noremap = true, silent = true }
+local term_opts = { silent = true }
 
 -- remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
@@ -72,7 +72,7 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- alternate way to save
 keymap("", "<C-w>", "<Nop>", opts) -- unmap first
-keymap("", "<C-w>", ":%s/\\s\\+$//e | :w<CR>", opts) -- save with ctr+w aswell remove all whitespace in the whole file
+keymap("", "<C-w>", ":%s/\\s\\+$//e | :w<CR>", opts) -- save with ctr+w aswell remove all trailings in the whole file
 
 -- alternate way to quit
 keymap("", "<C-q>", "<Nop>", opts) -- unmap first
@@ -85,3 +85,11 @@ keymap("n", "<F6>", ":set spell nospell<CR>", opts)
 
 -- for R-script %>% when pressing µ (alt+m)
 keymap("i", "µ", "%>%", opts)
+
+-- nvim-tree
+-- open with leader e
+keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
+
+-- telescope
+-- open  with leader t
+keymap("n", "<leader>t", ":Telescope<CR>", opts)

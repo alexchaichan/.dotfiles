@@ -13,8 +13,7 @@ tree.setup {
   sort_by = "name",
   update_cwd = false,
   view = {
-    width = 15,
-    height = 15,
+    width = 35,
     hide_root_folder = false,
     side = "left",
     preserve_window_proportions = false,
@@ -113,5 +112,3 @@ tree.setup {
     },
   },
 }
-
-keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
