@@ -37,8 +37,6 @@ config.load_autoconfig(False)
 #   - never: Don't accept cookies at all.
 config.set('content.cookies.accept', 'no-3rdparty', 'chrome-devtools://*')
 
-
-
 # Value to send in the `Accept-Language` header. Note that the value
 # read from JavaScript is always the global value.
 # Type: String
@@ -143,9 +141,6 @@ c.downloads.remove_finished = 1
 # open instant pdf
 c.content.pdfjs = True
 
-
-
-
 # default 'startpage.com' startpage
 
 #c.url.default_page = ('~/Dropbox/.config/.qutebrowser/startpages/search/startpage.html')
@@ -154,12 +149,13 @@ c.url.default_page = ('https://www.startpage.com/do/mypage.pl?prfe=2c5fae3819658
 c.url.start_pages = ('https://www.startpage.com/do/mypage.pl?prfe=2c5fae38196589d04bfd7217a019dee984f5eb60c1382f9db128da03f37b263a10deea6b7de567fe6df59597283725ae2294dc7c6e2706b450e89a583d967c1b84506ddfb8ea1895567309f04b4b')
 
 c.url.searchengines = {
-    'DEFAULT':  'https://www.startpage.com/sp/search?query={}'
+    'DEFAULT':      'https://www.startpage.com/sp/search?query={}',
+    'yt':           'https://www.youtube.com/results?search_query={}',
+    'en':           'https://www.dict.cc/?s="{}'
+
 }
 
-
 ###### darkmode
-
 config.set("colors.webpage.darkmode.enabled", True)
 
 # dracula css
@@ -167,12 +163,10 @@ config.set("colors.webpage.darkmode.enabled", True)
 
 # config.bind('<Ctrl-R>', 'config-cycle content.user_stylesheets "~/Dropbox/.config/.qutebrowser/css/dracula_for_stackoverflow.user.css" ""')
 
-
 # paywall
 c.aliases = {
     'paywall': "open https://12ft.io/proxy?q={url}"
 }
-
 
 #spellchecking
 # Spell checking languages. You can check for available languages and
@@ -224,9 +218,23 @@ c.aliases = {
 #   - vi-VN: Vietnamese (Viet Nam)
 ##### c.spellcheck.languages = ["en-US", "de-DE"]
 
-
-
 #### ad block
+
+
+# ==== yt add-blocking ====== {{{
+
+from qutebrowser.api import interceptor
+
+def ytfilter(info: interceptor.Request):
+     url = info.request_url
+     if(url.host() == "www.youtube.com"
+        and url.path() == "/get_video_info"
+        and "&adformat" in url.query()
+        ):
+         info.block()
+
+interceptor.register(ytfilter)
+# }}}
 
 c.content.blocking.adblock.lists = [ \
         "https://easylist.to/easylist/easylist.txt", \
@@ -262,10 +270,6 @@ config.bind('B', 'forward')
 config.bind('t', 'open -t')
 config.bind('H', 'home')
 
-
-
-
-
 # # Default font families to use. Whenever "default_family" is used in a
 # # font setting, it's replaced with the fonts listed here. If set to an
 # # empty value, a system-specific monospace default is used.
@@ -296,7 +300,7 @@ config.bind('H', 'home')
 # c.fonts.statusbar = '11pt "Source Code Pro"'
 
 
-#####dracula
+##### dracula
 
 import dracula.draw
 
@@ -601,5 +605,3 @@ def blood(c, options = {}):
     c.tabs.padding = padding
     c.tabs.indicator.width = 1
     c.tabs.favicons.scale = 1
-
-

@@ -62,3 +62,6 @@ Session.vim
 *~
 # Auto-generated tag files
 tags
+
+# jupyter notebooks
+.ipynb_checkpoints
