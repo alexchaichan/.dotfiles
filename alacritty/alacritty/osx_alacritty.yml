@@ -22,7 +22,7 @@ shell:
   args:
    - --login
    - -c
-   - "tmux attach || tmux"
+   - "tmux attach || tmux "
 
 import:
   - ~/.dotfiles/alacritty/alacritty/alacritty.yml
