@@ -7,6 +7,10 @@ dots(){
   cd $DOTFILES
 }
 
+push-dots(){
+  cd $DOTFILES && gitpush && cd
+}
+
 # open this file
 funs(){
     vim $DOTFILES/zsh/zsh/functions.zsh
