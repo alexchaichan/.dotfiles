@@ -2,6 +2,11 @@
 # aliasas						          #
 ######################################################################
 
+# open $DOTDIR repo
+dots(){
+  cd $DOTFILES
+}
+
 # open this file
 funs(){
     vim $DOTFILES/zsh/zsh/functions.zsh
