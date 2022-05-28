@@ -151,7 +151,9 @@ c.url.start_pages = ('https://www.startpage.com/do/mypage.pl?prfe=2c5fae38196589
 c.url.searchengines = {
     'DEFAULT':      'https://www.startpage.com/sp/search?query={}',
     'yt':           'https://www.youtube.com/results?search_query={}',
-    'en':           'https://www.dict.cc/?s="{}'
+    'en':           'https://www.dict.cc/?s={}',
+    'fr':           'https://defr.dict.cc/?s={}',
+    'ru':           'https://deru.dict.cc/?s={}'
 
 }
 
