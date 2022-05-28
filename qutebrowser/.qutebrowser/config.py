@@ -122,6 +122,9 @@ c.editor.encoding = 'utf-8'
 # Type: Bool
 c.auto_save.session = True
 
+# prevent autoplay when opening qutebrowser
+content.autoplay = False
+
 # scroll with mousewheel tabs type:bool
 config.set('tabs.mousewheel_switching', False)
 
