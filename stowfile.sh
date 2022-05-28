@@ -60,6 +60,9 @@ elif [[ "$os" == "linux" ]]; then
 	git clone https://github.com/dracula/qutebrowser-dracula-theme.git $CONFIG/qutebrowser/dracula
 fi
 
+# session directory
+ln -sf $DROPBOX/sessions ~/Library/'Application Support'/qutebrowser/
+
 # qutebrowser bookmarks
 ln -sf $DOTFILES/qutebrowser/.qutebrowser/bookmarks/urls $HOME/
 
