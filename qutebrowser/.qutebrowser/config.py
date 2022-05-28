@@ -122,10 +122,8 @@ c.editor.encoding = 'utf-8'
 # Type: Bool
 c.auto_save.session = True
 
-
 # scroll with mousewheel tabs type:bool
 config.set('tabs.mousewheel_switching', False)
-
 
 # keybinding for password manager 'pass'
 config.bind('p', 'spawn --userscript qute-pass --dmenu-invocation dmenu')
@@ -136,7 +134,6 @@ config.bind('P', 'spawn --userscript qute-pass --dmenu-invocation dmenu --passwo
 
 # how long will the downloads files apear in a tab (milliseconds)
 c.downloads.remove_finished = 1
-
 
 # open instant pdf
 c.content.pdfjs = True
@@ -222,7 +219,6 @@ c.aliases = {
 
 #### ad block
 
-
 # ==== yt add-blocking ====== {{{
 
 from qutebrowser.api import interceptor
@@ -256,10 +252,8 @@ c.content.blocking.enabled = True
 c.content.blocking.hosts.lists = ['https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts']
 c.content.blocking.method = 'both'
 
-
 # keybinding view videos with mpv
 config.bind('M', 'hint links spawn /usr/local/bin/mpv {hint-url}')
-
 
 # keybindings navigation
 config.unbind('<q>', mode='normal')

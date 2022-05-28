@@ -6,7 +6,7 @@ matrikelnummer
 
 Semester
 
-Soziologie + Politikwissenschaften
+HF + NF
 
 \vskip1cm
 
