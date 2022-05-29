@@ -33,7 +33,8 @@ install.packages(
     "dagitty",
     "DiagrammeR",
     "lavaan",
-    "DataExplorer"
+    "DataExplorer",
+    "semPlot"
   ),
   repos = "https://cloud.r-project.org"
 )
