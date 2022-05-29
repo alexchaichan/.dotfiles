@@ -217,6 +217,9 @@ c.aliases = {
 #   - vi-VN: Vietnamese (Viet Nam)
 ##### c.spellcheck.languages = ["en-US", "de-DE"]
 
+# autoplay when opening
+c.content.autoplay = False
+
 #### ad block
 
 # ==== yt add-blocking ====== {{{
