@@ -21,6 +21,5 @@
     "rmd_viewer_type": "none",
     "global_theme": "alternate",
     "terminal_initial_directory": "home",
-    "rmd_preferred_template_path": "/Library/Frameworks/R.framework/Versions/4.2/Resources/library/rticles/rmarkdown/templates/isba",
-    "show_terminal_tab": false
+    "rmd_preferred_template_path": "/Library/Frameworks/R.framework/Versions/4.2/Resources/library/rticles/rmarkdown/templates/isba"
 }

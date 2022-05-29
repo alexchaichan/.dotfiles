@@ -31,7 +31,9 @@ install.packages(
     "wbstats",
     "ggdag",
     "dagitty",
-    "DiagrammeR"
+    "DiagrammeR",
+    "lavaan",
+    "DataExplorer"
   ),
   repos = "https://cloud.r-project.org"
 )

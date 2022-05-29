@@ -122,7 +122,6 @@ c.editor.encoding = 'utf-8'
 # Type: Bool
 c.auto_save.session = True
 
-
 # scroll with mousewheel tabs type:bool
 config.set('tabs.mousewheel_switching', False)
 
