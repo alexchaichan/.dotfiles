@@ -178,20 +178,20 @@ snippet pptx
 
 snippet letter
 	---
-	author: Aleksej Chaichan
+	author: $1
 	return-address:
-	  - "STRASSE NR"
-	  - "PLZ ORT"
-	return-phone: "+49"
-	return-email: MAIL@LIAM.com
+	  - "$2 $3"
+	  - "$4 $5"
+	return-phone: "+49 $6"
+	return-email: $7
 
 	address:
-	  - NAME
-	  - STRASSE. 00
-	  - PLZ ORT
-	  - CTRY
+	  - $8
+	  - $9 $10
+	  - $11 $12
+	  - $13
 
-	place: ORT
+	place: $14
 
 	subject: Some nonsensical Subject
 	opening: Sehr geehrte Frau / Sehr geehrter Herr / sehr geehrte Damen und Herren,
@@ -201,4 +201,4 @@ snippet letter
 	output: komaletter::komaletter
 	---
 
-	TEXT
+	$15
