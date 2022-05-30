@@ -94,6 +94,7 @@ cask "rstudio"
 cask "vlc"
 cask "xquartz"
 cask "zoom"
+cask "skim"
 mas "Amphetamine", id: 937984704
 mas "com.alice.mac.GetPlainText", id: 508368068
 mas "Easy CSV Editor", id: 1171346381
