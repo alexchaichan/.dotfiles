@@ -54,6 +54,9 @@ source $DOTFILES/repositories.sh
 # install crontabs
 source $DOTFILES/cronbtabs.sh
 
+# make scripts executable
+source $DOTFILES/chmod.sh
+
 # install R packages
 Rscript $DOTFILES/R/R/packages.R
 
