@@ -255,18 +255,33 @@ c.content.blocking.enabled = True
 c.content.blocking.hosts.lists = ['https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts']
 c.content.blocking.method = 'both'
 
+################################################################################
+# keybindings                                                                  #
+################################################################################
+
 # keybinding view videos with mpv
 config.bind('M', 'hint links spawn /usr/local/bin/mpv {hint-url}')
 
 # keybindings navigation
+
+# unbindings
 config.unbind('<q>', mode='normal')
 config.unbind('<d>', mode='normal')
 config.unbind('<H>', mode='normal')
 
+# close tabs qith q
 config.bind('q', 'tab-close')
+
+# go back with b
 config.bind('b', 'back')
+
+# forward with shift+b
 config.bind('B', 'forward')
+
+# open a new tab with t
 config.bind('t', 'open -t')
+
+# homepage with shift+h
 config.bind('H', 'home')
 
 # # Default font families to use. Whenever "default_family" is used in a
@@ -299,7 +314,9 @@ config.bind('H', 'home')
 # c.fonts.statusbar = '11pt "Source Code Pro"'
 
 
-##### dracula
+################################################################################
+# color theme                                                                  #
+################################################################################
 
 import dracula.draw
 
@@ -312,7 +329,6 @@ dracula.draw.blood(c, {
         'horizontal': 8
     }
 })
-
 
 def blood(c, options = {}):
     palette = {
