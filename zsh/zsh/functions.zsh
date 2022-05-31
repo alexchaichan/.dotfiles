@@ -16,6 +16,13 @@ funs(){
     vim $DOTFILES/zsh/zsh/functions.zsh
 }
 
+update(){
+  if [[ "$os" == "osx" ]]; then
+      brew update && brew upgrade && brew cleanup && brew outdated && brew cu
+  elif [[ "$os" == "linux" ]]; then
+    sudo pacman -Syyu
+  fi
+}
 ######################################################################
 #git 						                  #
 ######################################################################
@@ -298,11 +305,6 @@ rstudio(){
 }
 
 ######################################################################
-
-# update & upgrade brew
-update(){
-    brew update && brew upgrade && brew cleanup && brew outdated && brew cu
-}
 
 # zsh functions to start/stop OpenConnect VPN client
 
