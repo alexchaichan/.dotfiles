@@ -10,7 +10,7 @@ mkdir $VDOTDIR/pack/ && mkdir $VDOTDIR/pack/plugins/ && mkdir $VDOTDIR/pack/plug
 
 - clone only nvim
 
-`git clone --depth 1 --filter=blob:none --no-checkout https://github.com/alexchaichan/.dotfiles.git $VDOTDIR ; cd $VDOTDIR ; git checkout main -- nvim/nvim.lua ; cd && mv $VDOTDIR/nvim/nvim.lua $VDOTDIR`
+`git clone --depth 1 --filter=blob:none --no-checkout https://github.com/alexchaichan/.dotfiles.git $VDOTDIR ; cd $VDOTDIR ; git checkout main -- nvim/nvim.lua ; cd && mv $VDOTDIR/nvim/nvim.lua ~/.config && rm $VDOTDIR && mv ~/.config/nvim.lua ~/.config/nvim`
 
 - install all plugins
 
