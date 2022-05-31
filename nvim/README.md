@@ -22,4 +22,4 @@ function vim_add_plugin() {
   PLUGIN_NAME=$(echo $1 | cut -d "/" -f 2)
   git clone "https://github.com/$1.git" "$VDOTDIR/pack/plugins/start/$PLUGIN_NAME"
 ```
-![hi](~/.dotfiles/nvim/plugins.sh)
+![hi](plugins.sh)
