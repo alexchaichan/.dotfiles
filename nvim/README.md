@@ -1,4 +1,6 @@
-- create directories
+# Clone only neovim
+
+- export
 
 ```
 export HOME="$(echo -n $(bash -c "cd ~${USER} && pwd"))"
