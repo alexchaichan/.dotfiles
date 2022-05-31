@@ -15,11 +15,16 @@ export VDOTDIR=$HOME/.config/nvim
 
 `mkdir $VDOTDIR/pack/ && mkdir $VDOTDIR/pack/plugins/ && mkdir $VDOTDIR/pack/plugins/start && mkdir $VDOTDIR/pack/plugins/opt && mkdir $VDOTDIR/spell`
 
-- install all plugins
+- install all [plugins](plugins.sh)
 
 ```
 function vim_add_plugin() {
   PLUGIN_NAME=$(echo $1 | cut -d "/" -f 2)
   git clone "https://github.com/$1.git" "$VDOTDIR/pack/plugins/start/$PLUGIN_NAME"
+
+source $DOTFILES/nvim/plugins.sh
+
+for i in $vim_plugins;
+  do vim_add_plugin $i;
+done
 ```
-[hi](plugins.sh)
