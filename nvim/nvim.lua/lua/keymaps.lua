@@ -92,4 +92,4 @@ keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
 -- telescope
 -- open  with leader t
-keymap("n", "<leader>t", ":Telescope<CR>", opts)
+keymap("n", "<leader>t", ":Telescope find_files<CR>", opts)
