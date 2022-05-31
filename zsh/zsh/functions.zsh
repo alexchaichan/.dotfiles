@@ -8,7 +8,7 @@ dots(){
 }
 
 push-dots(){
-  cd $DOTFILES && gitpush && cd
+  cd $DOTFILES && gitpush && cd && cd .password-store && gitpush && cd
 }
 
 # open this file
