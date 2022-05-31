@@ -101,3 +101,8 @@ vim.cmd('colorscheme dracula')
 --vim.g.material_style = "palenight"
 -- colorscheme for vimr
 vim.g.rout_follow_colorscheme = 1
+
+vim.cmd('call nvim_create_user_command(\'PlugInstall\', \'! source ~/.dotfiles/plugins.sh\', {})')
+vim.cmd('call nvim_create_user_command(\'PlugUpdate\', \'! cd $VDOTDIR/pack/plugins/start && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd   \', {})')
+
+
