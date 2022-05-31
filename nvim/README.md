@@ -4,8 +4,9 @@
 export HOME="$(echo -n $(bash -c "cd ~${USER} && pwd"))"
 export VDOTDIR=$HOME/.config/nvim
 
-mkdir $VDOTDIR && mkdir $VDOTDIR/pack/ && mkdir $VDOTDIR/pack/plugins/ && mkdir $VDOTDIR/pack/plugins/start && mkdir $VDOTDIR/pack/plugins/opt && mkdir $VDOTDIR/spell && ln -sf $DOTFILES/nvim/nvim.lua/* $VDOTDIR && ln -sf $DOTFILES/snippets/ $VDOTDIR
+mkdir $VDOTDIR/pack/ && mkdir $VDOTDIR/pack/plugins/ && mkdir $VDOTDIR/pack/plugins/start && mkdir $VDOTDIR/pack/plugins/opt && mkdir $VDOTDIR/spell
 ```
+
 
 - clone only nvim
 
