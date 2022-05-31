@@ -9,7 +9,7 @@ export VDOTDIR=$HOME/.config/nvim
 
 - clone only nvim
 
-`mv $VDOTDIR ~/.config/nvim_old && git clone --depth 1 --filter=blob:none --no-checkout https://github.com/alexchaichan/.dotfiles.git $VDOTDIR ; cd $VDOTDIR ; git checkout main -- nvim/nvim.lua ; cd && mv $VDOTDIR/nvim/nvim.lua ~/.config && rm -rf $VDOTDIR && mv ~/.config/nvim.lua ~/.config/nvim`
+`mv $VDOTDIR ~/.config/nvim_old && git clone --depth 1 --filter=blob:none --no-checkout https://github.com/alexchaichan/.dotfiles.git $VDOTDIR ; cd $VDOTDIR ; git checkout main -- nvim/nvim.lua ; cd && mv $VDOTDIR/nvim/nvim.lua ~/.config && rm -rf $VDOTDIR && mv ~/.config/nvim.lua $VDOTDIR`
 
 - create directories
 
