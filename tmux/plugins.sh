@@ -7,7 +7,6 @@ tmux_plugins=(
   'tmux-plugins/tmux-maildir-counter'
   'tmux-plugins/tmux-newsboat'
   'tmux-plugins/tmux-online-status'
-  'tmux-plugins/tmux-open'
   'tmux-plugins/tmux-sensible'
   'tmux-plugins/tmux-sidebar'
   'tmux-plugins/tmux-urlview'

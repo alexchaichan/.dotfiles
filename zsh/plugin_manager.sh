@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-# zsh
-
 function zsh_add_plugin() {
   PLUGIN_NAME=$(echo $1 | cut -d "/" -f 2)
   git clone "https://github.com/$1.git" "$ZDOTDIR/$PLUGIN_NAME"
