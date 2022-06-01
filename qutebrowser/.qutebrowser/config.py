@@ -150,7 +150,8 @@ c.url.searchengines = {
     'yt':           'https://www.youtube.com/results?search_query={}',
     'en':           'https://www.dict.cc/?s={}',
     'fr':           'https://defr.dict.cc/?s={}',
-    'ru':           'https://deru.dict.cc/?s={}'
+    'ru':           'https://deru.dict.cc/?s={}',
+    'sc':           'https://scholar.google.com/scholar?hl=de&as_sdt=0%2C5&q={}&btnG='
 
 }
 

@@ -40,4 +40,5 @@ vim_plugins=(
   'dracula/vim'
   'iamcco/markdown-preview.nvim'
   'ThePrimeagen/harpoon'
+  'easymotion/vim-easymotion'
 )

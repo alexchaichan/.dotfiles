@@ -190,7 +190,7 @@ alias PlugUpdate="cd $VDOTDIR/pack/plugins/start && find . -maxdepth 3 -name .gi
 # 1st link, when want to sent it push it do 2nd copie
 
 links(){
-    rm -rf wordcount.lua literature.bib styles .Rprofile && ln -sf ~/.local/share/pandoc/filters/wordcount/wordcount.lua "$(pwd)" && ln -sf $DOTFILES/styles "$(pwd)" && ln -sf $DROPBOX/googlebox/literature.bib "$(pwd)" && ln -sf $DOTFILES/R/.Rprofile "$(pwd)"
+    rm -rf wordcount.lua literature.bib styles .Rprofile && ln -sf ~/.local/share/pandoc/filters/wordcount/wordcount.lua "$(pwd)" && ln -sf $DOTFILES/styles "$(pwd)" && ln -sf $DROPBOX/googlebox/literature.bib "$(pwd)" && ln -sf $DOTFILES/R/R/.Rprofile "$(pwd)"
 }
 
 copies(){
