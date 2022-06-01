@@ -56,20 +56,12 @@ d{motion}       delete text that {motion} moves over
 
 # Text Objects
 
-ci"              - change inside double quotes
-ca"              - change around double quotes
-ci'              - change inside single quotes
-ca'              - change around single quotes
-ca)              - change around paranthesis
-ci)              - change inside paranthesis
+ci              - change inside
+ca              - change around
 cit              - change inside a tag(Example an html)
 cat              - change around a tag
 
-di"              - delete inside double quotes
-da"              - delete around double quotes
-di'              - delete inside single quotes
-da'              - delete around single quotes
-da)              - delete around paranthesis
-di)              - delete inside paranthesis
+di              - delete inside
+da              - delete around
 dit              - delete inside a tag(Example an html)
 dat              - delete around a tag
