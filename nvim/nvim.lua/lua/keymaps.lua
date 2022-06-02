@@ -29,6 +29,9 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- jump out from insertmode within "" / '' outside and stay in insertmode
 keymap("i", "jl", "<ESC>la", opts)
+-- paste in insertmode
+keymap("i", "jp", "<ESC>p", opts)
+
 
 -- resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
