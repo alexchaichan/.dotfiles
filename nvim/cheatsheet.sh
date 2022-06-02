@@ -54,14 +54,31 @@ d{motion}       delete text that {motion} moves over
 5yy         copies 5 lines
 42G         go to line 42
 
-# Text Objects
+# Text Objects "" | '' | () | [] | {}
 
-ci              - change inside
-ca              - change around
-cit              - change inside a tag(Example an html)
-cat              - change around a tag
+ci           change inside
+ca           change around
+cit          change inside a tag(Example an html)
+cat          change around a tag
 
-di              - delete inside
-da              - delete around
-dit              - delete inside a tag(Example an html)
-dat              - delete around a tag
+di           delete inside
+da           delete around
+dit          delete inside a tag(Example an html)
+dat          delete around a tag
+
+# Cases
+
+~            Toggle case of the character under the cursor, or all visually-selected characters.
+3~           Toggle case of the next three characters.
+g~3w         Toggle case of the next three words.
+g~iw         Toggle case of the current word (inner word – cursor anywhere in word).
+g~$          Toggle case of all characters to end of line.
+g~~          Toggle case of the current line (same as V~).
+
+The above uses ~ to toggle case. In each example, you can replace ~ with u to convert to lowercase, or with U to convert to uppercase. For example:
+
+U           Uppercase the visually-selected text. First press v or V then move to select text. If you dont select text, pressing U will undo all changes to the current line.
+gUU         Change the current line to uppercase (same as VU).
+gUiw        Change current word to uppercase.
+u           Lowercase the visually-selected text. If you dont select text, pressing u will undo the last change.
+guu         Change the current line to lowercase (same as Vu).

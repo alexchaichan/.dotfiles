@@ -27,8 +27,8 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
--- jump out from insertmode within "" / '' outside and stay in insertmode
-keymap("i", "jl", "<ESC>la", opts)
+-- <"", ""> makro
+keymap("i", "jl", "<ESC>la, \"\"<ESC>i", opts)
 -- paste in insertmode
 keymap("i", "jp", "<ESC>p", opts)
 
@@ -49,7 +49,6 @@ keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
 -- press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
-keymap("i", "kj", "<ESC>", opts)
 
 -- stay in indent mode
 keymap("v", "<", "<gv", opts)
