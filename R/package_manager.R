@@ -1,6 +1,6 @@
 #!/usr/bin/env R
 
-source ~/.dotfiles/R/packages.R
+source paste0(Sys.getenv('HOME'),'/.dotfiles/R/packages.R')
 
 installed_packages <- packages %in% rownames(installed.packages())
 
