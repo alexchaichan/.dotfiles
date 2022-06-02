@@ -4,7 +4,7 @@
 # create directories                                   #
 ########################################################
 
-mkdir $CONFIG && mkdir $HOME/.cache && mkdir $HOME/repositories
+mkdir $CONFIG ; mkdir $HOME/.cache ; mkdir $HOME/repositories
 
 ########################################################
 # create symlinks                                      #
@@ -37,10 +37,10 @@ elif [[ "$os" == "linux" ]]; then
 fi
 
 # nvim
-mkdir $VDOTDIR && mkdir $VDOTDIR/pack/ && mkdir $VDOTDIR/pack/plugins/ && mkdir $VDOTDIR/pack/plugins/start && mkdir $VDOTDIR/pack/plugins/opt && mkdir $VDOTDIR/spell && ln -sf $DOTFILES/nvim/nvim.lua/* $VDOTDIR && ln -sf $DOTFILES/snippets/ $VDOTDIR
+mkdir $VDOTDIR ; mkdir $VDOTDIR/pack/ ; mkdir $VDOTDIR/pack/plugins/ ; mkdir $VDOTDIR/pack/plugins/start ; mkdir $VDOTDIR/pack/plugins/opt ; mkdir $VDOTDIR/spell ; ln -sf $DOTFILES/nvim/nvim.lua/* $VDOTDIR ; ln -sf $DOTFILES/snippets/ $VDOTDIR
 
 # tmux
-mkdir $TDOTDIR && mkdir $TDOTDIR/plugins && ln -sf $DOTFILES/tmux/tmux/.tmux.conf $HOME/
+mkdir $TDOTDIR ; mkdir $TDOTDIR/plugins ; ln -sf $DOTFILES/tmux/tmux/.tmux.conf $HOME/
 
 # brewfile / pacmanfile
 if [[ "$os" == "osx" ]]; then
@@ -83,10 +83,10 @@ fi
 ln -sf $DOTFILES/bat/bat $CONFIG
 
 # rstudio
-mkdir $CONFIG/rstudio && ln -sf $DOTFILES/rstudio/rstudio/rstudio-prefs.json $CONFIG/rstudio && ln -sf $DOTFILES/snippets $CONFIG/rstudio/
+mkdir $CONFIG/rstudio ; ln -sf $DOTFILES/rstudio/rstudio/rstudio-prefs.json $CONFIG/rstudio ; ln -sf $DOTFILES/snippets $CONFIG/rstudio/
 
 # psychopy
-mkdir $HOME/.psychopy3 && ln -sf $DOTFILES/psychopy/.psychopy3/* $HOME/.psychopy3
+mkdir $HOME/.psychopy3 ; ln -sf $DOTFILES/psychopy/.psychopy3/* $HOME/.psychopy3
 
 # zathura
 mkdir $CONFIG/zathura
@@ -108,7 +108,7 @@ if [[ "$os" == "linux" ]]; then
 fi
 
 # spotify
-mkdir $CONFIG/spotify-tui && mkdir $CONFIG/spotifyd && mkdir $HOME/.cache/spotifyd
+mkdir $CONFIG/spotify-tui ; mkdir $CONFIG/spotifyd ; mkdir $HOME/.cache/spotifyd
 
 ## spotifyd
 if [[ "$os" == "osx" ]]; then
@@ -136,10 +136,10 @@ elif [[ "$os" == "linux" ]]; then
 fi
 
 # ranger
-mkdir $CONFIG/ranger && ln -sf $DOTFILES/ranger/ranger/* $CONFIG/ranger
+mkdir $CONFIG/ranger ; ln -sf $DOTFILES/ranger/ranger/* $CONFIG/ranger
 
 # contacs & calendar
-mkdir $HOME/.contacts && mkdir $HOME/.calendars
+mkdir $HOME/.contacts ; mkdir $HOME/.calendars
 
 # khard
 ln -sf $DOTFILES/khard/khard $HOME/.config
@@ -148,19 +148,19 @@ ln -sf $DOTFILES/khard/khard $HOME/.config
 ln -sf $DOTFILES/khal/khal $HOME/.config
 
 # vdirsyncer
-mkdir $CONFIG/vdirsyncer && ln -sf $DOTFILES/isync/vdirsyncer/config $CONFIG/vdirsyncer
+mkdir $CONFIG/vdirsyncer ; ln -sf $DOTFILES/isync/vdirsyncer/config $CONFIG/vdirsyncer
 
 # mbsync
 ln -sf $DOTFILES/isync/mbsync/.mbsyncrc $HOME/
 
 # newsboat
-mkdir $HOME/.newsboat && ln -sf $DOTFILES/newsboat/.newsboat/* $HOME/.newsboat
+mkdir $HOME/.newsboat ; ln -sf $DOTFILES/newsboat/.newsboat/* $HOME/.newsboat
 
 # w3m
-mkdir $HOME/.w3m && ln -sf $DOTFILES/w3m/.w3m/* $HOME/.w3m
+mkdir $HOME/.w3m ; ln -sf $DOTFILES/w3m/.w3m/* $HOME/.w3m
 
 # jupyter
-mkdir $HOME/.jupyter && mkdir $HOME/.jupyter/lab && ln -sf $DOTFILES/jupyter/.jupyter/jupyter_qtconsole_config.py $HOME/.jupyter && ln -sf $DOTFILES/jupyter/.jupyter/qtdracula.css $HOME/.jupyter && ln -sf $DOTFILES/jupyter/.jupyter/lab/user-settings $HOME/.jupyter/lab
+mkdir $HOME/.jupyter ; mkdir $HOME/.jupyter/lab ; ln -sf $DOTFILES/jupyter/.jupyter/jupyter_qtconsole_config.py $HOME/.jupyter ; ln -sf $DOTFILES/jupyter/.jupyter/qtdracula.css $HOME/.jupyter ; ln -sf $DOTFILES/jupyter/.jupyter/lab/user-settings $HOME/.jupyter/lab
 
 # templates
 ln -sf $DOTFILES/Templates $HOME/

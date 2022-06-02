@@ -57,7 +57,7 @@ source $DOTFILES/cronbtabs.sh
 # make scripts executable
 source $DOTFILES/chmod.sh
 
-# install R packages
+# configure R
 Rscript $DOTFILES/R/package_manager.R
 Rscript $DOTFILES/R/dependencies.R
 

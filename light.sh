@@ -1,4 +1,4 @@
-# ask for the administrator password upfront
+;# ask for the administrator password upfront
 sudo -v
 
 # keep-alive: update existing `sudo` time stamp until `.bootstap.sh` has finished
@@ -15,7 +15,7 @@ case "${unameOut}" in
 esac
 
 # create $ directorys
-export HOME="$(echo -n $(bash -c "cd ~${USER} && pwd"))"
+export HOME="$(echo -n $(bash -c "cd ~${USER} ; pwd"))"
 export DOTFILES=$HOME/.dotfiles
 export ZDOTDIR=$HOME/.zsh_plugins
 export VDOTDIR=$HOME/.config/nvim
@@ -40,10 +40,10 @@ elif [[ "$os" == "linux" ]]; then
 fi
 
 # nvim
-mkdir $CONFIG/nvim && mkdir $CONFIG/nvim/pack/ && mkdir $CONFIG/nvim/pack/plugins/ && mkdir $CONFIG/nvim/pack/plugins/start && mkdir $CONFIG/nvim/pack/plugins/opt && mkdir $CONFIG/nvim/spell && ln -sf $DOTFILES/nvim/nvim.lua/* $CONFIG/nvim && ln -sf ~/.dotfiles/snippets/ $CONFIG/nvim
+mkdir $CONFIG/nvim ; mkdir $CONFIG/nvim/pack/ ; mkdir $CONFIG/nvim/pack/plugins/ ; mkdir $CONFIG/nvim/pack/plugins/start ; mkdir $CONFIG/nvim/pack/plugins/opt ; mkdir $CONFIG/nvim/spell ; ln -sf $DOTFILES/nvim/nvim.lua/* $CONFIG/nvim ; ln -sf ~/.dotfiles/snippets/ $CONFIG/nvim
 
 # tmux
-mkdir $TDOTDIR && mkdir $TDOTDIR/plugins && ln -sf $DOTFILES/tmux/tmux/.tmux.conf $HOME/
+mkdir $TDOTDIR ; mkdir $TDOTDIR/plugins ; ln -sf $DOTFILES/tmux/tmux/.tmux.conf $HOME/
 
 # qutebrowser
 if [[ "$os" == "osx" ]]; then
@@ -65,7 +65,7 @@ source $DOTFILES/plugins.sh
 
 # programs
 if [[ "$os" == "osx" ]]; then
-	brew install bat neovim ranger tmux zsh && brew install --casl alacritty
+	brew install bat neovim ranger tmux zsh ; brew install --casl alacritty
 elif [[ "$os" == "linux" ]]; then
 	pacman -S bat neovim ranger tmux zsh alacritty
 fi
