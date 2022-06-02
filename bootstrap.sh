@@ -59,6 +59,7 @@ source $DOTFILES/chmod.sh
 
 # install R packages
 Rscript $DOTFILES/R/package_manager.R
+Rscript $DOTFILES/R/dependencies.R
 
 # install python packages
 source $DOTFILES/pip.sh
