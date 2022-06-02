@@ -27,6 +27,9 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
+-- jump out from insertmode within "" / '' outside and stay in insertmode
+keymap("i", "jl", "<ESC>la", opts)
+
 -- resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
 keymap("n", "<C-Down>", ":resize +2<CR>", opts)
@@ -86,16 +89,20 @@ keymap("n", "<F6>", ":set spell nospell<CR>", opts)
 -- for R-script %>% when pressing µ (alt+m)
 keymap("i", "µ", "%>%", opts)
 
--- nvim-tree
+-----------------------------------------------------------------------
+-- nvim-tree                                                          -
+-----------------------------------------------------------------------
 -- open with leader e
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
--- telescope
+-----------------------------------------------------------------------
+-- telescope                                                           -
+-----------------------------------------------------------------------
 -- open  with leader t
 keymap("n", "<leader>t", ":Telescope find_files<CR>", opts)
 
 -----------------------------------------------------------------------
--- hrpoon                                                             -
+-- harpoon                                                            -
 -----------------------------------------------------------------------
 
 keymap("n", "<leader>H", ":lua require(\"harpoon.mark\").add_file()<cr>", opts)
