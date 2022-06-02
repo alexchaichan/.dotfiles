@@ -58,7 +58,7 @@ source $DOTFILES/cronbtabs.sh
 source $DOTFILES/chmod.sh
 
 # install R packages
-Rscript $DOTFILES/R/R/packages.R
+Rscript $DOTFILES/R/package_manager.R
 
 # install python packages
 source $DOTFILES/pip.sh
