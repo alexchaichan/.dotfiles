@@ -112,17 +112,6 @@ odot(){
     glow $DROPBOX/todo.md
 }
 
-# check if spotifyd daemon is running. if not run pkill spotifyd (get error code of first command and then to if else)
-spt(){
-  launchctl list | grep spotifyd
-  if [ "$?" -eq "0" ]
-  then
-    /usr/local/bin/spt
-  else
-    pkill spotifyd && /usr/local/bin/spt
-  fi
-}
-
 #####################################################
 # zsh functions                                     #
 #####################################################
