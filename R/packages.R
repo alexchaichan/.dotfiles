@@ -31,7 +31,8 @@ packages <- c(
     "DiagrammeR",
     "lavaan",
     "DataExplorer",
-    "semPlot"
+    "semPlot",
+    "st"
   )
 
 github <- c(
