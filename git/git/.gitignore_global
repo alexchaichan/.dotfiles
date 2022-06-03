@@ -65,3 +65,6 @@ tags
 
 # jupyter notebooks
 .ipynb_checkpoints
+
+# python
+__pycache__

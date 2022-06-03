@@ -32,7 +32,8 @@ packages <- c(
     "lavaan",
     "DataExplorer",
     "semPlot",
-    "st"
+    "st",
+    "reticulate"
   )
 
 github <- c(
