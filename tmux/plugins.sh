@@ -14,4 +14,6 @@ tmux_plugins=(
   'jaclu/tmux-menus'
   'xamut/tmux-weather'
   'schasse/tmux-jump'
+  'tassaron/tmux-df'
+  'imomaliev/tmux-keyboard-layout'
 )
