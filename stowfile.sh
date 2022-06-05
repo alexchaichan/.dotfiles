@@ -149,7 +149,7 @@ ln -sf $DOTFILES/khard/khard $HOME/.config
 ln -sf $DOTFILES/khal/khal $HOME/.config
 
 # calcurse
-mkdir $HOME/.calcurse/ ; cp $DOTFILES/calcurse/.calcurse/* $HOME/.calcurse
+mkdir $HOME/.calcurse/ ; ln -sf $DOTFILES/calcurse/.calcurse/* $HOME/.calcurse
 
 # vdirsyncer
 mkdir $CONFIG/vdirsyncer ; cp $DOTFILES/isync/vdirsyncer/config $CONFIG/vdirsyncer

@@ -37,7 +37,7 @@ Verbose = Yes
 # not want to use authentication.
 [Auth]
 Username = a.chaichan@icloud.com
-Password = pass show mbsyncrc
+Password = CALCURSE_CALDAV_PASSWORD=$(pass show calcurse) calcurse-caldav
 
 # Optionally specify additional HTTP headers here.
 #[CustomHeaders]
