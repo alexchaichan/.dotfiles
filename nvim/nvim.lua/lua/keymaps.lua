@@ -32,7 +32,6 @@ keymap("i", "jl", "<ESC>la, \"\"<ESC>i", opts)
 -- paste in insertmode
 keymap("i", "jp", "<ESC>p", opts)
 
-
 -- resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
 keymap("n", "<C-Down>", ":resize +2<CR>", opts)
@@ -111,7 +110,6 @@ keymap("n", "<leader>H", ":lua require(\"harpoon.mark\").add_file()<cr>", opts)
 keymap("n", "<leader>h", ":lua require(\"harpoon.ui\").toggle_quick_menu()<cr>", opts)
 keymap("n", "<leader>g", ":lua require(\"harpoon.ui\").nav_next()<cr>", opts)
 keymap("n", "<leader>G", ":lua require(\"harpoon.ui\").nav_prev()<cr>", opts)
-
 
 -----------------------------------------------------------------------
 -- easymotion                                                         -

@@ -14,7 +14,7 @@
 Binary = calcurse
 
 # Host name of the server that hosts CalDAV.
-Hostname = p61-caldav.icloud.com/a.chaichan@icloud.com
+Hostname = p61-caldav.icloud.com/a.chaichan@icloud.com/calendars/A484F09C-F031-4F97-8F1F-D46648B330E2
 
 # Path to the CalDAV calendar on the host specified above.
 Path = calendars/A484F09C-F031-4F97-8F1F-D46648B330E2
