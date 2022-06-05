@@ -68,4 +68,3 @@ url = "https://caldav.icloud.com/"
 username = "a.chaichan@icloud.com"
 # password = "xxxx-xxxx-xxxx-xxxx"
 password.fetch = ["command", "pass", "vdirsyncer"]
-
