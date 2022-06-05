@@ -1,0 +1,44 @@
+# If you want to synchronize calcurse with a CalDAV server using
+# calcurse-caldav, create a new directory at $XDG_CONFIG_HOME/calcurse/caldav/
+# (~/.config/calcurse/caldav/) and $XDG_DATA_HOME/calcurse/caldav/
+# (~/.local/share/calcurse/caldav/) and copy this file to
+# $XDG_CONFIG_HOME/calcurse/caldav/config and adjust the configuration below.
+# Alternatively, if using ~/.calcurse, create a new directory at
+# ~/.calcurse/caldav/ and copy this file to ~/.calcurse/caldav/config and adjust
+# the configuration file below.
+# webcal://p61-caldav.icloud.com/published/2/NDMyNjA0MzkwNDMyNjA0M_dh3h4KUuTa_W243czcBGwyVM15RHv4w9PGVVTV_BeUIeB741_rxlfcq7q50sW-wZI-KXJoexCqe7U7sTSg5fc
+# https://p61-caldav.icloud.com
+
+[General]
+# Path to the calcurse binary that is used for importing/exporting items.
+Binary = calcurse
+
+# Host name of the server that hosts CalDAV.
+Hostname = p61-caldav.icloud.com/a.chaichan@icloud.com
+
+# Path to the CalDAV calendar on the host specified above.
+Path = calendars/A484F09C-F031-4F97-8F1F-D46648B330E2
+
+# Enable this if you want to skip SSL certificate checks.
+InsecureSSL = No
+
+AuthMethod = basic
+
+# Disable this option to actually enable synchronization. If it is enabled,
+# nothing is actually written to the server or to the local data files. If you
+# combine DryRun = Yes with Verbose = Yes, you get a log of what would have
+# happened with this option disabled.
+DryRun = No
+
+# Enable this if you want detailed logs written to stdout.
+Verbose = Yes
+
+# Credentials for HTTP Basic Authentication. Leave this commented out if you do
+# not want to use authentication.
+[Auth]
+Username = a.chaichan@icloud.com
+Password = pass show mbsyncrc
+
+# Optionally specify additional HTTP headers here.
+#[CustomHeaders]
+#User-Agent = Mac_OS_X/10.9.2 (13C64) CalendarAgent/176

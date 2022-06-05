@@ -148,6 +148,9 @@ ln -sf $DOTFILES/khard/khard $HOME/.config
 # khal
 ln -sf $DOTFILES/khal/khal $HOME/.config
 
+# calcurse
+mkdir $HOME/.calcurse/ ; cp $DOTFILES/calcurse/.calcurse/* $HOME/.calcurse
+
 # vdirsyncer
 mkdir $CONFIG/vdirsyncer ; cp $DOTFILES/isync/vdirsyncer/config $CONFIG/vdirsyncer
 
