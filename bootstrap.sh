@@ -57,9 +57,6 @@ source $DOTFILES/cheatsheets/cheatsheet_manager.sh
 # install crontabs
 source $DOTFILES/cronbtabs.sh
 
-# make scripts executable
-source $DOTFILES/chmod.sh
-
 # configure R
 Rscript $DOTFILES/R/package_manager.R
 Rscript $DOTFILES/R/dependencies.R
