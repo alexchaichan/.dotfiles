@@ -5,6 +5,7 @@
 ########################################################
 
 mkdir $CONFIG ; mkdir $HOME/.cache ; mkdir $HOME/repositories
+mkdir $HOME/cheatsheets ; mkdir $HOME/cheatsheets/R ; mkdir $HOME/cheatsheets/python
 
 ########################################################
 # create symlinks                                      #
@@ -148,10 +149,10 @@ ln -sf $DOTFILES/khard/khard $HOME/.config
 ln -sf $DOTFILES/khal/khal $HOME/.config
 
 # vdirsyncer
-mkdir $CONFIG/vdirsyncer ; ln -sf $DOTFILES/isync/vdirsyncer/config $CONFIG/vdirsyncer
+mkdir $CONFIG/vdirsyncer ; cp $DOTFILES/isync/vdirsyncer/config $CONFIG/vdirsyncer
 
 # mbsync
-ln -sf $DOTFILES/isync/mbsync/.mbsyncrc $HOME/
+cp $DOTFILES/isync/mbsync/.mbsyncrc $HOME/
 
 # newsboat
 mkdir $HOME/.newsboat ; ln -sf $DOTFILES/newsboat/.newsboat/* $HOME/.newsboat

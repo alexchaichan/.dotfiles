@@ -51,6 +51,9 @@ fi
 # install repositores
 source $DOTFILES/repositories.sh
 
+# download cheatsheet
+source $DOTFILES/cheatsheets/cheatsheet_manager.sh
+
 # install crontabs
 source $DOTFILES/cronbtabs.sh
 
