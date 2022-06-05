@@ -11,6 +11,7 @@ pip3 install qutebrowser
 pip3 install asciidoc
 pip3 install adblock
 pip install tldextract
+pip3 install --user httplib2
 
 # jupyter
 pip install JLDracula
