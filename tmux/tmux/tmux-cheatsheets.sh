@@ -3,16 +3,9 @@ lang=`ls $HOME/cheatsheets/ | fzf`;
 
 if [[ "$lang" == "cht" ]]; then
 
-  selected=`bat $HOME/cheatsheets/cht/cht-languages $HOME/cheatsheets/cht/cht-command | fzf`
-    if [[ -z $selected ]]; then
-      exit 0
-    fi
+  read -p "Enter Query: " query
 
-elif [[ "$lang" == "search" ]]; then
-
-      read -p "Enter Query: " query
-
-      query=`echo $query | tr ' ' '+'`
+  query=$query
 
 else
 
@@ -30,17 +23,9 @@ elif [[ "$selected" == *sh ]]; then
 
 fi
 
+
 if [[ "$lang" == "cht" ]]; then
 
-  read -p "Enter Query: " query
+  tmux neww zsh -c "curl -s cht.sh/$query | bat & while [ : ]; do sleep 1; done"
 
-  grep -qs "$selected" $HOME/cheatsheets/cht/cht-languages ;
-
-      query=`echo $query | tr ' ' '+'`
-
-      tmux neww zsh -c "echo \"curl cht.sh/$selected/$query/\" & curl cht.sh/$selected/$query & while [ : ]; do sleep 1; done"
-
-    elif [[ "$lang" == "search" ]]; then
-
-    tmux neww zsh -c "curl -s cht.sh/$query | bat"
-  fi
+fi
