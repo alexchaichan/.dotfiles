@@ -5,7 +5,13 @@
 ########################################################
 
 mkdir $CONFIG ; mkdir $HOME/.cache ; mkdir $HOME/repositories
-mkdir $HOME/cheatsheets ; mkdir $HOME/cheatsheets/R ; mkdir $HOME/cheatsheets/python
+
+########################################################
+# cheatsheets                                          #
+########################################################
+
+mkdir $HOME/cheatsheets ; mkdir $HOME/cheatsheets/R ; mkdir $HOME/cheatsheets/python ; mkdir $HOME/cheatsheets/zsh ; $HOME/cheatsheets/nvim
+ln -sf $DOTFILES/cheatsheets/* $HOME/cheatsheets && rm $HOME/cheatsheets/*.sh
 
 ########################################################
 # create symlinks                                      #
