@@ -1,0 +1,71 @@
+# If you want to synchronize calcurse with a CalDAV server using
+# calcurse-caldav, create a new directory ~/.calcurse/caldav/, copy this file
+# to ~/.calcurse/caldav/config and adjust the configuration below.
+
+[General]
+# Path to the calcurse binary that is used for importing/exporting items.
+Binary = calcurse
+
+# Host name of the server that hosts CalDAV.
+#Hostname = caldav.icloud.com
+Hostname = caldav.icloud.com
+
+# Path to the CalDAV calendar on the host specified above.
+Path = /432604390/calendars/6208D939-1C23-4499-B159-893C5A109D44/
+
+#Path = published/2/NDMyNjA0MzkwNDMyNjA0M_dh3h4KUuTa_W243czcBGwrYyq9jv607Tzh7DnP2QRzdQdLyqAqSStMi22368mrLBgp0px6aKEXvauPFEeyoHU/
+
+# Enable this if you want to skip SSL certificate checks.
+InsecureSSL = No 
+
+HTTPS = yes
+
+#SyncFilter = cal
+
+# Disable this option to actually enable synchronization. If it is enabled,
+# nothing is actually written to the server or to the local data files. If you
+# combine DryRun = Yes with Verbose = Yes, you get a log of what would have
+# happened with this option disabled.
+DryRun = No
+
+# Enable this if you want detailed logs written to stdout.
+Verbose = Yes
+
+# Credentials for HTTP Basic Authentication. Leave this commented out if you do
+# not want to use authentication.
+[Auth]
+Username = aleksejchaichan@posteo.de
+Password = tsov-qhzc-udme-edhr
+
+# Optionally specify additional HTTP headers here.
+#[CustomHeaders]
+#User-Agent = Mac_OS_X/10.9.2 (13C64) CalendarAgent/176
+#
+#
+#Hostname = apidata.googleusercontent.com
+#Path = /caldav/v2/aleksejchaichan@gmail.com/events/
+#AuthMethod = oauth2
+#SyncFilter = cal
+
+
+#[OAuth2]
+#ClientID = 1082127487465-39rqo8v5ms4sj25j2bv902ift40aji9h.apps.googleusercontent.com
+#ClientSecret = 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
+#Scope = https://www.googleapis.com/auth/calendar
+#RedirectURI = http://127.0.0.1
+#
+#
+#[General]
+#Binary = calcurse
+#Hostname = posteo.de:8843
+#Path = calendars/aleksejchaichan/defaults
+#AuthMethod = basic
+#InsecureSSL = No
+#HTTPS = Yes
+#SyncFilter = cal,todo
+#DryRun = No
+#Verbose = Yes
+
+#[Auth]
+#Username = aleksejchaichan@posteo.de
+#Password = 

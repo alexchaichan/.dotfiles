@@ -19,6 +19,16 @@ Hostname = p61-caldav.icloud.com/a.chaichan@icloud.com
 # Path to the CalDAV calendar on the host specified above.
 Path = calendars/FA80DC02-9ED0-4A05-B1FA-7383E7F74215/
 
+
+
+# Host name of the server that hosts CalDAV.
+Hostname = caldav.icloud.com/a.chaichan@icloud.com
+
+# Path to the CalDAV calendar on the host specified above.
+Path = calendars/FA80DC02-9ED0-4A05-B1FA-7383E7F74215/
+
+
+
 # Enable this if you want to skip SSL certificate checks.
 InsecureSSL = No
 
