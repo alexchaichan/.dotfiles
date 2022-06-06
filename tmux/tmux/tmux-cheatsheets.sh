@@ -23,7 +23,6 @@ elif [[ "$selected" == *sh ]]; then
 
 fi
 
-
 if [[ "$lang" == "cht" ]]; then
 
   tmux neww zsh -c "curl -s cht.sh/$query | bat & while [ : ]; do sleep 1; done"
