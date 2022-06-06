@@ -68,14 +68,11 @@ keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- wrapper
-keymap("v", "<A-2>", ':s/\%V\(.*\)\%V/"\1"/', opts)
-
-
---s/\%V\(.*\)\%V/"\1"/
---s/\%V\(.*\)\%V/'\1'/
---s/\%V\(.*\)\%V/(\1)/
---s/\%V\(.*\)\%V/[\1]/
---s/\%V\(.*\)\%V/{\1}/
+keymap("v", "\"", ":s/\\%V\\(.*\\)\\%V/\"\\1\"/<CR>", opts)
+keymap("v", "\'", ":s/\\%V\\(.*\\)\\%V/\'\\1\'/<CR>", opts)
+keymap("v", "(", ":s/\\%V\\(.*\\)\\%V/(\\1)/<CR>", opts)
+keymap("v", "[", ":s/\\%V\\(.*\\)\\%V/[\\1]/<CR>", opts)
+keymap("v", "{", ":s/\\%V\\(.*\\)\\%V/{\\1}/<CR>", opts)
 
 -- terminal --
 -- better terminal navigation
