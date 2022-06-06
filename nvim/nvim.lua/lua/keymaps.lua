@@ -67,6 +67,16 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
+-- wrapper
+keymap("v", "<A-2>", ':s/\%V\(.*\)\%V/"\1"/', opts)
+
+
+--s/\%V\(.*\)\%V/"\1"/
+--s/\%V\(.*\)\%V/'\1'/
+--s/\%V\(.*\)\%V/(\1)/
+--s/\%V\(.*\)\%V/[\1]/
+--s/\%V\(.*\)\%V/{\1}/
+
 -- terminal --
 -- better terminal navigation
 -- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
