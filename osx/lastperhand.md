@@ -1,12 +1,5 @@
 ## last steps by hand
 
-### neovim
-```
-gem install neovim
-yarn global add neovim
-pip3 install neovim
-pip3 install pynvim
-```
 ___
 
 ### full disk acces to crontabs

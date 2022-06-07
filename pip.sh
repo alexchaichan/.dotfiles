@@ -13,6 +13,8 @@ pip3 install adblock
 pip install tldextract
 pip3 install --user httplib2
 pip install --user youtube-dl
+pip3 install neovim
+pip3 install pynvim
 
 # jupyter
 pip install JLDracula
