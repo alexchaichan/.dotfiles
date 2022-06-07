@@ -12,6 +12,7 @@ pip3 install asciidoc
 pip3 install adblock
 pip install tldextract
 pip3 install --user httplib2
+pip install --user youtube-dl
 
 # jupyter
 pip install JLDracula

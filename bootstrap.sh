@@ -57,6 +57,10 @@ source $DOTFILES/cheatsheets/cheatsheet_manager.sh
 # install crontabs
 source $DOTFILES/cronbtabs.sh
 
+# chmods
+chmod a+x $DOTFILES/qutebrowser/.qutebrowser/userscripts/*.sh
+#chmod a+x $DOTFILES/tmux/tmux/tmux-cheatsheets.sh
+
 # configure R
 Rscript $DOTFILES/R/package_manager.R
 Rscript $DOTFILES/R/dependencies.R

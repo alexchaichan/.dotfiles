@@ -261,7 +261,9 @@ c.content.blocking.method = 'both'
 ################################################################################
 
 # keybinding view videos with mpv
-config.bind('M', 'hint links spawn /usr/local/bin/mpv {hint-url}')
+config.bind('M', 'hint links spawn mpv {hint-url}')
+config.bind("Y", "spawn --userscript youtube_mp3_downloader.sh")
+config.bind("X", "spawn --userscript youtube_downloader.sh")
 
 # keybindings navigation
 
