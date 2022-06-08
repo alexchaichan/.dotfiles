@@ -74,6 +74,9 @@ keymap("v", "(", ":s/\\%V\\(.*\\)\\%V/(\\1)/<CR>", opts)
 keymap("v", "[", ":s/\\%V\\(.*\\)\\%V/[\\1]/<CR>", opts)
 keymap("v", "{", ":s/\\%V\\(.*\\)\\%V/{\\1}/<CR>", opts)
 
+-- new line after each dot
+keymap("n", ".", ":%s/\\. /.\\r/g<CR>", opts)
+
 -- terminal --
 -- better terminal navigation
 -- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)

@@ -1,12 +1,12 @@
 # cd into repo
 git init
 
-# add the files in your new local repository. This stages them for the first commit.
+hub create -d "$REPONAME"
 
+# add the files in your new local repository. This stages them for the first commit.
 git add .
 
 # commit the files that you've staged in your local repository.
-
 git commit -m 'First commit'
 
 # add repo to git
