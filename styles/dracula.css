@@ -9,9 +9,6 @@ body {
 	padding: 0 30px;
 }
 
-
-
-
 a.headerlink {
   display: none;
   border: none;
@@ -96,8 +93,22 @@ li {
   color: #f1fa8c;
 }
 
+/*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  */
+/* Table of Content in HTML Markdown                                                    */
+/*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  */
 
+#TOC{
+  color: #bd93f9;
+}
 
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    z-index: 2;
+    color: #fff;
+    background-color: #bd93f9;
+    border-color: #bd93f9;
+}
+
+/*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  */
 
 
 table, th, td {
@@ -105,91 +116,3 @@ table, th, td {
 }
 
 
-/*
-
-einfügen in /Users/alexchaichan/Library/Application Support/Sublime Text 3/Packages/User/MarkdownPreview.sublime-settings
-
-{
-"css": [
-        "/Users/alexchaichan/Dropbox/styles/preview.css"
-    ],
-    "enable_mathjax": true,
-    "js": [
-        "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js",
-        "res://MarkdownPreview/js/math_config.js",
-    ],
-
-    "markdown_extensions": [
-        "markdown.extensions.footnotes",
-        "markdown.extensions.attr_list",
-        "markdown.extensions.def_list",
-        "markdown.extensions.tables",
-        "markdown.extensions.abbr",
-        "markdown.extensions.md_in_html",
-        "pymdownx.betterem",
-        "markdown.extensions.extra",
-        {
-            "pymdownx.arithmatex": {
-                "generic": true
-            }
-        },
-        {
-            "markdown.extensions.toc": {
-                "permalink": "\ue157"
-            }
-        },
-                "markdown.extensions.meta",
-        "markdown.extensions.sane_lists",
-        "markdown.extensions.smarty",
-        "markdown.extensions.wikilinks",
-        "markdown.extensions.admonition",
-{
-            "pymdownx.superfences": { // Nested fences and UML support
-                "custom_fences": [
-                    {
-                        "name": "flow",
-                        "class": "uml-flowchart",
-                        "format": {"!!python/name": "pymdownx.superfences.fence_code_format"}
-                    },
-                    {
-                        "name": "sequence",
-                        "class": "uml-sequence-diagram",
-                        "format": {"!!python/name": "pymdownx.superfences.fence_code_format"}
-                    }
-                ]
-            }
-        },
-        {
-            "pymdownx.magiclink": {   // Auto linkify URLs and email addresses
-                "repo_url_shortener": true,
-                "repo_url_shorthand": true
-            }
-        },
-        "pymdownx.tasklist",     // Task lists
-        {
-            "pymdownx.tilde": {  // Provide ~~delete~~
-                "subscript": false
-            }
-        },
-        {
-            "pymdownx.emoji": {  // Provide GitHub's emojis
-                "emoji_index": {"!!python/name": "pymdownx.emoji.gemoji"},
-                "emoji_generator": {"!!python/name": "pymdownx.emoji.to_png"},
-                "alt": "short",
-                "options": {
-                    "attributes": {
-                        "align": "absmiddle",
-                        "height": "20px",
-                        "width": "20px"
-                    },
-                    "image_path": "https://github.githubassets.com/images/icons/emoji/unicode/",
-                    "non_standard_image_path": "https://github.githubassets.com/images/icons/emoji/"
-                }
-            }
-        }
-
-    ]
-}
-
-
-*/
