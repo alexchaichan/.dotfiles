@@ -68,11 +68,11 @@ keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- wrapper
-keymap("v", "\"", ":s/\\%V\\(.*\\)\\%V/\"\\1\"/<CR>", opts)
-keymap("v", "\'", ":s/\\%V\\(.*\\)\\%V/\'\\1\'/<CR>", opts)
-keymap("v", "(", ":s/\\%V\\(.*\\)\\%V/(\\1)/<CR>", opts)
-keymap("v", "[", ":s/\\%V\\(.*\\)\\%V/[\\1]/<CR>", opts)
-keymap("v", "{", ":s/\\%V\\(.*\\)\\%V/{\\1}/<CR>", opts)
+keymap("v", "\"", "l:s/\\%V\\(.*\\)\\%V/\"\\1\"/<CR>", opts)
+keymap("v", "\'", "l:s/\\%V\\(.*\\)\\%V/\'\\1\'/<CR>", opts)
+keymap("v", "(", "l:s/\\%V\\(.*\\)\\%V/(\\1)/<CR>", opts)
+keymap("v", "[", "l:s/\\%V\\(.*\\)\\%V/[\\1]/<CR>", opts)
+keymap("v", "{", "l:s/\\%V\\(.*\\)\\%V/{\\1}/<CR>", opts)
 
 -- new line after each dot
 keymap("n", ".", ":%s/\\. /.\\r/g<CR>", opts)
