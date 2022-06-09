@@ -289,6 +289,10 @@ config.bind('t', 'open -t')
 # homepage with shift+h
 config.bind('H', 'home')
 
+# toogle darkmode
+config.bind('D', 'config-cycle colors.webpage.darkmode.enabled ;; restart')
+
+
 # # Default font families to use. Whenever "default_family" is used in a
 # # font setting, it's replaced with the fonts listed here. If set to an
 # # empty value, a system-specific monospace default is used.
