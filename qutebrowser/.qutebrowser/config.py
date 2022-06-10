@@ -153,7 +153,8 @@ c.url.searchengines = {
     'ru':           'https://deru.dict.cc/?s={}',
     'sc':           'https://scholar.google.com/scholar?hl=de&as_sdt=0%2C5&q={}&btnG=',
     'wiki':         'https://de.wikipedia.org/wiki/{}',
-    'archwiki':     'https://wiki.archlinux.org/index.php?search={}&title=Special%3ASearch&wprov=acrw1'
+    'archwiki':     'https://wiki.archlinux.org/index.php?search={}&title=Special%3ASearch&wprov=acrw1',
+    'duden':        'https://www.duden.de/rechtschreibung/{}'
 
 }
 
