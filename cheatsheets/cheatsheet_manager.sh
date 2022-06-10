@@ -9,3 +9,7 @@ done
 for i in $cheatsheets_python;
   do cd $HOME/cheatsheets/python; wget $i; cd;
 done
+
+for i in $cheatsheet_conda;
+ do cd $HOME/cheatsheets/conda; wget $i; cd;
+done
