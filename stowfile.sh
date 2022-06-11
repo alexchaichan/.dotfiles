@@ -44,7 +44,7 @@ elif [[ "$os" == "linux" ]]; then
 fi
 
 # nvim
-mkdir $VDOTDIR ; mkdir $VDOTDIR/pack/ ; mkdir $VDOTDIR/pack/plugins/ ; mkdir $VDOTDIR/pack/plugins/start ; mkdir $VDOTDIR/pack/plugins/opt ; mkdir $VDOTDIR/spell ; ln -sf $DOTFILES/nvim/nvim.lua/* $VDOTDIR ; ln -sf $DOTFILES/snippets/ $VDOTDIR
+mkdir $VDOTDIR ; mkdir $VDOTDIR/pack/ ; mkdir $VDOTDIR/pack/plugins/ ; mkdir $VDOTDIR/pack/plugins/start ; mkdir $VDOTDIR/pack/plugins/opt ; mkdir $VDOTDIR/spell ; ln -sf $DOTFILES/vim/nvim.lua/* $VDOTDIR ; ln -sf $DOTFILES/snippets/ $VDOTDIR
 
 # tmux
 mkdir $TDOTDIR ; mkdir $TDOTDIR/plugins ; ln -sf $DOTFILES/tmux/tmux/.tmux.conf $HOME/
