@@ -140,10 +140,8 @@ c.content.pdfjs = True
 
 # default 'startpage.com' startpage
 
-#c.url.default_page = ('~/Dropbox/.config/.qutebrowser/startpages/search/startpage.html')
-c.url.default_page = ('https://www.startpage.com/do/mypage.pl?prfe=2c5fae38196589d04bfd7217a019dee984f5eb60c1382f9db128da03f37b263a10deea6b7de567fe6df59597283725ae2294dc7c6e2706b450e89a583d967c1b84506ddfb8ea1895567309f04b4b')
-# c.url.start_pages = ('~/Dropbox/.config/.qutebrowser/startpages/search/startpage.html')
-c.url.start_pages = ('https://www.startpage.com/do/mypage.pl?prfe=2c5fae38196589d04bfd7217a019dee984f5eb60c1382f9db128da03f37b263a10deea6b7de567fe6df59597283725ae2294dc7c6e2706b450e89a583d967c1b84506ddfb8ea1895567309f04b4b')
+c.url.default_page = ('https://www.startpage.com/do/mypage.pl?prfe=a44f4a9cfee82fddce2e487e31cdb9d7a00fccb7548af69c104a99d89188eb44ca1bc929ebc56e9035fc9235831071f69ee55eb4dabedc2ab4d5609bb68c54c7988c20df10ae4ced40347d')
+c.url.start_pages = ('https://www.startpage.com/do/mypage.pl?prfe=a44f4a9cfee82fddce2e487e31cdb9d7a00fccb7548af69c104a99d89188eb44ca1bc929ebc56e9035fc9235831071f69ee55eb4dabedc2ab4d5609bb68c54c7988c20df10ae4ced40347d')
 
 c.url.searchengines = {
     'DEFAULT':      'https://www.startpage.com/sp/search?query={}',
