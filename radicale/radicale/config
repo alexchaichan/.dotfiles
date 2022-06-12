@@ -1,0 +1,5 @@
+[auth]
+type = htpasswd
+htpasswd_filename = $CONFIG/radicale/user
+# encryption method used in the htpasswd file
+htpasswd_encryption = md5
