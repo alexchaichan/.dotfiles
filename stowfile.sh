@@ -160,7 +160,7 @@ ln -sf $DOTFILES/khal/khal $HOME/.config
 mkdir $HOME/.calcurse/ ; ln -sf $DOTFILES/calcurse/.calcurse/* $HOME/.calcurse
 
 # radicale
-mkdir $CONFIG/radicale ; ln -sf $DOTFILES/radicale/radicale/* $CONFIG/radicale
+mkdir $CONFIG/radicale ; ln -sf $DOTFILES/radicale/radicale/* $CONFIG/radicale ; mkdir $HOME/radicale
 
 # vdirsyncer
 mkdir $CONFIG/vdirsyncer ; cp $DOTFILES/isync/vdirsyncer/config $CONFIG/vdirsyncer

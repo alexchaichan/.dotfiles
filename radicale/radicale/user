@@ -1,1 +1,1 @@
-user:CALCURSE_RADICALE_PASSWORD=$(pass show radicale)
+user:$apr1$VRp9u94K$o2GgVvohSoCoa8v52PFuo1

@@ -14,24 +14,23 @@
 Binary = calcurse
 
 # Host name of the server that hosts CalDAV.
-Hostname = p61-caldav.icloud.com/a.chaichan@icloud.com
+#Hostname = p61-caldav.icloud.com/a.chaichan@icloud.com
 
 # Path to the CalDAV calendar on the host specified above.
 #Path = calendars/FA80DC02-9ED0-4A05-B1FA-7383E7F74215/
 
-
-
+Hostname = http://localhost:5232/
 # Host name of the server that hosts CalDAV.
 # Hostname = caldav.icloud.com
 
 # Path to the CalDAV calendar on the host specified above.
 #Path = calendars/FA80DC02-9ED0-4A05-B1FA-7383E7F74215/
 
-Path = 432604390/calendars/6208D939-1C23-4499-B159-893C5A109D44/
-
+# Path = 432604390/calendars/6208D939-1C23-4499-B159-893C5A109D44/
+Path = user/cfc2c07c-0cb8-0d09-9790-43805d3cde91/
 
 # Enable this if you want to skip SSL certificate checks.
-InsecureSSL = No
+InsecureSSL = Yes
 
 AuthMethod = basic
 
