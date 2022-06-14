@@ -5,7 +5,7 @@ function vim_add_plugin() {
   git clone "https://github.com/$1.git" "$VDOTDIR/pack/plugins/start/$PLUGIN_NAME"
 }
 
-source $DOTFILES/nvim/plugins.sh
+source $DOTFILES/vim/plugins.sh
 
 for i in $vim_plugins;
   do vim_add_plugin $i;
