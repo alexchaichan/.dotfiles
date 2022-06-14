@@ -11,7 +11,7 @@ mkdir $CONFIG ; mkdir $HOME/.cache ; mkdir $HOME/repositories
 ########################################################
 
 mkdir $HOME/cheatsheets ; mkdir $HOME/cheatsheets/R ; mkdir $HOME/cheatsheets/python ; mkdir $HOME/cheatsheets/zsh ; mkdir $HOME/cheatsheets/nvim ; mkdir $HOME/cheatsheets/conda
-ln -sf $DOTFILES/cheatsheets/* $HOME/cheatsheets && rm $HOME/cheatsheets/*.sh
+ln -sf $DOTFILES/cheatsheets/* $HOME/cheatsheets ; rm $HOME/cheatsheets/*.sh
 
 ########################################################
 # create symlinks                                      #
