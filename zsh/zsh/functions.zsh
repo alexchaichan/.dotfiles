@@ -346,4 +346,8 @@ mm(){
     bluetoothctl connect 04:4B:ED:D2:45:CF
 }
 
+clear(){
+  /usr/bin/clear
+}
+
 fi
