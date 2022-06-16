@@ -226,21 +226,6 @@ c.content.autoplay = False
 
 #### ad block
 
-# ==== yt add-blocking ====== {{{
-
-from qutebrowser.api import interceptor
-
-def ytfilter(info: interceptor.Request):
-     url = info.request_url
-     if(url.host() == "www.youtube.com"
-        and url.path() == "/get_video_info"
-        and "&adformat" in url.query()
-        ):
-         info.block()
-
-interceptor.register(ytfilter)
-# }}}
-
 c.content.blocking.adblock.lists = [ \
         "https://easylist.to/easylist/easylist.txt", \
         "https://easylist.to/easylist/easyprivacy.txt", \
@@ -291,7 +276,7 @@ config.bind('t', 'open -t')
 config.bind('H', 'home')
 
 # toogle darkmode
-config.bind('D', 'config-cycle colors.webpage.darkmode.enabled ;; restart')
+#config.bind('', 'config-cycle colors.webpage.darkmode.enabled ;; restart')
 
 
 # # Default font families to use. Whenever "default_family" is used in a
