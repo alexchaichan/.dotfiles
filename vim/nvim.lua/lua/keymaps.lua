@@ -9,12 +9,12 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- modes
---   normal_mode = "n",
---   insert_mode = "i",
---   visual_mode = "v",
---   visual_block_mode = "x",
---   term_mode = "t",
---   command_mode = "c",
+-- normal_mode = "n",
+-- insert_mode = "i",
+-- visual_mode = "v",
+-- visual_block_mode = "x",
+-- term_mode = "t",
+-- command_mode = "c",
 
 -- window splitting
 keymap("n", "<C-v>", ":vsplit<cr>", opts)
@@ -87,7 +87,7 @@ keymap("n", ".", ":%s/\\. /.\\r/g<CR>", opts)
 -- alternate way to save
 keymap("", "<C-w>", "<Nop>", opts) -- unmap first
 -- save with ctr+w aswell remove all trailings in the whole file and trailing between to words and trailing more then one empty line
-keymap("", "<C-w>", ":%s/\\s\\+$//e | %s/  \\+/ /g | %s/\\n\\{3,}/\\r\\r/e | :w<CR>", opts)
+keymap("", "<C-w>", ":%s/\\s\\+$//e | %s/\\s\\+/ /g | %s/\\n\\{3,}/\\r\\r/e | :w<CR>", opts)
 -- alternate way to quit
 keymap("", "<C-q>", "<Nop>", opts) -- unmap first
 keymap("", "<C-q>", ":q!<CR>", opts) -- quit with ctrl+q
@@ -101,19 +101,19 @@ keymap("n", "<F6>", ":set spell nospell<CR>", opts)
 keymap("i", "µ", "%>%", opts)
 
 -----------------------------------------------------------------------
--- nvim-tree                                                          -
+-- nvim-tree -
 -----------------------------------------------------------------------
 -- open with leader e
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
 -----------------------------------------------------------------------
--- telescope                                                           -
+-- telescope -
 -----------------------------------------------------------------------
--- open  with leader t
+-- open with leader t
 keymap("n", "<leader>t", ":Telescope find_files<CR>", opts)
 
 -----------------------------------------------------------------------
--- harpoon                                                            -
+-- harpoon -
 -----------------------------------------------------------------------
 
 keymap("n", "<leader>H", ":lua require(\"harpoon.mark\").add_file()<cr>", opts)
@@ -122,7 +122,7 @@ keymap("n", "<leader>g", ":lua require(\"harpoon.ui\").nav_next()<cr>", opts)
 keymap("n", "<leader>G", ":lua require(\"harpoon.ui\").nav_prev()<cr>", opts)
 
 -----------------------------------------------------------------------
--- easymotion                                                         -
+-- easymotion -
 -----------------------------------------------------------------------
 
 vim.cmd('map <Leader><Leader> <Plug>(easymotion)')
