@@ -11,6 +11,7 @@ esac
 if [[ "$os" == "linux" ]]; then
   echo 'MOUSE ON!!!'
   bluetoothctl connect 04:4B:ED:D2:45:CF
+  pkill spotifyd
 	startx
 elif [[ "$os" == "cygwin" ]]; then
 	zsh
