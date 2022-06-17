@@ -86,8 +86,8 @@ keymap("n", ".", ":%s/\\. /.\\r/g<CR>", opts)
 
 -- alternate way to save
 keymap("", "<C-w>", "<Nop>", opts) -- unmap first
-keymap("", "<C-w>", ":%s/\\s\\+$//e | :w<CR>", opts) -- save with ctr+w aswell remove all trailings in the whole file
-
+-- save with ctr+w aswell remove all trailings in the whole file and trailing between to words and trailing more then one empty line
+keymap("", "<C-w>", ":%s/\\s\\+$//e | %s/  \\+/ /g | %s/\\n\\{3,}/\\r\\r/e | :w<CR>", opts)
 -- alternate way to quit
 keymap("", "<C-q>", "<Nop>", opts) -- unmap first
 keymap("", "<C-q>", ":q!<CR>", opts) -- quit with ctrl+q
