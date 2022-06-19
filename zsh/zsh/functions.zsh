@@ -1,3 +1,14 @@
+# pdf_merger (){
+#   export pages=`pdfinfo $1 | grep "Pages" | grep -Eo '[0-9]+(\.[0-9]+)?'`
+#
+#   if [ `expr $pages % 8` -eq 0 ]
+#   then
+#     echo "Your number is divisible by 8"
+#   else
+#     pdfunite ~/Downloads/blank.pdf  
+#   fi
+# }
+
 ######################################################################
 # aliasas						          #
 ######################################################################
@@ -22,7 +33,7 @@ funs(){
 
 update(){
   if [[ "$os" == "osx" ]]; then
-      brew update && brew upgrade && brew cleanup && brew outdated && brew cu
+      PlugUpdate && brew update && brew upgrade && brew cleanup && brew outdated && brew cu -f -a && sudo softwareupdate -i -a
   elif [[ "$os" == "linux" ]]; then
     sudo pacman -Syyu
   fi
@@ -172,7 +183,10 @@ function tmux_add_plugin() {
   git clone "https://github.com/$1.git" "$TDOTDIR/plugins/$PLUGIN_NAME"
 }
 
-alias PlugUpdate="cd $VDOTDIR/pack/plugins/start && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd && cd $ZDOTDIR && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd && cd $TDOTDIR && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd"
+function PlugUpdate(){
+  cd $VDOTDIR/pack/plugins/start && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd && cd $ZDOTDIR && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd && cd $TDOTDIR && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd
+}
+
 
 ##########################################################################################################
 # templates                                                                                              #
