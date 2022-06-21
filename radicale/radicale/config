@@ -7,7 +7,7 @@ htpasswd_encryption = md5
 delay = 1
 
 [server]
-hosts = 0.0.0.0:5232, [::]:5232
+# hosts = 0.0.0.0:5232, [::]:5232
 
 max_connections = 20
 # 100 Megabyte

@@ -6,28 +6,15 @@
 # Alternatively, if using ~/.calcurse, create a new directory at
 # ~/.calcurse/caldav/ and copy this file to ~/.calcurse/caldav/config and adjust
 # the configuration file below.
-# webcal://p61-caldav.icloud.com/published/2/NDMyNjA0MzkwNDMyNjA0M_dh3h4KUuTa_W243czcBGwyVM15RHv4w9PGVVTV_BeUIeB741_rxlfcq7q50sW-wZI-KXJoexCqe7U7sTSg5fc
-# https://p61-caldav.icloud.com
 
 [General]
 # Path to the calcurse binary that is used for importing/exporting items.
 Binary = calcurse
 
 # Host name of the server that hosts CalDAV.
-#Hostname = p61-caldav.icloud.com/a.chaichan@icloud.com
+Hostname = caldav.icloud.com
 
-# Path to the CalDAV calendar on the host specified above.
-#Path = calendars/FA80DC02-9ED0-4A05-B1FA-7383E7F74215/
-
-Hostname = http://localhost:5232/
-# Host name of the server that hosts CalDAV.
-# Hostname = caldav.icloud.com
-
-# Path to the CalDAV calendar on the host specified above.
-#Path = calendars/FA80DC02-9ED0-4A05-B1FA-7383E7F74215/
-
-# Path = 432604390/calendars/6208D939-1C23-4499-B159-893C5A109D44/
-Path = user/cfc2c07c-0cb8-0d09-9790-43805d3cde91/
+Path = 432604390/calendars/5FF8F53F-4E81-4AA2-89F9-9A5777B1B3D9
 
 # Enable this if you want to skip SSL certificate checks.
 InsecureSSL = Yes
@@ -48,19 +35,3 @@ Verbose = Yes
 [Auth]
 Username = a.chaichan@icloud.com
 Password = CALCURSE_CALDAV_PASSWORD=$(pass show calcurse) calcurse-caldav
-
-# Optionally specify additional HTTP headers here.
-#[CustomHeaders]
-#User-Agent = Mac_OS_X/10.9.2 (13C64) CalendarAgent/176
-
-
-
-# Path to the CalDAV calendar on the host specified above.
-#Path = /432604390/calendars/6208D939-1C23-4499-B159-893C5A109D44/
-
-#Path = published/2/NDMyNjA0MzkwNDMyNjA0M_dh3h4KUuTa_W243czcBGwrYyq9jv607Tzh7DnP2QRzdQdLyqAqSStMi22368mrLBgp0px6aKEXvauPFEeyoHU/
-
-# Enable this if you want to skip SSL certificate checks.
-#InsecureSSL = No
-
-#HTTPS = yes
