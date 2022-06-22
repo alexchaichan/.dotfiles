@@ -135,15 +135,6 @@ if [[ "$os" == "linux" ]]; then
 	ln -sf $DOTFILES/i3/i3status $CONFIG
 fi
 
-## spotify credentials
-echo | pass spotify.dom/spotify-tui > $CONFIG/spotify-tui/client.yml
-
-if [[ "$os" == "osx" ]]; then
-	echo | pass spotify.com/spotifyd > $HOME/.cache/spotifyd/credentials.json
-elif [[ "$os" == "linux" ]]; then
-	echo | pass spotify.com/spotifyd > $CONFIG/spotifyd/cache/credentials.json
-fi
-
 # ranger
 mkdir $CONFIG/ranger ; ln -sf $DOTFILES/ranger/ranger/* $CONFIG/ranger
 
@@ -158,8 +149,6 @@ ln -sf $DOTFILES/khal/khal $HOME/.config
 
 # calcurse
 mkdir $HOME/.calcurse/ ; mkdir $HOME/.calcurse/caldav ; ln -sf $DOTFILES/calcurse/.calcurse/* $HOME/.calcurse
-
-echo | pass show credentials/calcurse >> $HOME/.calcurse/caldav/config
 
 # radicale
 mkdir $CONFIG/radicale ; ln -sf $DOTFILES/radicale/radicale/* $CONFIG/radicale ; mkdir $HOME/radicale

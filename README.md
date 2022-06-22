@@ -46,6 +46,15 @@ fi
 ## on a private machine
 
 ```
+## spotify credentials
+echo | pass spotifyd.com/spotify-tui > $CONFIG/spotify-tui/client.yml
+
+if [[ "$os" == "osx" ]]; then
+	echo | pass spotify.com/spotifyd > $HOME/.cache/spotifyd/credentials.json
+elif [[ "$os" == "linux" ]]; then
+	echo | pass spotify.com/spotifyd > $CONFIG/spotifyd/cache/credentials.json
+fi
+
 echo | pass show credentials/calcurse >> $HOME/.calcurse/caldav/config
 echo | pass show credentials/vdirsyncer >> $HOME/.calcurse/caldav/config
 echo | pass show credentials/mbsyncrc >> $HOME/.calcurse/caldav/config
