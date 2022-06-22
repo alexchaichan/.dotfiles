@@ -5,7 +5,7 @@
 #   then
 #     echo "Your number is divisible by 8"
 #   else
-#     pdfunite ~/Downloads/blank.pdf  
+#     pdfunite ~/Downloads/blank.pdf
 #   fi
 # }
 
@@ -187,7 +187,6 @@ function PlugUpdate(){
   cd $VDOTDIR/pack/plugins/start && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd && cd $ZDOTDIR && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd && cd $TDOTDIR && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd
 }
 
-
 ##########################################################################################################
 # templates                                                                                              #
 ##########################################################################################################
@@ -223,7 +222,6 @@ pptx(){
 word(){
     cp $DOTFILES/Templates/word.rmd "$(pwd)"
 }
-
 
 #####################################################
 # zsh functions mac                                 #

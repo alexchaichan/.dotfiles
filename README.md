@@ -47,7 +47,7 @@ fi
 
 ```
 ## spotify credentials
-echo | pass spotifyd.com/spotify-tui > $CONFIG/spotify-tui/client.yml
+echo | pass spotify.com/spotify-tui > $CONFIG/spotify-tui/client.yml
 
 if [[ "$os" == "osx" ]]; then
 	echo | pass spotify.com/spotifyd > $HOME/.cache/spotifyd/credentials.json
