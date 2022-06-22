@@ -14,7 +14,7 @@ Binary = calcurse
 Hostname = caldav.icloud.com
 
 # Path to the calcurse binary that is used for importing/exporting items.
-Path = 432604390/calendars/5FF8F53F-4E81-4AA2-89F9-9A5777B1B3D9
+Path = 4XXXXXXXX/calendars/5FF8F53F-4E81-4AA2-89F9-9A5777B1B3D9
 
 # Enable this if you want to skip SSL certificate checks.
 InsecureSSL = Yes
