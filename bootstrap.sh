@@ -58,10 +58,9 @@ source $DOTFILES/cheatsheets/cheatsheet_manager.sh
 source $DOTFILES/cronbtabs.sh
 
 # chmods
-chmod a+x $DOTFILES/qutebrowser/.qutebrowser/userscripts/
+chmod a+x $DOTFILES/qutebrowser/.qutebrowser/userscripts/*
 chmod +x ~/.dotfiles/calcurse/.calcurse/hooks/pre-load
 chmod +x ~/.dotfiles/calcurse/.calcurse/hooks/post-save
-
 #chmod a+x $DOTFILES/tmux/tmux/tmux-cheatsheets.sh
 
 # configure R
