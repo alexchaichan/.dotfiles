@@ -44,7 +44,7 @@ update(){
 
 # quick push git
 gitpush(){
-  pass +
+  pass .
   git add .
   git commit -m "update"
   git push
