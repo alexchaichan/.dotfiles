@@ -8,12 +8,12 @@
 # the configuration file below.
 
 [General]
-# Path to the calcurse binary that is used for importing/exporting items.
 Binary = calcurse
 
 # Host name of the server that hosts CalDAV.
 Hostname = caldav.icloud.com
 
+# Path to the calcurse binary that is used for importing/exporting items.
 Path = 432604390/calendars/5FF8F53F-4E81-4AA2-89F9-9A5777B1B3D9
 
 # Enable this if you want to skip SSL certificate checks.
@@ -34,4 +34,4 @@ Verbose = Yes
 # not want to use authentication.
 [Auth]
 Username = a.chaichan@icloud.com
-Password = CALCURSE_CALDAV_PASSWORD=$(pass show calcurse) calcurse-caldav
+Password = CALCURSE_CALDAV_PASSWORD=$(pass show calcurse/Password) calcurse-caldav

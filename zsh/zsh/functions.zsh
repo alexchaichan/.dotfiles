@@ -14,7 +14,7 @@
 ######################################################################
 
 # calcurse pass plugins
-alias calcurse-caldav='CALCURSE_CALDAV_PASSWORD=$(pass show mbsyncrc) calcurse-caldav'
+alias calcurse-caldav='CALCURSE_CALDAV_PASSWORD=$(pass show calcurse/Password) calcurse-caldav'
 alias calcurse_radicale='CALCURSE_RADICALE_PASSWORD=$(pass show radicale)'
 
 # open $DOTDIR repo
