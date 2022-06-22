@@ -56,8 +56,8 @@ elif [[ "$os" == "linux" ]]; then
 fi
 
 echo | pass show credentials/calcurse >> $HOME/.calcurse/caldav/config
-echo | pass show credentials/vdirsyncer >> $HOME/.calcurse/caldav/config
-echo | pass show credentials/mbsyncrc >> $HOME/.calcurse/caldav/config
+echo | pass show credentials/vdirsyncer >> $CONFIG/vdirsyncer/config
+echo | pass show credentials/mbsyncrc >> $HOME/.mbsyncrc
 ```
 
 ### run light version
