@@ -43,6 +43,14 @@ fi
 
 `source ~/.dotfiles/bootstrap.sh`
 
+## on a private machine
+
+```
+echo | pass show credentials/calcurse >> $HOME/.calcurse/caldav/config
+echo | pass show credentials/vdirsyncer >> $HOME/.calcurse/caldav/config
+echo | pass show credentials/mbsyncrc >> $HOME/.calcurse/caldav/config
+```
+
 ### run light version
 
 `source ~/.dotfiles/light.sh`

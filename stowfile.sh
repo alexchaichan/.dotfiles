@@ -193,6 +193,9 @@ ln -sf $DOTFILES/mpv/mpv $CONFIG
 # neofetch
 ln -sf $DOTFILES/neofetch/neofetch $CONFIG
 
+# xboard
+ln -sf $DOTFILES/xboard/.xboardrc $HOME
+
 ########################################################
 # services                                             #
 ########################################################
