@@ -1,4 +1,4 @@
-set my_pass="`pass mutt`"
+set my_pass="`pass apple.com/password`"
 
 set imap_user = "a.chaichan"
 set smtp_pass = "$my_pass"

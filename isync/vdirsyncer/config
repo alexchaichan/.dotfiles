@@ -46,7 +46,7 @@ type = "carddav"
 url = "https://contacts.icloud.com/"
 username = "a.chaichan@icloud.com"
 # password = "xxxx-xxxx-xxxx-xxxx"
-password.fetch = ["command", "pass", "vdirsyncer"]
+password.fetch = ["command", "pass", "apple.com/password"]
 
 # CALDAV
 [pair my_calendar]
@@ -67,4 +67,4 @@ type = "caldav"
 url = "https://caldav.icloud.com/"
 username = "a.chaichan@icloud.com"
 # password = "xxxx-xxxx-xxxx-xxxx"
-password.fetch = ["command", "pass", "vdirsyncer"]
+password.fetch = ["command", "pass", "apple.com/password"]
