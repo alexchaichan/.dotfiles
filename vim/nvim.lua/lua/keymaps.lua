@@ -87,7 +87,7 @@ keymap("n", ".", ":%s/\\. /.\\r/g<CR>", opts)
 -- alternate way to save
 keymap("", "<C-w>", "<Nop>", opts) -- unmap first
 -- save with ctr+w aswell
-keymap("", "<C-w>", ":%s/\\s\\+$//e | %s/\\s\\+/ /g | w<CR>", opts)
+keymap("", "<C-w>", ":%s/\\s\\+$//e | %s/\\n\\{3,}/\\r\\r/e | w<CR>", opts)
 -- alternate way to quit
 keymap("", "<C-q>", "<Nop>", opts) -- unmap first
 keymap("", "<C-q>", ":q!<CR>", opts) -- quit with ctrl+q

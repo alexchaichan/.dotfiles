@@ -168,7 +168,7 @@ mkdir $CONFIG/radicale ; ln -sf $DOTFILES/radicale/radicale/* $CONFIG/radicale ;
 mkdir $CONFIG/vdirsyncer ; ln -sf $DOTFILES/isync/vdirsyncer/config $CONFIG/vdirsyncer
 
 # mbsync
-cp $DOTFILES/isync/mbsync/.mbsyncrc $HOME/
+ln -sf $DOTFILES/isync/mbsync/.mbsyncrc $HOME/
 
 # newsboat
 mkdir $HOME/.newsboat ; ln -sf $DOTFILES/newsboat/.newsboat/* $HOME/.newsboat

@@ -1,19 +1,14 @@
 source ~/.dotfiles/mutt/mutt/dracula.muttrc
 
-
 # folder hooks
 folder-hook 'account.com.icloud' source 'source ~/.dotfiles/mutt/mutt/account/.com.icloud.muttrc'
 
 # default account
 source ~/.dotfiles/mutt/mutt/account.com.icloud.muttrc
 
-
 # # Macros for switching accounts
 # macro index <f2> '<sync-mailbox><enter-command>source ~/Dropbox/.config/.mutt/mutt/account.com.icloud.muttrc<enter><change-folder>!<enter>'
 # macro index <f3> '<sync-mailbox><enter-command>source ~/Dropbox/.config/.mutt/mutt/account.de.uk.muttrc<enter><change-folder>!<enter>'
-
-
-
 
 # khard x mutt
 set query_command= "khard email --parsable --search-in-source-files %s"
@@ -27,25 +22,16 @@ set query_command= "khard email --parsable %s"
 bind editor <Tab> complete-query
 bind editor ^T    complete
 
-
-
 set smtp_authenticators = 'gssapi:login'
 
 set editor = "nvim"
 set move = no
 set include
 
-
 auto_view text/html
 alternative_order text/plain text/enriched text/html     # save html for last
 
-
 # Example NeoMutt config file for the sidebar feature.
-#
-#
-#
-#
-
 set pager_index_lines=20
 
 # check for mails
@@ -131,25 +117,7 @@ set sidebar_sort_method = 'unsorted'
 # vim: syntax=neomuttrc
 #
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### example
-
 
 ### ============================================================================
 ###  ~/.mutt/muttrc - persönliche Konfigurationsdatei für Mutt
@@ -273,10 +241,8 @@ bind index,pager <F6> sidebar-next-new
 # Toggle the visibility of the Sidebar.
 bind index,pager B sidebar-toggle-visible
 
-
 ## Die Mailcap, die verwendet werden soll (funktioniert irgendiwe nicht, wenn man es einstellt ??? aber ansosten funktioniert es wenn man es disabled)
 #set mailcap_path='~/Dropbox/.mutt/.mailcap'
-
 
 ## Dies ist eine RegExp, die auf die Dateien, die im Filebrowser angezeigt
 ## werden, matchen sollte. Also keine Dateien, die mit einem Punkt beginnen -
@@ -459,7 +425,6 @@ bind index,pager B sidebar-toggle-visible
 #  #
 #  # Dies reicht für die meisten Fälle aus. Hinweis: Zwischen den Quotationmarks
 #  # dürfen sich Leerzeichen befinden, müssen aber nicht!
-
 
 ## Auch was nettes fürs Syntaxhighlighting: Wie sehen Smileys aus
 #set smileys="((:|\\(|;|=)(-|=|-'|%)(\\)|:|\\=))"
@@ -683,7 +648,6 @@ bind index,pager B sidebar-toggle-visible
 ## Hooks sollen 'To:'-Adressen übereinstimmen
 #set default_hook="~t %s"
 
-
 ## Für deutsche Empfänger (eigentlich nur die Local-Einstellungen)
 #send-hook ^.*@.*(\\.de|\\.ch|\\.at|gmx\\.net|trash\\.net|morgner\\.com|eniac\\.ch\\.eu\\.org|incense\\.org|unix-ag\\.org)$ \
 #        "set locale=de_CH ;\
@@ -763,7 +727,6 @@ bind index,pager B sidebar-toggle-visible
 #folder-hook =feedback/vi$        "my_hdr Reply-To: thomasb+vi@trash.net"
 #folder-hook =feedback/fetchmail$ "my_hdr Reply-To: thomasb+fetchmail@trash.net"
 #folder-hook =feedback/homepage$  "my_hdr Reply-To: thomasb+www@trash.net"
-
 
 ### ----------------------------------------------------------------------------
 ### PGP/GnuPG
@@ -880,7 +843,6 @@ bind index,pager B sidebar-toggle-visible
 #mono body        underline      "[-a-z_0-9.]+@[-a-z_0-9.]+"
 #mono body        bold           "(^| )\\*[-a-z0-9äöüß*]+\\*[,.?]?[ \n]"
 #mono body        underline      "(^| )_[-a-z0-9äöüß_]+_[,.?]?[ \n]"
-
 
 ## farbige Terminals
 ##     object     foreground     background
