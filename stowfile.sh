@@ -136,12 +136,12 @@ if [[ "$os" == "linux" ]]; then
 fi
 
 ## spotify credentials
-echo | pass spotify-tui > $CONFIG/spotify-tui/client.yml
+echo | pass spotify.dom/spotify-tui > $CONFIG/spotify-tui/client.yml
 
 if [[ "$os" == "osx" ]]; then
-	echo | pass spotifyd > $HOME/.cache/spotifyd/credentials.json
+	echo | pass spotify.com/spotifyd > $HOME/.cache/spotifyd/credentials.json
 elif [[ "$os" == "linux" ]]; then
-	echo | pass spotifyd > $CONFIG/spotifyd/cache/credentials.json
+	echo | pass spotify.com/spotifyd > $CONFIG/spotifyd/cache/credentials.json
 fi
 
 # ranger
