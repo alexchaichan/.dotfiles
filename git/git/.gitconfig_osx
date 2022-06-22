@@ -18,7 +18,8 @@
     navigate = true
 [merge]
     conflictstyle = diff3
-
+[commit]
+	gpgsign = true
 [diff]
     colorMoved = default
 # URL ALIASES
@@ -68,5 +69,3 @@
   unmerged = magenta bold reverse
   untracked = red
   updated = green bold
-[commit]
-	gpgsign = true
