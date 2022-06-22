@@ -43,7 +43,7 @@ fi
 
 `source ~/.dotfiles/bootstrap.sh`
 
-## on a private machine
+## some credentials as clear-text
 
 ```
 ## spotify credentials
