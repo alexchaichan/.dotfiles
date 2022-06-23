@@ -1,4 +1,4 @@
-# general config
+# https://github.com/alacritty/alacritty/blob/master/alacritty.yml
 
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
 
@@ -67,7 +67,6 @@ window:
   #     - buttonless: Title bar, transparent background and no title bar buttons
   #decorations: none #/ buttonless #osx speciffic
 
-
   # Background opacity
   #
   # Window opacity as a floating point number from `0.0` to `1.0`.
@@ -112,7 +111,6 @@ scrolling:
 #  # Scrolling distance multiplier.
   multiplier: 0
 
-
 #  # Faux Scrolling
 #  #
 #  # The `faux_multiplier` setting controls the number
@@ -126,7 +124,6 @@ scrolling:
 #  # Automatically scroll to the bottom when new text is written
 #  # to the terminal.
 #  auto_scroll: false
-
 
 # Font configuration
 font:
@@ -202,12 +199,16 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
 
-# Colors (Tomorrow Night)
-#colors:
+# Colors [Dracula theme for Alacritty](https://draculatheme.com/alacritty)
+
+# Color palette
+# https://spec.draculatheme.com
+
+colors:
   # Default colors
-  #primary:
-  #  background: '#1d1f21'
-  #  foreground: '#c5c8c6'
+  primary:
+    background: '#282a36'
+    foreground: '#f8f8f2'
 
     # Bright and dim foreground colors
     #
@@ -216,7 +217,7 @@ draw_bold_text_with_bright_colors: true
     # `draw_bold_text_with_bright_colors` is `false`, the normal foreground
     # color will be used.
     #dim_foreground: '#828482'
-    #bright_foreground: '#eaeaea'
+    bright_foreground: '#ffffff'
 
   # Cursor colors
   #
@@ -224,9 +225,9 @@ draw_bold_text_with_bright_colors: true
   #
   # Allowed values are CellForeground/CellBackground, which reference the
   # affected cell, or hexadecimal colors like #ff00ff.
-  #cursor:
-  #  text: CellBackground
-  #  cursor: CellForeground
+  cursor:
+    text: CellBackground
+    cursor: CellForeground
 
   # Vi mode cursor colors
   #
@@ -234,44 +235,45 @@ draw_bold_text_with_bright_colors: true
   #
   # Allowed values are CellForeground/CellBackground, which reference the
   # affected cell, or hexadecimal colors like #ff00ff.
-  #vi_mode_cursor:
-  #  text: CellBackground
-  #  cursor: CellForeground
+  vi_mode_cursor:
+    text: CellBackground
+    cursor: CellForeground
 
   # Search colors
   #
   # Colors used for the search bar and match highlighting.
-  #search:
+  search:
     # Allowed values are CellForeground/CellBackground, which reference the
     # affected cell, or hexadecimal colors like #ff00ff.
-    #matches:
-    #  foreground: '#000000'
-    #  background: '#ffffff'
-    #focused_match:
-    #  foreground: '#ffffff'
-    #  background: '#000000'
+    matches:
+      foreground: '#44475a'
+      background: '#50fa7b'
+    focused_match:
+      foreground: '#44475a'
+      background: '#ffb86c'
 
-    #bar:
-    #  background: '#c5c8c6'
-    #  foreground: '#1d1f21'
+    bar:
+      background: '#282a36'
+      foreground: '#f8f8f2'
 
   # Keyboard regex hints
-  #hints:
+  hints:
     # First character in the hint label
     #
     # Allowed values are CellForeground/CellBackground, which reference the
     # affected cell, or hexadecimal colors like #ff00ff.
-    #start:
+    start:
     #  foreground: '#1d1f21'
-    #  background: '#e9ff5e'
+      foreground: '#282a36'
+      background: '#f1fa8c'
 
     # All characters after the first one in the hint label
     #
     # Allowed values are CellForeground/CellBackground, which reference the
     # affected cell, or hexadecimal colors like #ff00ff.
-    #end:
-    #  foreground: '#e9ff5e'
-    #  background: '#1d1f21'
+    end:
+      foreground: '#f1fa8c'
+      background: '#282a36'
 
   # Line indicator
   #
@@ -279,9 +281,9 @@ draw_bold_text_with_bright_colors: true
   # search and vi mode.
   #
   # By default, these will use the opposing primary color.
-  #line_indicator:
-  #  foreground: None
-  #  background: None
+  line_indicator:
+    foreground: None
+    background: None
 
   # Selection colors
   #
@@ -289,31 +291,31 @@ draw_bold_text_with_bright_colors: true
   #
   # Allowed values are CellForeground/CellBackground, which reference the
   # affected cell, or hexadecimal colors like #ff00ff.
-  #selection:
-  #  text: CellBackground
-  #  background: CellForeground
+  selection:
+    text: CellForeground
+    background: '#44475a'
 
   # Normal colors
-  #normal:
-  #  black:   '#1d1f21'
-  #  red:     '#cc6666'
-  #  green:   '#b5bd68'
-  #  yellow:  '#f0c674'
-  #  blue:    '#81a2be'
-  #  magenta: '#b294bb'
-  #  cyan:    '#8abeb7'
-  #  white:   '#c5c8c6'
+  normal:
+    black: '#21222c'
+    red: '#ff5555'
+    green: '#50fa7b'
+    yellow: '#f1fa8c'
+    blue: '#bd93f9'
+    magenta: '#ff79c6'
+    cyan: '#8be9fd'
+    white: '#f8f8f2'
 
   # Bright colors
-  #bright:
-  #  black:   '#666666'
-  #  red:     '#d54e53'
-  #  green:   '#b9ca4a'
-  #  yellow:  '#e7c547'
-  #  blue:    '#7aa6da'
-  #  magenta: '#c397d8'
-  #  cyan:    '#70c0b1'
-  #  white:   '#eaeaea'
+  bright:
+    black: '#6272a4'
+    red: '#ff6e6e'
+    green: '#69ff94'
+    yellow: '#ffffa5'
+    blue: '#d6acff'
+    magenta: '#ff92df'
+    cyan: '#a4ffff'
+    white: '#ffffff'
 
   # Dim colors
   #
@@ -424,7 +426,7 @@ cursor:
   # vi_mode_style: None
 
   # Cursor blinking interval in milliseconds.
-  blink_interval: 650
+  blink_interval: 750
 
   # If this is `true`, the cursor will be rendered as a hollow box when the
   # window is not focused.
@@ -436,7 +438,6 @@ cursor:
 
 # Live config reload (changes require restart)
 #live_config_reload: true
-#
 
 ########## SHELL
 
@@ -783,9 +784,7 @@ key_bindings:
   - { key: 23,      mods: Alt, chars: "[" }
   - { key: 22,      mods: Alt, chars: "]" }
 
-
   - { key: Q,      mods: Alt, chars: "@" }
-
 
   - { key: Left,     mods: Command, chars: "\x06\x1b\x5b\x44"                      }
   - { key: Right,    mods: Command, chars: "\x06\x1b\x5b\x43"                       }
@@ -803,17 +802,11 @@ key_bindings:
   - { key: Left,     mods: Control, chars: "\x06\x70"                      }
   - { key: Right,    mods: Control, chars: "\x06\x6e"                       }
 
-
-
-
 # vpn-up uni kassel
   - { key: I ,    mods: Command, chars: "\x76\x70\x6e\x2d\x75\x70\x0a\x75\x28\x6e\x69\x6b\x61\x73\x73\x65\x28\x6d\x34\x79\x6a\x7a\x33\x31\x64\x51\x29\x6c\x29\x0a"                       }
 
-
-
 ########################### crazy open qutebrowser workaround
   - { key: E,    mods: Command, chars: "\x63\x6c\x65\x61\x72\x0a\x62\x61\x74\x20\x7e\x2f\x75\x72\x6c\x73\x0a"                       }
-
 
 # open link  alt+1=1, 2=2, 3...
   - { key: Key1,    mods: Alt, chars: "\x06\x75\x0a\x0a\x71"                       }
@@ -821,7 +814,6 @@ key_bindings:
   - { key: Key3,    mods: Alt, chars: "\x06\x75\x33\x0a\x0a\x0a\x71"                      }
 
 ################################################################################################
-
 
 # open  R with cmd+R
   - { key: R,    mods: Command, chars: "\x52\x0a"                       }
@@ -920,9 +912,6 @@ key_bindings:
 
   # (macOS only)
 
-
-
-
   #- { key: K,              mods: Command, mode: ~Vi|~Search, chars: "\x0c"                 }
   #- { key: K,              mods: Command, mode: ~Vi|~Search, action: ClearHistory          }
   #- { key: Key0,           mods: Command,                    action: ResetFontSize         }
@@ -964,67 +953,3 @@ key_bindings:
 
   # Print all received window events.
   #print_events: false
-  #
-#
-#Dracula theme for Alacritty
-# https://draculatheme.com/alacritty
-#
-# Color palette
-# https://spec.draculatheme.com
-#
-# Template
-# https://github.com/alacritty/alacritty/blob/master/alacritty.yml
-
-colors:
-  primary:
-    background: '#282a36'
-    foreground: '#f8f8f2'
-    bright_foreground: '#ffffff'
-  cursor:
-    text: CellBackground
-    cursor: CellForeground
-  vi_mode_cursor:
-    text: CellBackground
-    cursor: CellForeground
-  search:
-    matches:
-      foreground: '#44475a'
-      background: '#50fa7b'
-    focused_match:
-      foreground: '#44475a'
-      background: '#ffb86c'
-    bar:
-      background: '#282a36'
-      foreground: '#f8f8f2'
-  hints:
-    start:
-      foreground: '#282a36'
-      background: '#f1fa8c'
-    end:
-      foreground: '#f1fa8c'
-      background: '#282a36'
-  line_indicator:
-    foreground: None
-    background: None
-  selection:
-    text: CellForeground
-    background: '#44475a'
-  normal:
-    black: '#21222c'
-    red: '#ff5555'
-    green: '#50fa7b'
-    yellow: '#f1fa8c'
-    blue: '#bd93f9'
-    magenta: '#ff79c6'
-    cyan: '#8be9fd'
-    white: '#f8f8f2'
-  bright:
-    black: '#6272a4'
-    red: '#ff6e6e'
-    green: '#69ff94'
-    yellow: '#ffffa5'
-    blue: '#d6acff'
-    magenta: '#ff92df'
-    cyan: '#a4ffff'
-    white: '#ffffff'
-
