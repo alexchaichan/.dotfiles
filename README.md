@@ -60,6 +60,12 @@ echo | pass show credentials/vdirsyncer >> $CONFIG/vdirsyncer/config
 echo | pass show credentials/mbsyncrc >> $HOME/.mbsyncrc
 ```
 
+#
+
+```
+calcurse-caldav --init=two-way
+```
+
 ### run light version
 
 `source ~/.dotfiles/light.sh`

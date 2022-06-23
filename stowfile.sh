@@ -148,13 +148,15 @@ ln -sf $DOTFILES/khard/khard $HOME/.config
 ln -sf $DOTFILES/khal/khal $HOME/.config
 
 # calcurse
-mkdir $HOME/.calcurse/ ; mkdir $HOME/.calcurse/caldav ; ln -sf $DOTFILES/calcurse/.calcurse/* $HOME/.calcurse # ;  ln -sf $DOTFILES/calcurse/caldav/config $HOME/.calcurse/caldav/config
+mkdir $HOME/.calcurse/ ; mkdir $HOME/.calcurse/caldav ; ln -sf $DOTFILES/calcurse/.calcurse/* $HOME/.calcurse
+# ln -sf $DOTFILES/calcurse/caldav/config $HOME/.calcurse/caldav/config
 
 # radicale
 mkdir $CONFIG/radicale ; ln -sf $DOTFILES/radicale/radicale/* $CONFIG/radicale ; mkdir $HOME/radicale
 
 # vdirsyncer
-mkdir $CONFIG/vdirsyncer # ; ln -sf $DOTFILES/isync/vdirsyncer/config $CONFIG/vdirsyncer
+mkdir $CONFIG/vdirsyncer
+# ln -sf $DOTFILES/isync/vdirsyncer/config $CONFIG/vdirsyncer
 
 # mbsync
 #ln -sf $DOTFILES/isync/mbsync/.mbsyncrc $HOME/
@@ -172,7 +174,6 @@ mkdir $HOME/.jupyter ; mkdir $HOME/.jupyter/lab ; ln -sf $DOTFILES/jupyter/.jupy
 ln -sf $DOTFILES/Templates $HOME/
 
 #tops
-## htop
 ln -sf $DOTFILES/tops/htop/ $CONFIG
 ln -sf $DOTFILES/tops/btop/ $CONFIG
 
