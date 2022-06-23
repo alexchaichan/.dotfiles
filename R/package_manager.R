@@ -18,5 +18,3 @@ for (i in github) {
 if (any(installed_remotes == FALSE)) {
     remotes::install_github(github[!installed_remotes])
 }
-
-
