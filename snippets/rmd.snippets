@@ -7,6 +7,35 @@ snippet setup
 	)
 	```
 
+	```{r}
+	packages <- c("tidyverse","$1")
+
+	installed_packages <- packages %in% rownames(installed.packages())
+
+	if (any(installed_packages == FALSE)) {
+	  install.packages(packages[!installed_packages])
+	}
+
+	# invisible(lapply(packages, library, character.only = TRUE))
+
+	prefix <- c("$3/")
+	remotes <- c("$2")
+
+	installed_remotes <- remotes %in% rownames(installed.packages())
+
+	if (any(installed_remotes == FALSE)) {
+	remotes::install_github(paste0(prefix,remotes[!installed_remotes]))
+	}
+
+	invisible(lapply(remotes, library, character.only = TRUE))
+	```
+
+	```{r}
+	if (!exists("$1")) {
+	$3 <- readr::read_csv("$2")
+	}
+	```
+
 snippet html
 	---
 	title: "TITLE"
@@ -138,7 +167,6 @@ snippet pptx
 	library("tidyverse")
 	```
 
-
 	# Slide 1
 
 	## Header 1
@@ -159,9 +187,7 @@ snippet pptx
 
 	## Header 3
 
-
 	# Slide 2
-
 
 	```{r message=FALSE, warning=FALSE, echo=F`ALSE}
 	plot(cars)

@@ -9,8 +9,14 @@ if (any(installed_packages == FALSE)) {
   install.packages(packages[!installed_packages], repos = "https://cloud.r-project.org")
 }
 
-installed_remotes <- strsplit(github,split='/', fixed=TRUE)[[1]] %in% rownames(installed.packages())
+installed_remotes <- c()
+
+for (i in github) {
+  installed_remotes[i] <- strsplit(i, split='/')[[1]][[2]] %in% rownames(installed.packages())
+}
 
 if (any(installed_remotes == FALSE)) {
-remotes::install_github(paste0(prefix,remotes[!installed_remotes]))
+    remotes::install_github(github[!installed_remotes])
 }
+
+
