@@ -174,7 +174,7 @@ font:
     #style: Bold Italic
 
   # Point size
-  #size: 13.0 #changed in directories
+  #size: 13.0 #os specific .yml
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -196,8 +196,8 @@ font:
   # it is recommended to set `use_thin_strokes` to `false`.
   use_thin_strokes: true
 
-# If `true`, bold text is drawn using the bright color variants.
-draw_bold_text_with_bright_colors: true
+  # If `true`, bold text is drawn using the bright color variants.
+  draw_bold_text_with_bright_colors: true
 
 # Colors [Dracula theme for Alacritty](https://draculatheme.com/alacritty)
 
@@ -439,7 +439,23 @@ cursor:
 # Live config reload (changes require restart)
 #live_config_reload: true
 
-########## SHELL
+# Shell
+#
+# You can set `shell.program` to the path of your favorite shell, e.g.
+# `/bin/fish`. Entries in `shell.args` are passed unmodified as arguments to the
+# shell.
+#
+# Default:
+#   - (macOS) /bin/bash --login
+#   - (Linux/BSD) user login shell
+#   - (Windows) powershell
+# os specific .yml
+#shell:
+  #program: zsh
+  #args:
+  # - --login
+  # - -c
+  # - "tmux attach || tmux"
 
 # Startup directory
 #
@@ -750,8 +766,6 @@ cursor:
 # in the order they were defined in.
 #
 # hotkeys shortcuts shortkeys short keys hot keys
-#
-#
 
 key_bindings:
   - { key: D, mods: Command, chars: "\x06\x76"  }
@@ -805,15 +819,13 @@ key_bindings:
 # vpn-up uni kassel
   - { key: I ,    mods: Command, chars: "\x76\x70\x6e\x2d\x75\x70\x0a\x75\x28\x6e\x69\x6b\x61\x73\x73\x65\x28\x6d\x34\x79\x6a\x7a\x33\x31\x64\x51\x29\x6c\x29\x0a"                       }
 
-########################### crazy open qutebrowser workaround
+# open qutebrowser workaround
   - { key: E,    mods: Command, chars: "\x63\x6c\x65\x61\x72\x0a\x62\x61\x74\x20\x7e\x2f\x75\x72\x6c\x73\x0a"                       }
 
 # open link  alt+1=1, 2=2, 3...
   - { key: Key1,    mods: Alt, chars: "\x06\x75\x0a\x0a\x71"                       }
   - { key: Key2,    mods: Alt, chars: "\x06\x75\x32\x0a\x0a\x0a\x71"                      }
   - { key: Key3,    mods: Alt, chars: "\x06\x75\x33\x0a\x0a\x0a\x71"                      }
-
-################################################################################################
 
 # open  R with cmd+R
   - { key: R,    mods: Command, chars: "\x52\x0a"                       }
