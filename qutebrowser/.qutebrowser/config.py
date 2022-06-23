@@ -152,8 +152,8 @@ c.url.searchengines = {
  'scholar': 'https://scholar.google.com/scholar?hl=de&as_sdt=0%2C5&q={}&btnG=',
  'wiki': 'https://de.wikipedia.org/wiki/{}',
  'archwiki': 'https://wiki.archlinux.org/index.php?search={}&title=Special%3ASearch&wprov=acrw1',
- 'duden': 'https://www.duden.de/rechtschreibung/{}',
- 'urban': 'https://www.urbandictionary.com/define.php?term={}',
+ 'duden': 'https://www.duden.de/suchen/dudenonline/{}',
+  'urban': 'https://www.urbandictionary.com/define.php?term={}',
  'ebay': 'https://www.ebay.de/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw={}&_sacat=0'
  #'':
 

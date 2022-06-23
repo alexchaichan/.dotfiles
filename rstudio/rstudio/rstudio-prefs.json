@@ -8,10 +8,10 @@
     "source_with_echo": true,
     "soft_wrap_r_files": true,
     "cran_mirror": {
-        "name": "Germany (Münster) [https]",
-        "host": "University of Münster, Germany",
-        "url": "https://cran.uni-muenster.de/",
-        "country": "de",
+        "name": "Global (CDN)",
+        "host": "RStudio",
+        "url": "https://cran.rstudio.com/",
+        "country": "us",
         "ok": 1,
         "secondary": ""
     },

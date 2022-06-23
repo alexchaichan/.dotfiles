@@ -3,12 +3,14 @@
 # source package-list
 source(paste0(Sys.getenv('HOME'),'/.dotfiles/R/packages.R'))
 
+# install from CRAN
 installed_packages <- packages %in% rownames(installed.packages())
 
 if (any(installed_packages == FALSE)) {
   install.packages(packages[!installed_packages], repos = "https://cloud.r-project.org")
 }
 
+# install from GitHub
 installed_remotes <- c()
 
 for (i in github) {
