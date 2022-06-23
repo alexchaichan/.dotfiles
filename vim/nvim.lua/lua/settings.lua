@@ -91,13 +91,12 @@ vim.cmd([[
   augroup END
 ]])
 
---vim.o.background = 'dark'
---syntax enable
---colorscheme dracula
-
+-- colorscheme
 vim.cmd('set t_Co=256')
 vim.cmd('set termguicolors')
 vim.cmd('colorscheme dracula')
+vim.cmd('hi Normal guibg=NONE ctermbg=NONE')
+
 -- colorscheme for vimr
 vim.g.rout_follow_colorscheme = 1
 
