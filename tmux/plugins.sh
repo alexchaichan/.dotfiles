@@ -16,4 +16,5 @@ tmux_plugins=(
   'schasse/tmux-jump'
   'tassaron/tmux-df'
   'imomaliev/tmux-keyboard-layout'
+  'robhurring/tmux-uptime'
 )
