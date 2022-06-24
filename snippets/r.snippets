@@ -4,7 +4,9 @@ snippet read
 	}
 
 snippet lib
-	packages <- c("tidyverse","$1")
+	# install from CRAN
+	
+	packages <- c("tidyverse","")
 
 	installed_packages <- packages %in% rownames(installed.packages())
 
@@ -12,15 +14,25 @@ snippet lib
 	  install.packages(packages[!installed_packages])
 	}
 
-	# invisible(lapply(packages, library, character.only = TRUE))
+	invisible(lapply(packages, library, character.only = TRUE))
 	
-	installed_remotes <- strsplit(github,split='/', fixed=TRUE)[[1]] %in% rownames(installed.packages())
-		
-	if (any(installed_remotes == FALSE)) {
-		remotes::install_github(paste0(prefix,remotes[!installed_remotes]))
+	# install from GitHub
+	
+	github <- c()
+	
+	installed_remotes <- c()
+
+	for (i in github) {
+		installed_remotes[i] <- strsplit(i, split='/')[[1]][[2]] %in% rownames(installed.packages())
 	}
 
-	invisible(lapply(remotes, library, character.only = TRUE))
+	if (any(installed_remotes == FALSE)) {
+		remotes::install_github(github[!installed_remotes])
+	}
+	
+	for (i in github) {
+		invisible(lapply(strsplit(i, split='/')[[1]][[2]], library, character.only = TRUE))
+	}
 
 snippet req
 	require(${1:package})
