@@ -43,7 +43,7 @@ fi
 
 `source ~/.dotfiles/bootstrap.sh`
 
-## some credentials as clear-text
+## credentials as clear-text
 
 ```
 ## spotify credentials
@@ -60,10 +60,12 @@ echo | pass show credentials/vdirsyncer >> $CONFIG/vdirsyncer/config
 echo | pass show credentials/mbsyncrc >> $HOME/.mbsyncrc
 ```
 
-#
+## calcurse config
 
 ```
 calcurse-caldav --init=two-way
+
+ln -sf ~/Dropbox/iphone/note.md ~/.calcurse
 ```
 
 ### run light version
