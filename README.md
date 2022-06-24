@@ -65,7 +65,7 @@ echo | pass show credentials/mbsyncrc >> $HOME/.mbsyncrc
 ```
 calcurse-caldav --init=two-way
 
-ln -sf ~/Dropbox/iphone/todo. ~/.calcurse
+ln -sf ~/Dropbox/iphone/todo ~/.calcurse
 ```
 
 ### run light version
