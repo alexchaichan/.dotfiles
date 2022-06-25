@@ -1,7 +1,5 @@
 set from = "aleksej.chaichan@posteo.de"
-
 set my_pass="`pass posteo.de/aleksej.chaichan@posteo.de`"
-
 set imap_user = "aleksej.chaichan"
 set smtp_pass = "$my_pass"
 set imap_pass = "$my_pass"
