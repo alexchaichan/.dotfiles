@@ -81,9 +81,9 @@ ln -sf $DOTFILES/mutt/neomutt/.muttrc $HOME/
 
 ## mailcap
 if [[ "$os" == "osx" ]]; then
-	ln -sf $DOTFILES/mutt/mutt/.mac_mailcap $HOME/.mailcap
+	ln -sf $DOTFILES/mutt/neomutt/.mac_mailcap $HOME/.mailcap
 elif [[ "$os" == "linux" ]]; then
-	ln -sf $DOTFILES/mutt/mutt/.arch_mailcap $HOME/.mailcap
+	ln -sf $DOTFILES/mutt/neomutt/.arch_mailcap $HOME/.mailcap
 fi
 
 # bat
