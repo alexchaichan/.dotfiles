@@ -4,13 +4,14 @@ set imap_user = "aleksej.chaichan"
 set smtp_pass = "$my_pass"
 set imap_pass = "$my_pass"
 set realname = "Aleksej Chaichan"
-set smtp_url = "smtp://aleksej.chaichan@smtp.mail.me.com:587/"
+set smtp_user = "aleksej.chaichan"
+set smtp_url = "smtp://aleksej.chaichan@posteo.de@posteo.de"
 
 # for online post inbox
 set folder = "imaps://aleksej.chaichan@posteo.de@posteo.de/"
 set spoolfile = "imaps://aleksej.chaichan@posteo.de@posteo.de/INBOX"
 
-set record = "+Sent Messages"
+set record = "+Sent"
 set trash = "+Trash"
 set postponed = "+Drafts"
 
