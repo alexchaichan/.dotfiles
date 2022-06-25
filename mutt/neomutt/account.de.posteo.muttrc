@@ -16,7 +16,7 @@ set record = "+Sent Messages"
 set trash = "+Trash"
 set postponed = "+Drafts"
 
-mailboxes =INBOX =Sent =Drafts =Trash
+mailboxes =INBOX =Sent =Drafts =Trash =Archiv
 
 set sort=threads
 set sort_aux=date-sent

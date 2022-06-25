@@ -14,7 +14,7 @@
 ######################################################################
 
 # calcurse pass plugins
-alias calcurse-caldav='CALCURSE_CALDAV_PASSWORD=$(pass show apple.com/password) calcurse-caldav'
+alias calcurse-caldav='CALCURSE_CALDAV_PASSWORD=$(pass show posteo.de/aleksej.chaichan@posteo.de) calcurse-caldav'
 
 # open $DOTDIR repo
 dots(){
