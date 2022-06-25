@@ -77,7 +77,7 @@ ln -sf $DOTFILES/qutebrowser/.qutebrowser/bookmarks/urls $HOME/
 mkdir $HOME/mail
 
 ## muttrc
-ln -sf $DOTFILES/mutt/mutt/.muttrc $HOME/
+ln -sf $DOTFILES/mutt/neomutt/.muttrc $HOME/
 
 ## mailcap
 if [[ "$os" == "osx" ]]; then

@@ -1,10 +1,10 @@
-source ~/.dotfiles/mutt/mutt/dracula.muttrc
+source ~/.dotfiles/mutt/neomutt/dracula.muttrc
 
 # folder hooks
-folder-hook 'account.com.icloud' source 'source ~/.dotfiles/mutt/mutt/account/.com.icloud.muttrc'
+folder-hook 'account.de.posteo' source 'source ~/.dotfiles/mutt/neomutt/account.de.posteo.muttrc'
 
 # default account
-source ~/.dotfiles/mutt/mutt/account.com.icloud.muttrc
+source ~/.dotfiles/mutt/neomutt/account.de.posteo.muttrc
 
 # # Macros for switching accounts
 # macro index <f2> '<sync-mailbox><enter-command>source ~/Dropbox/.config/.mutt/mutt/account.com.icloud.muttrc<enter><change-folder>!<enter>'

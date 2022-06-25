@@ -115,7 +115,7 @@ synchro(){
     vdirsyncer discover my_contacts
     vdirsyncer discover my_calendar
     vdirsyncer sync
-    mbsync icloud
+    mbsync posteo
 }
 
 todo(){
