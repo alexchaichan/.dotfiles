@@ -85,11 +85,6 @@ mutt() {
     neomutt
 }
 
-# open qutebrowser with $1
-qute(){
-    qutebrowser $1
-}
-
 # open neovim
 vim(){
    nvim $1
@@ -99,17 +94,6 @@ vim(){
 w3mb(){
     w3m -B
 }
-
-# alias for projects
-
-schoko(){
-
-    nvim ~/Dropbox/uni/schokolade
-}
-
-modeling(){
-    nvim ~/Dropbox/uni/modeling/
-  }
 
 synchro(){
     vdirsyncer discover my_contacts
