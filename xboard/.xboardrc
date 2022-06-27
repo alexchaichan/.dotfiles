@@ -5,7 +5,7 @@
 ; but if you add other options, the next Save Settings will not save them.
 ; Use a shortcut, an @indirection file, or a .bat file instead.
 ;
--saveDate 1655808103
+-saveDate 1656336561
 -whitePieceColor #FFFFCC
 -blackPieceColor #202020
 -lightSquareColor #C8C365
