@@ -32,7 +32,7 @@ funs(){
 
 update(){
   if [[ "$os" == "osx" ]]; then
-      PlugUpdate && brew update && brew upgrade && brew cleanup -s && brew outdated && brew cu && sudo softwareupdate -i -a
+      PlugUpdate && brew update && brew upgrade && brew cleanup && brew outdated && brew cu && sudo softwareupdate -i -a
   elif [[ "$os" == "linux" ]]; then
     sudo pacman -Syyu
   fi

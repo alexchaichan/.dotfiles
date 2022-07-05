@@ -20,7 +20,7 @@ esac
 export HOME="$(echo -n $(bash -c "cd ~${USER} && pwd"))"
 export DOTFILES=$HOME/.dotfiles
 export DROPBOX=$HOME/Dropbox
-export ZDOTDIR=$HOME/.zsh_plugins
+export ZDOTDIR=$HOME/.plugins_zsh
 export VDOTDIR=$HOME/.config/nvim
 export TDOTDIR=$HOME/.tmux
 export CONFIG=$HOME/.config

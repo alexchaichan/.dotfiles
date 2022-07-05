@@ -26,7 +26,7 @@ if [[ "$os" == "osx" || "$os" == "linux" ]]; then
 fi
 export DOTFILES=$HOME/.dotfiles
 export DROPBOX=$HOME/Dropbox
-export ZDOTDIR=$HOME/.zsh_plugins
+export ZDOTDIR=$HOME/.plugins_zsh
 export VDOTDIR=$HOME/.config/nvim
 export TDOTDIR=$HOME/.tmux
 export CONFIG=$HOME/.config
