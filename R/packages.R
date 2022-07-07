@@ -33,7 +33,8 @@ packages <- c(
     "DataExplorer",
     "semPlot",
     "st",
-    "reticulate"
+    "reticulate",
+    "kableExtra"
   )
 
 github <- c(

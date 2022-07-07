@@ -3,6 +3,15 @@ snippet read
 	$3 <- readr::read_csv("$2")
 	}
 
+snippet setup
+	knitr::opts_chunk\$set(
+	echo = FALSE,
+	message = FALSE,
+	warning = FALSE
+	)
+
+	options("scipen" = 100, "digits" = 4)
+
 snippet lib
 	# install from CRAN
 	
