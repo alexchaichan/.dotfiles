@@ -125,8 +125,10 @@ function vpn-up() {
     return
   fi
   echo "Starting the vpn ..."
-  sudo openconnect  --user=uk069555 --servercert pin-sha256:Aq5S0+QpnxCg3f/QopnL9bvJA09x1c1mmEhH79quzng= $VPN_HOST
+  sudo openconnect  --user=uk069555 https://vpn.uni-kassel.de/
 }
+
+#--servercert pin-sha256:cE1Loj4xAFctrQWe/4RdmIdvuIQqeIZrQ1zhkBgW6VM=
 
 function vpn-down() {
   sudo kill -2 `pgrep openconnect`
