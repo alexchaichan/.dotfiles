@@ -8,3 +8,9 @@ pdfunite ~/path/to/directorie/* ~/new_file.pdf
 zip -r FILENAME.zip /PATH/TO/DIR/*
 
 # unzip
+
+# split file by lines into smaller files
+split -l n /path/to/file
+
+# change extension name
+for f in *; do mv -- "$f" "${f}.extension"; done
