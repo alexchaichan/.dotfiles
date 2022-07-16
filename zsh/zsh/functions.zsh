@@ -1,3 +1,8 @@
+ba()
+{
+  cd ~/Dropbox/uni/ba/ && vim "+: NvimTreeOpen"
+}
+
 # pdf_merger (){
 #   export pages=`pdfinfo $1 | grep "Pages" | grep -Eo '[0-9]+(\.[0-9]+)?'`
 #
