@@ -120,35 +120,22 @@ odot(){
 #####################################################
 
 # ZSH functions to start/stop OpenConnect VPN client
-
-export VPN_HOST=https://vpn.uni-kassel.de/
-
 function vpn-up() {
-  if [[ -z $VPN_HOST ]]
-  then
-    echo "Please set VPN_HOST env var"
-    return
-  fi
-  echo "Starting the vpn ..."
-  sudo openconnect  --user=uk069555 https://vpn.uni-kassel.de/
-}
-
-#--servercert pin-sha256:cE1Loj4xAFctrQWe/4RdmIdvuIQqeIZrQ1zhkBgW6VM=
+ pass show uni-kassel.de/uk069555  | sudo openconnect  --user=uk069555 --passwd-on-stdin https://vpn.uni-kassel.de/ --servercert pin-sha256:cE1Loj4xAFctrQWe/4RdmIdvuIQqeIZrQ1zhkBgW6VM=
+  }
 
 function vpn-down() {
   sudo kill -2 `pgrep openconnect`
 }
 
-### function to connect to the hiwi server
-
-# connect(){
-#     osascript ~/Dropbox/.config/connect.scpt
-# }
+# connect to the server
+connect(){
+  osascript ~/connect.scpt
+}
 
 # disconnect
-
 disconnect(){
-    umount /Volumes/Chaichan ; umount /Volumes/uk069555
+    umount /Volumes/vpvs
 }
 
 ##########################################################################################################
@@ -300,38 +287,8 @@ rstudio(){
 }
 
 ######################################################################
-
-# zsh functions to start/stop OpenConnect VPN client
-
-# define vpn host
-export VPN_HOST=https://vpn.uni-kassel.de/
-
-function vpn-up() {
-  if [[ -z $VPN_HOST ]]
-  then
-    echo "Please set VPN_HOST env var"
-    return
-  fi
-  echo "Starting the vpn ..."
-  sudo openconnect  --user=uk069555 --servercert pin-sha256:Aq5S0+QpnxCg3f/QopnL9bvJA09x1c1mmEhH79quzng= $VPN_HOST
-}
-
-function vpn-down() {
-  sudo kill -2 `pgrep openconnect`
-}
-
-### osa script to connect to the hiwi server
-
-# connect(){
-#     osascript ~/Dropbox/.config/connect.scpt
-# }
-
-# disconnect from hiwi server
-disconnect(){
-    umount /Volumes/Chaichan ; umount /Volumes/uk069555
-}
-
 fi
+
 #####################################################
 # zsh functions linux                               #
 #####################################################
