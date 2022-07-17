@@ -43,23 +43,6 @@ fi
 
 `source ~/.dotfiles/bootstrap.sh`
 
-## credentials as clear-text
-
-```
-## spotify credentials
-echo | pass spotify.com/spotify-tui > $CONFIG/spotify-tui/client.yml
-
-if [[ "$os" == "osx" ]]; then
-	echo | pass spotify.com/spotifyd > $HOME/.cache/spotifyd/credentials.json
-elif [[ "$os" == "linux" ]]; then
-	echo | pass spotify.com/spotifyd > $CONFIG/spotifyd/cache/credentials.json
-fi
-
-echo | pass show credentials/calcurse >> $HOME/.calcurse/caldav/config
-echo | pass show credentials/vdirsyncer >> $CONFIG/vdirsyncer/config
-echo | pass show credentials/mbsyncrc >> $HOME/.mbsyncrc
-```
-
 ## calcurse config
 
 ```

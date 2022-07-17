@@ -146,18 +146,16 @@ ln -sf $DOTFILES/khard/khard $HOME/.config
 ln -sf $DOTFILES/khal/khal $HOME/.config
 
 # calcurse
-mkdir $HOME/.calcurse/ ; mkdir $HOME/.calcurse/caldav ; ln -sf $DOTFILES/calcurse/.calcurse/* $HOME/.calcurse
-# ln -sf $DOTFILES/calcurse/caldav/config $HOME/.calcurse/caldav/config
+mkdir $HOME/.calcurse/ ; mkdir $HOME/.calcurse/caldav ; ln -sf $DOTFILES/calcurse/.calcurse/* $HOME/.calcurse ; ln -sf $DOTFILES/calcurse/caldav/config $HOME/.calcurse/caldav/config
 
 # radicale
 mkdir $CONFIG/radicale ; ln -sf $DOTFILES/radicale/radicale/* $CONFIG/radicale ; mkdir $HOME/radicale
 
 # vdirsyncer
-mkdir $CONFIG/vdirsyncer
-# ln -sf $DOTFILES/isync/vdirsyncer/config $CONFIG/vdirsyncer
+mkdir $CONFIG/vdirsyncer ; ln -sf $DOTFILES/isync/vdirsyncer/config $CONFIG/vdirsyncer
 
 # mbsync
-#ln -sf $DOTFILES/isync/mbsync/.mbsyncrc $HOME/
+ln -sf $DOTFILES/isync/mbsync/.mbsyncrc $HOME/
 
 # newsboat
 mkdir $HOME/.newsboat ; ln -sf $DOTFILES/newsboat/.newsboat/* $HOME/.newsboat
