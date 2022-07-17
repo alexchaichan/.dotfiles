@@ -130,7 +130,7 @@ function vpn-down() {
 
 # connect to the server
 connect(){
-  osascript ~/connect.scpt
+  osascript -e 'tell application "Finder" to open location "smb://smb.uni-kassel.de/vpvs"'
 }
 
 # disconnect
