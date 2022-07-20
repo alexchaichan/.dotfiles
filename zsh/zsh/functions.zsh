@@ -102,7 +102,7 @@ w3mb(){
 
 synchro(){
     vdirsyncer discover my_contacts
-    vdirsyncer discover my_calendar
+    #vdirsyncer discover my_calendar
     vdirsyncer sync
     mbsync posteo
 }
