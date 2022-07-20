@@ -49,22 +49,22 @@ username = "aleksej.chaichan@posteo.de"
 password.fetch = ["command", "pass", "posteo.de/aleksej.chaichan@posteo.de"]
 
 # CALDAV
-[pair my_calendar]
-a = "my_calendar_local"
-b = "my_calendar_remote"
-collections = ["from a", "from b"]
-
-# Calendars also have a color property
-metadata = ["displayname", "color"]
-
-[storage my_calendar_local]
-type = "filesystem"
-path = "~/.calendars"
-fileext = ".ics"
-
-[storage my_calendar_remote]
-type = "caldav"
-url = "https://posteo.de:8443"
-username = "aleksej.chaichan@posteo.de"
-# password = "xxxx-xxxx-xxxx-xxxx"
-password.fetch = ["command", "pass", "posteo.de/aleksej.chaichan@posteo.de"]
+# [pair my_calendar]
+# a = "my_calendar_local"
+# b = "my_calendar_remote"
+# collections = ["from a", "from b"]
+#
+# # Calendars also have a color property
+# metadata = ["displayname", "color"]
+#
+# [storage my_calendar_local]
+# type = "filesystem"
+# path = "~/.calendars"
+# fileext = ".ics"
+#
+# [storage my_calendar_remote]
+# type = "caldav"
+# url = "https://posteo.de:8443"
+# username = "aleksej.chaichan@posteo.de"
+# # password = "xxxx-xxxx-xxxx-xxxx"
+# password.fetch = ["command", "pass", "posteo.de/aleksej.chaichan@posteo.de"]
