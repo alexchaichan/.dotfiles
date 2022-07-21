@@ -1,55 +1,51 @@
-snippet book "bib book" b
-@book{Buch,
-  title={TITLE. SUBTITLE},
-  author={NACHNAME, VORNAME and NACHNAME, VORNAME},
-  year={YYYY},
-  publisher={VERLAG},
-  location={ORT}
-}
+snippet book
+	@book{Buch,
+		title={TITLE. SUBTITLE},
+		author={NACHNAME, VORNAME and NACHNAME, VORNAME},
+		year={YYYY},
+		publisher={VERLAG},
+		location={ORT}
+	}
 
+snippet sammelband
+	@inbook{Sammelband,
+		title = {TITLE. SUBTITLE},
+		author = {NACHNAME, VORNAME and NACHNAME, VORNAME},
+		year = {YYYY},
+		booktitle = {BOOKTITLE},
+		editor = {NACHNAME, VORNAME and NACHNAME, VORNAME},
+		volume = {X},
+		publisher = {VERLAG},
+		location = {ORT},
+		pages = {X--XX}
+	}
 
-snippet sammelband "bib sammelband" b
-@inbook{Sammelband,
-  title = {TITLE. SUBTITLE},
-  author = {NACHNAME, VORNAME and NACHNAME, VORNAME},
-  year = {YYYY},
-  booktitle = {BOOKTITLE},
-  editor = {NACHNAME, VORNAME and NACHNAME, VORNAME},
-  volume = {X},
-  publisher = {VERLAG},
-  location = {ORT},
-  pages = {X--XX}
-}
+snippet paper
+	@article{Paper,
+		title = {TITLE. SUBTITLE},
+		author = {NACHNAME, VORNAME and NACHNAME, VORNAME},
+		journal = {JOURNALTITLE},
+		year = {YYYY},
+		number = {XX},
+		volume = {XX},
+		publisher = {VERLAG},
+		pages = {X--XX},
+		doi={LINK}
+	}
 
+snippet online
+	@online{Internet,
+		author = {NACHNAME, VORNAME and NACHNAME, VORNAME},
+		title = {TITLE},
+		url = {LINK},
+		year = {YYYY},
+		urldate={YYYY-MM-DD}
+	}
 
-snippet paper "bib paper" b
-@article{Paper,
-  title = {TITLE. SUBTITLE},
-  author = {NACHNAME, VORNAME and NACHNAME, VORNAME},
-  journal = {JOURNALTITLE},
-  year = {YYYY},
-  number = {XX},
-  volume = {XX},
-  publisher = {VERLAG},
-  pages = {X--XX},
-  doi={LINK}
-}
-
-
-snippet online "bib online" b
-@online{Internet,
-  author = {NACHNAME, VORNAME and NACHNAME, VORNAME},
-  title = {TITLE},
-  url = {LINK},
-  year = {YYYY},
-  urldate={YYYY-MM-DD}
-}
-
-
-snippet thesis "bib thesis" b
-@thesis{thesis,
-  title={TITLE. SUBTITLE},
-  year={YYYY},
-  author={NACHNAME, VORNAME},
-  school={EINRICHTUNG}
-}
+snippet thesis
+	@thesis{thesis,
+		title={TITLE. SUBTITLE},
+		year={YYYY},
+		author={NACHNAME, VORNAME},
+		school={EINRICHTUNG}
+	}
