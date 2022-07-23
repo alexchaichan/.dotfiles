@@ -9,6 +9,10 @@ snippet setup
 	message = FALSE,
 	warning = FALSE
 	)
+	
+	path <- rstudioapi::getActiveDocumentContext()$path
+	Encoding(path) <- "UTF-8"
+	setwd(dirname(path))
 
 	options("scipen" = 100, "digits" = 4)
 
