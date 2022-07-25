@@ -44,8 +44,8 @@ source $ZDOTDIR/powerlevel10k/powerlevel10k.zsh-theme
 source $ZDOTDIR/zsh-autopair/autopair.zsh
 
 if [[ "$os" == "osx" ]]; then
-  source /usr/local/Cellar/fzf/0.30.0/shell/completion.zsh
-	source /usr/local/Cellar/fzf/0.30.0/shell/key-bindings.zsh
+  source /usr/local/Cellar/fzf/*/shell/completion.zsh
+	source /usr/local/Cellar/fzf/*/shell/key-bindings.zsh
 elif [[ "$os" == "linux" ]]; then
 	#source /usr/local/fzf/0.30.0/shell/completion.zsh
 	#source /usr/local/fzf/0.30.0/shell/key-bindings.zsh
