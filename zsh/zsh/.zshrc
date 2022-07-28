@@ -104,5 +104,3 @@ elif [[ "$os" == "osx" ]]; then
 
 fi
 # <<< conda initialize <<<
-
-pass .
