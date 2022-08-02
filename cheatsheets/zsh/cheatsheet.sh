@@ -14,3 +14,5 @@ split -l n /path/to/file
 
 # change extension name
 for f in *; do mv -- "$f" "${f}.extension"; done
+
+var=$(lynx --dump LINK_HERE_WITHOUT_QUOTES | grep ".*\.pdf$"  | awk '/http/{print $2}') | echo $var | for i in $(echo $var); do wget $i; done# download all pdfs fro a webpage
