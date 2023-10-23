@@ -1,3 +1,4 @@
+
 # Dracula readline configuration. Requires version 2.0, if you have 1.2 convert to `Set-PSReadlineOption -TokenType`
 Set-PSReadlineOption -Color @{
     "Command" = [ConsoleColor]::Green
@@ -49,5 +50,8 @@ function prompt {
     Write-Host "[$elapsedTime] " -ForegroundColor Green
     return "> "
 } #end prompt function
+
+# terminal icons
+Import-Module -Name Terminal-Icons
 
 clear
