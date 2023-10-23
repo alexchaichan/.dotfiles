@@ -1,0 +1,44 @@
+# Dracula readline configuration. Requires version 2.0, if you have 1.2 convert to `Set-PSReadlineOption -TokenType`
+Set-PSReadlineOption -Color @{
+    "Command" = [ConsoleColor]::Green
+    "Parameter" = [ConsoleColor]::Gray
+    "Operator" = [ConsoleColor]::Magenta
+    "Variable" = [ConsoleColor]::White
+    "String" = [ConsoleColor]::Yellow
+    "Number" = [ConsoleColor]::Blue
+    "Type" = [ConsoleColor]::Cyan
+    "Comment" = [ConsoleColor]::DarkCyan
+}
+
+function Global:prompt {
+    if (!$?) {
+	$str = $(
+	    if ($LASTEXITCODE) { "EXTERNAL EXIT CODE $LASTEXITCODE" }
+	    else { "EXIT CODE 1" }
+	)
+	write-host $str -fore white -back red
+    }
+    $location = "$($env:username)@$($env:computername)"
+    $time = [DateTime]::Now.ToString("yyyy-MM-dd HH:mm.ss")
+    $cd = $(
+	switch ( $pwd.Path -Replace "\\$","" ) {	   
+	    $env:userprofile { "~" }
+	    $env:systemdrive { "\" }
+	    default { $pwd.Path }
+	}
+    )
+    if ( ls $cd | ?{$_ -match ".hg"} ) 
+         { write-host "[hg]" -back red -fore white -nonewline; write-host " " -nonewline }
+    write-host "[" -fore yellow -nonewline
+    write-host "$time " -foreground cyan -nonewline
+    write-host "$location " -foreground yellow -nonewline
+    if ($pwd.provider.name -ne "FileSystem") {
+	write-host "$cd" -back blue -foreground white -nonewline
+    } else {
+	write-host "$cd" -fore green -nonewline
+    }
+    write-host "] :>" -foreground yellow -nonewline
+    return " "
+}
+
+clear
