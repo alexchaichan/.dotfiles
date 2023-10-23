@@ -14,7 +14,7 @@ Set-PSReadlineOption -Color @{
 function prompt {
 
     #Assign Windows Title Text
-    $host.ui.RawUI.WindowTitle = "Current Folder: $pwd"
+    $host.ui.RawUI.WindowTitle = "Windows PowerShell"
 
     #Configure current user, current folder and date outputs
     $CmdPromptCurrentFolder = $pwd
