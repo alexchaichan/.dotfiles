@@ -1,4 +1,3 @@
-
 # Dracula readline configuration. Requires version 2.0, if you have 1.2 convert to `Set-PSReadlineOption -TokenType`
 Set-PSReadlineOption -Color @{
     "Command" = [ConsoleColor]::Green
@@ -11,13 +10,14 @@ Set-PSReadlineOption -Color @{
     "Comment" = [ConsoleColor]::DarkCyan
 }
 
+# prompt
 function prompt {
 
     #Assign Windows Title Text
     $host.ui.RawUI.WindowTitle = "Current Folder: $pwd"
 
     #Configure current user, current folder and date outputs
-    $CmdPromptCurrentFolder = Split-Path -Path $pwd -Leaf
+    $CmdPromptCurrentFolder = $pwd
     $CmdPromptUser = [Security.Principal.WindowsIdentity]::GetCurrent();
     $Date = Get-Date -Format 'hh:mm:ss tt'
 
@@ -43,8 +43,8 @@ function prompt {
     Write-host ($(if ($IsAdmin) { 'Elevated ' } else { '' })) -BackgroundColor DarkRed -ForegroundColor White -NoNewline
     Write-Host " $($CmdPromptUser.Name.split("\")[1]) " -BackgroundColor DarkBlue -ForegroundColor White -NoNewline
     If ($CmdPromptCurrentFolder -like "*:*")
-        {Write-Host " $CmdPromptCurrentFolder "  -ForegroundColor White -BackgroundColor DarkGray -NoNewline}
-        else {Write-Host ".\$CmdPromptCurrentFolder\ "  -ForegroundColor White -BackgroundColor DarkGray -NoNewline}
+        {Write-Host " $CmdPromptCurrentFolder "  -ForegroundColor White -BackgroundColor Magenta -NoNewline}
+        else {Write-Host ".\$CmdPromptCurrentFolder\ "  -ForegroundColor White -BackgroundColor Magenta -NoNewline}
 
     Write-Host " $date " -ForegroundColor White
     Write-Host "[$elapsedTime] " -ForegroundColor Green
@@ -54,4 +54,13 @@ function prompt {
 # terminal icons
 Import-Module -Name Terminal-Icons
 
+
+# functions
+function editor($1) {
+	
+	 & 'C:\Program Files\Notepad++\notepad++.exe' $1
+	
+}
+
+# end
 clear
