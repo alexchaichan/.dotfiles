@@ -1,0 +1,117 @@
+#!/usr/bin/env bash
+
+# ask for the administrator password upfront
+sudo -v
+
+# keep-alive: update existing `sudo` time stamp until `bootstap` has finished
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+# check for os type
+unameOut="$(uname -s)"
+case "${unameOut}" in
+    Linux*)     os=linux;;
+    Darwin*)    os=osx;;
+    CYGWIN*)    os=cygwin;;
+    MINGW*)     os=mingw;;
+    *)          os="UNKNOWN:${unameOut}"
+esac
+
+# create $ directories
+if [[ "$os" == "osx" || "$os" == "linux" ]]; then
+  export HOME="$(echo -n $(bash -c "cd ~${USER} && pwd"))"
+fi
+export DOTFILES=$HOME/.dotfiles
+export CONFIG=$HOME/.config
+export DROPBOX=$HOME/Dropbox
+export ZDOTDIR=$HOME/.zsh
+export VDOTDIR=$CONFIG/nvim
+export TDOTDIR=$HOME/.tmux
+if [[ "$os" == "osx" ]]; then
+    export SUBL=$HOME/Library/Application\ Support/Sublime\ Text
+elif [[ "$os" == "linux" ]]; then
+    export SUBL=$CONFIG\ Support/Sublime\ Text
+fi
+
+# update system first 
+if [[ "$os" == "osx" ]]; then
+  softwareupdate -l
+fi
+
+# make osx system changes
+if [[ "$os" == "osx" ]]; then
+  source $DOTFILES/osx/.macos
+fi
+
+# create symlinks from .dotfiles repo
+source $DOTFILES/bootstraped/stowfile.sh
+
+# install plugins for zsh / neovim / tmux
+source $DOTFILES/bootstraped/plugins.sh
+
+# install Brewfile / pacmanfile
+if [[ "$os" == "osx" ]]; then
+  brew bundle --file=$DOTFILES/osx/Brewfile
+# define open with
+  source $DOTFILES/osx/duti.sh
+elif [[ "$os" == "linux" ]]; then
+  pacman -S --needed - < $DOTFILES/linux/arch_linux/pacman/pacmanfile
+fi
+
+# install applications
+if [[ "$os" == "osx" ]]; then
+  source $DOTFILES/osx/applications.sh
+fi
+
+# install crontabs
+if [[ "$os" == "linux" ]]; then
+  systemctl enable --now cronie.service
+fi
+source $DOTFILES/bootstraped/crontab.sh
+
+# R
+# rig add <X.X.X>
+Rscript $DOTFILES/R/package_manager.R
+Rscript $DOTFILES/R/dependencies.R
+
+# python
+source $DOTFILES/python/package_manager.sh
+
+# ruby
+source $DOTFILES/ruby/gems.sh
+
+# java
+source $DOTFILES/java/javascript/npm.sh
+
+# rust
+## rustup
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+source $DOTFILES/rust/packages.sh
+
+# sublime text
+source $DOTFILES/sublime_text/installer.sh
+
+# vscode
+source $DOTFILES/vscode/installer.sh
+
+# passwords
+echo | pass spotify/spotify-tui  >> ~/.config/spotify-tui/client.yml
+echo | pass spotify/spotifyd  >> ~/.cache/spotifyd/credentials.json
+
+# set gpg agent
+gpg-connect-agent reloadagent /bye
+pass . 
+
+# clone repositores
+source $DOTFILES/bootstraped/repositories.sh
+
+# make zsh default shell
+if [ -z "`$SHELL -c 'echo $ZSH_VERSION'`" ]; then
+  sudo sh -c "echo $(which zsh) >> /etc/shells"
+  chsh -s "$(which zsh)"
+fi
+
+# replace ~/.password-store with the git repository
+git clone https://github.com/alexchaichan/.password-store.git $HOME/Downloads/.password-store ; rm -r $HOME/.password-store ; mv $HOME/Downloads/.password-store $HOME/.password-store
+
+# clear ~/Downloads
+rm -rf $HOME/Downloads/gnupg.zip $HOME/Downloads/password-store-main

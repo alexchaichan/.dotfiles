@@ -1,0 +1,22 @@
+#!/usr/bin/env zsh
+
+# check for os type
+unameOut="$(uname -s)"
+case "${unameOut}" in
+    Linux*)     os=linux;;
+    Darwin*)    os=osx;;
+    CYGWIN*)    os=cygwin;;
+    MINGW*)     os=mingw;;
+    *)          os="UNKNOWN:${unameOut}"
+esac
+
+# create $ directories
+if [[ "$os" == "osx" || "$os" == "linux" ]]; then
+  export HOME="$(echo -n $(bash -c "cd ~${USER} && pwd"))"
+fi
+export DOTFILES=$HOME/.dotfiles
+
+  /usr/local/bin/vdirsyncer discover my_contacts
+  /usr/local/bin/vdirsyncer sync
+  /usr/local/bin/mbsync posteo
+

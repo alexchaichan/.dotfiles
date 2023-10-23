@@ -1,0 +1,11 @@
+feh --scale-down \
+    --image-bg #282a36 \
+    --sort name \
+    --thumbnails
+
+thumbs --sort name \
+       --image-bg black \
+       --thumbnails \
+       --thumb-width 320 \
+       --thumb-height 240 \
+       --limit-width 1920

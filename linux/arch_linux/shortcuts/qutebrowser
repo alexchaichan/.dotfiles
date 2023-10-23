@@ -1,0 +1,14 @@
+#!/bin/bash
+
+
+PID=$(xdotool search --onlyvisible --class qutebrowser)
+
+if [[ "$PID" -ne "" ]]; then
+
+    xdotool windowactivate $PID
+
+else
+
+    qutebrowser
+
+fi

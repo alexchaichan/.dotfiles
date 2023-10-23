@@ -1,0 +1,22 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+		
+	],
+	"installed_packages":
+	[
+		"LaTeXTools",
+		"LSP-R",
+		"MarkdownPreview",
+		"MySQL Snippets",
+		"Outline",
+		"Package Control",
+		"R-IDE",
+		"Racket",
+		"rainbow_csv",
+		"RichTextFormat",
+		"SideBarEnhancements",
+		"SmartMarkdown",
+	],
+}

@@ -1,0 +1,144 @@
+# linux
+
+window:
+
+  dimensions:
+    columns: 192
+    lines: 50
+
+  decorations: none
+
+shell:
+  program: /usr/bin/zsh
+  args:
+   - --login
+   - -c
+   - "tmux attach || tmux ; pkill spotifyd ; pkill spt ; gpg-connect-agent reloadagent /bye"
+
+# Font configuration
+font:
+  # Point size
+  size: 12.0
+  # Normal (roman) font face
+  normal:
+    # Font family
+    #
+    # Default:
+    #   - (macOS) Menlo
+    #   - (Linux/BSD) monospace
+    #   - (Windows) Consolas
+    family: SauceCodePro Nerd Font
+
+    # The `style` can be specified to pick a specific face.
+    #style: Regular
+
+  # Bold font face
+  bold:
+    # Font family
+    #
+    # If the bold family is not specified, it will fall back to the
+    # value specified for the normal font.
+    family: SauceCodePro Nerd Font
+
+    # The `style` can be specified to pick a specific face.
+    #style: Bold
+
+  # Italic font face
+  italic:
+    # Font family
+    #
+    # If the italic family is not specified, it will fall back to the
+    # value specified for the normal font.
+    family: SauceCodePro Nerd Font
+
+    # The `style` can be specified to pick a specific face.
+    #style: Italic
+
+  # Bold italic font face
+  bold_italic:
+    # Font family
+    #
+    # If the bold italic family is not specified, it will fall back to the
+    # value specified for the normal font.
+    family: SauceCodePro Nerd Font
+
+    # The `style` can be specified to pick a specific face.
+    #style: Bold Italic
+
+  # Point size
+  #size: 13.0 #os specific .yml
+
+  # Offset is the extra space around each character. `offset.y` can be thought
+  # of as modifying the line spacing, and `offset.x` as modifying the letter
+  # spacing.
+  #offset:
+  #  x: 0
+  #  y: 0
+
+  # Glyph offset determines the locations of the glyphs within their cells with
+  # the default being at the bottom. Increasing `x` moves the glyph to the
+  # right, increasing `y` moves the glyph upward.
+  #glyph_offset:
+  #  x: 0
+  #  y: 0
+
+  # Thin stroke font rendering (macOS only)
+  #
+  # Thin strokes are suitable for retina displays, but for non-retina screens
+  # it is recommended to set `use_thin_strokes` to `false`.
+  # use_thin_strokes: false
+
+  # If `true`, bold text is drawn using the bright color variants.
+  draw_bold_text_with_bright_colors: true
+
+key_bindings:
+  - { key: D, mods: Control, chars: "\x06\x76"  }
+  - { key: D, mods: Control|Shift, chars: "\x06\x68" }
+  - { key: W, mods: Control, chars: "\x06\x78"  }
+  - { key: T, mods: Control, chars: "\x06\x74"  }
+  - { key: Key0, mods: Control, chars: "\x06\x30"  }
+  - { key: Key1, mods: Control, chars: "\x06\x31"  }
+  - { key: Key2, mods: Control, chars: "\x06\x32"  }
+  - { key: Key3, mods: Control, chars: "\x06\x33"  }
+  - { key: Key4, mods: Control, chars: "\x06\x34"  }
+  - { key: Key5, mods: Control, chars: "\x06\x35"  }
+  - { key: Key6, mods: Control, chars: "\x06\x36"  }
+  - { key: Key7, mods: Control, chars: "\x06\x37"  }
+
+    #- { key: Key5,     mods: Alt,        chars: "\x5b"                     }
+    #- { key: Key6,     mods: Alt,        chars: "\x5d"                     }
+    #- { key: Key7,     mods: Alt|Shift,  chars: "\x5c"                     }
+    #- { key: Key7,     mods: Alt,        chars: "\x7c"                     }
+    #- { key: Key8,     mods: Alt,        chars: "\x7b"                     }
+    #- { key: Key9,     mods: Alt,        chars: "\x7d"                     }
+    #- { key: L,        mods: Alt,        chars: "\x40"                     }
+
+  # unbind fkeys
+  # - { key: F7,   action: None             }
+  # - { key: F8,  action: None             }
+  # - { key: F9, action: None             }
+
+
+  - { key: Left,     mods: Control, chars: "\x06\x1b\x5b\x44"                     }
+  - { key: Right,    mods: Control, chars: "\x06\x1b\x5b\x43"                     }
+  - { key: Up,    mods: Control, chars: "\x06\x1b\x5b\x41"                        }
+  - { key: Down,    mods: Control, chars: "\x06\x1b\x5b\x42"                      }
+
+  - { key: L,   mods: Control,  action: None             }
+
+# remap copy and paste to only ctrl (remapped to alt) and c | v
+  - { key: V, mods: Control, action: Paste }
+  - { key: C, mods: Control, action: Copy }
+
+# remap kill terminate to alt (remapped to ctrl)
+  - { key: C, mods: ALt, chars: "\x03"}
+ # - { key: H,    mods: Alt, chars: "\x06\x1b\x5b\x44"                       }
+ # - { key: L,    mods: Alt, chars: "\x06\x1b\x5b\x43"                       }
+ # - { key: K,    mods: Alt, chars: "\x06\x1b\x5b\x41"                       }
+ # - { key: J,    mods: Alt, chars: "\x06\x1b\x5b\x42"                       }
+
+# open url_view (tmx-plugin mac os only)
+  # - { key: U,    mods: Command, chars: "\x06\x75"                       }
+
+import:
+  - ~/.dotfiles/alacritty/alacritty/alacritty.yml

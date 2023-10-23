@@ -1,0 +1,24 @@
+set from = "`pass credentials/posteo/username`"
+set my_pass="`pass credentials/posteo/password`"
+set imap_user = "`pass credentials/posteo/user`"
+set smtp_pass = "$my_pass"
+set imap_pass = "$my_pass"
+set realname = "Aleksej Chaichan"
+set smtp_user = "`pass credentials/posteo/user`"
+set smtp_url = "`pass credentials/posteo/smtp_url`"
+
+# for online post inbox
+set folder = "`pass credentials/posteo/folder`"
+set spoolfile = "`pass credentials/posteo/spoolfile`"
+
+set record = "+Sent"
+set trash = "+Trash"
+set postponed = "+Drafts"
+
+mailboxes =INBOX =Sent =Drafts =Trash =Archive =job =dkb =emilia
+
+set sort=threads
+set sort_aux=date-sent
+set header_cache = ~/.cache/.mutt/
+set message_cachedir = ~/.cache/.mutt/
+set certificate_file = ~/.cache/.mutt/

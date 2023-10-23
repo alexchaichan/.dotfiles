@@ -1,0 +1,29 @@
+IMAPAccount posteo
+Host posteo.de
+Port 993
+UserCmd "pass credentials/posteo/username"
+PassCmd "pass credentials/posteo/password"
+# Pass xxxx-xxxx-xxxx-xxxx
+SSLType IMAPS
+#CertificateFile /usr/local/etc/openssl@1.1/cert.pem
+AuthMechs PLAIN
+
+IMAPStore posteo-remote
+Account posteo
+
+MaildirStore posteo-local
+Path ~/mail/
+Inbox ~/mail/INBOX
+Trash Trash
+
+Channel posteo-folders
+Far :posteo-remote:
+Near :posteo-local:
+Patterns "INBOX"
+Create Both
+Expunge Both
+Patterns *
+SyncState *
+
+Group posteo
+Channel posteo-folders

@@ -1,0 +1,5 @@
+[user]
+	name = alexchaichan
+	email = aleksej.chaichan@posteo.de
+[http]
+	sslBackend = schannel

@@ -1,0 +1,37 @@
+# If you want to synchronize calcurse with a CalDAV server using
+# calcurse-caldav, create a new directory at $XDG_CONFIG_HOME/calcurse/caldav/
+# (~/.config/calcurse/caldav/) and $XDG_DATA_HOME/calcurse/caldav/
+# (~/.local/share/calcurse/caldav/) and copy this file to
+# $XDG_CONFIG_HOME/calcurse/caldav/config and adjust the configuration below.
+# Alternatively, if using ~/.calcurse, create a new directory at
+# ~/.calcurse/caldav/ and copy this file to ~/.calcurse/caldav/config and adjust
+# the configuration file below.
+
+[General]
+Binary = calcurse
+
+# Host name of the server that hosts CalDAV.
+Hostname = posteo.de:8443
+
+# Path to the calcurse binary that is used for importing/exporting items.
+Path = $(pass show credentials/calcurse/path)
+
+# Enable this if you want to skip SSL certificate checks.
+InsecureSSL = Yes
+
+AuthMethod = basic
+
+# Disable this option to actually enable synchronization. If it is enabled,
+# nothing is actually written to the server or to the local data files. If you
+# combine DryRun = Yes with Verbose = Yes, you get a log of what would have
+# happened with this option disabled.
+DryRun = No
+
+# Enable this if you want detailed logs written to stdout.
+Verbose = Yes
+
+# Credentials for HTTP Basic Authentication. Leave this commented out if you do
+# not want to use authentication.
+[Auth]
+Username = $(pass show credentials/posteo/username)
+Password = CALCURSE_CALDAV_PASSWORD=$(pass show credentials/posteo/password) calcurse-caldav

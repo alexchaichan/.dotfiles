@@ -1,0 +1,348 @@
+# linux
+
+
+shell:
+  program: /usr/bin/zsh
+  args:
+   - --login
+   - -c
+   - "tmux attach || tmux ; pkill spotifyd ; pkill spt ; gpg-connect-agent reloadagent /bye"
+
+window:
+  
+  dimensions:
+    columns: 250
+    lines: 60
+
+  decorations: none
+
+  opacity: 0.9
+
+  # Startup Mode (changes require restart)
+  #
+  # Values for `startup_mode`:
+  #   - Windowed
+  #   - Maximized
+  #   - Fullscreen
+  #
+  # Values for `startup_mode` (macOS only):
+  #   - SimpleFullscreen
+  startup_mode: Windowed
+
+
+scrolling:
+#  # Maximum number of lines in the scrollback buffer.
+#  # Specifying '0' will disable scrolling.
+#  history: 10000
+
+#  # Scrolling distance multiplier.
+  multiplier: 0
+
+
+cursor:
+  # Cursor style
+  style:
+    # Cursor shape
+    #
+    # Values for `shape`:
+    #   - ▇ Block
+    #   - _ Underline
+    #   - | Beam
+    shape: Beam
+
+    # Cursor blinking state
+    #
+    # Values for `blinking`:
+    #   - Never: Prevent the cursor from ever blinking
+    #   - Off: Disable blinking by default
+    #   - On: Enable blinking by default
+    #   - Always: Force the cursor to always blink
+    blinking: Always
+
+  # Vi mode cursor style
+  #
+  # If the vi mode cursor style is `None` or not specified, it will fall back to
+  # the style of the active value of the normal cursor.
+  #
+  # See `cursor.style` for available options.
+  # vi_mode_style: None
+
+  # Cursor blinking interval in milliseconds.
+  blink_interval: 750
+
+  # If this is `true`, the cursor will be rendered as a hollow box when the
+  # window is not focused.
+  unfocused_hollow: true
+
+  # Thickness of the cursor relative to the cell width as floating point number
+  # from `0.0` to `1.0`.
+  thickness: 0.2
+
+# Font configuration
+font:
+  # Point size
+  size: 12.0
+  # Normal (roman) font face
+  normal:
+    # Font family
+    #
+    # Default:
+    #   - (macOS) Menlo
+    #   - (Linux/BSD) monospace
+    #   - (Windows) Consolas
+    family: SauceCodePro Nerd Font
+
+    # The `style` can be specified to pick a specific face.
+    #style: Regular
+
+  # Bold font face
+  bold:
+    # Font family
+    #
+    # If the bold family is not specified, it will fall back to the
+    # value specified for the normal font.
+    family: SauceCodePro Nerd Font
+
+    # The `style` can be specified to pick a specific face.
+    #style: Bold
+
+  # Italic font face
+  italic:
+    # Font family
+    #
+    # If the italic family is not specified, it will fall back to the
+    # value specified for the normal font.
+    family: SauceCodePro Nerd Font
+
+    # The `style` can be specified to pick a specific face.
+    #style: Italic
+
+  # Bold italic font face
+  bold_italic:
+    # Font family
+    #
+    # If the bold italic family is not specified, it will fall back to the
+    # value specified for the normal font.
+    family: SauceCodePro Nerd Font
+
+    # The `style` can be specified to pick a specific face.
+    #style: Bold Italic
+
+  # Point size
+  #size: 13.0 #os specific .yml
+
+  # Offset is the extra space around each character. `offset.y` can be thought
+  # of as modifying the line spacing, and `offset.x` as modifying the letter
+  # spacing.
+  #offset:
+  #  x: 0
+  #  y: 0
+
+  # Glyph offset determines the locations of the glyphs within their cells with
+  # the default being at the bottom. Increasing `x` moves the glyph to the
+  # right, increasing `y` moves the glyph upward.
+  #glyph_offset:
+  #  x: 0
+  #  y: 0
+
+  # Thin stroke font rendering (macOS only)
+  #
+  # Thin strokes are suitable for retina displays, but for non-retina screens
+  # it is recommended to set `use_thin_strokes` to `false`.
+  # use_thin_strokes: false
+
+  # If `true`, bold text is drawn using the bright color variants.
+  draw_bold_text_with_bright_colors: true
+
+key_bindings:
+  - { key: D, mods: option, chars: "\x06\x76"  }
+  - { key: D, mods: option|Shift, chars: "\x06\x68" }
+  - { key: W, mods: option, chars: "\x06\x78"  }
+  - { key: T, mods: option, chars: "\x06\x74"  }
+  - { key: Key0, mods: option, chars: "\x06\x30"  }
+  - { key: Key1, mods: option, chars: "\x06\x31"  }
+  - { key: Key2, mods: option, chars: "\x06\x32"  }
+  - { key: Key3, mods: option, chars: "\x06\x33"  }
+  - { key: Key4, mods: option, chars: "\x06\x34"  }
+  - { key: Key5, mods: option, chars: "\x06\x35"  }
+  - { key: Key6, mods: option, chars: "\x06\x36"  }
+  - { key: Key7, mods: option, chars: "\x06\x37"  }
+
+    #- { key: Key5,     mods: Alt,        chars: "\x5b"                     }
+    #- { key: Key6,     mods: Alt,        chars: "\x5d"                     }
+    #- { key: Key7,     mods: Alt|Shift,  chars: "\x5c"                     }
+    #- { key: Key7,     mods: Alt,        chars: "\x7c"                     }
+    #- { key: Key8,     mods: Alt,        chars: "\x7b"                     }
+    #- { key: Key9,     mods: Alt,        chars: "\x7d"                     }
+    #- { key: L,        mods: Alt,        chars: "\x40"                     }
+
+  # unbind fkeys
+  # - { key: F7,   action: None             }
+  # - { key: F8,  action: None             }
+  # - { key: F9, action: None             }
+
+
+  - { key: Left,     mods: option, chars: "\x06\x1b\x5b\x44"                     }
+  - { key: Right,    mods: option, chars: "\x06\x1b\x5b\x43"                     }
+  - { key: Up,    mods: option, chars: "\x06\x1b\x5b\x41"                        }
+  - { key: Down,    mods: option, chars: "\x06\x1b\x5b\x42"                      }
+
+  - { key: L,   mods: option,  action: None             }
+
+ # - { key: H,    mods: Alt, chars: "\x06\x1b\x5b\x44"                       }
+ # - { key: L,    mods: Alt, chars: "\x06\x1b\x5b\x43"                       }
+ # - { key: K,    mods: Alt, chars: "\x06\x1b\x5b\x41"                       }
+ # - { key: J,    mods: Alt, chars: "\x06\x1b\x5b\x42"                       }
+
+# open url_view (tmx-plugin mac os only)
+  # - { key: U,    mods: Command, chars: "\x06\x75"                       }
+
+# Colors [Dracula theme for Alacritty](https://draculatheme.com/alacritty)
+
+# Color palette
+# https://spec.draculatheme.com
+
+colors:
+  # Default colors
+  primary:
+    background: '#282a36'
+    foreground: '#f8f8f2'
+
+    # Bright and dim foreground colors
+    #
+    # The dimmed foreground color is calculated automatically if it is not
+    # present. If the bright foreground color is not set, or
+    # `draw_bold_text_with_bright_colors` is `false`, the normal foreground
+    # color will be used.
+    #dim_foreground: '#828482'
+    bright_foreground: '#ffffff'
+
+  # Cursor colors
+  #
+  # Colors which should be used to draw the terminal cursor.
+  #
+  # Allowed values are CellForeground/CellBackground, which reference the
+  # affected cell, or hexadecimal colors like #ff00ff.
+  cursor:
+    text: CellBackground
+    cursor: CellForeground
+
+  # Vi mode cursor colors
+  #
+  # Colors for the cursor when the vi mode is active.
+  #
+  # Allowed values are CellForeground/CellBackground, which reference the
+  # affected cell, or hexadecimal colors like #ff00ff.
+  vi_mode_cursor:
+    text: CellBackground
+    cursor: CellForeground
+
+  # Search colors
+  #
+  # Colors used for the search bar and match highlighting.
+  search:
+    # Allowed values are CellForeground/CellBackground, which reference the
+    # affected cell, or hexadecimal colors like #ff00ff.
+    matches:
+      foreground: '#44475a'
+      background: '#50fa7b'
+    focused_match:
+      foreground: '#44475a'
+      background: '#ffb86c'
+
+    colors.footer_bar:
+      background: '#282a36'
+      foreground: '#f8f8f2'
+
+  # Keyboard regex hints
+  hints:
+    # First character in the hint label
+    #
+    # Allowed values are CellForeground/CellBackground, which reference the
+    # affected cell, or hexadecimal colors like #ff00ff.
+    start:
+    #  foreground: '#1d1f21'
+      foreground: '#282a36'
+      background: '#f1fa8c'
+
+    # All characters after the first one in the hint label
+    #
+    # Allowed values are CellForeground/CellBackground, which reference the
+    # affected cell, or hexadecimal colors like #ff00ff.
+    end:
+      foreground: '#f1fa8c'
+      background: '#282a36'
+
+  # Line indicator
+  #
+  # Color used for the indicator displaying the position in history during
+  # search and vi mode.
+  #
+  # By default, these will use the opposing primary color.
+  line_indicator:
+    foreground: None
+    background: None
+
+  # Selection colors
+  #
+  # Colors which should be used to draw the selection area.
+  #
+  # Allowed values are CellForeground/CellBackground, which reference the
+  # affected cell, or hexadecimal colors like #ff00ff.
+  selection:
+    text: CellForeground
+    background: '#44475a'
+
+  # Normal colors
+  normal:
+    black: '#21222c'
+    red: '#ff5555'
+    green: '#50fa7b'
+    yellow: '#f1fa8c'
+    blue: '#bd93f9'
+    magenta: '#ff79c6'
+    cyan: '#8be9fd'
+    white: '#f8f8f2'
+
+  # Bright colors
+  bright:
+    black: '#6272a4'
+    red: '#ff6e6e'
+    green: '#69ff94'
+    yellow: '#ffffa5'
+    blue: '#d6acff'
+    magenta: '#ff92df'
+    cyan: '#a4ffff'
+    white: '#ffffff'
+
+  # Dim colors
+  #
+  # If the dim colors are not set, they will be calculated automatically based
+  # on the `normal` colors.
+  #dim:
+  #  black:   '#131415'
+  #  red:     '#864343'
+  #  green:   '#777c44'
+  #  yellow:  '#9e824c'
+  #  blue:    '#556a7d'
+  #  magenta: '#75617b'
+  #  cyan:    '#5b7d78'
+  #  white:   '#828482'
+
+  # Indexed Colors
+  #
+  # The indexed colors include all colors from 16 to 256.
+  # When these are not set, they're filled with sensible defaults.
+  #
+  # Example:
+  #   `- { index: 16, color: '#ff00ff' }`
+  #
+  #indexed_colors: []
+
+  # Transparent cell backgrounds
+  #
+  # Whether or not `window.opacity` applies to all cell backgrounds or only to
+  # the default background. When set to `true` all cells will be transparent
+  # regardless of their background color.
+  #transparent_background_colors: false
+

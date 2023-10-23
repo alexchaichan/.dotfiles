@@ -1,0 +1,38 @@
+[
+    // margitrr pipe 
+    {
+        "key": "Ctrl+Alt+m",
+        "command": "type",
+        "args": { "text": " %>% " },
+        "when": "editorTextFocus && editorLangId in (rmd, r)"
+    },
+
+    // ->
+    {
+        "key": "Alt+-",
+        "command": "type",
+        "args": { "text": " -> " },
+        "when": "editorTextFocus && editorLangId in (rmd, r)"
+    },
+
+    // code-chunks 
+    {
+        "key": "Ctrl+Alt+i",
+        "command": "type",
+        "args": { "text": "```{r}\n\n``` " },
+        "when": "editorTextFocus && editorLangId == rmd"
+    },
+
+    // delete lines
+    {
+        "key": "Ctrl+d",
+        "command": "editor.action.deleteLines",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+
+    // execute current line 
+    {
+        "key": "Ctrl+enter",
+        "command": "workbench.action.terminal.runSelectedText"
+    },
+]

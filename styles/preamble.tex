@@ -1,0 +1,126 @@
+%geometry
+\usepackage{geometry}\geometry{
+ a4paper,
+ left=20mm,
+ top=20mm,
+ right=20mm,
+ bottom=20mm,
+ }
+
+\usepackage[T1]{fontenc}
+\setmainfont{XCharter}
+% \usepackage[utf8]{inputenc}
+\usepackage[scaled]{helvet}
+% \newfontfamily\Charis{CharisSIL}
+% \renewcommand\familydefault{\sfdefault}
+\usepackage{setspace}
+
+\usepackage{fancyhdr}
+
+\raggedbottom 
+
+
+
+
+\usepackage{sectsty} 
+\usepackage[indentafter]{titlesec}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%APA7                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% überschriften 
+\sectionfont{\nohang\centering\normalsize}
+\subsectionfont{\nohang\normalsize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%math
+\usepackage{mathtools, amssymb, amsthm} % imports amsmath
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+
+%notes
+% \usepackage{todonotes}
+%\presetkeys{todonotes}{disable}{} % comment in at the end
+
+%acronyms
+\usepackage{acro}
+\input{children/001abbreviations.tex}
+
+
+%captions
+\usepackage{floatrow}
+\floatsetup[figure]{capposition=top}
+\floatsetup[table]{capposition=top}
+
+%für kable (tabellen) mit r erstellen
+\usepackage{booktabs}
+% left algign plots caption
+\usepackage[font=small,format=plain,labelfont=bf,up,textfont=normal,up,justification=justified,singlelinecheck=false]{caption}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\floatplacement{figure}{H}
+% \floatplacement{table}{H}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
+
+\usepackage[german=quotes]{csquotes} %quotes
+
+\usepackage[nottoc]{tocbibind}
+\usepackage[toc,page]{appendix}
+
+% code line wrapping
+\lstset{
+  breaklines=true
+}
+
+%color
+% \usepackage{sectsty}
+% 
+% \definecolor{exampleuniversity}{RGB}{199, 16, 92}
+% 
+% \colorlet{maincolor}{exampleuniversity}
+% \colorlet{stringcolor}{green!60!black}
+% \colorlet{commentcolor}{black!50}
+% \colorlet{keywordcolor}{maincolor!80!black}
+% 
+% \newcommand{\imagesuffix}{-color}
+% 
+% \allsectionsfont{\color{maincolor}}
+
+%for apendix
+\usepackage{pdfpages}
+%\usepackage{attachfile2}
+
+%header option
+\setlength{\headheight}{14.49998pt}
+
+
+% APA tables and figure title / captions
+\DeclareCaptionLabelSeparator*{spaced}{\\[2ex]}
+\captionsetup[table]{labelfont=bf,textfont=it,format=plain,justification=justified,
+  singlelinecheck=false,labelsep=period,skip=0pt}
+\captionsetup[figure]{labelsep=period,labelfont=bf,justification=justified,
+  singlelinecheck=false,font=doublespacing}
+
+\usepackage{afterpage}
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}

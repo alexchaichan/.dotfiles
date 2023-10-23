@@ -1,0 +1,61 @@
+#!/usr/bin/env zsh
+
+# check for os type
+unameOut="$(uname -s)"
+case "${unameOut}" in
+    Linux*)     os=linux;;
+    Darwin*)    os=osx;;
+    CYGWIN*)    os=cygwin;;
+    MINGW*)     os=mingw;;
+    *)          os="UNKNOWN:${unameOut}"
+esac
+
+# create $ directories
+if [[ "$os" == "osx" || "$os" == "linux" ]]; then
+  export HOME="$(echo -n $(bash -c "cd ~${USER} && pwd"))"
+fi
+export DOTFILES=$HOME/.dotfiles
+
+# define connected monitors
+
+if [[ "$os" == "osx" ]]; then
+
+  export RESOLUTION=$(system_profiler SPDisplaysDataType | grep "Resolution" | awk -F'[^0-9]+' '{ print $2 }')"x"$(system_profiler SPDisplaysDataType | grep "Resolution" | awk -F'[^0-9]+' '{ print $3 }')
+
+elif [[ "$os" == "linux" ]]; then
+
+  # export RESOLUTION=$(system_profiler SPDisplaysDataType | grep "Resolution" | awk -F'[^0-9]+' '{ print $2 }')"x"$(system_profiler SPDisplaysDataType | grep "Resolution" | awk -F'[^0-9]+' '{ print $3 }')
+
+fi
+
+# osx
+
+if [[ "$os" == "osx" && "$RESOLUTION" == "2560x1440" ]]; then
+
+  ln -sf $DOTFILES/alacritty/alacritty/osx_2560x1440_alacritty.yml $CONFIG/alacritty.yml
+
+elif [[ "$os" == "osx" && "$RESOLUTION" == "1920x1080" ]]; then
+
+  ln -sf $DOTFILES/alacritty/alacritty/osx_2560x1440_alacritty.yml $CONFIG/alacritty.yml
+
+elif [[ "$os" == "osx" && "$RESOLUTION" == "1440x900" ]]; then
+
+  ln -sf $DOTFILES/alacritty/alacritty/osx_lcd_alacritty.yml $CONFIG/alacritty.yml
+
+fi
+
+# arch
+
+if [[ "$os" == "linux" && "$RESOLUTION" == "2560x1440" ]]; then
+
+  ln -sf $DOTFILES/alacritty/alacritty/arch_2560x1440_alacritty.yml $CONFIG/alacritty.yml
+
+elif [[ "$os" == "linux" && "$RESOLUTION" == "1920x1080" ]]; then
+
+  ln -sf $DOTFILES/alacritty/alacritty/arch_2560x1440_alacritty.yml $CONFIG/alacritty.yml
+
+elif [[ "$os" == "linux" && "$RESOLUTION" == "1440x900" ]]; then
+
+  ln -sf $DOTFILES/alacritty/alacritty/arch_lcd_alacritty.yml $CONFIG/alacritty.yml
+
+fi

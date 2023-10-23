@@ -1,0 +1,201 @@
+snippet html
+	---
+	title: "TITLE"
+	subtitle: SUBTITLE
+	author: "Aleksej Chaichan"
+	date: "`r format(Sys.Date(), '%d %b, %Y')`"
+	output:
+  	html_document:
+    	code_folding : hide
+    	pandoc_args:
+      	- --lua-filter=wordcount.lua
+      	- --metadata=wordcount=process
+    	css: styles/style.css
+    	number_sections: yes
+    	theme: lumen
+    	toc: yes
+    	toc_float: yes
+	bibliography: literature.bib
+	csl: styles/my.csl
+	#nocite: '@*'
+	#nocite: |
+	#  @key1, @key2
+	lang: de
+	urlcolor: "blue"
+	#params:
+  	#X:  <num>; "string"  #filter with params paramsX
+	---
+
+snippet pdf
+	---
+	title: "TITLE"
+	#subtitle: "SUBTITLE"
+	author: "Aleksej Chaichan"
+	date: "`r format(Sys.Date(), '%d %b, %Y')`"
+	output:
+	  pdf_document:
+	    pandoc_args:
+	    	- --lua-filter=wordcount.lua
+				- --metadata=wordcount=process
+	    latex_engine: pdflatex #xelatex #lualatex #pdflatex
+	    includes:
+	      in_header: styles/style.sty
+	    #keep_tex:  true
+	  bookdown::pdf_book:
+	    citation_package: biblatex #natbib #biblatex
+	bibliography: literature.bib
+	csl: styles/my.csl
+	#nocite: '@*'
+	#nocite: |
+	#  @key1, @key2
+	fontsize: 12pt
+	lang: de
+	urlcolor: "blue"
+	#params:
+	  #X:  <num>; "string"  #filter with params params$X
+	---
+
+snippet pdf2
+	---
+	title: "TITLE"
+	subtitle: "SUBTITLE"
+	author: "Aleksej Chaichan"
+	date: "r format(Sys.Date(), '%d %b, %Y')"
+	header-includes:
+	  - \usepackage[T1]{fontenc}
+	  - \usepackage[utf8]{inputenc}
+	  - \usepackage[scaled]{helvet}
+	  - \usepackage{booktabs}
+	  - \usepackage{longtable}
+	  - \usepackage{array}
+	  - \usepackage{multirow}
+	  - \usepackage{wrapfig}
+	  - \usepackage{float}
+	  - \floatplacement{figure}{H}
+	  - \floatplacement{table}{H}
+	  - \usepackage{colortbl}
+	  - \usepackage{pdflscape}
+	  - \usepackage{tabu}
+		- \usepackage{threeparttable}
+		- \usepackage{threeparttablex}
+		- \usepackage[normalem]{ulem}
+		- \usepackage{makecell}
+		- \usepackage{xcolor}
+	output:
+	  pdf_document:
+	fontsize: 12pt
+	lang: de
+	urlcolor: "blue"
+	---
+
+snippet docx
+	---
+	title: "TITLE"
+	author: "Aleksej Chaichan"
+	date: "`r format(Sys.Date(), '%d %b, %Y')`"
+	output:
+  	word_document:
+    	reference_docx: styles/svm-word-docx-example.docx
+  	citation_package: biblatex
+	bibliography: literature.bib
+	csl: styles/my.csl
+	#nocite: '@*'
+	#nocite: |
+	#  @key1, @key2
+	fontsize: 12pt
+	font: "Helevetica"
+	lang: de
+	urlcolor: "blue"
+	---
+
+snippet pptx
+	---
+	date: "`r format(Sys.Date(), '%d %b, %Y')`"
+	output:
+	  powerpoint_presentation:
+	    reference_doc: template_uni_kassel.pptx
+	lang: de
+	---
+
+	<!--  tabelle
+
+	flextable::flextable() %>%
+	flextable::theme_zebra() %>%
+	flextable::autofit()
+
+	-->
+
+	```{r}
+	library("tidyverse")
+	```
+
+	# Slide 1
+
+	## Header 1
+
+	- text
+	- text
+
+	:::::::::::::: {.columns}
+	::: {.column}
+	Test
+	:::
+	::: {.column}
+	Text
+	:::
+	::::::::::::::
+
+	## Header 2
+
+	## Header 3
+
+	# Slide 2
+
+	```{r message=FALSE, warning=FALSE, echo=F`ALSE}
+	plot(cars)
+	```
+
+	# Slide 3
+
+	```{r message=FALSE, warning=FALSE, echo=FALSE}
+	mtcars %>%
+	  head(10) %>%
+		flextable::flextable() %>%
+	 	flextable::theme_zebra() %>%
+	 	flextable::autofit()
+	```
+
+	::: presenter notes
+	This is a speaker note.
+
+	- Use basic Markdown
+	- like this list
+	- *and inline formatting*
+	:::
+
+snippet letter
+	---
+	author: $1
+	return-address:
+	  - "$2 $3"
+	  - "$4 $5"
+	return-phone: "+49 $6"
+	return-email: $7
+
+	address:
+	  - $8
+	  - $9 $10
+	  - $11 $12
+	  - $13
+
+	place: $14
+
+	subject: Some nonsensical Subject
+	opening: Sehr geehrte Frau / Sehr geehrter Herr / sehr geehrte Damen und Herren,
+	closing: Mit freundlichen Grüßen,
+	signature: "\\\includegraphics{~/Dropbox/documents/sig.pdf}"
+	signature-before: "0.5\\\baselineskip"
+	output: komaletter::komaletter
+	---
+
+	$15

@@ -1,0 +1,906 @@
+#      ___           ___           ___           ___           ___
+#     /\  \         /\__\         /\  \         /\  \         /\  \
+#     \:\  \       /:/ _/_       /::\  \       |::\  \        \:\  \         ___           ___
+#      \:\  \     /:/ /\__\     /:/\:\  \      |:|:\  \        \:\  \       /\__\         /\__\
+#  _____\:\  \   /:/ /:/ _/_   /:/  \:\  \   __|:|\:\  \   ___  \:\  \     /:/  /        /:/  /
+# /::::::::\__\ /:/_/:/ /\__\ /:/__/ \:\__\ /::::|_\:\__\ /\  \  \:\__\   /:/__/        /:/__/
+# \:\~~\~~\/__/ \:\/:/ /:/  / \:\  \ /:/  / \:\~~\  \/__/ \:\  \ /:/  /  /::\  \       /::\  \
+#  \:\  \        \::/_/:/  /   \:\  /:/  /   \:\  \        \:\  /:/  /  /:/\:\  \     /:/\:\  \
+#   \:\  \        \:\/:/  /     \:\/:/  /     \:\  \        \:\/:/  /   \/__\:\  \    \/__\:\  \
+#    \:\__\        \::/  /       \::/  /       \:\__\        \::/  /         \:\__\        \:\__\
+#     \/__/         \/__/         \/__/         \/__/         \/__/           \/__/         \/__/
+
+source ~/.dotfiles/mutt/neomutt/dracula.muttrc
+
+# folder hooks
+folder-hook 'account.de.posteo' source 'source ~/.dotfiles/mutt/neomutt/account.de.posteo.muttrc'
+
+# default account
+source ~/.dotfiles/mutt/neomutt/account.de.posteo.muttrc
+
+# # Macros for switching accounts
+# macro index <f2> '<sync-mailbox><enter-command>source ~/Dropbox/.config/.mutt/mutt/account.com.icloud.muttrc<enter><change-folder>!<enter>'
+# macro index <f3> '<sync-mailbox><enter-command>source ~/Dropbox/.config/.mutt/mutt/account.de.uk.muttrc<enter><change-folder>!<enter>'
+
+# khard x mutt
+set query_command= "khard email --parsable --search-in-source-files %s"
+set query_command = "echo %s | xargs khard email --parsable --"
+
+macro index,pager A \
+  "<pipe-message>khard add-email<return>" \
+  "add the sender email address to khard"
+
+set query_command= "khard email --parsable %s"
+bind editor <Tab> complete-query
+bind editor ^T    complete
+
+set smtp_authenticators = 'gssapi:login'
+
+set editor = "nvim"
+set move = no
+set include
+
+auto_view text/html
+alternative_order text/plain text/enriched text/html     # save html for last
+
+# Example NeoMutt config file for the sidebar feature.
+set pager_index_lines=20
+
+# check for mails
+set timeout=60
+
+# --------------------------------------------------------------------------
+# VARIABLES – shown with their default values
+# --------------------------------------------------------------------------
+# Should the Sidebar be shown?
+set sidebar_visible = yes
+# How wide should the Sidebar be in screen columns?
+
+# Note: Some characters, e.g. Chinese, take up two columns each.
+set sidebar_width = 20
+# Should the mailbox paths be abbreviated?
+set sidebar_short_path = no
+# Number of top-level mailbox path subdirectories to truncate for display
+set sidebar_component_depth = 0
+# When abbreviating mailbox path names, use any of these characters as path
+# separators. Only the part after the last separators will be shown.
+# For file folders '/' is good. For IMAP folders, often '.' is useful.
+set sidebar_delim_chars = '/.'
+# If the mailbox path is abbreviated, should it be indented?
+set sidebar_folder_indent = no
+# Indent mailbox paths with this string.
+set sidebar_indent_string = '  '
+# Make the Sidebar only display mailboxes that contain new, or flagged,
+# mail.
+set sidebar_new_mail_only = no
+# Any mailboxes that are whitelisted will always be visible, even if the
+# sidebar_new_mail_only option is enabled.
+set sidebar_non_empty_mailbox_only = no
+# Only show mailboxes that contain some mail
+#sidebar_whitelist '/home/user/mailbox1'
+#sidebar_whitelist '/home/user/mailbox2'
+# When searching for mailboxes containing new mail, should the search wrap
+# around when it reaches the end of the list?
+set sidebar_next_new_wrap = no
+# Show the Sidebar on the right-hand side of the screen
+set sidebar_on_right = no
+# The character to use as the divider between the Sidebar and the other NeoMutt
+# panels.
+set sidebar_divider_char = '|'
+# Enable extended mailbox mode to calculate total, new, and flagged
+# message counts for each mailbox.
+set mail_check_stats
+# Display the Sidebar mailboxes using this format string.
+set sidebar_format = '%B%?F? [%F]?%* %?N?%N/?%S'
+# Sort the mailboxes in the Sidebar using this method:
+#       count    – total number of messages
+#       flagged  – number of flagged messages
+#       new      – number of new messages
+#       path     – mailbox path
+#       unsorted – do not sort the mailboxes
+set sidebar_sort_method = 'unsorted'
+
+# --------------------------------------------------------------------------
+# COLORS – some unpleasant examples are given
+# --------------------------------------------------------------------------
+# Note: All color operations are of the form:
+#       color OBJECT FOREGROUND BACKGROUND
+# Color of the current, open, mailbox
+# Note: This is a general NeoMutt option which colors all selected items.
+#####color indicator cyan black
+# Sidebar-specific color of the selected item
+#####color sidebar_indicator cyan black
+# Color of the highlighted, but not open, mailbox.
+#####color sidebar_highlight black color8
+# Color of the divider separating the Sidebar from NeoMutt panels
+#####color sidebar_divider color8 black
+# Color to give mailboxes containing flagged mail
+#####color sidebar_flagged red black
+# Color to give mailboxes containing new mail
+#####color sidebar_new green black
+# Color to give mailboxes containing no new/flagged mail, etc.
+#####color sidebar_ordinary color245 default
+# Color to give the spoolfile mailbox
+#####color sidebar_spoolfile color207 default
+# Color to give mailboxes containing no unread mail
+#####color sidebar_unread color136 default
+# --------------------------------------------------------------------------
+
+# vim: syntax=neomuttrc
+#
+
+### example
+
+### ============================================================================
+###  ~/.mutt/muttrc - persönliche Konfigurationsdatei für Mutt
+### ============================================================================
+###  $Id: muttrc,v 1.13 2000/07/30 10:19:46 tb Exp $
+### ============================================================================
+###  Diese Datei darf unter einer beliebigen Version der GPL benutzt werden.
+###
+###  URL: http://www.trash.net/~thomasb/mutt/muttrc      (Plain ASCII)
+###       http://www.trash.net/~thomasb/mutt/muttrc.html (HTML-Version)
+###       http://www.trash.net/~thomasb/mutt/index.html  (Mutt-Seite)
+###
+###  (c) 1999,2000 by Thomas Bader <thomasb@trash.net>
+### ============================================================================
+###  Die HTML-Version dieser Datei lässt sich direkt aus Vim erstellen. Dazu
+###  benutzt man
+###
+###       ESC
+###       :set syntax=muttrc
+###       :syntax on
+###       :so $VIMRUNTIME/syntax/2html.vim
+### ============================================================================
+
+## Zuerst alle Variablen auf Standardwerte zurücksetzen
+#reset all
+
+### ----------------------------------------------------------------------------
+### Allgemeines
+### ----------------------------------------------------------------------------
+
+## Wie sollen die eMails sortiert werden?
+#set sort=threads # Zuerst in Threads sortieren
+#set sort_aux=date-sent # Innerhalb der Threads nach Absendedatum
+
+## Threading soll nur auf dem In-Reply-To:-Header und nicht auf dem Subject:
+## basieren
+#set strict_threads
+
+## Das Kommando zum drucken
+#set print_command=lpr # Wenn der Pfad nicht angegeben wird, sollte das Executable im $PATH sein
+
+## Die Shell aus /etc/passwd verwenden
+#reset shell
+
+## Bei Eingabefehlern etc. piepsen
+#set beep
+
+## Einen Piepton ausgeben, wenn eine neue eMail angekommen ist
+#set beep_new
+
+## Nicht gelesene Nachrichten nicht als "Old" markieren. Dies ist *sehr*
+## störend.
+#set nomark_old
+
+## Gelesene Nachrichten nicht nach $mbox verschieben. Auch dies ist *sehr*
+## störend.
+#set nomove
+
+## Auf der ersten Zeile des Displays die Hilfe anzeigen. Dies ist manchmal noch
+## nützlich.
+#set help
+
+## Zeilen, die bei PgUp/PgDown zweimal angezeigt werden sollen
+#set pager_context=0
+
+## Dies fügt ein Threadlisting oberhalb der aktuellen Nachricht ein
+#set pager_index_lines=6
+
+### ----------------------------------------------------------------------------
+### Externe Dateien (Konfigfiles, Aliasdateien, Mailboxen)
+### ----------------------------------------------------------------------------
+
+## In diesem Verzeichnis sind meine Mailboxes aufbewahrt
+#set folder=~/Mail
+
+## Der Typ der Mailbox. Möglich sind:
+##   - mbox
+##   - MMDF
+##   - MH
+##   - Maildir
+#set mbox_type=mbox
+
+## Welche Mailboxen sollen auf neue eMails überprüft werden? Nützlich, wenn man
+## öfters »mutt -Z« verwendet.
+#mailboxes `find ~/Mail -type f -print | grep -v saved | xargs`
+#        # Sehr nützlich: Befehle innerhalb zwei Backticks (»`«) werden von der
+#        # Shell interpretiert und der Output wird von Mutt verwertet.
+
+## In welcher Datei stehen die Aliases drin?
+#set alias_file=~/.mutt/aliases
+
+## Entgegen der Meinung vieler Leute wird das alias_file _nicht_ automatisch
+## gesourcet.
+#source ~/.mutt/aliases
+
+## Die Tastaturbelegung ist in einer separaten Datei
+#source ~/.mutt/keybind
+#ne ist nicht kommt direkt hier drunter (aber nice to know, dass man sourcen kann <3)
+#
+#
+# --------------------------------------------------------------------------
+# FUNCTIONS – shown with an example mapping
+# --------------------------------------------------------------------------
+# Move the highlight to the previous mailbox
+bind index,pager \CK sidebar-prev
+# Move the highlight to the next mailbox
+bind index,pager \CJ sidebar-next
+# Open the highlighted mailbox
+bind index,pager \CO sidebar-open
+# Move the highlight to the previous page
+# This is useful if you have a LOT of mailboxes.
+bind index,pager <F3> sidebar-page-up
+# Move the highlight to the next page
+# This is useful if you have a LOT of mailboxes.
+bind index,pager <F4> sidebar-page-down
+# Move the highlight to the previous mailbox containing new, or flagged,
+# mail.
+bind index,pager <F5> sidebar-prev-new
+# Move the highlight to the next mailbox containing new, or flagged, mail.
+bind index,pager <F6> sidebar-next-new
+# Toggle the visibility of the Sidebar.
+bind index,pager B sidebar-toggle-visible
+
+## Die Mailcap, die verwendet werden soll (funktioniert irgendiwe nicht, wenn man es einstellt ??? aber ansosten funktioniert es wenn man es disabled)
+#set mailcap_path='~/Dropbox/.mutt/.mailcap'
+
+## Dies ist eine RegExp, die auf die Dateien, die im Filebrowser angezeigt
+## werden, matchen sollte. Also keine Dateien, die mit einem Punkt beginnen -
+## normalerweise sind dies "versteckte" Dateien.
+#set mask="!^\\.[^.]"
+
+### ----------------------------------------------------------------------------
+### Persönliche Informationen (Name, Headers)
+### ----------------------------------------------------------------------------
+
+## Mein richtiger Name. Dient dazu, den Eintrag in der /etc/passwd zu umgehen
+#set realname="Thomas Bader"
+
+## eMailadressen, unter denen ich auch bekannt bin (eMails direkt an mich werden mit einem + markiert)
+#set alternates="^(thomas|thomasb(\\+.*|)|thomas.bader)@(.*trash|cyberspace|grex|penguinpowered|linuxfan|linuxfreak|eniac\\.ch\\.eu|t-bader)(\\.org|\\.com|\\.net|\\.ch)$"
+
+## Mein FQDN (u.a. der Teil nach dem @ in der Message-ID)
+##  /bin/dnsdomainname ist unter GNU/Linux verfügbar; wie dies bei anderen
+##  OS/Linux-Distributionen aussieht, würde mich interessieren ->
+##  Bitte Feedback dazu an thomasb@trash.net
+#set hostname=`/bin/dnsdomainname`
+
+## Alle Header entladen (zur Sicherheit)
+## WICHTIG: Auf der folgenden Zeile keinen Kommentar anbringen, da dieser
+## Kommentar sonst als Header interpretiert würde.
+#unmy_hdr *
+
+## Welche Header sollen noch hinzugefügt werden (From: und Reply-To: siehe weiter unten bei send-hooks)
+#  # Die Organisation wird bei den send-hooks/folder-hooks noch angepasst
+#my_hdr Organization: private
+#  # Ein paar X-Header... hier meine Homepage
+#my_hdr X-Url: <http://www.trash.net/~thomasb/>
+#  # Ein bisschen Schleichwerbung für einen guten Zweck :)
+#my_hdr X-Cool: get your free UNIX account @ http://www.trash.net/
+#  # Wo kriegt man meinen PGP-Key?
+#my_hdr X-PGP-Key: mailto <thomasb+pgpkey@trash.net> (automated reply)
+#my_hdr X-PGP-Algorithms: RSA and DSA/EG keys are available
+#  # Für andere Betriebssysteme/Linux-Distributionen als Debian GNU/Linux muss man das noch anpassen!
+#my_hdr X-Operating-System: Debian GNU/`uname -s` `cat /etc/debian_version` (Kernel `uname -r`)
+
+## Mutt soll immer einen »User-Agent: Mutt/VERSION«-Header generieren
+#set user_agent
+
+## Im Editor die Header noch anzeigen, damit diese nachträglich
+## eingefügt/abgeändert werden können
+#set edit_headers
+
+## In dieser Reihenfolge sollen die Header im Pager angezeigt werden
+#unhdr_order *
+#hdr_order From: Reply-To: Subject: To: Cc: Bcc: X-Spamblock-maybe:
+
+#### Mein Editor
+## Dies verwendete ich früher: ein Skript, dass die gequotete Signatur entfernt
+## wird vor dem Editor aufgerufen, der dann die Nachricht ohne gequotete Signatur
+## erhält.
+## Vorteil: Funktioniert auch mit anderen Editoren als Vim
+## Nachteil: Mehr Overhead, da drei Prozesse gestartet werden müssen
+##
+##set editor="sigkiller %s; vim +\`awk '/^$/ {print i+2; exit} {i++}' %s\` %s"
+##
+## Das Skript selber benutzt awk und stammt aus Felix Leitners Mutt-FAQ. Hier ist
+## das Skript:
+##
+##  #!/bin/sh
+##  #
+##  # sigkiller: delete last foreign signatur when quoting mails
+##  #            (foreign dashes = "> -- " or "> --"
+##  #
+##  # Markus Muss
+##  #
+##  awk '{if ($0 ~ /^> -- ?$/) {
+##           while ($0 !~ /^-- $/) {
+##              getline
+##            }
+##         print " " > OUTFILE
+##        }
+##        print $0 > OUTFILE
+##     }' OUTFILE=$1.out $1
+##  mv $1.out $1
+##
+##
+## Dank einem MAPping im .vimrc geht dies nun auch ohne externes Skript.
+## »%s« wird zum Dateinamen expandiert; der awk-Aufruf gibt die Nummer der ersten
+## leeren Zeile nach den Headern an (so muss man nicht scrollen) und der
+## Suchbefehl am Schluss matcht auch alle leeren Zeilen (so erkennt man sie
+## gleich, wenn im Vim hlsearch aktiviert ist).
+## Nachteil: Es sind immer noch zwei Prozesse zu starten...
+#set editor="vim %s +\`awk ' /^$/ {print i+2; exit} {i++}' %s\` -c ':0;/^$/+'"
+
+## Meine Signatur
+#set signature="~/.signature-mail"
+
+## Die Signatur soll nicht mit "-- \n" abgetrennt werden (Das mache ich
+## lieber selber). Hier sollte man vorsichtig sein!
+#unset sig_dashes
+
+## Dies bestimmt den Zeichensatz, der verwendet werden soll, wenn Zeichen
+## verwendet sollen, die nicht zu US-ASCII passen. Für Europa ist ISO-8859-1
+## goldrichtig.
+#set charset="iso-8859-1"
+
+## Locale-Einstellungen. Diese Variable hat die gleiche Wirkung wie »export
+## LC_ALL='C'« auf der Shell. Sprich: Es bestimmt das Zeit- und Datumsformat.
+#set locale="C"
+
+## Wenn dies nicht gesetzt ist, werden Mails als Quoted-Printable verschickt. Im
+## Allgemeinen ist dies sicherer.
+#unset allow_8bit
+
+### ----------------------------------------------------------------------------
+### Antworten, eMails schreiben, weiterleiten
+### ----------------------------------------------------------------------------
+
+## Beim Antworten nicht nach 'To;', 'Subject:' etc. fragen
+#set fast_reply
+
+## Bei einem Group-Reply will ich nicht auf der Empfängerliste stehen
+#unset metoo
+
+## Den Reply-To:-Header auf Mailinglisten ignorieren
+#set ignore_list_reply_to
+
+## PGP-Nachrichten vor dem Weiterleiten _nicht_ entschlüsseln
+#unset forward_decrypt
+
+## Nicht abbrechen wenn die Nachricht keinen Betreff hat
+#set abort_nosubject=no
+
+## Mutt soll mich fragen, ob er abbrechen soll, wenn eine Nachricht nicht
+## bearbeitet wurde
+#set abort_unmodified=ask-yes
+
+## Mails löschen, ohne vorher zu fragen
+#set delete=yes
+
+## Quoten bei Antwort
+#set include=yes
+
+## Nach Postponing fragen, wenn editieren von Nachricht abgebrochen wird?
+#set postpone=ask-yes
+
+## Frage, ob Mutt wirklich beendet werden soll, einschalten und Standardantwort
+## auf »No« setzen :-)
+#set quit=ask-no
+
+## Immer fragen, ob die Adresse im Reply-To-Header benutzt werden soll.
+## Normalerweise wird man mit »Ja« antworten, meistens ist es aber nicht
+## erwünscht.
+#set reply_to=ask-yes
+
+## Ganz nützlich: Wenn mir z.B. eine Mail an thomasb+www@trash.net geschickt
+## wurde, dann wird auch mit dieser Adresse geantwortet - gleich, was ich in den
+## From:-Header setzte
+#set reverse_name
+
+## Mutt soll das Envelope-From immer setzen (via -f bei Sendmail)
+##  Dieses Feature ist nur in Mutt 1.1.* bzw. Mutt 1.2* vorhanden!
+#set envelope_from
+
+### ----------------------------------------------------------------------------
+### Look'n'feel
+### ----------------------------------------------------------------------------
+
+## Diese RegExp sollte auf gequoteten Text matchen, damit Mutt ihn entsprechend
+## einfärben kann
+#set quote_regexp="^( {0,4}[>|:%]| {0,4}[a-z0-9]+[>|]+)+"
+#  # Folgendes wird gedeckt:
+#  #
+#  #  > > Frage
+#  #  > Antwort
+#  #  Gegenfrage
+#  #
+#  #  Thomas> Frage
+#  #  Heinz> Antwort
+#  #  Gegenfrage
+#  #
+#  #  : : Frage
+#  #  : Antwort
+#  #  Gegenfrage
+#  #
+#  # Dies reicht für die meisten Fälle aus. Hinweis: Zwischen den Quotationmarks
+#  # dürfen sich Leerzeichen befinden, müssen aber nicht!
+
+## Auch was nettes fürs Syntaxhighlighting: Wie sehen Smileys aus
+#set smileys="((:|\\(|;|=)(-|=|-'|%)(\\)|:|\\=))"
+#  # Hier werde ich wohl besser keine Beispiele machen, da die Datei sonst zu
+#  # gross würde
+
+## Diese RegExp muss auf Betreffzeilen von Replys matchen, damit Mutt threaden
+## kann
+#set reply_regexp="^((re(\\^[0-9])? ?:|a(nt)?w(ort)?:|\\(fwd\\))[ \t]+)*"
+
+## Dies ist ein Format, dessen Syntax zu strftime() kompatible sein muss (siehe
+## auch die Manpage zu strftime(3). Dieses Argument wird dann von Mutt dem
+## strftime()-Aufruf mitgegeben, wenn das Datum gebraucht wird.
+## Das »!« hat hier eine Sonderstellung; es veranlasst Mutt/strftime() dazu,
+## Wochen- und Monatsnamen in der C-Locale (unabhängig, was wirklich als locale
+## gesetzt ist) auszugeben.
+#set date_format="!%a %b %d, %Y at %I:%M%S%p %Z"
+#  # Monday, Dec 06, 1997 at 08:30:42pm CET)
+
+## Hiermit leite ich Antworten ein
+##  Dies ist Standard
+##set attribution="On %d, %n wrote:"
+##  Folgendes ist IMHO zu lang
+##set attribution="On %{%A, %d %b %Y}, %n wrote:\n\nHi %v,\n"
+##  Folgendes sieht schön aus und ist kurz
+#set attribution="* %n <%a> [%[%y%m%d %H:%M]]:"
+##  Beispiel:
+##
+##       * Thomas Bader <thomasb@trash.net> [000430 13:38]:
+##       > Eine Frage...
+##       Eine Antwort
+##
+##  Vorteile sind hier: Mit dem »*« wird die Attribution auf gleiche Höhe wie
+##  der gequotete Text gesetzt, Name und eMailadresse sind im selben Format wie
+##  in einem Header present (cut&paste) und das Datum ist auch erkennbar
+##  (nützlich, wenn sich eine Diskussion auf mehrere Mails pro Tag ausdehnt).
+
+## So sieht eine Zeile im Filebrowser aus
+#set folder_format="%N %F %2l %-8.8u %-8.8g %8s %d %f"
+
+## Wie sieht das Subject beim forwarden aus?
+##   %s = ursprüngliches Subject)
+##   %a = eMailadresse vom ursprünglichen Sender
+## Die Möglichen Paramter sind in doc/manual.txt erklärt.
+#set forward_format="(fwd) %s [%a]"
+
+## So sieht eine Zeile im Index aus
+#set index_format="%4C %Z %[!%d.%m.%y] %-15.15F (%?M?C%3M&%4l?) %s"
+
+## Nachrichtenformat
+#set message_format="%-.16n: %s"
+
+## Die Statuszeile des Pagers
+#set pager_format="-%S- %C/%m [%[%H:%M]] %-17.17n   %s"
+
+## Das Format der Statuszeile
+#set status_format="-%r-%v--[%?M?%M/?%m msgs%?n?, %n new?%?d?, %d del?%?F?, %F flag?%?t?, %t tag?%?p?, %p postp?%?b?, %b inc?%?l?, %l?]--(%f)--%s-%>-%P-"
+
+## Daten, die im Alias-Menü angezeigt werden.
+#set alias_format="%3n %t %-12 %r"
+
+## Look'n'Feel des Compose- und Attachmenüs
+#set attach_format="%u%D%t%2n %T%.40d%> [%.7m/%.10M, %.6e, %s] "
+
+## Eine Markierung (+) einfügen, wenn der Pager einen Zeilenumbruch machen muss
+#set markers
+
+## Einige Tilden (~~~~) am Schluss des Pagers, so wie in Vi (macht in meine Setup
+## durch den gespliteten Screen keinen Sinn).
+#set tilde
+
+### ----------------------------------------------------------------------------
+### FCC's
+### ----------------------------------------------------------------------------
+
+## Das Attachment bei einem FCC nicht mitspeichern
+#unset fcc_attach
+
+## Wohin soll das FCC gehen?
+#my_hdr FCC: ~/Mail/sent/gesendete\ eMails-`date +%b-%Y`
+#  # Ein Folder pro Monat
+#  # Ich weiss, der Pfad sieht Windowsartig aus :-) aber was solls...
+
+### ----------------------------------------------------------------------------
+### Delivery status notification (DSN)
+### ----------------------------------------------------------------------------
+
+## Hier kann man einstellen, in welchen Fällen ein FCC zurückkommt. Dies nützt
+## eigentlich nichts, da ein FCC noch kein Garant für ein wirklich fehlerfreies
+## zustellen der Mail ist.
+##set dsn_notify="failure,delay,success" # failure = Fehler
+#                                        # delay = Verzgerung
+#                                        # success = Erfolgreich
+
+## Was soll bei einem Return-Receipt zurückkommen... natürlich nur die Header
+##set dsn_return="hdrs" # Nur die Headers kommen zurück (Traffic sparen)
+
+### ----------------------------------------------------------------------------
+### Headers, die angezeigt werden (oder eben nicht :-)
+### ----------------------------------------------------------------------------
+
+#ignore lines precedence status
+#ignore nntp-posting-host path old-return-path received >received references
+#ignore content- errors-to in-reply-to mime-version
+#ignore resent-message-id return-path xref path
+#ignore x-keywords x-uid x-ftn-via x-ftn-domain x-ftn-seen-by x-ftn-path
+#ignore x-gateway x-loop x-sender x-priority
+#ignore mbox-line x-pop3-rcpt x-mailing-list x400- dl-expansion-history
+#ignore priority alternate-recipient x-zc-via
+#ignore x-received x-envelope-sender x-return-path x-authentication-warning
+#ignore resent-message-id resent-sender resent-date resent-cc
+#ignore from >From From
+#ignore X-MIME-Autoconverted X-MimeOLE X-URL X-Cool X-PGP-Key
+#ignore X-PGP-Algorithms X-ICQ-UIN X-From_ X-MSMail-Priority
+#ignore From X-Editor X-Operating-System X-Envelope-To User-Agent
+#ignore X-Face X-Mailer X-Newsreader Mail-Followup-To
+
+## From: soll angezeigt werden
+#unignore from
+
+### ----------------------------------------------------------------------------
+### MIME
+### ----------------------------------------------------------------------------
+
+## Typen, die automatisch angezeigt werden sollen (mit Hilfe der mailcap)
+#auto_view text/richtext text/html text/x-sgml text/x-vcard text/x-sh \
+#        text/x-csrc application/x-tex \
+#        applicatoin/x-gzip-dvi application/x-gzip \
+#        application/x-gunzip application/x-gtar \
+#        application/x-tar application/x-tar-gz application/x-rar-compressed \
+#        application/x-zip-compressed application/zip application/x-csh \
+#        application/x-sh application/x-script application/x-shellscript \
+#        application/x-latex application/x-shar \
+#        application/x-troff-man application/x-troff-me \
+#        application/x-pgp-message \
+#        application/ms-tnef \
+#        application/octet-stream application/x-tcl application/x-perl \
+#        message/partial
+
+## Priorität der MIME-Typen
+auto_view text/calendar application/ics
+#alternative_order text/enriched text/plain text/html
+
+## Nicht dekodieren vor dem Weiterleiten; so werden alle Header eingefügt (man
+## muss sie von Hand löschen) aber die PGP-Signatur bleibt erhalten.
+#set forward_decode=no
+#  # Siehe auch forward_decrypt, weiter oben.
+#  # ?? Weiss da jemand eine bessere Möglichkeit ??
+
+## Beim forwarden MIME benutzen? Manchmal, kommt auf den Empfänger/Inhalt der
+## Mail an
+#set mime_forward=ask-yes
+
+## Einige Header weglassen beim forwarden (nur mit Mutt 1.1.*). Nur wirkungsvoll,
+## wenn »forward_decode« gesetzt ist
+#set weed
+
+### ----------------------------------------------------------------------------
+### Mailinglisten
+### ----------------------------------------------------------------------------
+
+## [000430] In der aktuellen Developerversion von Mutt wurde »lists« bzw.
+## »unlists« durch »subscribe« bzw. »unsubscribe« ersetzt. Falls man Mutt kleiner
+## als 1.1.* bzw. 1.2* verwendet, muss man folgende Sektion anpassen
+
+## Zuerst auf null stellen (kein Kommentar auf der selben Zeile wie das Kommando!)
+#unsubscribe *
+
+## Mailinglisten
+#  # Listen von trash.net
+#subscribe support talk drunk announce redesign
+#  # Listen von Debian
+#subscribe debian-announce debian-security-announce debian-news debian-user-de
+#  # Die Leafnode-Liste
+#subscribe leafnode-list
+#  # Der freshmeat-Newsletter
+#subscribe freshmeat-news@freshmeat.net
+#  # Apache-relevantes
+#subscribe apache-announce
+#  # Announces über Sambe
+#subscribe samba-announce
+#  # Announces über Mutt
+#subscribe mutt-announce
+#  # Diskussionen/Announces über GnuPG
+#subscribe gnupg-users gnupg-announce
+#  # Announces über Vim
+#subscribe vim-announce
+#  # Listen der Linux User Group Swizterland (LUGS)
+#subscribe lugs announce linux
+#  # Eine Mailingliste über PHP (php@solix.wiso.uni-koeln.de, siehe
+#  # http://www.php-center.de/)
+#subscribe php
+#  # Eine Mailingliste über Apache (ml-apache@unix-ag.org, siehe
+#  # http://www.unix-ag.org/apachelist/)
+#subscribe ml-apache@unix-ag.org
+#  # Mailinglisten von ENIAC
+#subscribe misc admin linux news support talk@eniac.ch.eu.org
+#  # Meine eigenen Mailinglisten (siehe http://lists.t-bader.ch)
+#subscribe perl security gimp java python
+#  # Die Mailingliste von dcouli
+#subscribe dcouli-authors
+#  # FreeBSD Mailinglisten
+#subscribe freebsd-questions freebsd-newbies freebsd-doc
+
+### ----------------------------------------------------------------------------
+### Hooks
+### ----------------------------------------------------------------------------
+
+## Hooks sind eine der mächtigeren Features von Mutt; wenn man sie einmal
+## verwendet hat, möchte man sie nie mehr missen.
+##
+## Ein grosser Nachteil besteht jedoch: Wenn einmal ein Hook gebraucht wurde,
+## gelten die Variablen, die dieser gesetzt hat, immer noch (ausser, sie werden
+## durch einen anderen Hook ersetzt). Deshalb sind meine Hooks ziemlich reduant.
+## Wenn jemand weiss, wie man das besser machen könnte, wäre ich froh, wenn sich
+## derjenige bei mir melden könnte.
+
+##
+## Send-Hooks
+##
+
+## Hooks sollen 'To:'-Adressen übereinstimmen
+#set default_hook="~t %s"
+
+## Für deutsche Empfänger (eigentlich nur die Local-Einstellungen)
+#send-hook ^.*@.*(\\.de|\\.ch|\\.at|gmx\\.net|trash\\.net|morgner\\.com|eniac\\.ch\\.eu\\.org|incense\\.org|unix-ag\\.org)$ \
+#        "set locale=de_CH ;\
+#         set signature=~/.signature-mail"
+
+## Für die trash.net-Mailinglisten
+#send-hook ^(support|redesign|talk|drunk|announce)@.*trash\\.net$ \
+#        "my_hdr From: Thomas Bader <thomasb@trash.net> ;\
+#         my_hdr Organization: trash.net - free Internet Technology for everybody ;\
+#         set signature=~/.signature-mail"
+
+## Für die Lugs-Listen
+#send-hook ^(lugs|linux)@.*lugs\\.ch$ \
+#        "my_hdr From: Thomas Bader <thomasb@trash.net> ;\
+#         my_hdr Organization: Debian GNU/Linux-System ;\
+#         set signature=~/.signature-mail"
+
+## Für ml-apache
+#send-hook ^ml\-apache@unix\-ag\.org$ \
+#        "my_hdr From: Thomas Bader <thomasb@trash.net> ;\
+#         my_hdr Organization: Apache-Freak ;\
+#         set signature=~/.signature-mail"
+
+## Für die Leafnodelist (Attribution, From)
+#send-hook ^leafnode\\-list@wpxx02\\.toxi\\.uni\\-wuerzburg\\.de$ \
+#        "my_hdr From: Thomas Bader <thomasb@trash.net> ;\
+#         my_hdr Organization: A small leafsite ;\
+#         set locale=C ;\
+#         set signature=~/.signature-mail"
+
+## Für die deutsche Debian-User-List (Attribution, From)
+#send-hook ^debian\\-user\\-de@jfl\\.de$ \
+#        "my_hdr From: Thomas Bader <thomasb@trash.net> ;\
+#         my_hdr Organization: Debian GNU/Linux-System ;\
+#         set signature=~/.signature-mail"
+
+## Für gnupg-users
+#send-hook ^gnupg\\-users@gnupg\\.org$ \
+#        "my_hdr From: Thomas Bader <thomasb@trash.net> ;\
+#         my_hdr Organization: Paranoia ;\
+#         set locale=C ;\
+#         set signature=~/.signature-mail"
+
+## Für ENIAC
+#send-hook ^.*@.*eniac\.ch.eu\.org$ \
+#        "my_hdr From: Thomas Bader <thomasb@eniac.ch.eu.org> ;\
+#         my_hdr Reply-To: Thomas Bader <thomasb@eniac.ch.eu.org> ;\
+#         my_hdr Organization: ENIAC - http://www.eniac.ch.eu.org/ ;\
+#         set signature=~/.signature-mail"
+
+## Für Bots
+#send-hook ^(majordomo|listserv|.*subscribe|pgp|newsupd|gup@|areafix|areamgr|gecho|filescan|filemgr|mail2news|.*request|de-alt-netdigest) \
+#        "my_hdr From: Thomas Bader <thomasb@trash.net> ;\
+#         my_hdr Reply-To: Thomas Bader <thomasb@trash.net> ;\
+#         my_hdr Organization: I don't know ;\
+#         set locale=C ;\
+#         set signature=/dev/null"
+
+##
+## Folder-Hooks
+##
+
+## Dies gilt für alle Nachrichten
+#folder-hook . "my_hdr From: Thomas Bader <thomas@t-bader.ch>"
+#folder-hook . "my_hdr Reply-To: Thomas Bader <thomas@t-bader.ch>"
+#folder-hook . "my_hdr Organization: private"
+#folder-hook . "set locale=C"
+#folder-hook . "set signature=~/.signature-mail"
+
+## Bei Mailinglisten das Reply-To entfernen
+#folder-hook ^=mlist/            "unmy_hdr Reply-To"
+
+## Bei einigen Mailboxen das Reply-To ändern
+#folder-hook =feedback/slrn$      "my_hdr Reply-To: thomasb+slrn@trash.net"
+#folder-hook =feedback/mutt$      "my_hdr Reply-To: thomasb+mutt@trash.net"
+#folder-hook =feedback/vim$       "my_hdr Reply-To: thomasb+vim@trash.net"
+#folder-hook =feedback/vi$        "my_hdr Reply-To: thomasb+vi@trash.net"
+#folder-hook =feedback/fetchmail$ "my_hdr Reply-To: thomasb+fetchmail@trash.net"
+#folder-hook =feedback/homepage$  "my_hdr Reply-To: thomasb+www@trash.net"
+
+### ----------------------------------------------------------------------------
+### PGP/GnuPG
+### ----------------------------------------------------------------------------
+
+## Ausgehende Mails nicht automatisch signieren - ich bin nicht paranoid (auch
+## wenn dies viele behaupten :)
+#unset pgp_autosign
+
+## Auch nicht jede ausgehende Mail verschlüsseln
+#unset pgp_autoencrypt
+
+## Wer eine eMail verschlüsselt schickt, will die Antwort auch verschlüsselt
+#set pgp_replyencrypt
+
+## Dies ist lästig, vorallem wenn man auf eine Mailingliste antwortet (man muss
+## von Hand einstellen, dass nicht signiert werden soll)
+#unset pgp_replysign
+
+## Jedesmal die Signatur prüfen
+#set pgp_verify_sig=yes
+
+### EncryptToSelf einschalten
+##  Ist mit Mutt 1.1.*/1.2* obsolete
+##set pgp_encryptself
+
+## Nach einer Stunde das Passwort vergessen
+#set pgp_timeout=3600
+
+## Mit diesem Schlüssel soll Standardmässig unterschrieben werden
+#set pgp_sign_as=0x3A4B7F5D # Mein RSA-Schlüssel, PGP 2.6.3i
+##set pgp_sign_as=0x7584F5D8 # Mein DSA/EG-Schlüssel, GnuPG 1.0.1
+
+## keine 64bit-tige KeyIDs anzeigen (nicht ändern!)
+#unset pgp_long_ids
+
+## Traditionelle Nachrichten erzeugen, ohne PGP-MIME. Sobald aber ein Zeichen vom
+## US-ASCII-Zeichensatz abweicht, wird PGP-MIME benutzt
+##  Dies ist nur mit Mutt 1.1.*/1.2* benutzbar.
+#set pgp_create_traditional
+
+#### Folgendes ist mit Mutt 1.1.* bzw. 1.2(.*)obsolete
+##
+## <obsolete>
+##
+### Standard soll PGP 2.6.3i sein
+##set pgp_default_version=pgp2
+##
+### Die Einstellungen für PGP 5.x
+##set pgp_v5=/usr/local/bin/pgp   # Das Binary
+##set pgp_v5_language=mutt        # Welche Sprache verwenden
+##set pgp_v5_pubring=~/.pgp/pubring.pkr   # Schlüsselbund mit öffentlichen Schlüsseln
+##set pgp_v5_secring=~/.pgp/secring.skr   # Schlüsselbund mit privaten Schlüsseln
+##
+### Die Einstellungen für PGP 2.x
+##set pgp_v2=/usr/local/bin/pgp2  # Das Binary
+##set pgp_v2_language=de          # Die Sprache
+##set pgp_v2_pubring=~/.pgp2/pubring.pgp  # öffentlicher Schlüsselbund, liegt in
+##                                        #~/.pgp2
+##set pgp_v2_secring=~/.pgp2/secring.pgp  # ditto, bloss für private Schlüssel
+##
+### Die Einstellungen für GnuPG
+##set pgp_gpg=/usr/local/bin/gpg          # Das Binary
+##  # Mehr gibt es nicht zu tun für GnuPG
+##
+## </obsolete>
+##
+## Wir nutzen PGP 2.6.3i per Default
+##   Falls eine Muttversion vor 1.1.* genutzt wird, ist dies auszukommentieren
+##   und dafür obige Einstellungen einzukommentieren (natürlich muss man diese
+##   noch anpassen)
+#source ~/.mutt/pgp2.rc
+
+### ----------------------------------------------------------------------------
+### Sendmaileinstellungen
+### ----------------------------------------------------------------------------
+
+## Standardoptionen von sendmail verwenden
+#reset sendmail
+
+## Sendmail in den Hintergrund (ich bin ungeduldig :-)
+#set sendmail_wait="-1"
+
+## Wie wird sendmail aufgerufen?
+#set sendmail="/usr/sbin/sendmail -oem -t -oi"
+
+### ----------------------------------------------------------------------------
+### Farben
+### ----------------------------------------------------------------------------
+
+####  Monochrome Terminals
+##    object             attribute
+##
+#mono normal             none            # Normaler Text
+#mono indicator          reverse         # Die Nachricht, die gerade ausgewählt ist
+#mono tree               none            # Die Pfeile, die einen Thread zusammenhalten
+#mono status             reverse         # Die Statuszeile
+#mono error              bold            # Fehlermeldungen
+#mono message            none            # informative Texte
+#mono quoted             bold            # gequoteter Text in einer Nachricht
+#mono signature          none            # Die Signatur eines Senders
+#mono attachment         underline       # MIME attachments
+#mono search             reverse         # Ergebnisse einer Suche
+#mono tilde              none            # Die »~« am Ende einer Nachricht
+#mono markers            bold            # Das »+«, dass eine umgebrochene Zeile anzeigt
+#mono hdrdefault         none            # Standardheaderzeilen
+#mono bold               bold            # *hervorgehobener* Text im Body
+#mono underline          underline       # _unterstrichener_ Text im Body
+##
+##    object      attribute      RegExp
+##
+#mono header      bold           "^(from|subject|reply-to|.*spamblock.*|date):"
+#mono body        underline      "((ftp|http|https)://|(file|mailto|news):|www\\.)[-a-z0-9_.:]*[a-z0-9](/[^][{} \t\n\r\"<>()]*[^][{} \t\n\r\"<>().,:!])?/?"
+#mono body        underline      "[-a-z_0-9.]+@[-a-z_0-9.]+"
+#mono body        bold           "(^| )\\*[-a-z0-9äöüß*]+\\*[,.?]?[ \n]"
+#mono body        underline      "(^| )_[-a-z0-9äöüß_]+_[,.?]?[ \n]"
+
+## farbige Terminals
+##     object     foreground     background
+##
+#color normal     white          default # Normaler Text
+#color indicator  green          black   # Die ausgewählte Nachricht
+#color tree       red            default # Die Pfeile, die einen Thread zusammenhalten
+#color status     brightyellow   blue    # Die Statuszeile
+#color error      brightred      default # Eine Fehlermeldung
+#color message    red            default # Informative Nachrichten
+#color signature  red            default # Die Signatur eines Senders
+#color attachment brightyellow   red     # MIME attachments
+#color search     brightyellow   red     # Suchergebnisse
+#color tilde      brightmagenta  default # Die »~« am Anfang einer Nachricht
+#color markers    red            default # Das »+« bei umgebrochenen Zeilen
+#color hdrdefault brightyellow   default # Standardheaderzeilen
+#color bold       red            default # *hervorgehobener* Text im Body
+#color underline  green          default # _unterstrichener_ Text im Body
+#color quoted     cyan           default # gequoteter Text
+#color quoted1    magenta        default
+#color quoted2    red            default
+#color quoted3    green          default
+#color quoted4    blue           default
+#color quoted5    cyan           default
+#color quoted6    magenta        default
+#color quoted7    red            default
+#color quoted8    green          default
+#color quoted9    blue           default
+##
+##     object     foreground backg.   RegExp
+##
+#color header     red        default  "^(from|subject|reply-to|.*spamblock.*|date):"
+#color body       black      white    "((ftp|http|https)://|(file|mailto|news):|www\\.)[-a-z0-9_.:]*[a-z0-9](/[^][{} \t\n\r\"<>()]*[^][{} \t\n\r\"<>().,:!])?/?"
+#color body       green      default  "((;|:|8\\:|\\=)(-|=|~|_|-'|%|<|)(\\)|Q|P|\\)%))"
+#color body       red        default  " (*)(ACK|ROTFL|LOL|SCNR|BRB|BTW|C|CWYL|FWIW|g|G|bg|vbg|GIWIST|G,D&R|HHOK|HTH|HTHBE|IMHO|IMNSHO|IOW|IRL|ITRW|OTP|OTF|OIC|OTOH|POV|RL|RTFM|ROTFL|TTFN|TTYL|U|WAEF|Y|TIMTOWTDI)(*) "
+#color body       cyan       default  "[-a-z_0-9.+]+@[-a-z_0-9.]+"
+#color body       red        default  "(^| )\\*[-a-z0-9*]+\\*[,.?]?[ \n]"
+#color body       green      default  "(^| )_[-a-z0-9_]+_[,.?]?[ \n]"
+
+#color index      blue       default  ~F         # geflagged Nachrichte
+#color index      red        default  ~N         # Neue Nachrichten
+#color index      magenta    default  ~T         # getaggte Nachrichten
+#color index      yellow     default  ~D         # Nachrichten, die als gelöscht
+#                                                # markiert sind
+
+### ============================================================================
+### Ende der Datei
+### ============================================================================

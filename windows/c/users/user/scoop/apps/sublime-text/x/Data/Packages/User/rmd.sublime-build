@@ -1,0 +1,4 @@
+{
+    "cmd"       : ["Rscript", "-e", "rmarkdown::render('$file')"],
+    "selector"  : "source.shell, source.Rmd",
+}

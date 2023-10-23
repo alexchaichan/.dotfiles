@@ -1,0 +1,53 @@
+{
+    "workbench.colorTheme": "Dracula",
+    "r.rpath.windows": "C:/Users/a.chaichan/AppData/Local/Programs/R/R-4.3.1/bin/x64/R.exe",
+    "r.rterm.windows": "C:/Users/a.chaichan/AppData/Local/Programs/R/R-4.3.1/bin/x64/R.exe",
+    "terminal.integrated.fontFamily": "Monaco Nerd Font Complete Mono",
+	"editor.fontFamily": "Monaco Nerd Font Complete Mono",
+    "editor.fontSize": 22,
+    "editor.codeLensFontFamily": "Monaco Nerd Font Complete Mono",
+    "python.defaultInterpreterPath": "C:\\Users\\a.chaichan\\AppData\\Local\\Programs\\Python\\Launcher\\py.exe",
+    "oracledevtools.bookmarkFileFolder": "C:\\Users\\a.chaichan\\Oracle\\oracle.oracledevtools",
+    "oracledevtools.download.otherFolder": "C:\\Users\\a.chaichan\\downloads",
+    "oracledevtools.connectionConfiguration.configFilesFolder": "C:\\Users\\a.chaichan\\Oracle\\network\\admin",
+    "[oraclesql]": {
+        "editor.suggest.showSnippets": true,
+        "editor.quickSuggestions": {
+            "comments": "on",
+            "strings": "on",
+            "other": "on"
+        },
+        "editor.defaultFormatter": "Oracle.oracledevtools"
+    },
+    "oracledevtools.connectionConfiguration.walletFileFolder": "C:\\Users\\a.chaichan\\Oracle\\network\\admin",
+    "oracledevtools.connections": [
+        {
+            "authenticationType": 2,
+            "dBAPrivilege": "None",
+            "userID": "",
+            "passwordSaved": true,
+            "password": "",
+            "dataSource": "",
+            "connectionType": 2,
+            "databaseHostName": "",
+            "databasePortNumber": "1521",
+            "databaseServiceName": "",
+            "tnsAdmin": "C:\\Users\\a.chaichan\\Oracle\\network\\admin",
+            "name": "RDH Test",
+            "color": "none",
+            "currentSchema": "",
+            "addSettingsScopeToConnectionName": false,
+            "addCurrentSchemaToConnectionName": false,
+            "filters": [],
+            "useCompatibleNamesDirectoryPath": true
+        }
+    ],
+    "oracledevtools.defaultConnection": "RDH Test",
+    "editor.minimap.enabled": false,
+    "window.zoomLevel": 1,
+    "vscode-office.previewCode": false,
+    "workbench.editorAssociations": {
+        "*.md": "default"
+    }
+
+}

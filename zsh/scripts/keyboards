@@ -1,0 +1,68 @@
+#!/usr/bin/env zsh
+
+# check for os type
+unameOut="$(uname -s)"
+case "${unameOut}" in
+    Linux*)     os=linux;;
+    Darwin*)    os=osx;;
+    CYGWIN*)    os=cygwin;;
+    MINGW*)     os=mingw;;
+    *)          os="UNKNOWN:${unameOut}"
+esac
+
+# create $ directories
+if [[ "$os" == "osx" || "$os" == "linux" ]]; then
+  export HOME="$(echo -n $(bash -c "cd ~${USER} && pwd"))"
+fi
+export DOTFILES=$HOME/.dotfiles
+
+# define keyboard layout from laptop
+KLAYOUT=$(defaults read /Library/Preferences/com.apple.HIToolbox.plist  AppleEnabledInputSources | awk '{ print $4 }' | awk 'NR==5' )
+
+# define connected keyboards
+
+if [[ "$os" == "osx" ]]; then
+
+  # keychron k2
+  export KEYCHRON_USB=$(ioreg -p IOUSB -w0 | sed 's/[^o]*o //; s/@.*$//' | grep "Keychron" | sed 's/[^a-zA-Z0-9]//g')
+  export KEYCHRON_BLUETOOTH=$(system_profiler SPBluetoothDataType | grep -m1 "0x800020")
+
+  #
+
+elif [[ "$os" == "linux" ]]; then
+
+  # keychron k2
+  export KEYCHRON_USB=$(lsusb | grep 'Apple' | cut -f7 -d" ")
+
+  #
+
+fi
+
+# specific Keyboard settings osx
+
+  # keychron k2
+if [[ "$os" == "osx" && "$KEYCHRON_USB" == "KeychronK2" || "$KEYCHRON_BLUETOOTH" == "              Services: 0x800020 < HID ACL >" ]]; then
+
+  xkbswitch -s 2
+
+#elif [[ "$os" == "osx" && "$_BLUETOOTH" == "" || "$_BLUETOOTH" == ""]]; then
+
+else
+
+  xkbswitch -se German
+
+fi
+
+# linux 
+
+if [[ "$os" == "linux" && "$KEYCHRON_USB" == "Apple," ]]; then
+
+  xmodmap ~/.Xmodmap
+
+#elif [[ "$os" == "osx" && "$_BLUETOOTH" == "" || "$_BLUETOOTH" == ""]]; then
+
+else
+
+  
+
+fi

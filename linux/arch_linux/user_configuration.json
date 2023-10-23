@@ -1,0 +1,30 @@
+user_configuration.json
+{
+  "additional-repositories": [
+    "multilib"
+  ],
+  "audio": "pipewire",
+  "config_version": "2.5.1",
+  "debug": false,
+  "desktop-environment": "cinnamon",
+  "gfx-driver": "VMware / VirtualBox (open-source)",
+  "harddrives": [
+    "/dev/sda"
+  ],
+  "no_pkg_lookups": false,
+  "offline": false,
+  "packages": [
+    "git",
+    "alacritty",
+    "tmux",
+    "qutebrowser",
+    "neovim"
+  ],
+  "profile": {
+    "path": "/usr/lib/python3.10/site-packages/archinstall/profiles/desktop.py"
+  },
+  "script": "guide",
+  "silent": false,
+  "timezone": "Europe/Berlin",
+  "version": "2.5.1"
+}

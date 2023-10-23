@@ -1,0 +1,104 @@
+{
+ "id": "cw_ecrz8",
+ "label": "Dracula",
+ "manufacturer": "",
+ "swatches": {
+  "base": {
+   "background": "#44475a",
+   "color": "#bd93f9"
+  },
+  "mods": {
+   "background": "#6272a4",
+   "color": "#ffb86c"
+  },
+  "accent": {
+   "background": "#ff5555",
+   "color": "#282a36"
+  },
+  "swatch-1": {
+   "background": "#ff79c6",
+   "color": "#282a36"
+  },
+  "swatch-2": {
+   "background": "#50fa7b",
+   "color": "#282a36"
+  },
+  "swatch-3": {
+   "background": "#f1fa8c",
+   "color": "#282a36"
+  },
+  "swatch-4": {
+   "background": "#ffb86c",
+   "color": "#282a36"
+  },
+  "swatch-5": {
+   "background": "#8be9fd",
+   "color": "#282a36"
+  },
+  "swatch-6": {
+   "background": "#44475a",
+   "color": "#ff5555"
+  },
+  "swatch-7": {
+   "background": "#44475a",
+   "color": "#f1fa8c"
+  },
+  "swatch-8": {
+   "background": "#f8f8f2",
+   "color": "#282a36"
+  }
+ },
+ "override": {
+  "KC_SPC": "base",
+  "KC_PENT": "accent",
+  "KC_ESC": "accent",
+  "KC_GESC": "accent",
+  "KC_F5": "mods",
+  "KC_F6": "mods",
+  "KC_F7": "mods",
+  "KC_F8": "mods",
+  "KC_TAB": "swatch-1",
+  "KC_CAPS": "swatch-1",
+  "KC_LSFT": "swatch-1",
+  "KC_X": "accent2",
+  "KC_R": "base",
+  "KC_Y": "base",
+  "KC_O": "base",
+  "KC_RBRC": "base",
+  "KC_LBRC": "base",
+  "KC_QUOT": "base",
+  "KC_SLSH": "swatch-2",
+  "KC_DOT": "base",
+  "KC_SCLN": "base",
+  "KC_RALT": "swatch-2",
+  "KC_RGUI": "swatch-2",
+  "MO(1)": "swatch-5",
+  "KC_A": "base",
+  "KC_S": "base",
+  "KC_D": "base",
+  "KC_F": "base",
+  "KC_G": "base",
+  "KC_H": "base",
+  "KC_RSFT": "mods",
+  "KC_I": "base",
+  "KC_RCTL": "swatch-2",
+  "KC_2": "swatch-7",
+  "KC_1": "swatch-7",
+  "KC_3": "swatch-7",
+  "KC_4": "swatch-7",
+  "KC_5": "swatch-7",
+  "KC_6": "swatch-7",
+  "KC_7": "swatch-7",
+  "KC_8": "swatch-7",
+  "KC_9": "swatch-7",
+  "KC_0": "swatch-7",
+  "KC_MINS": "swatch-7",
+  "KC_EQL": "swatch-7",
+  "KC_LCTL": "swatch-3",
+  "KC_LGUI": "swatch-3",
+  "KC_LALT": "swatch-3",
+  "KC_BSPC": "swatch-4",
+  "KC_J": "base",
+  "KC_K": "base"
+ }
+}
