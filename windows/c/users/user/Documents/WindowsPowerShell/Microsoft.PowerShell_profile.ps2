@@ -40,6 +40,7 @@ function prompt {
 
     #Decorate the CMD Prompt
     Write-Host ""
+	Write-Host " 󰖳 " -BackgroundColor White -ForegroundColor Black -NoNewline
     Write-host ($(if ($IsAdmin) { 'Elevated ' } else { '' })) -BackgroundColor DarkBlue -ForegroundColor White -NoNewline
     Write-Host " $($CmdPromptUser.Name.split("\")[1]) " -BackgroundColor DarkBlue -ForegroundColor White -NoNewline
     If ($CmdPromptCurrentFolder -like "*:*")
@@ -48,7 +49,7 @@ function prompt {
 
     Write-Host " $date " -BackgroundColor DarkYellow -ForegroundColor White -NoNewline
     Write-Host " $elapsedTime " -BackgroundColor Cyan -ForegroundColor Black -NoNewline
-    return " > "
+    return "  "
 } #end prompt function
 
 # terminal icons
