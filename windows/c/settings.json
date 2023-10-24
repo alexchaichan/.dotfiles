@@ -31,7 +31,7 @@
     ],
     "copyFormatting": "none",
     "copyOnSelect": false,
-    "defaultProfile": "{fdfc1dac-196c-4a6e-a793-ac32efed5de0}",
+    "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
     "firstWindowPreference": "defaultProfile",
     "newTabMenu": 
     [
@@ -46,8 +46,9 @@
             "colorScheme": "Dracula",
             "font": 
             {
-                "face": "Monaco Nerd Font Mono"
-            }
+                "face": "Monaco Nerd Font"
+            },
+            "opacity": 90
         },
         "list": 
         [
@@ -68,21 +69,6 @@
                 "hidden": false,
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure"
-            },
-            {
-                "guid": "{2ece5bfe-50ed-5f3a-ab87-5cd4baafed2b}",
-                "hidden": false,
-                "name": "Git Bash",
-                "source": "Git"
-            },
-            {
-                "commandline": "powershell.exe -ExecutionPolicy ByPass -NoExit -Command & '%ANACONDA_HOME%\\\\shell\\\\condabin\\\\conda-hook.ps1' ; conda activate '%ANACONDA_HOME%'",
-                "guid": "{fdfc1dac-196c-4a6e-a793-ac32efed5de0}",
-                "hidden": false,
-                "name": "Anaconda",
-                "opacity": 95,
-                "startingDirectory": "C:\\Users\\a.chaichan",
-                "useAcrylic": false
             }
         ]
     },
