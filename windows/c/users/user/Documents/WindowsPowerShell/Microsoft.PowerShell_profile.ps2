@@ -10,6 +10,43 @@ Set-PSReadlineOption -Color @{
     "Comment" = [ConsoleColor]::DarkCyan
 }
 
+Set-PSReadLineOption -PredictionSource History
+Set-PSReadlineKeyHandler -Key "Tab" -Function MenuComplete
+Set-PSReadlineKeyHandler -Key "UpArrow" -Function HistorySearchBackward
+Set-PSReadlineKeyHandler -Key "DownArrow" -Function HistorySearchForward
+Set-PSReadLineOption -Colors @{ InlinePrediction = '#6272a4'}
+Set-PSReadlineOption -HistorySearchCursorMovesToEnd
+Set-PSReadLineKeyHandler -Key "RightArrow" -ScriptBlock {
+       param($key, $arg)
+
+       $line = $null
+       $cursor = $null
+       [Microsoft.PowerShell.PSConsoleReadLine]::GetBufferState([ref]$line, [ref]$cursor)
+
+       if ($cursor -lt $line.Length) {
+           [Microsoft.PowerShell.PSConsoleReadLine]::ForwardChar($key, $arg)
+       } else {
+           [Microsoft.PowerShell.PSConsoleReadLine]::AcceptNextSuggestionWord($key, $arg)
+       }
+}
+
+Set-PSReadLineKeyHandler -Key End -ScriptBlock {
+       param($key, $arg)
+
+       $line = $null
+       $cursor = $null
+       [Microsoft.PowerShell.PSConsoleReadLine]::GetBufferState([ref]$line, [ref]$cursor)
+
+       if ($cursor -lt $line.Length) {
+           [Microsoft.PowerShell.PSConsoleReadLine]::EndOfLine($key, $arg)
+       } else {
+           [Microsoft.PowerShell.PSConsoleReadLine]::AcceptSuggestion($key, $arg)
+       }
+}
+
+#Set-PSReadLineOption -PredictionViewStyle ListView
+
+
 # prompt
 function prompt {
 
