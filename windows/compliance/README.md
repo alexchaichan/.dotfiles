@@ -1,5 +1,7 @@
+```
 powershell -noprofile -command "Install-Module PSReadLine -Force -SkipPublisherCheck -AllowPrerelease"
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
 
 - install modules
 
