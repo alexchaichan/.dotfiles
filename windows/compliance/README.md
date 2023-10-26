@@ -97,6 +97,16 @@ scoop install neofetch
 scoop install btop
 ```
 
-PATH
 
 
+nvim
+```powershell
+cd $HOME\AppData\Local\nvim\pack\plugins\start\
+git clone https://github.com/akinsho/bufferline.nvim.git
+git clone https://github.com/nvim-lualine/lualine.nvim.git
+git clone https://github.com/windwp/nvim-autopairs.git
+git clone https://github.com/nvim-tree/nvim-tree.lua.git
+git clone https://github.com/nvim-treesitter/nvim-treesitter.git
+git clone https://github.com/terrortylor/nvim-comment.git
+git clone https://github.com/nvim-telescope/telescope.nvim.git
+```
