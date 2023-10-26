@@ -114,4 +114,5 @@ git clone https://github.com/terrortylor/nvim-comment.git
 git clone https://github.com/nvim-telescope/telescope.nvim.git
 git clone https://github.com/dracula/vim.git
 git clone https://github.com/hrsh7th/nvim-cmp.git
+git clone https://github.com/nvim-lua/plenary.nvim.git
 ```
