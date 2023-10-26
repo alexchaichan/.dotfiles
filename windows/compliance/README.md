@@ -86,10 +86,15 @@ scoop install neovim
 scoop install fzf
 scoop bucket add extras
 scoop install extras/rstudio
+scoop install r
 scoop install sublime-text
 scoop install miniconda
 scoop install pandoc
 scoop install rust
+scoop instsall git
+scoop install bat
+scoop install neofetch
+scoop install btop
 ```
 
 PATH
