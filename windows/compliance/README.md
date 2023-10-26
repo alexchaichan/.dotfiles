@@ -109,4 +109,5 @@ git clone https://github.com/nvim-tree/nvim-tree.lua.git
 git clone https://github.com/nvim-treesitter/nvim-treesitter.git
 git clone https://github.com/terrortylor/nvim-comment.git
 git clone https://github.com/nvim-telescope/telescope.nvim.git
+git clone https://github.com/dracula/vim.git
 ```
