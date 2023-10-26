@@ -71,11 +71,13 @@ install scoops
 scoop install spotify-tui
 scoop install lf
 scoop install bat
-scoop install nvim
+scoop install neovim
 scoop install fzf
 scoop bucket add extras
 scoop install extras/rstudio
 scoop install sublime-text
+scoop install miniconda
+scoop install pandoc
 ```
 
 PATH
