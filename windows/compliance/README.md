@@ -6,6 +6,7 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```powershell
 #Install-Module -Name PowerShellGet -Force -Scope CurrentUser -AllowClobber
 Install-Module -Name PowerShellGet -Force -Scope CurrentUser
+winget install JanDeDobbeleer.OhMyPosh -s winget
 ```
 
 - install modules 
