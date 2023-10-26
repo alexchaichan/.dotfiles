@@ -95,6 +95,7 @@ scoop instsall git
 scoop install bat
 scoop install neofetch
 scoop install btop
+scoop install gcc
 ```
 
 
@@ -110,4 +111,5 @@ git clone https://github.com/nvim-treesitter/nvim-treesitter.git
 git clone https://github.com/terrortylor/nvim-comment.git
 git clone https://github.com/nvim-telescope/telescope.nvim.git
 git clone https://github.com/dracula/vim.git
+git clone https://github.com/hrsh7th/nvim-cmp.git
 ```
