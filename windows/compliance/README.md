@@ -24,6 +24,7 @@ winget install qutebrowser
 #winget install brave.Brave
 winget install -e --id Anaconda.Miniconda3
 winget install -e --id RProject.R
+Install-Module -Name PSFzf
 ```
 
 - Edit environment variables:
@@ -66,7 +67,6 @@ scoop install lf
 scoop install bat
 scoop install nvim
 scoop install fzf
-scoop install PSFzf
 scoop bucket add extras
 scoop install extras/rstudio
 scoop install sublime-text
