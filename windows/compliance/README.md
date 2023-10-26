@@ -14,19 +14,20 @@ PowerShellGet\Install-Module posh-git -Scope CurrentUser -Force
 
 ```powershell
 Install-Module -Name Terminal-Icons -Repository PSGallery
+Install-Module -Name PSFzf
 ```
 
 - install apps
 
 ```powershell
-winget install Git.Git
-winget install --source winget --exact --id JohnMacFarlane.Pandoc
-winget install -e --id Microsoft.VisualStudioCode
-winget install qutebrowser
+#winget install Git.Git
+#winget install --source winget --exact --id JohnMacFarlane.Pandoc
+#winget install -e --id Microsoft.VisualStudioCode
+#winget install qutebrowser
 #winget install brave.Brave
-winget install -e --id Anaconda.Miniconda3
-winget install -e --id RProject.R
-Install-Module -Name PSFzf
+#winget install -e --id Anaconda.Miniconda3
+#winget install -e --id RProject.R
+#
 ```
 
 ```powershell
@@ -38,6 +39,13 @@ git config --global http.sslbackend schannel
 ```
 Variable name: ANACONDA_HOME
 Variable value: C:\Users\a.chaichan\AppData\Local\miniconda3
+
+Variable name: Path
+Variable values:
+C:\Users\a.chaichan\AppData\Roaming\Python\Python312\Scripts
+C:\Users\a.chaichan\AppData\Local\Microsoft\WinGet\Packages\gokcehan.lf_Microsoft.Winget.Source_8wekyb3d8bbwe
+C:\Users\a.chaichan\AppData\Roaming\Python\Python310\Scripts
+C:\Users\a.chaichan\AppData\Roaming\Python\Python312\Scripts
 ```
 
 - make pip work (sometimes)
@@ -82,5 +90,4 @@ scoop install pandoc
 
 PATH
 
-C:\Users\a.chaichan\AppData\Roaming\Python\Python312\Scripts
-C:\Users\a.chaichan\AppData\Local\Microsoft\WinGet\Packages\gokcehan.lf_Microsoft.Winget.Source_8wekyb3d8bbwe
+
