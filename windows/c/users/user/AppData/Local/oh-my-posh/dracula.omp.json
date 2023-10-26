@@ -39,17 +39,6 @@
           "background": "#6272a4",
           "template": "{{ .UserName }} "
         },
-		        {
-          "type": "time",
-          "style": "diamond",
-          "foreground": "#ffffff",
-          "background": "#ff79c6",
-          "trailing_diamond": "\ue0b0",
-          "template": "  {{ .CurrentDate | date .Format }} ",
-          "properties": {
-            "time_format": "15:04"
-          }
-        },
         {
           "type": "path",
           "style": "powerline",
@@ -119,6 +108,17 @@
 		  },
 		  "style": "powerline"
 		},
+				{
+          "type": "time",
+          "style": "powerline",
+		  "powerline_symbol": "\ue0b0",
+          "foreground": "#ffffff",
+          "background": "#ff79c6",
+          "template": "  {{ .CurrentDate | date .Format }} ",
+          "properties": {
+            "time_format": "15:04"
+          }
+        },
 		{
 		  "type": "executiontime",
 		  "style": "powerline",
