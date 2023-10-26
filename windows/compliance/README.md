@@ -7,6 +7,7 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 #Install-Module -Name PowerShellGet -Force -Scope CurrentUser -AllowClobber
 Install-Module -Name PowerShellGet -Force -Scope CurrentUser
 winget install JanDeDobbeleer.OhMyPosh -s winget
+PowerShellGet\Install-Module posh-git -Scope CurrentUser -Force
 ```
 
 - install modules 
