@@ -67,7 +67,10 @@ Invoke-WebRequest -UseBasicParsing -Uri "https://raw.githubusercontent.com/pyenv
 ```
 
 - install rust (download and execute)
-https://win.rustup.rs/x86_64
+
+```powershell
+#https://win.rustup.rs/x86_64
+```
 
 - install scoop
 ```powershell
