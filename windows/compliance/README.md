@@ -27,6 +27,10 @@ winget install -e --id RProject.R
 Install-Module -Name PSFzf
 ```
 
+```powershell
+git config --global http.sslbackend schannel
+```
+
 - Edit environment variables:
 
 ```
