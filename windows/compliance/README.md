@@ -77,3 +77,8 @@ scoop bucket add extras
 scoop install extras/rstudio
 scoop install sublime-text
 ```
+
+PATH
+
+C:\Users\a.chaichan\AppData\Roaming\Python\Python312\Scripts
+C:\Users\a.chaichan\AppData\Local\Microsoft\WinGet\Packages\gokcehan.lf_Microsoft.Winget.Source_8wekyb3d8bbwe
