@@ -86,6 +86,7 @@ scoop install extras/rstudio
 scoop install sublime-text
 scoop install miniconda
 scoop install pandoc
+scoop install rust
 ```
 
 PATH
