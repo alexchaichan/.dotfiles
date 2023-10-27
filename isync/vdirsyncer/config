@@ -43,7 +43,7 @@ fileext = ".vcf"
 
 [storage my_contacts_remote]
 type = "carddav"
-url = "https://posteo.de:8443"
+url = "https://contacts.icloud.com:8443"
 username.fetch = ["command", "pass", "credentials/posteo/username"]
 # password = "xxxx-xxxx-xxxx-xxxx"
 password.fetch = ["command", "pass", "credentials/posteo/password"]
