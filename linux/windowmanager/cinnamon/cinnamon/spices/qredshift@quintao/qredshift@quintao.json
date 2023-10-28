@@ -224,7 +224,7 @@
         "units": "%",
         "step": 1,
         "description": "Brightness",
-        "value": 50
+        "value": 100
     },
     "gammaMix": {
         "type": "spinbutton",
