@@ -131,7 +131,7 @@ key_bindings:
   - { key: C, mods: Control, action: Copy }
 
 # remap kill terminate to alt (remapped to ctrl)
-  - { key: C, mods: Control, chars: "\x03"}
+  - { key: C, mods: Alt, chars: "\x03"}
  # - { key: H,    mods: Alt, chars: "\x06\x1b\x5b\x44"                       }
  # - { key: L,    mods: Alt, chars: "\x06\x1b\x5b\x43"                       }
  # - { key: K,    mods: Alt, chars: "\x06\x1b\x5b\x41"                       }
