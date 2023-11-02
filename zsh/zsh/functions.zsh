@@ -101,8 +101,8 @@ get-ip(){
 
 # ZSH functions to start/stop OpenConnect VPN client
 function vpn-uk() {
-     pass show uni-kassel.de/uk069555  | sudo openconnect  --user=uk069555 --passwd-on-stdin https://vpn.uni-kassel.de/ --servercert pin-sha256:cE1Loj4xAFctrQWe/4RdmIdvuIQqeIZrQ1zhkBgW6VM=
-  }
+     pass show uni-kassel.de/uk069555  | sudo openconnect  --user=uk069555 --passwd-on-stdin https://vpn.uni-kassel.de/  --useragent=AnyConnect
+   }
 
 function vpn-down() {
   sudo kill -2 `pgrep openconnect`
@@ -148,7 +148,6 @@ function PlugUpdate(){
 #####################################################
 # zsh functions mac                                 #
 #####################################################
-
 
 if [[ "$os" == "osx" ]]; then
 
@@ -283,11 +282,6 @@ fi
 #####################################################
 
 if [[ "$os" == "linux" ]]; then
-
-# set the display on the imac to 100%
-licht(){
-   brightnessctl set 100%
-}
 
 logi(){
   bluetoothctl connect 44:73:D6:A4:50:D8
