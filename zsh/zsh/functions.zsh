@@ -310,3 +310,8 @@ ssh_viki(){
   pass .
   ssh "$(pass ssh/viki_thinkpad)"
 }
+
+ssh_uk(){
+  pass .
+  ssh "$(pass ssh/uk)"
+}
