@@ -315,3 +315,4 @@ ssh_uk(){
   pass .
   ssh "$(pass ssh/uk)"
 }
+
