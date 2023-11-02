@@ -5,8 +5,8 @@
 - qutebrowser: /home/alex/.dotfiles/linux/arch_linux/shortcuts/qutebrowser
 
 ## create shortcuts
-- close window: ctrl+q
-- cycle through open windows: ctrl+tab
+- close window: alt+q
+- cycle through open windows: alt+tab
 
 ```{sh}
 sudo cp .dotfiles/fonts/Monaco\ Nerd\ Font\ Complete\ Mono.ttf /usr/local/share/fonts/ttf/MonacoNerdFont
