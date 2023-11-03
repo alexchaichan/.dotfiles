@@ -1,3 +1,7 @@
+cinnamon xorg xorg-server pass git neovim qutebrowser alacritty zsh tmux fzf pass unzip blueman bluez-utils mpv openconnect r spotifyd ruby jupterlab pyenv renv 
+
+python-tldextract
+
 git clone https://aur.archlinux.org/sublime-text-4.git 
 git clone https://aur.archlinux.org/pass-git-helper.git 
 git clone https://aur.archlinux.org/redshift-minimal.git
@@ -7,11 +11,4 @@ git clone https://aur.archlinux.org/ruby-colorls.git
 git clone https://aur.archlinux.org/dracula-gtk-theme.git
 git clone https://aur.archlinux.org/soci.git
 git clone https://aur.archlinux.org/rstudio-desktop.git 
-
-
-
-
-cinnamon xorg xorg-server pass git neovim qutebrowser alacritty zsh tmux fzf pass unzip blueman bluez-utils mpv openconnect r spotifyd ruby jupterlab pyenv renv 
-
-python-tldextract
-
+git clone https://aur.archlinux.org/brave.git
