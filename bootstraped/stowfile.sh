@@ -190,7 +190,7 @@ ln -sf $DOTFILES/neofetch/neofetch $CONFIG
 if [[ "$os" == "osx" ]]; then
 	ln -sf $DOTFILES/gnupg/.gnupg/gpg-agent.conf $HOME/.gnupg/
 elif [[ "$os" == "linux" ]]; then
-	ln -sf $DOTFILES/gnupg/.gnupg/gpg-agent_arch.conf $HOME/.gnupg/
+	ln -sf $DOTFILES/gnupg/.gnupg/gpg-agent_arch.conf $HOME/.gnupg/gpg-agent.conf
 fi
 
 # feh
