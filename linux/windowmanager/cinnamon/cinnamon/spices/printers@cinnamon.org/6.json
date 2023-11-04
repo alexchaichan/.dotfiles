@@ -13,7 +13,7 @@
             "When printing": "jobs"
         },
         "tooltip": "Choose when to show the printer icon in the panel",
-        "value": "printers"
+        "value": "jobs"
     },
     "__md5__": "93e5a8d56ccfdbf949efa8b7e5b6ef9d"
 }
