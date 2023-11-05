@@ -283,7 +283,7 @@
         "default": true,
         "description": "Show favorite icons",
         "tooltip": "Choose whether or not to show icons on favorites.",
-        "value": true
+        "value": false
     },
     "favorite-button-size": {
         "type": "spinbutton",
@@ -345,7 +345,7 @@
         "tooltip": "Choose whether to display the 'Quit' button first or last. (Has no effect on 'DropDown' layout.)",
         "dependency": "show-shutdown-menu",
         "indent": true,
-        "value": true
+        "value": false
     },
     "shutdown-menu-layout": {
         "type": "combobox",
@@ -359,7 +359,7 @@
         "tooltip": "Choose the layout of the quit options.",
         "dependency": "show-shutdown-menu",
         "indent": true,
-        "value": "vertical"
+        "value": "horizontal"
     },
     "shutdown-label": {
         "type": "entry",
@@ -375,7 +375,7 @@
         "default": false,
         "description": "Separator below user account info box",
         "tooltip": "Choose whether or not to show this separator.",
-        "value": false
+        "value": true
     },
     "quicklauncher-places": {
         "type": "list",
