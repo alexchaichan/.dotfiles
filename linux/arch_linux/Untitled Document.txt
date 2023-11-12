@@ -1,4 +1,4 @@
-cinnamon xorg xorg-server pass git neovim qutebrowser alacritty zsh tmux fzf pass unzip blueman bluez-utils mpv openconnect r spotifyd ruby jupterlab pyenv renv bat libjs-pdf pandoc texlive-basic texlive-fontsextra texlive-latexextra texlive-luatex texlive-mathscience texlive-xetex ufw zathura-pdf-poppler gcc gcc-fortran imagemagick
+cinnamon xorg xorg-server pass git neovim qutebrowser alacritty zsh tmux fzf pass unzip blueman bluez-utils mpv openconnect r spotifyd ruby jupterlab pyenv renv bat libjs-pdf pandoc texlive-basic texlive-fontsextra texlive-latexextra texlive-luatex texlive-mathscience texlive-xetex ufw zathura-pdf-poppler gcc gcc-fortran imagemagick dmenu thunderbird
 
 python-tldextract python-adblock 
 

@@ -41,12 +41,11 @@ xterm -geometry 80x50+494+51 &
 xterm -geometry 80x20+494-0 &
 
 # set keyboard config
-if [[ $(lsusb | grep  "SHARKOON Technologies GmbH Keyboard" | cut -f7 -d" ") == "SHARKOON" ]]; then
-    xmodmap ~/.Xmodmap
-elif [[ $(lsusb | grep "Apple" | cut -f7 -d" ") == "Apple" ]]; then
-    xmodmap ~/.Xmodmap
-fi
-
+# if [[ $(lsusb | grep  "SHARKOON Technologies GmbH Keyboard" | cut -f7 -d" ") == "SHARKOON" ]]; then
+#     xmodmap ~/.Xmodmap
+# elif [[ $(lsusb | grep "Apple" | cut -f7 -d" ") == "Apple" ]]; then
+#     xmodmap ~/.Xmodmap
+# fi
 
 # set window manager
 if [[ "$WM" == "cinnamon" ]]; then
@@ -58,3 +57,5 @@ elif [[ "$WM" == "i3" ]]; then
     exec cinnamon-session
 
 fi
+
+xmodmap ~/.Xmodmap
