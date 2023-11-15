@@ -1,3 +1,5 @@
+# Windows 11
+
 # Setup WSL for windows
 
 - Windows-Features -> activate: 
