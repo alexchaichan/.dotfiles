@@ -267,7 +267,7 @@ c.content.blocking.method = 'both'
 ################################################################################
 
 # view videos with mpv
-config.bind('M', 'hint links spawn  /usr/bin/env mpv {hint-url}')
+config.bind('M', 'hint links spawn  C:/Users/a.chaichan/scoop/apps/mpv/current/mpv.com {hint-url}')
 config.bind("Y", "spawn --userscript youtube_mp3_downloader.sh")
 config.bind("X", "spawn --userscript youtube_downloader.sh")
 
