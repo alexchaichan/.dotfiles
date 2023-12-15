@@ -317,7 +317,7 @@
         "units": "%",
         "step": 1,
         "description": "Brightness",
-        "value": 52
+        "value": 57
     },
     "locationRemote": {
         "type": "checkbox",
