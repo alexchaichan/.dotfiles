@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PID=$(xdotool search --onlyvisible --class qutebrowser)
+PID=$(xdotool search --onlyvisible --class brave)
 
 if [[ "$PID" -ne "" ]]; then
 
@@ -8,6 +8,6 @@ if [[ "$PID" -ne "" ]]; then
 
 else
 
-    qutebrowser
+    brave
 
 fi

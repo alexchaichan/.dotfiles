@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 PID=$(xdotool search --onlyvisible --class alacritty)
 
 if [[ "$PID" -ne "" ]]; then

@@ -22,4 +22,6 @@ mkdir $SUBL ; sudo mkdir $SUBL/Packages ; sudo mkdir $SUBL/Packages/User
 subl --command "install_package_control"
 pkill subl
 
+sudo ln -sf $DOTFILES/sublime_text/Sublime\ Text/Packages/User/* $SUBL/Packages/User/
+sudo ln -sf $DOTFILES/sublime_text/Sublime\ Text/Packages/Dracula\ Color\ Scheme $SUBL/Packages/
 ln -sf $DOTFILES/sublime_text/Sublime\ Text/Packages/User/Preferences_arch.sublime-settings $SUBL/Packages/User/Preferences.sublime-settings
