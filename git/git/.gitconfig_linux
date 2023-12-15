@@ -4,7 +4,7 @@
 	signingkey = B50CCA3A30B61127
 [core]
   autocrlf = input
-	excludesfile = /home/alex/.dotfiles/git/git/.gitignore_global
+	excludesfile = /home/user/.dotfiles/git/git/.gitignore_global
   editor = nvim
 [credential]
   helper = !pass-git-helper $@

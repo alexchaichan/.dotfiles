@@ -57,17 +57,17 @@ export LC_CTYPE="en_US.UTF-8"
 # pyenv / pipenv                                                                   #
 ####################################################################################
 
-export PYENV_ROOT="$HOME/.pyenv"
+# export PYENV_ROOT="$HOME/.pyenv"
 
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init -)"
 
-# -U eliminates duplicates.
-export -U PATH path         
-path=( 
-    $PYENV_ROOT/{bin,shims} 
-    $path
-)
+# # -U eliminates duplicates.
+# export -U PATH path         
+# path=( 
+#     $PYENV_ROOT/{bin,shims} 
+#     $path
+# )
 
 ####################################################################################
 # pyenv / pipenv                                                                   #

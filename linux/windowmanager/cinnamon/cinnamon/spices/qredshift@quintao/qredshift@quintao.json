@@ -224,7 +224,7 @@
         "units": "%",
         "step": 1,
         "description": "Brightness",
-        "value": 74
+        "value": 100
     },
     "gammaMix": {
         "type": "spinbutton",
@@ -337,13 +337,13 @@
         "type": "entry",
         "default": "0",
         "description": "Latitude",
-        "value": "52.5307"
+        "value": "52.5416"
     },
     "locationLongitude": {
         "type": "entry",
         "default": "0",
         "description": "Longitude",
-        "value": "13.3372"
+        "value": "13.3495"
     },
     "aboutLocation": {
         "type": "label",
