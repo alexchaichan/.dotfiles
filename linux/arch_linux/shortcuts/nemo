@@ -1,0 +1,13 @@
+#!/bin/bash
+
+PID=$(xdotool search --onlyvisible --class nemo)
+
+if [[ "$PID" -ne "" ]]; then
+
+    xdotool windowactivate $PID
+
+else
+
+    nemo
+
+fi
