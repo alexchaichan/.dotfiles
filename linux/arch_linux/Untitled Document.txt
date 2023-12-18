@@ -1,4 +1,4 @@
-cinnamon xorg xorg-server pass git neovim qutebrowser alacritty zsh tmux fzf pass unzip blueman bluez-utils mpv openconnect r spotifyd ruby jupyterlab pyenv renv bat libjs-pdf pandoc texlive-basic texlive-fontsextra texlive-latexextra texlive-luatex texlive-mathscience texlive-xetex ufw zathura-pdf-poppler gcc gcc-fortran imagemagick dmenu thunderbird netctl networkmanager
+cinnamon xorg xorg-server pass git neovim qutebrowser alacritty zsh tmux fzf pass unzip blueman bluez-utils mpv openconnect r spotifyd ruby jupyterlab pyenv renv bat libjs-pdf pandoc texlive-basic texlive-fontsextra texlive-latexextra texlive-luatex texlive-mathscience texlive-xetex ufw zathura-pdf-poppler gcc gcc-fortran imagemagick dmenu thunderbird netctl networkmanager spotifyd
 
 python-tldextract python-adblock 
 
@@ -13,3 +13,4 @@ git clone https://aur.archlinux.org/soci.git
 git clone https://aur.archlinux.org/rstudio-desktop.git 
 git clone https://aur.archlinux.org/brave-bin.git
 git clone https://aur.archlinux.org/zoom.git
+git clone https://aur.archlinux.org/spotify-tui.git

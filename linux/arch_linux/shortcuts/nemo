@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PID=$(xdotool search --onlyvisible --class nemo)
+PID=$(xdotool search --onlyvisible --class "^nemo$")
 
 if [[ "$PID" -ne "" ]]; then
 
