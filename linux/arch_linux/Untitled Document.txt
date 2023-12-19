@@ -19,6 +19,7 @@ git clone https://aur.archlinux.org/spotify-tui.git
 git clone https://aur.archlinux.org/dropbox.git
 git clone https://aur.archlinux.org/nemo-dropbox.git
 
+cd $HOME
 git clone https://github.com/alexchaichan/cheatsheets.git
 git clone https://github.com/alexchaichan/data-science.git
 git clone https://github.com/alexchaichan/Templates.git
