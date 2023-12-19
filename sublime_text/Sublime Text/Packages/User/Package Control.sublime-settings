@@ -2,6 +2,13 @@
 	"bootstrapped": true,
 	"in_process_packages":
 	[
+		"LaTeXTools",
+		"LSP-R",
+		"MarkdownPreview",
+		"MySQL Snippets",
+		"R-IDE",
+		"rainbow_csv",
+		"SideBarEnhancements",
 	],
 	"installed_packages":
 	[

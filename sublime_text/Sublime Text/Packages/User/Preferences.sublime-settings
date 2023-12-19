@@ -1,12 +1,19 @@
 {
 	"ignored_packages":
 	[
+		"LaTeXTools",
+		"LSP-R",
+		"MarkdownPreview",
+		"MySQL Snippets",
+		"R-IDE",
+		"rainbow_csv",
+		"SideBarEnhancements",
 		"Vintage",
 	],
 	"theme": "Adaptive.sublime-theme",
 	"color_scheme": "Packages/Dracula Color Scheme/Dracula.tmTheme",
 	"font_face": "Monaco Nerd Font",
-	"font_size": 23,
+	"font_size": 15,
 	"caret_style": "phase",
 	"block_caret": false,
 	"dictionary": "Packages/User/de_DE.dic",

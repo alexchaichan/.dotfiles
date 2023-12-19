@@ -2,6 +2,8 @@ cinnamon xorg xorg-server pass git neovim qutebrowser alacritty zsh tmux fzf pas
 
 python-tldextract python-adblock 
 
+
+cd /tmp/
 git clone https://aur.archlinux.org/sublime-text-4.git 
 git clone https://aur.archlinux.org/pass-git-helper.git 
 git clone https://aur.archlinux.org/redshift-minimal.git
@@ -16,3 +18,7 @@ git clone https://aur.archlinux.org/zoom.git
 git clone https://aur.archlinux.org/spotify-tui.git
 git clone https://aur.archlinux.org/dropbox.git
 git clone https://aur.archlinux.org/nemo-dropbox.git
+
+git clone https://github.com/alexchaichan/cheatsheets.git
+git clone https://github.com/alexchaichan/data-science.git
+git clone https://github.com/alexchaichan/Templates.git
