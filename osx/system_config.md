@@ -27,13 +27,3 @@ ___
 2. click "+" button > Create Multi-Output Device > name it "screen record w/ auio" > check Built-In Output (must be on top!) + BlackHole 16ch
 3. record screen with "screen record w/ audio"
 ___
-
-### posteo mail / carddav / caldav
-
-email address: ****@**.**
-
-user name: ******
-
-password: *****
-incoming mail server: posteo.de
-outgoing mail server: posteo.de
