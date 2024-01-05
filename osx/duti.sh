@@ -56,6 +56,7 @@ duti -s com.interversehq.qView .pnm all
 duti -s com.interversehq.qView .heif all
 duti -s com.interversehq.qView .avif all
 duti -s com.interversehq.qView .icns all
+duti -s com.interversehq.qView .svg all
 
 # preview
 duti -s com.apple.Preview .stl all

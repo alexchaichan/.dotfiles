@@ -4,7 +4,7 @@
     "posix_terminal_shell": "zsh",
     "jobs_tab_visibility": "shown",
     "show_margin": false,
-    "default_project_location": "/Users/user",
+    "default_project_location": "/Users/user/repositories/EMILIA",
     "soft_wrap_r_files": true,
     "cran_mirror": {
         "name": "Global (CDN)",
@@ -20,7 +20,7 @@
     "global_theme": "alternate",
     "rmd_preferred_template_path": "/Library/Frameworks/R.framework/Versions/4.2/Resources/library/vitae/rmarkdown/templates/latexcv",
     "show_hidden_files": true,
-    "font_size_points": 12,
+    "font_size_points": 14,
     "reduced_motion": true,
     "rmd_auto_date": true,
     "document_author": "aleksej chaichan",
