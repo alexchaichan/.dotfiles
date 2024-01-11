@@ -14,7 +14,6 @@
 .dropbox.attr
 .dropbox.cache
 
-
 # ==============================
 #   macOS
 # ==============================
@@ -47,7 +46,6 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
-
 
 # ==============================
 #   Vim
