@@ -1,0 +1,212 @@
+[colors.bright]
+black = "#6272a4"
+blue = "#d6acff"
+cyan = "#a4ffff"
+green = "#69ff94"
+magenta = "#ff92df"
+red = "#ff6e6e"
+white = "#ffffff"
+yellow = "#ffffa5"
+
+[colors.cursor]
+cursor = "CellForeground"
+text = "CellBackground"
+
+[colors.hints.end]
+background = "#282a36"
+foreground = "#f1fa8c"
+
+[colors.hints.start]
+background = "#f1fa8c"
+foreground = "#282a36"
+
+[colors.line_indicator]
+background = "None"
+foreground = "None"
+
+[colors.normal]
+black = "#21222c"
+blue = "#bd93f9"
+cyan = "#8be9fd"
+green = "#50fa7b"
+magenta = "#ff79c6"
+red = "#ff5555"
+white = "#f8f8f2"
+yellow = "#f1fa8c"
+
+[colors.primary]
+background = "#282a36"
+bright_foreground = "#ffffff"
+foreground = "#f8f8f2"
+
+#[colors.search."colors.footer_bar"]
+#background = "#282a36"
+#foreground = "#f8f8f2"
+
+[colors.search.focused_match]
+background = "#ffb86c"
+foreground = "#44475a"
+
+[colors.search.matches]
+background = "#50fa7b"
+foreground = "#44475a"
+
+[colors.selection]
+background = "#44475a"
+text = "CellForeground"
+
+[colors.vi_mode_cursor]
+cursor = "CellForeground"
+text = "CellBackground"
+
+[cursor]
+blink_interval = 750
+thickness = 0.2
+unfocused_hollow = true
+
+[cursor.style]
+blinking = "Always"
+shape = "Beam"
+
+[env]
+TERM = "alacritty"
+
+[font]
+size = 14.0
+
+[font.bold]
+family = "SauceCodePro Nerd Font"
+
+[font.bold_italic]
+family = "SauceCodePro Nerd Font"
+
+[font.italic]
+family = "SauceCodePro Nerd Font"
+
+[font.normal]
+family = "SauceCodePro Nerd Font"
+
+[[keyboard.bindings]]
+chars = "\u0006v"
+key = "D"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u0006h"
+key = "D"
+mods = "Alt|Shift"
+
+[[keyboard.bindings]]
+chars = "\u0006x"
+key = "W"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u0006t"
+key = "T"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u00060"
+key = "Key0"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u00061"
+key = "Key1"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u00062"
+key = "Key2"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u00063"
+key = "Key3"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u00064"
+key = "Key4"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u00065"
+key = "Key5"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u00066"
+key = "Key6"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u00067"
+key = "Key7"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u0006\u001B[D"
+key = "Left"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u0006\u001B[C"
+key = "Right"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u0006\u001B[A"
+key = "Up"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u0006\u001B[B"
+key = "Down"
+mods = "Alt"
+
+[[keyboard.bindings]]
+action = "None"
+key = "L"
+mods = "Alt"
+
+[[keyboard.bindings]]
+action = "None"
+key = "D"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "C"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u0003"
+key = "C"
+mods = "Alt"
+
+[scrolling]
+multiplier = 0
+
+[shell]
+args = ["tmux attach || tmux || zsh", "gpg-connect-agent reloadagent /bye"]
+program = "wsl"
+
+[window]
+decorations = "none"
+opacity = 0.9
+startup_mode = "Windowed"
+
+[window.dimensions]
+columns = 190
+lines = 42
+
+[window.position]
+x = 200
+y = 200
