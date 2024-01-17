@@ -38,9 +38,9 @@ ln -sf $DOTFILES/git/.gitkraken $HOME/
 
 # alacritty
 if [[ "$os" == "osx" ]]; then
-	ln -sf $DOTFILES/alacritty/alacritty/osx_alacritty.yml $CONFIG/alacritty.yml
+	ln -sf $DOTFILES/alacritty/alacritty/osx_alacritty.toml $CONFIG/alacritty.toml
 elif [[ "$os" == "linux" ]]; then
-	ln -sf $DOTFILES/alacritty/alacritty/arch_alacritty.yml $CONFIG/alacritty.yml
+	ln -sf $DOTFILES/alacritty/alacritty/arch_alacritty.toml $CONFIG/alacritty.toml
 fi
 
 # vim

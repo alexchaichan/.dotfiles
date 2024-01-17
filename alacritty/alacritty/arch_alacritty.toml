@@ -1,0 +1,128 @@
+import = ["~/.dotfiles/alacritty/alacritty/alacritty.toml"]
+
+[font]
+#draw_bold_text_with_bright_colors = true
+size = 12.0
+
+[font.bold]
+family = "Monaco Nerd Font"
+
+[font.bold_italic]
+family = "Monaco Nerd Font"
+
+[font.italic]
+family = "SauceCodePro Nerd Font"
+
+[font.normal]
+family = "Monaco Nerd Font"
+
+[[keyboard.bindings]]
+chars = "\u0006v"
+key = "D"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u0006h"
+key = "D"
+mods = "Alt|Shift"
+
+[[keyboard.bindings]]
+chars = "\u0006x"
+key = "W"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u0006t"
+key = "T"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u00060"
+key = "Key0"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u00061"
+key = "Key1"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u00062"
+key = "Key2"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u00063"
+key = "Key3"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u00064"
+key = "Key4"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u00065"
+key = "Key5"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u00066"
+key = "Key6"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u00067"
+key = "Key7"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u0006\u001B[D"
+key = "Left"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u0006\u001B[C"
+key = "Right"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u0006\u001B[A"
+key = "Up"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u0006\u001B[B"
+key = "Down"
+mods = "Alt"
+
+[[keyboard.bindings]]
+action = "None"
+key = "L"
+mods = "Alt"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "C"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u0003"
+key = "C"
+mods = "Alt"
+
+[shell]
+args = ["--login", "-c", "tmux attach || tmux ; pkill spotifyd ; pkill spt ; gpg-connect-agent reloadagent /bye"]
+program = "/usr/bin/zsh"
+
+[window]
+decorations = "none"
+
+[window.dimensions]
+columns = 192
+lines = 50
