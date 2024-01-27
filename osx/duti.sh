@@ -33,6 +33,7 @@ duti -s com.sublimetext.4 .lock all
 duti -s com.sublimetext.4 .ini all
 duti -s com.sublimetext.4 .js all
 duti -s com.sublimetext.4 .zsh all
+duti -s com.sublimetext.4 .dek all
 
 # skim
 duti -s net.sourceforge.skim-app.skim .pdf all
