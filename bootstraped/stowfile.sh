@@ -114,7 +114,7 @@ fi
 
 # pacman.conf
 if [[ "$os" == "linux" ]]; then
-	ln -sf $DOTFILES/arch/pacman/pacman.conf /etc
+	sudo ln -sf $DOTFILES/arch/pacman/pacman.conf /etc
 fi
 
 # spotify
