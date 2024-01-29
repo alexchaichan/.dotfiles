@@ -297,7 +297,7 @@ clear(){
 }
 
 rstudio(){
-  /usr/bin/rstudio-bin $1
+  /usr/bin/rstudio  $1
 }
 
 fi
