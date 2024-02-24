@@ -34,6 +34,7 @@ duti -s com.sublimetext.4 .ini all
 duti -s com.sublimetext.4 .js all
 duti -s com.sublimetext.4 .zsh all
 duti -s com.sublimetext.4 .dek all
+duti -s com.sublimetext.4 .dec all
 
 # skim
 duti -s net.sourceforge.skim-app.skim .pdf all
