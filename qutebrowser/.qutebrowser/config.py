@@ -25,7 +25,7 @@ home_dir = expanduser('~')
 # path
 if system == 'Darwin':
 
-    path = os.pathsep + '/usr/local/lib/python3.11/:/usr/local/lib/:~/.local/bin:/usr/local/bin/:~/.pyenv/bin:~/.pyenv/shims:/usr/local/sbin:~/bin:~/.cargo/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands'
+    path = os.pathsep + '~/.pyenv/bin:~/.pyenv/shims:/usr/local/bin/:/usr/local/sbin:~/bin:~/.cargo/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands'
     os.environ['PATH'] = path
 
 # NOTE: config.py is intended for advanced users who are comfortable
