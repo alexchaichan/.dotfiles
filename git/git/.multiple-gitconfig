@@ -1,1 +1,8 @@
+[includeif "gitdir:/home/achaichan/"]
+  path = /home/achaichan/projects/.gitconfig
+  
+[includeif "gitdir:/path/to/directory"]
+  path = /path/to/.gitconfig
 
+[safe]
+    directory = *
