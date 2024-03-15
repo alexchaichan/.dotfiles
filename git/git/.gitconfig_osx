@@ -11,7 +11,7 @@
 #     \/__/         \/__/         \/__/
 
 [user]
-	email = alex.mailme@posteo.de
+	email = alex.mailme@icloud.com
 	name = alexchaichan
 	signingkey = B50CCA3A30B61127
 [core]
@@ -24,8 +24,6 @@
 # INCLUDES
 # --------
 # Local/Private config goes in the include
-[include]
-  path = ~/.gitconfig.local
 [commit]
 	gpgsign = true
 [interactive]
@@ -92,5 +90,3 @@
 [alias]
 	unstage = restore --staged . # restore all staged files
   logs = log --oneline --all --graph # shows log with graph
-
-
